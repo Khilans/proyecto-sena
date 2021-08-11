@@ -5,7 +5,7 @@
 			<div class="logo_container">
 				<div class="logo">
 					<img src="images/logo.png" alt="">
-					<span>course</span>
+					<span>senatel</span>
 				</div>
 			</div>
 
@@ -25,7 +25,7 @@
 		</div>
 		<div class="header_side d-flex flex-row justify-content-center align-items-center">
 			<img src="images/phone-call.svg" alt="">
-			<span>+43 4566 7788 2457</span>
+			<span>Prueba de esto</span>
 		</div>
 
 		<!-- Hamburger -->
