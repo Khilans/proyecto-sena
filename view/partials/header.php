@@ -13,12 +13,12 @@
 			<nav class="main_nav_container">
 				<div class="main_nav">
 					<ul class="main_nav_list">
-						<li class="main_nav_item"><a href="#">home</a></li>
-						<li class="main_nav_item"><a href="#">about us</a></li>
-						<li class="main_nav_item"><a href="courses.html">courses</a></li>
+						<li class="main_nav_item"><a href="#">Casa</a></li>
+						<li class="main_nav_item"><a href="#">Sobre nosotros</a></li>
+						<li class="main_nav_item"><a href="courses.html">Cursos</a></li>
 						<li class="main_nav_item"><a href="elements.html">elements</a></li>
-						<li class="main_nav_item"><a href="news.html">news</a></li>
-						<li class="main_nav_item"><a href="contact.html">contact</a></li>
+						<li class="main_nav_item"><a href="news.html">Noticias</a></li>
+						<li class="main_nav_item"><a href="contact.html">Contactanos</a></li>
 					</ul>
 				</div>
 			</nav>
