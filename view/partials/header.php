@@ -13,19 +13,19 @@
 			<nav class="main_nav_container">
 				<div class="main_nav">
 					<ul class="main_nav_list">
-						<li class="main_nav_item"><a href="#">Casa</a></li>
+						<li class="main_nav_item"><a href="index.php">Inicio</a></li>
 						<li class="main_nav_item"><a href="#">Sobre nosotros</a></li>
 						<li class="main_nav_item"><a href="courses.html">Cursos</a></li>
-						<li class="main_nav_item"><a href="elements.html">elements</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("Usuarios","Usuarios","prueba")?>">Prueba</a></li>
 						<li class="main_nav_item"><a href="news.html">Noticias</a></li>
-						<li class="main_nav_item"><a href="contact.html">Contactanos</a></li>
+						<li class="main_nav_item"><a href="contact.html">Blog</a></li>
 					</ul>
 				</div>
 			</nav>
 		</div>
 		<div class="header_side d-flex flex-row justify-content-center align-items-center">
 			<img src="images/phone-call.svg" alt="">
-			<span>Prueba de esto</span>
+			<span>Prueba</span>
 		</div>
 
 		<!-- Hamburger -->

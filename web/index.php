@@ -12,7 +12,6 @@ include_once '../lib/helpers.php';
                     include_once '../view/partials/popular.php';
                     include_once '../view/partials/register.php';
                 }
-
                 include_once '../view/partials/footer.php';
             echo "</div>";
             include_once '../view/partials/scripts.php';
