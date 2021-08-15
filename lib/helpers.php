@@ -1,6 +1,11 @@
 <?php
     session_start();
 
+    function encrypt($pass){
+        $result=password_hash($pass,PASSWORD_DEFAULT);
+        return $result;
+    }
+
     function redirect($url){ //Redirecciona con JS en lugar de header
         echo "<script type='text/javascript'>"."window.location.href='$url'"."</script>";
     }
