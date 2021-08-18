@@ -6,6 +6,10 @@
         return $result;
     }
 
+    function decrypt($pass){
+        
+    }
+
     function redirect($url){ //Redirecciona con JS en lugar de header
         echo "<script type='text/javascript'>"."window.location.href='$url'"."</script>";
     }
