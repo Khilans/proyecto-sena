@@ -16,4 +16,7 @@ include_once '../lib/helpers.php';
             echo "</div>";
             include_once '../view/partials/scripts.php';
         echo "</body>";
+
+        
 ?>
+
