@@ -28,7 +28,7 @@
             $ejecutar=$obj->update($sql);
     
             if ($ejecutar) {
-                $_SESSION['mensaje']="Se registró el estado <b>$desc_estado</b>exitosamente";
+                $_SESSION['mensaje']="Se registró el estado <b>$desc_estado</b> exitosamente";
                 redirect(getUrl("Estado","Estado","consult"));
             } else {
                 echo "Ops, ha ocurrido un error";

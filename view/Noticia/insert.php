@@ -27,7 +27,7 @@
 
 				<?php
 				foreach ($noticias as $not) {
-					echo "<option value='" . $not['cod_tipo_noti '] . "'>" . $not['desc_tipo_noti'] . "</option>";
+					echo "<option value='" . $not['cod_tipo_noti'] . "'>" . $not['desc_tipo_noti'] . "</option>";
 				}
 				?>
 			</select>
@@ -38,8 +38,8 @@
 				<option value="">Seleccione...</option>
 
 				<?php
-				foreach ($estados as $estd) {
-					echo "<option value='" . $estd['id_estado '] . "'>" . $not['desc_estado'] . "</option>";
+				foreach ($estados  as $estd) {
+					echo "<option value='" . $estd['id_estado'] . "'>" . $estd['desc_estado'] . "</option>";
 				}
 				?>
 			</select>

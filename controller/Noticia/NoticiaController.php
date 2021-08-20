@@ -9,8 +9,16 @@
     {
 
         $obj = new NoticiaModel();
+        $sql = "SELECT * FROM t_estado";
+        $estados = $obj->consult($sql);
+
         $sql = "SELECT * FROM t_tiponoticia";
         $noticias = $obj->consult($sql);
+
+     
+
+       
+
 
         include_once  '../view/Noticia/insert.php';
     }
@@ -34,7 +42,7 @@
         move_uploaded_file($_FILES['img_noticia']['tmp_name'], $ruta);
         $id = $obj->autoincrement("t_noticia", "cod_noticia");
 
-        $sql = "INSERT INTO t_noticia VALUES($id, '$desc_noticia', '$titulo_noticia', $fecha_noticia, '$ruta' , '', $cod_tipo_noti, $id_estado)";
+        $sql = "INSERT INTO t_noticia VALUES($id, '$desc_noticia', '$titulo_noticia', '$fecha_noticia', '$ruta' , 1, $cod_tipo_noti, $id_estado)";
        
         $ejecutar = $obj->update($sql);
 
@@ -56,6 +64,46 @@
 
         include_once '../view/Noticia/consult.php';
     }
+
+
+    public function getDelete()
+    {
+
+        $obj = new NoticiaModel();
+
+        $cod_noticia=$_GET['cod_noticia '];
+
+        $sql="SELECT * FROM t_noticia WHERE cod_noticia=$cod_noticia";
+        $noticias=$obj->consult($sql);
+
+        include_once '../view/Noticia/delete.php';
+    }
+
+    public function postDelete()
+    {
+        $obj=new NoticiaModel();
+
+        $cod_noticia=$_POST['cod_noticia'];
+        $titulo_noticia=$_POST['titulo_noticia'];
+
+        $sql="DELETE FROM t_noticia WHERE cod_noticia=$cod_noticia";
+        $ejecutar=$obj->update($sql);
+
+        if ($ejecutar){
+            $_SESSION['mensaje']="Se eliminó la noticia <b>$titulo_noticia</b> exitosamente";
+            redirect(getUrl("Noticia","Noticia","consult"));
+        } else {
+            echo "Ops, ha ocurrido un error";
+        }
+    }
+
+
+
+
+
+
+
+
 
     }   
 ?>
