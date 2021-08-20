@@ -18,7 +18,7 @@
 						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia","Noticia","getInsert")?>">Noticias</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Usuarios","Usuarios","consult")?>">Usuarios</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Registro","Registro","getRegister")?>">Registro</a></li>
-						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia","Noticia","consult")?>">Blog</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("Estado","Estado","getInsert")?>">Blog</a></li>
 					</ul>
 				</div>
 			</nav>

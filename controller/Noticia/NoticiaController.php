@@ -9,7 +9,7 @@
     {
 
         $obj = new NoticiaModel();
-        $sql = "SELECT *  FROM t_tiponoticia";
+        $sql = "SELECT * FROM t_tiponoticia";
         $noticias = $obj->consult($sql);
 
         include_once  '../view/Noticia/insert.php';
@@ -22,8 +22,11 @@
        
         $desc_noticia=$_POST['desc_noticia'];
         $titulo_noticia = $_POST['titulo_noticia'];
+        $fecha_noticia = $_POST['fecha_noticia'];
         $img_noticia = $_FILES['img_noticia']['name'];
+       /*  $usu_id= $_POST['usu_id']; */
         $cod_tipo_noti= $_POST['cod_tipo_noti'];
+        $id_estado= $_POST['id_estado'];
         
 
         $ruta = "images/$img_noticia";
@@ -31,7 +34,7 @@
         move_uploaded_file($_FILES['img_noticia']['tmp_name'], $ruta);
         $id = $obj->autoincrement("t_noticia", "cod_noticia");
 
-        $sql = "INSERT INTO t_noticia VALUES($id, '$desc_noticia', '$titulo_noticia', '', '$ruta' , '', $cod_tipo_noti, '')";
+        $sql = "INSERT INTO t_noticia VALUES($id, '$desc_noticia', '$titulo_noticia', $fecha_noticia, '$ruta' , '', $cod_tipo_noti, $id_estado)";
        
         $ejecutar = $obj->update($sql);
 
@@ -48,7 +51,7 @@
     {
         $obj = new NoticiaModel();
 
-        $sql = "SELECT tn.cod_noticia, tn.titulo_noticia, tn.img_noticia, tn.desc_noticia , ttn.desc_tipo_noti FROM t_noticia tn, t_tiponoticia ttn WHERE ttn.cod_tipo_noti =tn.cod_tipo_noti ";
+        $sql = "SELECT tn.cod_noticia, tn.titulo_noticia, tn.img_noticia, tn.desc_noticia , ttn.desc_tipo_noti , te.desc_estado FROM t_noticia tn, t_tiponoticia ttn, t_estado te WHERE ttn.cod_tipo_noti =tn.cod_tipo_noti AND te.id_estado=tn.id_estado";
         $noticias = $obj->consult($sql);
 
         include_once '../view/Noticia/consult.php';

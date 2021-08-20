@@ -4,22 +4,22 @@
 </div>
 <form action="<?php echo getUrl("Noticia", "Noticia", "postInsert"); ?>" method="post" enctype="multipart/form-data">
 	<div class="row">
+	<div class="col-md-4 form-group">
+			<label>Descripción</label>
+			<input type="text" name="desc_noticia" class="form-control" placeholder="Descripción">
+		</div> 
 		<div class="col-md-4 form-group">
 			<label>Titulo</label>
-            <input type="hidden" name="cod_noticia" class="form-control" >
 			<input type="text" name="titulo_noticia" class="form-control" placeholder="Titulo">
 		</div>
+		<div class="col-md-4 form-group">
+			<label>Fecha</label>
+			<input type="date" name="fecha_noticia" class="form-control" placeholder="Fecha">
+		</div> 
 		<div class="col-md-4">
 			<label>Imagen</label>
 			<input type="file" name="img_noticia">
 		</div>
-         <div class="col-md-4 form-group">
-			<label>Descripción</label>
-			<input type="text" name="desc_noticia" class="form-control" placeholder="Descripción">
-		</div> 
-
-
-
 		<div class="col-md-4 form-group">
 			<label>Tipo de noticia</label>
 			<select name="cod_tipo_noti" class="form-control">
@@ -32,6 +32,19 @@
 				?>
 			</select>
 		</div>
+		<div class="col-md-4 form-group">
+			<label>Estado</label>
+			<select name="id_estado" class="form-control">
+				<option value="">Seleccione...</option>
+
+				<?php
+				foreach ($estados as $estd) {
+					echo "<option value='" . $estd['id_estado '] . "'>" . $not['desc_estado'] . "</option>";
+				}
+				?>
+			</select>
+		</div>
+		
 	</div>
 	<div class="row">
 		<div class="col-md-4">
