@@ -17,7 +17,7 @@
         <option value="">Seleccione...</option>
         <?php
             foreach($tipos_documentos as $td){
-                echo "<option value='".$td['cod_tipo_doc']."'>".$td['nom_tipo_cod']."</option>";
+                echo "<option value='".$td['cod_tipo_doc']."'>".$td['nom_tipo_doc']."</option>";
             }
         ?>
     </select>
