@@ -2,9 +2,6 @@
     include_once '../model/Estado/EstadoModel.php';
     class EstadoController{
 
-
-       
-
         public function getInsert(){
 
         $obj = new EstadoModel();
