@@ -1,29 +1,54 @@
 <?php
-    include_once '../lib/helpers.php';
+include_once '../lib/helpers.php';
+
 ?>
-<form action="<?php echo getUrl("Registro","Registro","postRegister");?>" method="post">
-    <label>Primer nombre</label>
-    <input type="text" name="usu_nombre" class="form-control">
-    <label>Segundo nombre</label>
-    <input type="text" name="usu_nombre2" class="form-control">
-    <label>Apellidos</label>
-    <input type="text" name="usu_apellido" class="form-control">
-    <label>Contraseña</label>
-    <input type="password" name="usu_pass" class="form-control">
-    <label>Confirma la contraseña</label>
-    <input type="password" name="confirm" class="form-control">
-    <label>Tipo de documento</label>
-    <select name="cod_tipo_doc" class="form-control">
-        <option value="">Seleccione...</option>
-        <?php
-            foreach($tipos_documentos as $td){
-                echo "<option value='".$td['cod_tipo_doc']."'>".$td['nom_tipo_doc']."</option>";
-            }
-        ?>
-    </select>
-    <label>Número de documento</label>
-    <input type="number" name="usu_ndocumento" class="form-control">
-    <label>Correo electrónico</label>
-    <input type="text" name="usu_correo" class="form-control">
-    <input type="submit" value="Enviar" >
-</form>
+
+<html lang="es">
+
+<head>
+	<meta charset="utf-8">
+	<title>Registrar</title>
+	<link rel="stylesheet" href="../web/styles/registro.css">
+    <link rel="stylesheet" href="../web/styles/bootstrap.css">
+</head>
+<body>
+    <div class="container" id="advanced-search-form">
+        <h2>Registrar</h2>
+        <form>
+
+            <div class="form-group">
+                <label for="first-name">Primer nombre</label>
+                <input type="text" class="form-control" placeholder="Primer nombre" id="first-name">
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Segundo nombre</label>
+                <input type="text" class="form-control" placeholder="Segundo nombre" id="last-name">
+            </div>
+
+            <div class="form-group">
+                <label for="first-name">Apellidos</label>
+                <input type="text" class="form-control" placeholder="Apellidos" id="first-name">
+            </div>
+
+            <div class="form-group">
+                <label for="last-name">Tipo documento</label>
+                <input type="text" class="form-control" placeholder="Tipo documento" id="last-name">
+            </div>
+
+            <div class="form-group">
+                <label for="number">Numero documento</label>
+                <input type="number" class="form-control" placeholder="Numero documento" id="number">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo electronico</label>
+                <input type="email" class="form-control" placeholder="Correo electronico" id="email">
+            </div>
+
+            <div class="clearfix"></div>
+            <button type="submit" class="btn btn-warning btn-lg btn-responsive" id="search"> <span class="glyphicon glyphicon-search"></span>Registrase</button>
+        </form>
+    </div>
+</body>
+</html>
