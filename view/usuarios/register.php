@@ -36,7 +36,7 @@ include_once '../lib/helpers.php';
                     <option value="">Seleccione...</option>
                     <?php
                         foreach($tipos_documentos as $td){
-                            echo "<option value'".$td['cod_tipo_doc']."'>".$td['nom_tipo_doc']."</option>";
+                           echo "<option value='" . $td['cod_tipo_doc'] . "'>" . $td['nom_tipo_doc'] . "</option>";
                         }
                     ?>
                 </select>
