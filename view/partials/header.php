@@ -14,7 +14,7 @@
 				<div class="main_nav">
 					<ul class="main_nav_list">
 						<li class="main_nav_item"><a href="index.php">Inicio</a></li>
-						<li class="main_nav_item"><a href="login.php">Sobre nosotros</a></li>
+						<li class="main_nav_item"><a href="login.php">jj</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Estado","Estado","getInsert")?>">Noticias</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Usuarios","Usuarios","consult")?>">Usuarios</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Registro","Registro","getRegister")?>">Registro</a></li>
