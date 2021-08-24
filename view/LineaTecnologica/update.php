@@ -1,16 +1,16 @@
 <div class="jumbotron mt-4">
-    <h2 class="display-4">Editar estado</h2>
+    <h2 class="display-4">Editar Linea Tecnologica</h2>
 </div>
 <div class="container">
     <?php
-    foreach ($estados as $estd) {
+    foreach ($lineatecnologica as $linea) {
     ?>
-        <form action="<?php echo getUrl("Estado", "Estado", "postUpdate"); ?>" method="post">
+        <form action="<?php echo getUrl("LineaTecnologica", "LineaTecnologica", "postUpdate"); ?>" method="post">
             <div class="row ">
                 <div class="form-group col-md-7">
                     <label>Nombre</label>
-                    <input type="hidden" name="id_estado" value="<?php echo $estd['id_estado']; ?>">
-                    <input type="text" name="desc_estado" class="form-control" value="<?php echo $estd['desc_estado']; ?>">
+                    <input type="hidden" name="lin_tec_cod" value="<?php echo $linea['lin_tec_cod']; ?>">
+                    <input type="text" name="lin_tec_desc" class="form-control" value="<?php echo $linea['lin_tec_desc']; ?>">
                 </div>
             </div>
             <div class="row">

@@ -26,8 +26,8 @@
 				<option value="">Seleccione...</option>
 
 				<?php
-				foreach ($noticias as $not) {
-					echo "<option value='" . $not['cod_tipo_noti'] . "'>" . $not['desc_tipo_noti'] . "</option>";
+				foreach ($tipo_noticias as $tipo_not) {
+					echo "<option value='" . $tipo_not['cod_tipo_noti'] . "'>" . $tipo_not['desc_tipo_noti'] . "</option>";
 				}
 				?>
 			</select>
