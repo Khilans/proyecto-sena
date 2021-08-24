@@ -37,9 +37,12 @@
                         if($registro){
                             echo "Se registró exitosamente";
                             $_SESSION['mensaje']="Se registró exitosamente";
+                            redirect("index.php");
                         }else{
                             echo "Ocurró un error durante el registro, intenta nuevamente.";
                             $_SESSION['mensaje']="Ocurró un error durante el registro, intenta nuevamente.";
+                            echo $tipo_documento;
+                            dd($sql);
                         }
                     }
                 }else{
