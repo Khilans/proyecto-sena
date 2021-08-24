@@ -4,7 +4,7 @@
 
         public function getRegister(){
             $obj=new RegistroModel;
-            $sql="SELECT * FROM t_tipodocumento";
+            $sql="SELECT cod_tipo_doc, nom_tipo_doc FROM t_tipodocumento";
             $tipos_documentos=$obj->consult($sql);
             include_once '../view/usuarios/register.php';
             
@@ -25,7 +25,7 @@
             $confirma_contraseña=$_POST['confirm'];
             if(filter_var($correo,FILTER_VALIDATE_EMAIL)){
                 if($confirma_contraseña==$contraseña){
-                    $sql="SELECT * FROM t_usuario WHERE usu_correo='$correo' OR usu_ndocumento=$numero_documento";
+                    $sql="SELECT usu_correo, usu_ndocumento FROM t_usuario WHERE usu_correo='$correo' OR usu_ndocumento=$numero_documento";
                     $consulta=$obj->consult($sql);
                     if(mysqli_num_rows($consulta)>0){
                         echo "Ya existe un usuario registrado con este correo/documento";
@@ -37,9 +37,12 @@
                         if($registro){
                             echo "Se registró exitosamente";
                             $_SESSION['mensaje']="Se registró exitosamente";
+                            redirect("index.php");
                         }else{
                             echo "Ocurró un error durante el registro, intenta nuevamente.";
                             $_SESSION['mensaje']="Ocurró un error durante el registro, intenta nuevamente.";
+                            echo $tipo_documento;
+                            dd($sql);
                         }
                     }
                 }else{

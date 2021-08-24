@@ -1,3 +1,6 @@
+<?php
+include_once '../view/partials/modal.php';
+?>
 <div class="container">
     <?php
         if(isset($_SESSION['mensaje'])){
@@ -31,10 +34,17 @@
                     echo "<td class='text-center'>".$user['usu_nombre']."</td>";
                     echo "<td class='text-center'>".$user['usu_nombre2']."</td>";
                     echo "<td class='text-center'>".$user['usu_apellido']."</td>";
-                    echo "<td class='text-center'>".$user['cod_tipo_doc']."</td>";
+                    echo "<td class='text-center'>".$user['nom_tipo_doc']."</td>";
                     echo "<td class='text-center'>".$user['usu_ndocumento']."</td>";
                     echo "<td class='text-center'>".$user['usu_correo']."</td>";
-                    echo "<td class='text-center'Accion></td>";
+                    echo "<td class='text-center'>
+                    <button class='btn btn-warning btn-sm' id='modalUpdate' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Usuarios","Usuarios","getUpdateModal",false,"ajax")."' data-usu_id='".$user['usu_id']."'>
+                    <i class='fi-rr-edit'></i>                   
+                    </button>
+                    <button class='btn btn-danger btn-sm'>
+                    <i class='fi-rr-user-delete'></i>
+                    </button>
+                    </td>";
                 echo "</tr>";
                 }
             ?>

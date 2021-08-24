@@ -46,9 +46,11 @@ $(document).ready(function(){
 
     $(document).on("click","#modalUpdate",function(){
         var url=$(this).attr("data-url");
-
+        var id=$(this).attr("data-usu_id");
         $.ajax({
             url:url,
+            data:"id="+id,
+            type:"GET",
             success:function(datos){
                 $("#contenedor").html(datos);
                 $("#exampleModalCenter").modal("show");
