@@ -25,7 +25,6 @@ include_once '../lib/helpers.php';
         <div class="image"></div>
         <div class="frm">
             <h1>Iniciar sesion</h1>
-<<<<<<< HEAD
             <form action="<?php echo getUrl("Acceso", "Acceso", "login") ?>" method="POST">
                 <div class="form-group">
                     <label for="username">Numero de documento:</label>
@@ -34,16 +33,7 @@ include_once '../lib/helpers.php';
                 <div class="form-group">
                     <label for="pwd">Contraseña:</label>
                     <input type="password" class="form-control" name="usu_pass" placeholder="Contraseña">
-=======
-            <form action="<?php echo getUrl("Acceso", "Acceso", "login", false, "ajax") ?>" method="POST">
-                <div class="form-group">
-                    <label for="username">Numero Identidad:</label>
-                    <input type="number" class="form-control" id="username" placeholder="Numero de identidad">
-                </div>
-                <div class="form-group">
-                    <label for="pwd">Contraseña:</label>
-                    <input type="password" class="form-control" id="pwd" placeholder="Contraseña">
->>>>>>> 01dcec557e39bf76570894b40b8747f2cd655c10
+
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-warning">Ingresar</button>
