@@ -5,7 +5,12 @@
         $result=password_hash($pass,PASSWORD_DEFAULT);
         return $result;
     }
-
+    function dd($var)
+    {
+        echo "<pre>";
+        die(print_r($var));
+    }
+    
     function decrypt($pass){
         
     }
