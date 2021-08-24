@@ -5,8 +5,8 @@
 
         public function login(){
             $obj= new AccesoModel;
-            $documento=$_POST['n_documento'];
-            $contraseña=$_POST['contraseña'];
+            $documento=$_POST['usu_ndocumento'];
+            $contraseña=$_POST['usu_pass'];
             $sql="SELECT * FROM t_usuario WHERE usu_ndocumento=$documento";
             $usuario=$obj->consult($sql);
             if(mysqli_num_rows($usuario)>0){
@@ -19,6 +19,7 @@
                     echo "Sesion iniciada correctamente";
                 }else{
                     echo "Correo y/o contraseña incorrectos";
+                    redirect("loginn.php");
                 }
             }else{
                 echo "No se encuentra registrado";
