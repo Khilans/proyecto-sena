@@ -26,6 +26,9 @@ include_once '../lib/helpers.php';
         <div class="frm">
             <h1>Iniciar sesion</h1>
 
+
+
+
             <form action="<?php echo getUrl("Acceso", "Acceso", "login") ?>" method="POST">
                 <div class="form-group">
                     <label for="username">Numero de documento:</label>
@@ -34,6 +37,7 @@ include_once '../lib/helpers.php';
                 <div class="form-group">
                     <label for="pwd">Contraseña:</label>
                     <input type="password" class="form-control" name="usu_pass" placeholder="Contraseña">
+
                 </div>
             <form action="<?php echo getUrl("Acceso", "Acceso", "login", false, "ajax") ?>" method="POST">
                 <div class="form-group">
@@ -43,6 +47,7 @@ include_once '../lib/helpers.php';
                 <div class="form-group">
                     <label for="pwd">Contraseña:</label>
                     <input type="password" class="form-control" id="pwd" placeholder="Contraseña">
+
 
                 </div>
                 <div class="form-group">
