@@ -32,7 +32,7 @@
         $titulo_noticia = $_POST['titulo_noticia'];
         $fecha_noticia = $_POST['fecha_noticia'];
         $img_noticia = $_FILES['img_noticia']['name'];
-       /*  $usu_id= $_POST['usu_id']; */
+        $usu_id=$_SESSION['user_id']; 
         $cod_tipo_noti= $_POST['cod_tipo_noti'];
         $id_estado= $_POST['id_estado'];
         
@@ -42,7 +42,7 @@
         move_uploaded_file($_FILES['img_noticia']['tmp_name'], $ruta);
         $id = $obj->autoincrement("t_noticia", "cod_noticia");
 
-        $sql = "INSERT INTO t_noticia VALUES($id, '$desc_noticia', '$titulo_noticia', '$fecha_noticia', '$ruta' , 1, $cod_tipo_noti, $id_estado)";
+        $sql = "INSERT INTO t_noticia VALUES($id, '$desc_noticia', '$titulo_noticia', '$fecha_noticia', '$ruta' , $usu_id, $cod_tipo_noti, $id_estado)";
        
         $ejecutar = $obj->update($sql);
 
@@ -71,7 +71,7 @@
 
         $obj = new NoticiaModel();
 
-        $cod_noticia=$_GET['cod_noticia '];
+        $cod_noticia=$_GET['cod_noticia'];
 
         $sql="SELECT * FROM t_noticia WHERE cod_noticia=$cod_noticia";
         $noticias=$obj->consult($sql);
