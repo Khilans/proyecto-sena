@@ -14,7 +14,7 @@ include_once '../lib/helpers.php';
 <body>
     <div class="container" id="advanced-search-form">
         <h2>Registrar</h2>
-        <form action="<?php echo getUrl("Registro","Registro","getRegister")?>" method="POST">
+        <form action="<?php echo getUrl("Registro","Registro","postRegister")?>" method="POST">
             <div class="form-group">
                 <label for="first-name">Primer nombre</label>
                 <input type="text" class="form-control" placeholder="Primer nombre" id="first-name" name="usu_nombre">
@@ -27,7 +27,7 @@ include_once '../lib/helpers.php';
 
             <div class="form-group">
                 <label for="first-name">Apellidos</label>
-                <input type="text" class="form-control" placeholder="Apellidos" id="first-name" name="usu_apellidos">
+                <input type="text" class="form-control" placeholder="Apellidos" id="first-name" name="usu_apellido">
             </div>
 
             <div class="form-group">
@@ -44,7 +44,7 @@ include_once '../lib/helpers.php';
 
             <div class="form-group">
                 <label for="number">Numero documento</label>
-                <input type="number" class="form-control" placeholder="Numero documento" id="number" number="usu_ndocumento">
+                <input type="number" class="form-control" placeholder="Numero documento" id="number" name="usu_ndocumento">
             </div>
 
             <div class="form-group">
@@ -61,13 +61,11 @@ include_once '../lib/helpers.php';
                     <input type="password" class="form-control" placeholder="Confirma contraseña" name="confirm">
                 </div>
             </div>
-            <button type="submit" class="btn btn-warning btn-lg btn-responsive" id="search"> <span class="glyphicon glyphicon-search"></span>Registrase</button>
-        </form>
         <?php
             if (isset($_SESSION['mensaje'])) {
         ?>
-            <div class="alert alert-danger alert-dismissible fade show mt-4" id="alerta" role="alert">
-                <?php $_SESSION['mensaje'] ?>
+            <div class="alert alert-warning alert-dismissible fade show mt-4" id="alerta" role="alert">
+                <? $_SESSION['mensaje'] ?>
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -76,6 +74,8 @@ include_once '../lib/helpers.php';
             unset($_SESSION['mensaje']);
         }
         ?>
+            <button type="submit" class="btn btn-warning btn-lg btn-responsive" id="search"> <span class="glyphicon glyphicon-search"></span>Registrase</button>
+        </form>
     </div>
 </body>
 </html>
