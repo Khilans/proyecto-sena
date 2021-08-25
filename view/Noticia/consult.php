@@ -7,6 +7,7 @@
                 <th>Descripción</th>
                 <th>Titulo</th>
 				<th>Imagen</th>
+                <th>Tipo de noticia</th>
                 <th>Estado</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
@@ -22,6 +23,7 @@
                 echo "<td>" . $noti['desc_noticia'] . "</td>";
                 echo "<td>" . $noti['titulo_noticia'] . "</td>";
                 echo "<td><img src='" . $noti['img_noticia'] . "' width='100px'></td>";
+                echo "<td>" . $noti['desc_tipo_noti'] . "</td>";
                 echo "<td>" . $noti['desc_estado'] . "</td>";
                 
                  echo "<td><a href='" . getUrl("Noticia", "Noticia", "getUpdate", array("cod_noticia" => $noti['cod_noticia'])) . "'><button class='btn btn-primary'>Editar</button></a></td>";

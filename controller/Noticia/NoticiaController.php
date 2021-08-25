@@ -103,9 +103,7 @@
 
     }
 
-
-
-public function getUpdate()
+    public function getUpdate()
     {
 
         $obj = new NoticiaModel();
@@ -118,10 +116,13 @@ public function getUpdate()
         $estados = $obj->consult($sql);
 
         $sql = "SELECT * FROM t_tiponoticia";
-        $noticias = $obj->consult($sql);
+        $tipo_noticias = $obj->consult($sql);
+
+       
 
         include_once '../view/Noticia/update.php';
     }
+
     public function postUpdate()
     {
         $obj = new NoticiaModel();
@@ -143,16 +144,17 @@ public function getUpdate()
             $sql = "UPDATE t_noticia SET desc_noticia='$desc_noticia', cod_tipo_noti=$cod_tipo_noti,cod_estado=$cod_estado,
             img_noticia='$ruta' WHERE cod_noticia=$cod_noticia";
         } else {
-            $sql = "UPDATE t_ciudad SET desc_noticia='$desc_noticia', cod_tipo_noti=$cod_tipo_noti,cod_estado=$cod_estado,img_noticia='$ruta' WHERE
+            $sql = "UPDATE t_noticia SET desc_noticia='$desc_noticia', cod_tipo_noti=$cod_tipo_noti,cod_estado=$cod_estado,img_noticia='$ruta' WHERE
             cod_noticia=$cod_noticia";
         }
         $ejecutar = $obj->consult($sql);
 
         if ($ejecutar) {
-            $_SESSION['mensaje']="Se editó la ciudad <b>$desc_noticia</b> exitosamente";
-            redirect(getUrl("Ciudad", "Ciudad", "consult"));
+            $_SESSION['mensaje']="Se editó la noticia <b>$desc_noticia</b> exitosamente";
+            redirect(getUrl("Noticia", "Noticia", "consult"));
         } else {
             echo "Ops, ha ocurrido un error inesperado";
+            
         }
     }
 
