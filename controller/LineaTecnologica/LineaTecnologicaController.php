@@ -35,29 +35,29 @@
         include_once '../view/LineaTecnologica/consult.php';
     }
 
-    public function getDelete()
+     public function getDelete()
     {
         $obj = new LineaTecnologicaModel();
         $lineatecnologica=$_GET['lin_tec_cod'];
         $sql="SELECT * FROM t_lineatecnologica";
         $lineatecnologica=$obj->consult($sql);
         include_once '../view/LineaTecnologica/delete.php';
-    }
+    } 
 
-    public function postDelete()
+     public function postDelete()
     {
         $obj=new LineaTecnologicaModel();
-        $lin_tec_desc=$_POST['lin_tec_desc'];
-        $sql="DELETE * FROM t_lineatecnologica";
-        $ejecutar=$obj->update($sql);
+        $lin_tec_cod=$_POST['lin_tec_cod'];
+        $sql="DELETE FROM t_lineatecnologica where lin_tec_cod= $lin_tec_cod";
+        $ejecutar=$obj->delete($sql);
 
         if ($ejecutar){
-            $_SESSION['mensaje']="Se eliminó la linea tecnologica <b>$lin_tec_desc</b> exitosamente";
+            //$_SESSION['mensaje']="Se eliminó la linea tecnologica <b>$lin_tec_cod</b> exitosamente";
             redirect(getUrl("LineaTecnologica","LineaTecnologica","consult"));
         } else {
             echo "Ops, ha ocurrido un error";
         }
-    }
+    } 
 
     public function getUpdate(){
 

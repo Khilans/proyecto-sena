@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    $(document).on("click","#cambioImagen",function(){
+    $(document).on("click","#cambioDeImagen",function(){
         var ruta=$("#imagen").attr("src");
 
         $("#cambiarImagen").html("<input type='file' name='ciu_imagen'>");

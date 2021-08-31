@@ -55,6 +55,7 @@
                 }
             }else{
                 echo "El controlador especificado no existe";
+                
             }
         }else{
             $_SESSION['error']="El módulo especificado no existe.";

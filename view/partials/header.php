@@ -14,13 +14,17 @@
 				<div class="main_nav">
 					<ul class="main_nav_list">
 						<li class="main_nav_item"><a href="index.php">Inicio</a></li>
+<<<<<<< HEAD
 
 						<li class="main_nav_item"><a href="login.php">Sobre nosotros</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("LineaTecnologica","LineaTecnologica","consult")?>">LineaTecnologica</a></li>
+=======
+						<li class="main_nav_item"><a href="login.php">jj</a></li>
+>>>>>>> 450f608fd589609225f3e2dd47fcfb9b3d291950
 						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia","Noticia","getInsert")?>">Noticias</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Usuarios","Usuarios","consult")?>">Usuarios</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Registro","Registro","getRegister")?>">Registro</a></li>
-						<li class="main_nav_item"><a href="<?php echo getUrl("Tnoticia","Tnoticia","consult")?>">Blog</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia","Noticia","consult")?>">Blog</a></li>
 					</ul>
 				</div>
 			</nav>

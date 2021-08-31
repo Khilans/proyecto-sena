@@ -10,6 +10,7 @@
             
         }
         public function postRegister(){
+            
             $obj=new RegistroModel;
             $id=$obj->autoincrement("t_usuario","usu_id");
             $pnombre=$_POST['usu_nombre'];
