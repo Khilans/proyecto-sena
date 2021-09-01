@@ -10,10 +10,10 @@
             <div class="form-group col-md-4">
                 <label>Línea tecnológica</label>
             <div>
-                <input type="hidden" name="lin_tec_cod" value="<?php echo $linea['lin_tec_cod']; ?>">
+                <input type="hidden" name="lin_tec_cod" value="<?php echo $linea['lin_tec_cod']; ?>"> 
                 <input type="text" readonly name="lin_tec_desc" value="<?php echo $linea['lin_tec_desc'] ?>"> 
             </div>
-                <p class="mt-4">¿Esta seguro de eliminar esta linea tecnologica?</p>
+                <p class="mt-4">¿Está seguro de eliminar esta línea tecnológica?</p>
             </div>     
         </div>
         <div class="row">

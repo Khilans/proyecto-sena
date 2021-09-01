@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="jumbotron">
-		<h3 class="display-4">Registrar linea tecnologica</h3>
+		<h3 class="display-4">Registrar línea tecnológica</h3>
 	</div>
 	<form action="<?php echo getUrl("LineaTecnologica", "LineaTecnologica", "postInsert"); ?>" method="post" enctype="multipart/form-data">
 		<div class="row">

@@ -61,7 +61,7 @@
             $obj=new TnoticiaModel();
     
             $cod_tipo_noti=$_POST['cod_tipo_noti'];
-             $desc_tipo_noti=$_POST['desc_tipo_noti'];
+            $desc_tipo_noti=$_POST['desc_tipo_noti'];
     
             $sql="DELETE FROM t_tiponoticia WHERE cod_tipo_noti=$cod_tipo_noti";
             $ejecutar=$obj->update($sql);
