@@ -25,7 +25,7 @@
                     echo "<td>" . $ofer['fech_ini_oferta'] . "</td>";
                     echo "<td>" . $ofer['fech_fin_oferta'] . "</td>";                  
                     echo "<td><img src='" . $ofer['imag_oferta'] . "' width='100px'></td>";
-                    echo "<td>" . $ofer['id_estado'] . "</td>";
+                    echo "<td>" . $ofer['desc_estado'] . "</td>";
                     echo "<td><a href='" . getUrl("Oferta", "Oferta", "getUpdate", array("id_oferta" => $ofer['id_oferta'])) . "'><button class='btn btn-primary'>Editar</button></a></td>";
                     echo "<td><a href='" . getUrl("Oferta", "Oferta", "getDelete", array("id_oferta" => $ofer['id_oferta'])) . "'><button class='btn btn-danger'>Eliminar</button></a></td>";
                     echo "</tr>";

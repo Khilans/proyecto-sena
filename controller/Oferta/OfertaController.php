@@ -23,14 +23,14 @@ class OfertaController{
         $fech_ini_oferta = $_POST['fech_ini_oferta'];
         $fech_fin_oferta = $_POST['fech_fin_oferta'];
         $imag_oferta = $_FILES['imag_oferta']['name'];
-       // $usu_id = $_SESSION['user_id'];
+        $usu_id = $_SESSION['user_id'];
         $id_estado = $_POST['id_estado'];
 
         $ruta = "images/$imag_oferta";
         move_uploaded_file($_FILES['imag_oferta']['tmp_name'], $ruta);
         $id = $obj->autoincrement("t_oferta", "id_oferta");
 
-        $sql = "INSERT INTO t_oferta VALUES($id,'', '$desc_oferta', '$fech_ini_oferta', '$fech_fin_oferta', '$ruta', $id_estado)";
+        $sql = "INSERT INTO t_oferta VALUES($id,$usu_id, $id_estado, '$desc_oferta', '$fech_ini_oferta', '$fech_fin_oferta', '$ruta')";
 
         $ejecutar = $obj->update($sql);
 
@@ -47,7 +47,7 @@ class OfertaController{
     {
         $obj = new OfertaModel();
 
-        $sql = "SELECT o.id_oferta, o.desc_oferta, o.fech_ini_oferta, o.fecha_fin_oferta, o.imag_oferta, te.desc_estado FROM t_oferta o, t_estado te WHERE te.id_estado=o.id_estado";
+        $sql = "SELECT o.id_oferta, u.usu_id,te.desc_estado,o.desc_oferta, o.fech_ini_oferta, o.fech_fin_oferta, o.imag_oferta FROM t_oferta o, t_estado te, t_usuario u WHERE te.id_estado=o.id_estado AND u.usu_id=o.usu_id";
         $oferta = $obj->consult($sql);
 
         include_once '../view/Oferta/consult.php';
