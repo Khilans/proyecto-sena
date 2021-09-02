@@ -6,7 +6,7 @@
 	<div class="row">
 	<div class="col-md-4 form-group">
 			<label>Descripción</label>
-			<input type="text" name="desc_noticia" class="form-control" placeholder="Descripción">
+			<textarea name="Desc_noticia" rows="1" cols="50">Introdusca una descripción</textarea>
 		</div> 
 		<div class="col-md-4 form-group">
 			<label>Titulo</label>
