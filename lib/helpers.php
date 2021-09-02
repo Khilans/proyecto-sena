@@ -57,7 +57,7 @@
                 echo "El controlador especificado no existe";
                 
             }
-        }else{
+        }else {
             $_SESSION['error']="El módulo especificado no existe.";
             include_once '../view/partials/error404.php';
         }
