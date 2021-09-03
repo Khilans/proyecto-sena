@@ -1,5 +1,6 @@
 	<!-- Footer -->
-
+<br>
+<br>
 	<footer class="footer">
 		<div class="container">
 			
