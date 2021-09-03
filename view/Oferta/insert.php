@@ -4,10 +4,7 @@
 	</div>
 	<form action="<?php echo getUrl("Oferta", "Oferta", "postInsert"); ?>" method="post" enctype="multipart/form-data">
 		<div class="row">
-		    <!-- <div class="col-md-4 form-group">
-				<label>Usuario</label>
-				<input type="text" name="usu_id" class="form-control" placeholder="Usuario">
-			</div> -->
+		    
 			<div class="col-md-4 form-group">
 				<label>Descripción oferta</label>
 				<input type="text" name="desc_oferta" class="form-control" placeholder="Descripción">
