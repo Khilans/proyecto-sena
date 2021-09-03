@@ -16,7 +16,8 @@
 							<div class="button button_1 register_button mx-auto trans_200"><a href="#">register now</a></div>
 						</div>
 					</div>
-
+                 <br>
+				 <br>
 				</div>
 
 				<div class="col-lg-6 nopadding">
@@ -40,5 +41,4 @@
 			</div>
 		</div>
 	</div>
-	<br>
-	<br>
+	
