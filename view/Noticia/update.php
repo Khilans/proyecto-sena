@@ -10,8 +10,7 @@
             <div class="form-group col-md-7">
                 <label>Descripcion</label>
                 <input type="hidden" name="cod_noticia" value="<?php echo $noti['cod_noticia']; ?>">
-                <input type="text" name="desc_noticia" class="form-control" value="<?php echo $noti['desc_noticia']; ?>">
-              
+                <input type="text" name="desc_noticia" class="form-control" value="<?php echo $noti['desc_noticia']; ?>">     
             </div> 
             <div class="form-group col-md-7">
                 <label>Titulo</label>
@@ -20,7 +19,6 @@
             <div class="col-md-4">
                 <label>Imagen</label>
                 <div id="cambiarImagen">
-
                     <img class="d-block" id="imagen" src="<?php echo $noti['img_noticia'] ?>" width="150px">
                     <button type="button" id="cambioDeImagen" class="btn btn-primary mt-3">Cambiar imagen</button>
                 </div>
@@ -53,16 +51,17 @@
                         } else {
                             echo "<option value='" . $estd['cod_estado'] . "'>" . $estd['desc_estado'] . "</option>";
                         }
-                    }
+                    } 
                     ?>
                 </Select>
             </div>  
         </div> 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-4"> 
                 <input type="submit" value="enviar" class="btn btn-success">
             </div>
         </div>
+        
     </form>
 
     <?php
