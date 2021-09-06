@@ -1,5 +1,5 @@
 	<!-- Header -->
-	<header class=""> header d-flex flex-row
+	<header class="header d-flex flex-row"> 
 		<div class="header_content d-flex flex-row align-items-center">
 			<!-- Logo -->
 			<div class="logo_container">
@@ -21,7 +21,7 @@
 
 						<li class="main_nav_item"><a href="<?php echo getUrl("Oferta", "Oferta", "consult") ?>">Ofertas</a></li>
 
-						<li class="main_nav_item"><a href="login.php">jj</a></li>
+						<li class="main_nav_item"><a href="login.php">Inicio de Sesion</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia", "Noticia", "getInsert") ?>">Noticias</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Usuarios", "Usuarios", "consult") ?>">Usuarios</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Registro", "Registro", "getRegister") ?>">Registro</a></li>
