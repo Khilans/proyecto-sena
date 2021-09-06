@@ -1,7 +1,11 @@
 <div class="container">
-    <table class="table table-striped table-dark mt-5">
+<div class="jumbotron">
+	<h3 class="display-4">Ofertas</h3>
+</div>
+    <!-- <table class="table table-striped table-dark mt-5"> -->
+    <table class="table table-striped mt-5 table-hover table table-bordered "> 
         <a href="<?php echo getUrl("Oferta", "Oferta", "getInsert") ?>"><button class="btn btn-success mt-4">Insertar</button></a>
-        <thead>
+        <thead class="thead-dark">
             <tr>
                 <th>Id</th>
                 <th>Usuario</th>
@@ -24,13 +28,14 @@
                     echo "<td>" . $ofer['desc_oferta'] . "</td>";       
                     echo "<td>" . $ofer['fech_ini_oferta'] . "</td>";
                     echo "<td>" . $ofer['fech_fin_oferta'] . "</td>";                  
-                    echo "<td><img src='" . $ofer['imag_oferta'] . "' width='100px'></td>";
+                    echo "<td><img src='" . $ofer['imag_oferta'] . "' width='50px'></td>";
                     echo "<td>" . $ofer['desc_estado'] . "</td>";
-                    echo "<td><a href='" . getUrl("Oferta", "Oferta", "getUpdate", array("id_oferta" => $ofer['id_oferta'])) . "'><button class='btn btn-primary'>Editar</button></a></td>";
-                    echo "<td><a href='" . getUrl("Oferta", "Oferta", "getDelete", array("id_oferta" => $ofer['id_oferta'])) . "'><button class='btn btn-danger'>Eliminar</button></a></td>";
+                    echo "<td><a href='" . getUrl("Oferta", "Oferta", "getUpdate", array("id_oferta" => $ofer['id_oferta'])) . "'><button class='btn btn-outline-primary'>Editar</button></a></td>";
+                    echo "<td><a href='" . getUrl("Oferta", "Oferta", "getDelete", array("id_oferta" => $ofer['id_oferta'])) . "'><button class='btn btn-outline-danger'>Eliminar</button></a></td>";
                     echo "</tr>";
                 }
             ?>
         </tbody>
     </table>
 </div>
+<br>

@@ -141,7 +141,7 @@
                 $img_vieja = $_POST['img_vieja'];
                 unlink("$img_vieja");
             }
-            $sql = "UPDATE t_noticia SET desc_noticia='$desc_noticia', cod_tipo_noti=$cod_tipo_noti,cod_estado=$cod_estado,img_noticia='$ruta' WHERE cod_noticia=$cod_noticia";
+            $sql = "UPDATE t_noticia SET desc_noticia='$desc_noticia', cod_tipo_noti=$cod_tipo_noti,cod_estado=$cod_estado,img_noticia=$ruta WHERE cod_noticia=$cod_noticia";
         } else {
             $sql = "UPDATE t_noticia SET desc_noticia='$desc_noticia', cod_tipo_noti=$cod_tipo_noti,cod_estado=$cod_estado,img_noticia=$ruta WHERE cod_noticia=$cod_noticia";
         }

@@ -9,16 +9,19 @@
             <div class="row">
                 <div class="col-md-4 form-group">
                     <label>Descripción oferta</label>
-                    <input type="text" name="desc_oferta" class="form-control" placeholder="Descripción">
+                    <input value="<?php echo $ofer['id_oferta'] ?>" type="hidden" name="id_oferta">
+                    <input value="<?php echo $ofer['desc_oferta'] ?>" type="text" name="desc_oferta" class="form-control" placeholder="Descripción">
+            
+
                 </div>
 
                 <div class="col-md-4 form-group">
                     <label>Fecha inicio</label>
-                    <input type="date" name="fech_ini_oferta" class="form-control" placeholder="Fecha inicio">
+                    <input value="<?php echo $ofer['fech_ini_oferta'] ?>" type="date" name="fech_ini_oferta" class="form-control" placeholder="Fecha inicio">
                 </div>
                 <div class="col-md-4 form-group">
                     <label>Fecha final</label>
-                    <input type="date" name="fech_fin_oferta" class="form-control" placeholder="Fecha final">
+                    <input  value="<?php echo $ofer['fech_fin_oferta'] ?>" type="date" name="fech_fin_oferta" class="form-control" placeholder="Fecha final">
                 </div>
 
                 <div class=" form-group col-md-4 mt-4">
@@ -40,7 +43,7 @@
                 <div class="col-md-8">
                     <label>.</label>
                     <div id="cambiarImagen">
-                        <img class="d-block" id="imagen" src="<?php echo $noti['img_noticia'] ?>" width="150px">
+                        <img class="d-block" id="imagen" src="<?php echo $ofer['imag_oferta'] ?>" width="50px">
                         <button type="button" id="cambioDeImagen" class="btn btn-outline-secondary mt-2">Cambiar imagen</button>
                     </div>
                 </div>

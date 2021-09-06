@@ -16,8 +16,10 @@
 						<li class="main_nav_item"><a href="index.php">Inicio</a></li>
 						<li class="main_nav_item"><a href="login.php">Sobre nosotros</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("LineaTecnologica", "LineaTecnologica", "consult") ?>">Línea Tecnológica</a></li>
-						<li class="main_nav_item"><a href="<?php echo getUrl("ProgramaArea", "ProgramaArea", "consult") ?>">Programa Ärea</a></li>
-						<li class="main_nav_item"><a href="<?php echo getUrl("Oferta", "Oferta", "consult") ?>">OFERTAS</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("ProgramaArea", "ProgramaArea", "consult") ?>">Área de Programa</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("ProgramaNivel", "ProgramaNivel", "consult") ?>">Nivel de Programa</a></li>
+
+						<li class="main_nav_item"><a href="<?php echo getUrl("Oferta", "Oferta", "consult") ?>">Ofertas</a></li>
 
 						<li class="main_nav_item"><a href="login.php">jj</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia", "Noticia", "getInsert") ?>">Noticias</a></li>
