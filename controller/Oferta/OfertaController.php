@@ -109,7 +109,7 @@ class OfertaController{
         $desc_oferta = $_POST['desc_oferta'];
         $fech_ini_oferta = $_POST['fech_ini_oferta'];
         $fech_fin_oferta = $_POST['fech_fin_oferta'];
-        $id_estado = $_POST['id_estado'];
+      
 
         if (isset($_FILES['imag_oferta']['name'])) {
             $imag_oferta = $_FILES['imag_oferta']['name'];
@@ -120,15 +120,15 @@ class OfertaController{
                 $img_vieja = $_POST['img_vieja'];
                 unlink("$img_vieja");
             }
-            //$sql = "UPDATE t_oferta SET desc_oferta='$desc_oferta',id_estado=$id_estado,imag_oferta='$ruta' WHERE id_oferta=$id_oferta";
+            $sql = "UPDATE t_oferta SET desc_oferta='$desc_oferta', fech_ini_oferta=$fech_ini_oferta, fech_fin_oferta=$fech_fin_oferta, imag_oferta='$ruta' where id_oferta=$id_oferta";
+
         } else {
-            $sql = "UPDATE t_oferta,t_estado SET desc_oferta='$desc_oferta',$fech_ini_oferta=fech_ini_oferta, $fech_fin_oferta=fech_fin_oferta,
-             id_estado=$id_estado,imag_oferta='$ruta' ";
+            $sql = "UPDATE t_oferta SET desc_oferta='$desc_oferta', fech_ini_oferta=$fech_ini_oferta, fech_fin_oferta=$fech_fin_oferta, imag_oferta='$ruta' where id_oferta=$id_oferta";
         }
         $ejecutar = $obj->consult($sql);
 
         if ($ejecutar) {
-            $_SESSION['mensaje'] = "Se editó la ofereta <b>$desc_oferta</b> exitosamente";
+            $_SESSION['mensaje'] = "Se editó la oferta <b>$desc_oferta</b> exitosamente";
             redirect(getUrl("Oferta", "Oferta", "consult"));
         } else {
             echo "Ops, ha ocurrido un error inesperado";

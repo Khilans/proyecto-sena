@@ -1,75 +1,52 @@
-<div class="jumbotron mt-4">
-    <h2 class="display-4">Editar noticia</h2>
-</div>
 <div class="container">
+    <div class="jumbotron mt-4">
+        <h2 class="display-4">Editar área</h2>
+    </div>
     <?php
-    foreach ($noticias as $noti){
+    foreach ($progarea as $prog) {
     ?>
-    <form action="<?php echo getUrl("Noticia","Noticia","postUpdate");?>" method="post">
-        <div class="row">
-            <div class="form-group col-md-7">
-                <label>Descripcion</label>
-                <input type="hidden" name="cod_noticia" value="<?php echo $noti['cod_noticia']; ?>">
-                <input type="text" name="desc_noticia" class="form-control" value="<?php echo $noti['desc_noticia']; ?>">
-              
-            </div> 
-            <div class="form-group col-md-7">
-                <label>Titulo</label>
-                <input type="text" name="titulo_noticia" class="form-control" value="<?php echo $noti['titulo_noticia']; ?>">
-            </div>
-            <div class="col-md-4">
-                <label>Imagen</label>
-                <div id="cambiarImagen">
+        <form action="<?php echo getUrl("ProgramaArea", "ProgramaArea", "postUpdate"); ?>" method="post">
+            <div class="row">
+                <div class="col-md-4 form-group">
+                    <label>Área</label>
+                    <input value="<?php echo $prog['prog_area_desc'] ?>" type="text" name="prog_area_desc" class="form-control" placeholder="Descripción">
+                    <input value="<?php echo $prog['prog_area_cod'] ?>" type="hidden" name="prog_area_cod" class="form-control"">
 
-                    <img class="d-block" id="imagen" src="<?php echo $noti['img_noticia'] ?>" width="150px">
-                    <button type="button" id="cambioDeImagen" class="btn btn-primary mt-3">Cambiar imagen</button>
+                </div>
+		
+		         <div class=" col-md-4 form-group">
+                    <label>Línea tecnológica</label>
+                    <select name="lin_tec_cod" class="form-control">
+                        <option value="">Seleccione...</option>
+
+                        <?php
+                        foreach ($lineatecnologica as $linea) {
+                            
+                           if ($linea['lin_tec_cod'] == $prog['lin_tec_cod']) {
+                            
+                               echo "<option value='".$linea['lin_tec_cod']."' selected>".$linea['lin_tec_desc']."</option>";
+                           }else{
+                               echo "<option value='".$linea['lin_tec_cod']."' >".$linea['lin_tec_desc']."</option>";
+                           }
+                        }
+                        ?>
+                    </select>
+                </div> 
+
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <input type="submit" value="Enviar" class="btn btn-success">
+                    <a href="<?php echo getUrl("ProgramaArea", "ProgramaArea", "consult"); ?>"><button type="button" class="btn btn-outline-primary">Volver</button></a>
                 </div>
             </div>
-            <div class=" form-group col-md-4">
-                <label>Tipo de noticia</label>
-                <select name="cod_tipo_noti" class="form-control">
-                    <option value="">Seleccione...</option>
-                    <?php
-                    foreach ($tipo_noticias as $tipo_not) {
-                        if ($tipo_not['cod_tipo_noti'] == $noti['cod_tipo_noti']) {
 
-                            echo "<option value='" . $tipo_not['cod_tipo_noti'] . "'selected>" . $tipo_not['desc_tipo_noti'] . "</option>";
-                        } else {
-                            echo "<option value='" . $tipo_not['cod_tipo_noti'] . "'>" . $tipo_not['desc_tipo_noti'] . "</option>";
-                        }
-                    }
-                    ?>
-                </Select>
-            </div>
-            <div class=" form-group col-md-4">
-                <label>Estado</label>
-                <select name="cod_estado" class="form-control">
-                    <option value="">Seleccione...</option>
-                    <?php
-                    foreach ($estados as $estd) {
-                        if ($estd['cod_estado'] == $noti['cod_estado']) {
 
-                            echo "<option value='" . $estd['cod_estado'] . "'selected>" . $estd['desc_estado'] . "</option>";
-                        } else {
-                            echo "<option value='" . $estd['cod_estado'] . "'>" . $estd['desc_estado'] . "</option>";
-                        }
-                    }
-                    ?>
-                </Select>
-            </div>  
-        </div> 
-        <div class="row">
-            <div class="col-md-4">
-                <input type="submit" value="enviar" class="btn btn-success">
-            </div>
-        </div>
-    </form>
+        </form>
 
     <?php
 
     }
     ?>
 </div>
-
-
-
+<br>
