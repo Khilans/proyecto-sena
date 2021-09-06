@@ -19,7 +19,20 @@
                 echo "<td><a href='" . getUrl("LineaTecnologica", "LineaTecnologica", "getDelete", array("lin_tec_cod" => $linea['lin_tec_cod'])) . "'><button class='btn btn-danger'>Eliminar</button></a></td>";
                 echo "</tr>";
             }
+            if (isset($_SESSION['mensaje'])) {
+                ?>
+                    <div class="alert alert-warning alert-dismissible fade show mt-4" id="alerta" role="alert">
+                        <?= $_SESSION['mensaje'] ?>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                <?php
+                    unset($_SESSION['mensaje']);
+                }
             ?>
+            
         </tbody>
+
     </table>
 </div>
