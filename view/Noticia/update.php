@@ -59,6 +59,7 @@
         <div class="row">
             <div class="col-md-4"> 
                 <input type="submit" value="enviar" class="btn btn-success">
+                <a href="<?php echo getUrl("Noticia","Noticia","consult") ?>"><button type="button" class="btn btn-success">Cancelar</button></a>
             </div>
         </div>
         

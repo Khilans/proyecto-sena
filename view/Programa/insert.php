@@ -25,18 +25,18 @@
 					?>
 				</select>
 			</div>
-			<!-- <div class="col-md-4 form-group">
+			 <div class="col-md-4 form-group">
 				<label>Nivel</label>
-				<select name="id_estado" class="form-control">
+				<select name="id_prog_niv" class="form-control">
 					<option value="">Seleccione...</option>
 
 					<?php
-					/* foreach ($ as $) {
-						echo "<option value='" . $[''] . "'>" . $[''] . "</option>";
-					} */
+					 foreach ($nivel as $niv) {
+						echo "<option value='" . $niv['id_prog_niv'] . "'>" . $niv['nom_prog_niv'] . "</option>";
+					} 
 					?>
 				</select>
-			</div> -->
+			</div> 
 
 		</div>
 		<div class="row">

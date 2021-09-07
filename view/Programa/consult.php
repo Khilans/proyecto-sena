@@ -5,6 +5,7 @@
             <tr>
                 <th>Id</th>
                 <th>Linea</th>
+                <th>Nivel</th>
                 <th>Nombre</th>
 				<th>descripcion</th>
                 <th>Editar</th>
@@ -17,6 +18,7 @@
                 echo "<tr>";
                  echo "<td>" . $prog['id_prog'] . "</td>"; 
                 echo "<td>" . $prog['lin_tec_desc'] . "</td>";
+                echo "<td>" . $prog['nom_prog_niv'] . "</td>";
                 echo "<td>" . $prog['nom_prog'] . "</td>";
                 echo "<td>" . $prog['desc_prog'] . "</td>";
                  echo "<td><a href='" . getUrl("Programa", "Programa", "getUpdate", array("id_prog" => $prog['id_prog'])) . "'><button class='btn btn-primary'>Editar</button></a></td>";
