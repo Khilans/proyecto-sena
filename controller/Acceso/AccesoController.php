@@ -10,7 +10,7 @@
             $sql="SELECT * FROM t_usuario WHERE usu_ndocumento=$documento";
             $usuario=$obj->consult($sql);
             if(mysqli_num_rows($usuario)>0){
-
+                
                 $usu_pass=mysqli_fetch_array($usuario);
                 
                 $verify=password_verify($contraseña,$usu_pass['usu_pass']);
