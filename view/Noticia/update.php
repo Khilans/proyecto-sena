@@ -10,7 +10,7 @@
             <div class="form-group col-md-7">
                 <label>Descripcion</label>
                 <input type="hidden" name="cod_noticia" value="<?php echo $noti['cod_noticia']; ?>">
-                <input type="text" name="desc_noticia" class="form-control" value="<?php echo $noti['desc_noticia']; ?>">     
+                <textarea name="desc_noticia" rows="1" cols="50" placeholder="descripcion de la noticia" value="<?php echo $noti['desc_noticia']; ?>"></textarea>
             </div> 
             <div class="form-group col-md-7">
                 <label>Titulo</label>

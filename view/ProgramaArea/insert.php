@@ -7,11 +7,7 @@
 			<div class="col-md-4 form-group">
 				<label>Descripción</label>
 				<input type="text" name="prog_area_desc" class="form-control" placeholder="Descripción">
-			</div>
-			<div class="col-md-4 form-group">
-				<label>Código</label>
-				<input type="hidden" name="prog_area_cod" class="form-control"">
-		</div>
+</div>
 		
 		<div class=" col-md-4 form-group">
 				<label>Línea tecnológica</label>
