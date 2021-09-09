@@ -46,13 +46,21 @@
         public function getDeleteModal(){
             $obj=new UsuariosModel;
             $id=$_GET['id'];
-            $sql="SELECT usu_nombre, usu_id, usu_nombre2, usu_apellido, usu_correo, cod_tipo_doc, usu_ndocumento, cod_rol FROM t_usuario WHERE usu_id=$id";
+            $sql="SELECT u.usu_nombre, u.usu_nombre2, u.usu_id, u.usu_apellido, td.nom_tipo_doc, u.cod_tipo_doc, u.usu_ndocumento, u.usu_correo FROM t_usuario u, t_tipodocumento td WHERE usu_id=$id AND td.cod_tipo_doc=u.cod_tipo_doc ";
             $usuarios=$obj->consult($sql);
             include_once '../view/usuarios/modalDelete.php';
         }
 
         public function postDelete(){
-            
+            $obj=new UsuariosModel;
+            $id=$_GET['id'];
+            $sql="UPDATE t_usuario SET id_estado=2 WHERE usu_id=$id";
+            $ejecutar=$obj->update($sql);
+            if($ejecutar){
+                redirect(getUrl("Usuarios","Usuarios","consult"));
+            }else{
+                echo "Fallo al actualizar el estado";
+            }
         }
 
         public function state(){
