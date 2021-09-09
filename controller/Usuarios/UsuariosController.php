@@ -15,7 +15,7 @@
             $id=$_SESSION['user_id'];
             $sql="SELECT * FROM t_usuario WHERE usu_id=$id";
             $usuario=$obj->consult($sql);
-            include_once '../view/usuarios/Modal.php';
+            include_once '../view/usuarios/profile.php';
         }
 
         public function getUpdateModal(){
