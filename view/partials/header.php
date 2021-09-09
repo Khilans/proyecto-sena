@@ -27,6 +27,7 @@
 						<li class="main_nav_item"><a href="<?php echo getUrl("Registro", "Registro", "getRegister") ?>">Registro</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia", "Noticia", "consult") ?>">Blog</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Programa", "Programa", "getinsert") ?>">programa</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("ResultadoAp", "ResultadoAp", "getinsert") ?>">REsultadoAP</a></li>
 					</ul>
 				</div>
 			</nav>
