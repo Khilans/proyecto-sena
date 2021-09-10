@@ -33,10 +33,8 @@ class OfertaController{
         move_uploaded_file($_FILES['imag_oferta']['tmp_name'], $ruta);
         $id = $obj->autoincrement("t_oferta", "id_oferta");
 
+
         $sql = "INSERT INTO t_oferta VALUES($id,$usu_id, '$desc_oferta', '$fech_ini_oferta', '$fech_fin_oferta', '$ruta', $id_estado)";
-
-        $sql = "INSERT INTO t_oferta VALUES($id, $usu_id, '$desc_oferta', '$fech_ini_oferta', '$fech_fin_oferta', '$ruta', $id_estado)";
-
         $ejecutar = $obj->update($sql);
 
         if ($ejecutar) {
@@ -44,7 +42,7 @@ class OfertaController{
             redirect(getUrl("Oferta", "Oferta", "consult"));
         } else {
             echo "Ops, ha ocurrido un error";
-            dd($sql);
+            
         }
     }
 

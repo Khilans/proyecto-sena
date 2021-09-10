@@ -18,11 +18,11 @@
 						<div class="logo_container">
 							<div class="logo">
 								<img src="images/logo.png" alt="">
-								<span>course</span>
+								<span>VISION??</span>
 							</div>
 						</div>
 
-						<p class="footer_about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum, tempor lacus.</p>
+						<p class="footer_about_text">Aquí cambiaría</p>
 
 					</div>
 
@@ -96,8 +96,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 				</div>
 				<div class="footer_social ml-sm-auto">
 					<ul class="menu_social">
-						<li class="menu_social_item"><a href="#"><i class="fab fa-pinterest"></i></a></li>
-						<li class="menu_social_item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
 						<li class="menu_social_item"><a href="#"><i class="fab fa-instagram"></i></a></li>
 						<li class="menu_social_item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
 						<li class="menu_social_item"><a href="#"><i class="fab fa-twitter"></i></a></li>
