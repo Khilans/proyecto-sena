@@ -17,6 +17,7 @@
                 if($verify){
                     foreach ($usuario as $user) {
                         $_SESSION['user_id']=$user['usu_id'];
+                        $_SESSION['nombre']=$user['usu_nombre'];
                     }
                     echo "Sesion iniciada correctamente";
                 }else{

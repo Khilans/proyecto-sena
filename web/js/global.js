@@ -72,6 +72,20 @@ $(document).ready(function(){
         });
     });
 
+    $(document).on("click","#modalProfile",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-usu_id");
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            type:"GET",
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
     $("#alerta").delay(5000).fadeOut();
 
     $(document).on("click","#agregar",function(){
