@@ -24,7 +24,6 @@ class OfertaController{
         $fech_fin_oferta = $_POST['fech_fin_oferta'];
         $imag_oferta = $_FILES['imag_oferta']['name'];
 
-
         $usu_id = $_SESSION['user_id'];
 
         $id_estado = $_POST['id_estado'];
@@ -33,8 +32,16 @@ class OfertaController{
         move_uploaded_file($_FILES['imag_oferta']['tmp_name'], $ruta);
         $id = $obj->autoincrement("t_oferta", "id_oferta");
 
+<<<<<<< HEAD
 
         $sql = "INSERT INTO t_oferta VALUES($id,$usu_id, '$desc_oferta', '$fech_ini_oferta', '$fech_fin_oferta', '$ruta', $id_estado)";
+=======
+        //$sql = "INSERT INTO t_oferta VALUES($id,$usu_id, '$desc_oferta', $id_estado, '$fech_ini_oferta', '$fech_fin_oferta', '$ruta')";
+
+        $sql = "INSERT INTO t_oferta VALUES($id, $usu_id, '$desc_oferta', '$fech_ini_oferta', '$fech_fin_oferta', '$ruta', $id_estado)";
+
+
+>>>>>>> 4e2549d10ed06ba7377c327ec5c09a1748cec698
         $ejecutar = $obj->update($sql);
 
         if ($ejecutar) {

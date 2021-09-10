@@ -9,11 +9,11 @@
             <tr>
                 <th>Id</th>
                 <th>Usuario</th>
-                <th>Descripción de la oferta</th>
-                <th>Fecha de inicio</th>
-                <th>fecha final</th>
-                <th>Imagen</th>
                 <th>Estado</th>
+                <th>Descripción de la oferta</th>
+                <th>Fecha inicial</th>
+                <th>fecha final</th>
+                <th>Imagen</th> 
                 <th>Editar</th>
                 <th>Eliminar</th>
             </tr>
@@ -25,11 +25,12 @@
                     echo "<tr>";
                     echo "<td>" . $ofer['id_oferta'] . "</td>";
                     echo "<td>" . $ofer['usu_id'] . "</td>";
+                    echo "<td>" . $ofer['desc_estado'] . "</td>";
                     echo "<td>" . $ofer['desc_oferta'] . "</td>";       
                     echo "<td>" . $ofer['fech_ini_oferta'] . "</td>";
                     echo "<td>" . $ofer['fech_fin_oferta'] . "</td>";                  
                     echo "<td><img src='" . $ofer['imag_oferta'] . "' width='50px'></td>";
-                    echo "<td>" . $ofer['desc_estado'] . "</td>";
+                  
                     echo "<td><a href='" . getUrl("Oferta", "Oferta", "getUpdate", array("id_oferta" => $ofer['id_oferta'])) . "'><button class='btn btn-outline-primary'>Editar</button></a></td>";
                     echo "<td><a href='" . getUrl("Oferta", "Oferta", "getDelete", array("id_oferta" => $ofer['id_oferta'])) . "'><button class='btn btn-outline-danger'>Eliminar</button></a></td>";
                     echo "</tr>";

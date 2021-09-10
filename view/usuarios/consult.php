@@ -44,6 +44,9 @@ include_once '../view/partials/modal.php';
                     <button class='btn btn-danger btn-sm' id='modalDelete' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Usuarios","Usuarios","getDeleteModal",false,"ajax")."' data-usu_id='".$user['usu_id']."'>
                     <i class='fi-rr-user-delete'></i>                   
                     </button>
+                    <button class='btn btn-info btn-sm' id='modalDelete' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Usuarios","Usuarios","getDeleteModal",false,"ajax")."' data-usu_id='".$user['usu_id']."'>
+                    <i class='fi-rr-interrogation'></i>                   
+                    </button>
                     </td>";
                 echo "</tr>";
                 }

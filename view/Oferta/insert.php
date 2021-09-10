@@ -4,10 +4,23 @@
 	</div>
 	<form action="<?php echo getUrl("Oferta", "Oferta", "postInsert"); ?>" method="post" enctype="multipart/form-data">
 		<div class="row">
-		    
+			
 			<div class="col-md-4 form-group">
 				<label>Descripción oferta</label>
 				<input type="text" name="desc_oferta" class="form-control" placeholder="Descripción">
+			</div>
+
+			<div class="col-md-4 form-group">
+				<label>Estado</label>
+				<select name="id_estado" class="form-control">
+					<option value="">Seleccione...</option>
+
+					<?php
+					foreach ($estados  as $estd) {
+						echo "<option value='" . $estd['id_estado'] . "'>" . $estd['desc_estado'] . "</option>";
+					}
+					?>
+				</select>
 			</div>
 
 			<div class="col-md-4 form-group">
@@ -23,18 +36,7 @@
 				<input type="file" name="imag_oferta">
 			</div>
 
-			<div class="col-md-4 form-group">
-				<label>Estado</label>
-				<select name="id_estado" class="form-control">
-					<option value="">Seleccione...</option>
 
-					<?php
-					foreach ($estados  as $estd) {
-						echo "<option value='" . $estd['id_estado'] . "'>" . $estd['desc_estado'] . "</option>";
-					}
-					?>
-				</select>
-			</div>
 
 		</div>
 		<div class="row">

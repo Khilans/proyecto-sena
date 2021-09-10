@@ -19,13 +19,16 @@
                         $_SESSION['user_id']=$user['usu_id'];
                         $_SESSION['nombre']=$user['usu_nombre'];
                     }
-                    echo "Sesion iniciada correctamente";
+                    $_SESSION['mensaje']="Sesión iniciada exitosamente";
+                    redirect("index.php");
                 }else{
-                    echo "Correo y/o contraseña incorrectos";
-                    redirect("loginn.php");
+                    $_SESSION['mensaje']="Correo y/o contraseñas incorrectos";
+                    redirect("login.php");
                 }
             }else{
-                echo "No se encuentra registrado";
+                $_SESSION['mensaje']="No se encuentra registrado";
+                redirect("login.php");
+
             }
         }
 
