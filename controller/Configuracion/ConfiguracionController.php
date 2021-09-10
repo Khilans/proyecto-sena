@@ -4,7 +4,9 @@
 
 
         
-        public function datos(){}
+        public function datos(){
+            
+        }
 
         public function insert(){
             
