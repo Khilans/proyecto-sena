@@ -2,7 +2,7 @@
 foreach ($usuario as $usu) {
   ?>
 <div class="modal-body">
-    <form action="<?php echo getUrl("Usuarios","Usuarios","postUpdate")?>" method="post" enctype="multipart/form-data">
+    <form action="<?php echo getUrl("Usuarios","Usuarios","postUpdateProfile")?>" method="post" enctype="multipart/form-data">
         <div class="alert alert-info" role="alert">
             <h4 class="alert-heading text-center">¡Hola, <?php echo $_SESSION['nombre']; ?>!</h4>
             <p class="text-center">Aquí puedes actualizar tus datos personales.</p>

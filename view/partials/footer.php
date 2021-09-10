@@ -1,3 +1,8 @@
+<?php 
+/*$sql="SELECT * FROM t_usuario";
+$consulta=$obj->consult($sql);*/
+
+?>
 	<!-- Footer -->
 <br>
 <br>
