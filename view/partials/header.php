@@ -31,6 +31,8 @@ include_once '../view/partials/modal.php';
 						<li class="main_nav_item"><a href="<?php echo getUrl("Programa", "Programa", "getinsert") ?>">programa</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Competencia", "Competencia", "consult") ?>">Competencia</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("ResultadoAp", "ResultadoAp", "getinsert") ?>">REsultadoAP</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("Configuracion", "Configuracion", "getInsert") ?>">Configuracion</a></li>
+						
 					</ul>
 				</div>
 			</nav>
