@@ -2,7 +2,7 @@
 			 
 <div class="jumbotron">
   <h1 class="text-center">Bienvenidos</h1>
-  <p class="text-center">Bienvenidos al panel de control.</p>
+  <p class="text-center">Bienvenidos al panel de control. <?php echo $_SESSION['rol']; ?></p>
 </div>
     <hr>
 		<ul>
