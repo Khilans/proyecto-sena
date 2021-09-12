@@ -40,7 +40,10 @@
 								<p><?php echo $p['desc_foro']; ?></p>
 							</div>
 							<div class="news_post_button text-center trans_200">
-								<a href="<?php echo getUrl("Foro","Foro","post"); ?>">Ver más</a>
+								<form action="<?php echo getUrl("Foro","Foro","post"); ?>" method="post">
+									<input type="hidden" name="foro_id" value="<?php echo $p['cod_foro'] ?>">
+									<button type="submit" class="btn btn-warning" value="Enviar"></button>
+								</form>
 							</div>
 						</div>
 					</div>

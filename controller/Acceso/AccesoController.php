@@ -21,9 +21,14 @@
                         $_SESSION['nombre2']=$user['usu_nombre2'];
                         $_SESSION['apellidos']=$user['usu_apellido'];                  
                         $_SESSION['correo']=$user['usu_correo'];
+                        $_SESSION['rol']=$user['cod_rol'];
                     }
                     $_SESSION['mensaje']="Sesión iniciada exitosamente";
-                    redirect("index.php");
+                    if($_SESSION['rol']==1){
+                        redirect("../admin/web/index.php");
+                    }else{
+                        redirect("index.php");
+                    }
                 }else{
                     $_SESSION['mensaje']="Correo y/o contraseñas incorrectos";
                     redirect("login.php");

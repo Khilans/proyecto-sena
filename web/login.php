@@ -43,7 +43,7 @@ include_once '../lib/helpers.php';
                     <button type="submit" class="btn btn-warning">Ingresar</button>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-warning"><a href="<?php echo getUrl("Registro", "Registro", "getRegister", false, "ajax"); ?>">Registrarse</a></button>
+                <a href="<?php echo getUrl("Registro", "Registro", "getRegister"); ?>"><button type="button" class="btn btn-warning">Registrarse</button></a>
                 </div>
             
         </div>
