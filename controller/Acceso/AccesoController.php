@@ -18,6 +18,9 @@
                     foreach ($usuario as $user) {
                         $_SESSION['user_id']=$user['usu_id'];
                         $_SESSION['nombre']=$user['usu_nombre'];
+                        $_SESSION['nombre2']=$user['usu_nombre2'];
+                        $_SESSION['apellidos']=$user['usu_apellido'];                  
+                        $_SESSION['correo']=$user['usu_correo'];
                     }
                     $_SESSION['mensaje']="Sesión iniciada exitosamente";
                     redirect("index.php");

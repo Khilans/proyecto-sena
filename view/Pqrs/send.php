@@ -13,7 +13,6 @@
 
 <div class="container">  
 <!-- Contact -->
-
 	<div class="contact">
 		<div class="container">
 			<div class="row">
@@ -21,14 +20,35 @@
 					
 					<!-- Contact Form -->
 					<div class="contact_form">
-						<div class="contact_title">Get in touch</div>
+						<div class="contact_title">Radica tu PQRSF</div>
 
 						<div class="contact_form_container">
 							<form action="post">
-								<input id="contact_form_name" class="input_field contact_form_name" type="text" placeholder="Name" required="required" data-error="Name is required.">
-								<input id="contact_form_email" class="input_field contact_form_email" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
+                                <?php 
+                                if(isset($_SESSION['user_id'])){                     
+                                ?>
+								<div class="row">
+								    <input class="input_field contact_form_name col-md-4" name="usuario" type="text" value="<?php echo $_SESSION['nombre']; ?>" required="required" data-error="Name is required." disabled>
+								    <input class="input_field contact_form_email col-md-4 mx-1" name="usuario_correo" type="email" value="<?php echo $_SESSION['correo']; ?>" required="required" data-error="Valid email is required." disabled>
+									<select class="input_field col-md-3" name="tipopqrsf" id="">
+										<option value="">Seleccione</option>
+										<?php 
+										foreach($tipoPQRSF as $tpq){
+											echo "<option value='".$tpq['cod_pqrsf_tipo']."'>".$tpq['desc_pqrsf_tipo']."</option>";						
+										}
+										?>
+									</select>
+								</div>
+                                <?php
+                                }else{
+                                    ?>
+								    <input class="input_field contact_form_name" type="text" placeholder="Name" required="required" data-error="Name is required.">
+								    <input class="input_field contact_form_email" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
+                                    <?php
+                                }
+                                ?>
 								<textarea id="contact_form_message" class="text_field contact_form_message" name="message" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
-								<button id="contact_send_btn" type="button" class="contact_send_btn trans_200" value="Submit">send message</button>
+								<button id="contact_send_btn" type="button" class="contact_send_btn trans_200" value="Submit">Radicar</button>
 							</form>
 						</div>
 					</div>

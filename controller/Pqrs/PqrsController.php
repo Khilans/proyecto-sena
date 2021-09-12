@@ -11,8 +11,9 @@
 
         public function getSend(){
             $obj=new PqrsModel;
-
-
+            $sql="SELECT * FROM t_pqrsftipo";
+            $tipoPQRSF=$obj->consult($sql);
+            
             include_once '../view/Pqrs/send.php';
         }
 
