@@ -4,14 +4,15 @@ include_once '../lib/helpers.php';
         echo "<body>";
             echo "<div class='super_container'>";
                 include_once '../view/partials/header.php';
-                echo "<br><br><br><br><br><br><br><br>";
-                include_once '../view/partials/menu.php';
+                
+                
                 if(isset($_GET['modulo'])){
                     resolve();
                 }else{
                     include_once '../view/partials/home.php';
                     include_once '../view/partials/popular.php';
                     include_once '../view/partials/register.php';
+                    
                 }
                 include_once '../view/partials/footer.php';
             echo "</div>";
