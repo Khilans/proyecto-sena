@@ -2,7 +2,7 @@
 			 
 <div class="jumbotron">
   <h1 class="text-center">Bienvenidos</h1>
-  <p class="text-center">Bienvenidos al panel de control. <?php echo $_SESSION['rol']; ?></p>
+  <p class="text-center">Bienvenidos al panel de control</p>
 </div>
     <hr>
 		<ul>
@@ -19,7 +19,7 @@
 					
 					<a href="<?php echo getUrl("Noticia", "Noticia", "consult") ?>">
 					   <div style="background:#238276">
-						<span class="fa fa-users"></span>
+					   <span class="fa fa-users"></span>
 					    <p>NOTICIAS</p>
 					   </div>
 					</a>

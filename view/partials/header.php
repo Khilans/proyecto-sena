@@ -18,13 +18,25 @@ include_once '../view/partials/modal.php';
 					<ul class="main_nav_list">
 						<li class="main_nav_item"><a href="index.php">Inicio</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Pqrs", "Pqrs", "getSend") ?>">PQRSF</a></li>
+<<<<<<< HEAD
 						
+=======
+>>>>>>> 9b809ba157deeb426591f61c30179aa2a0ba73b5
 						<li class="main_nav_item"><a href="<?php echo getUrl("Foro", "Foro", "feed") ?>">Foros</a></li>
 						
 						<li class="main_nav_item"><a href="<?php echo getUrl("Oferta", "Oferta", "consult") ?>">Ofertas</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia", "Noticia", "getInsert") ?>">Noticias</a></li>
+<<<<<<< HEAD
 						
 						
+=======
+						<li class="main_nav_item"><a href="<?php echo getUrl("Registro", "Registro", "getRegister") ?>">Registro</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia", "Noticia", "consult") ?>">Blog</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("Programa", "Programa", "getinsert") ?>">programa</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("Competencia", "Competencia", "consult") ?>">Competencia</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("ResultadoAp", "ResultadoAp", "getinsert") ?>">REsultadoAP</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("Configuracion", "Configuracion", "getInsert") ?>">Configuracion</a></li>
+>>>>>>> 9b809ba157deeb426591f61c30179aa2a0ba73b5
 						
 					</ul>
 				</div>

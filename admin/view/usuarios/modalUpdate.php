@@ -22,17 +22,16 @@ foreach ($usuarios as $usu) {
             <div class="col-md-6 form-group">
                 <label>Tipo de documento</label>
                 <select class="form-control" name="cod_tipo_doc">
-                    <option value="">Seleccione...</option>
-                     <?php
-                        foreach ($tipodocumento as $tipodocu) {
-                            if ($usu['cod_tipo_doc']==$tipodocu['cod_tipo_doc']){
-                                $select="selected";
-                            }else{
-                                $select="";
-                            }
-                            echo "<option value='".$tipodocu['cod_tipo_doc']."' $select>".$tipodocu ['nom_tipo_doc']."</option>";
+                    <?php foreach($tipos_documentos as $td){
+                        if($usu['cod_tipo_doc']==$td['cod_tipo_doc']){
+                            echo "<option value='".$usu['cod_rol']."' selected>".$usu['nom_tipo_doc']."</option>";
+                        }else{
+                        ?>
+                            <option value="<?php echo $td['cod_tipo_doc'];?>"><?php echo $td['nom_tipo_doc']; ?></option>
+                    <?php
                         }
-                    ?>    
+                        }
+                    ?>
                 </select>
             </div>
         </div>

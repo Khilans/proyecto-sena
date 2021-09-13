@@ -81,6 +81,8 @@
             }
         }
 
+        
+
         public function getUpdate(){
 
             $obj = new NoticiaModel();

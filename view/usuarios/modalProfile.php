@@ -6,6 +6,8 @@ foreach ($usuario as $usu) {
         <div class="alert alert-info" role="alert">
             <h4 class="alert-heading text-center">¡Hola, <?php echo $_SESSION['nombre']; ?>!</h4>
             <p class="text-center">Aquí puedes actualizar tus datos personales.</p>
+            <p class="text-center">Tu rol actual es: <?php echo $usu['desc_rol']; ?></p>
+
         </div>
             <div class="row">
                 <div class="col-md-3 form-group">
