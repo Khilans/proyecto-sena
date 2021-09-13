@@ -23,6 +23,9 @@
 					
 					<div class="news_post_container">
 						<!-- News Post -->
+						<?php
+						foreach($foro as $f){
+						?>
 						<div class="news_post">
 							<div class="news_post_image">
 								<img src="images/news_1.jpg" alt="https://unsplash.com/@dsmacinnes">
@@ -36,26 +39,25 @@
 								</div>
 								<div class="news_post_title_container">
 									<div class="news_post_title">
-										<a href="news_post.html">Why do you need a qualification?</a>
+										<a href="news_post.html"><?php echo $f['titulo_foro']; ?></a>
 									</div>
 									<div class="news_post_meta">
-										<span class="news_post_author"><a href="#">By Christian Smith</a></span>
+										<span class="news_post_author"><a href="#">Por <?php echo $f['usu_nombre'] ?> <?php echo $f['usu_apellido'] ?></a></span>
 										<span>|</span>
 										<span class="news_post_comments"><a href="#">3 Comments</a></span>
 									</div>
 								</div>
 							</div>
 							<div class="news_post_text">
-								<p>In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum. Etiam eu purus nec eros varius luctus. Praesent finibus risus facilisis ultricies. Etiam eu purus nec eros varius luctus. Praesent finibus risus facilisis ultricies venenatis. Suspendisse fermentum sodales lacus, lacinia gravida elit dapibus sed. Cras in lectus elit. Maecenas tempus nunc vitae mi egestas venenatis. Aliquam rhoncus, purus in vehicula porttitor, lacus ante consequat purus, id elementum enim purus nec enim. In sed odio rhoncus, tristique ipsum id, pharetra neque. </p>
+								<p><?php echo $f['desc_foro'] ?></p>
 							</div>
 
-							<div class="news_post_quote">
-								<p class="news_post_quote_text"><span>E</span>tiam eu purus nec eros varius luctus. Praesent finibus risus facilisis ultricies venena tis. Suspendisse fermentum sodales lacus, lacinia gravida elit.</p>
-							</div>
+						
 
-							<p class="news_post_text" style="margin-top: 59px;">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum. Etiam eu purus nec eros varius luctus. Praesent finibus risus facilisis ultricies. Etiam eu purus nec eros varius luctus. Praesent finibus risus facilisis ultricies venenatis. Suspendisse fermentum sodales lacus, lacinia gravida elit dapibus sed. Cras in lectus elit. Maecenas tempus nunc vitae mi egestas venenatis. Aliquam rhoncus, purus in vehicula porttitor, lacus ante consequat purus, id elementum enim purus nec enim. In sed odio rhoncus, tristique ipsum id, pharetra neque. </p>
 						</div>
-
+					<?php 
+						}
+					?>
 					</div>
 					
 					<!-- Comments -->
@@ -64,6 +66,8 @@
 						<ul class="comments_list">
 							
 							<!-- Comment -->
+							<?php foreach($comentarios as $comentario){
+								?>
 							<li class="comment">
 								<div class="comment_container d-flex flex-row">
 									<div>
@@ -73,17 +77,19 @@
 									</div>
 									<div class="comment_content">
 										<div class="comment_meta">
-											<span class="comment_name"><a href="#">Jhan Sebastián</a></span>
+											<span class="comment_name"><a href="#"><?php echo $comentario['usu_nombre']; ?> <?php echo $comentario['usu_apellido']; ?></a></span>
 											<span class="comment_separator">|</span>
-											<span class="comment_date">Sept 11, 2021</span>
+											<span class="comment_date"><?php echo $comentario['fech_foro_com']; ?></span>
 											<span class="comment_separator">|</span>
 											<span class="comment_reply_link"><a href="#">Responder</a></span>
 										</div>
-										<p class="comment_text">Aliquam rhoncus, purus in vehicula porttitor, lacus ante consequat purus, id elementum enim purus nec enim. In sed odio rhoncus, tristique ipsum id, pharetra neque. </p>
+										<p class="comment_text"><?php echo $comentario['com_foro_com']; ?></p>
 									</div>
 								</div>
 							</li>
-
+							<?php
+							}
+							?>
 						</ul>
 
 					</div>
@@ -94,19 +100,12 @@
 						<div class="leave_comment_title">Deja un comentario</div>
 
 						<div class="leave_comment_form_container">
-							<form action="post">
-                                <?php
-                                if(isset($_SESSION['user_id'])){
-                                    ?>
-                                    <input id="comment_form_name" class="input_field contact_form_name" type="text" value="<?php echo $_SESSION['nombre'];?>" required="required" data-error="Name is required.">
-                                    <input id="comment_form_email" class="input_field contact_form_email" type="email" value="<?php echo $_SESSION['correo'];?>" required="required" data-error="Valid email is required.">
-                                   <?php
-                                    }else{
-                                    ?>
-                                <?php
-                                    }
-                                ?>
-                                <textarea id="comment_form_message" class="text_field contact_form_message" name="message" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
+							<form action="<?php echo getUrl("Foro","Foro","sendComment") ?>" method="post">
+								<?php foreach($foro as $f){
+									echo "<input type='hidden' name='foro_id' value='".$f['cod_foro']."'> ";
+								}
+								?>
+                                <textarea id="comment_form_message" class="text_field contact_form_message" name="comentario" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
 								<button id="comment_send_btn" type="submit" class="comment_send_btn trans_200" value="Submit">Enviar comentario</button>
 
 							</form>

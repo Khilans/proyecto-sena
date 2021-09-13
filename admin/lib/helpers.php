@@ -1,4 +1,7 @@
 <?php
+if(isset($_SESSION['rol'])!=1){
+    redirect("../../web/index.php");
+}
     session_start();
 
     function encrypt($pass){

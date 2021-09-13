@@ -46,8 +46,14 @@ include_once '../view/partials/modal.php';
 						</button>
 						<div class="dropdown-menu dropdown-menu-right">
 							<button class="dropdown-item text-center" type="button" id="modalUpdate" data-toggle="modal" data-target="#exampleModal" data-url="<?php echo getUrl("Usuarios","Usuarios","profile",false,"ajax"); ?>" data-usu_id="<?php echo $_SESSION['user_id']; ?>">Perfil</button>
-							<a href="<?php echo getUrl("Acceso","Acceso","logout"); ?>"><button class="dropdown-item text-center" type="button">Cerrar sesión</button></a>
 							<a href="<?php echo getUrl("Usuarios","Usuarios","mail",false,"ajax"); ?>"><button class="dropdown-item text-center">Correo</button></a>
+							<?php 
+								if($_SESSION['rol']==1){
+									echo "<a href='../admin/web/index.php'><button class='dropdown-item text-center' type='button'>Panel de control</button></a>";
+								}
+							?>
+							<a href="<?php echo getUrl("Acceso","Acceso","logout"); ?>"><button class="dropdown-item text-center" type="button">Cerrar sesión</button></a>
+
 						</div>
 					</div>
 				<?php
