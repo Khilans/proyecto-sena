@@ -54,7 +54,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo getUrl("Noticia", "Noticia", "consult") ?>">
-              <span data-feather="file"></span>
+              <span data-feather="book"></span>
               NOTICIAS
             </a>
           </li>
@@ -73,7 +73,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo getUrl("Pqrs", "Pqrs", "consult") ?>">
-              <span data-feather="file"></span>
+              <span data-feather="info"></span>
              PQRSF
             </a>
           </li>

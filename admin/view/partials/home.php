@@ -19,7 +19,7 @@
 					
 					<a href="<?php echo getUrl("Noticia", "Noticia", "consult") ?>">
 					   <div style="background:#238276">
-						<span class="fa fa-users"></span>
+					   <span class="fa fa-users"></span>
 					    <p>NOTICIAS</p>
 					   </div>
 					</a>
