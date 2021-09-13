@@ -10,7 +10,7 @@
             <div class="form-group col-md-7">
                 <label>Descripcion</label>
                 <input type="hidden" name="cod_noticia" value="<?php echo $noti['cod_noticia']; ?>">
-                <input type="text" name="desc_noticia" class="form-control" value="<?php echo $noti['desc_noticia']; ?>">     
+                <textarea name="desc_noticia" rows="1" cols="50" placeholder="descripcion de la noticia" value="<?php echo $noti['desc_noticia']; ?>"></textarea>
             </div> 
             <div class="form-group col-md-7">
                 <label>Titulo</label>
@@ -41,15 +41,15 @@
             </div>
             <div class=" form-group col-md-4">
                 <label>Estado</label>
-                <select name="cod_estado" class="form-control">
+                <select name="id_estado" class="form-control">
                     <option value="">Seleccione...</option>
                     <?php
                     foreach ($estados as $estd) {
-                        if ($estd['cod_estado'] == $noti['cod_estado']) {
+                        if ($estd['id_estado'] == $noti['id_estado']) {
 
-                            echo "<option value='" . $estd['cod_estado'] . "'selected>" . $estd['desc_estado'] . "</option>";
+                            echo "<option value='" . $estd['id_estado'] . "'selected>" . $estd['desc_estado'] . "</option>";
                         } else {
-                            echo "<option value='" . $estd['cod_estado'] . "'>" . $estd['desc_estado'] . "</option>";
+                            echo "<option value='" . $estd['id_estado'] . "'>" . $estd['desc_estado'] . "</option>";
                         }
                     } 
                     ?>
@@ -59,6 +59,7 @@
         <div class="row">
             <div class="col-md-4"> 
                 <input type="submit" value="enviar" class="btn btn-success">
+                <a href="<?php echo getUrl("Noticia","Noticia","consult") ?>"><button type="button" class="btn btn-success">Cancelar</button></a>
             </div>
         </div>
         

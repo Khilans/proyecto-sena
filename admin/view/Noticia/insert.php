@@ -6,7 +6,7 @@
 		<div class="row">
 			<div class="col-md-4 form-group">
 				<label>Descripción</label>
-				<textarea name="Desc_noticia" rows="1" cols="50" placeholder="descripcion de la noticia"></textarea>
+				<textarea name="desc_noticia" rows="1" cols="50" placeholder="Descripcion de la noticia"></textarea>
 			</div>
 			<div class="col-md-4 form-group">
 				<label>Titulo</label>

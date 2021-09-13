@@ -2,7 +2,7 @@ $(document).ready(function(){
     $(document).on("click","#cambioDeImagen",function(){
         var ruta=$("#imagen").attr("src");
 
-        $("#cambiarImagen").html("<input type='file' name='ciu_imagen'>");
+        $("#cambiarImagen").html("<input type='file' name='img_noticia'>");
         $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
     });
 
@@ -44,7 +44,80 @@ $(document).ready(function(){
         });
     });
 
+
+
+    $(document).on("click","#modalnoti",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-noti");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            type:"GET",
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
     $(document).on("click","#modalUpdate",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-usu_id");
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            type:"GET",
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#modalUpdateConfiguracion",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-comp_id");
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            type:"GET",
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#modalInsertConfiguracion",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-comp_id");
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            type:"GET",
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#modalDelete",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-usu_id");
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            type:"GET",
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#modalProfile",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-usu_id");
         $.ajax({
