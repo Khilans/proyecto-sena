@@ -31,7 +31,7 @@
             move_uploaded_file($_FILES['img_noticia']['tmp_name'], $ruta);
             $id = $obj->autoincrement("t_noticia", "cod_noticia");
 
-            $sql = "INSERT INTO t_noticia VALUES($id, '$desc_noticia', '$titulo_noticia', '$fecha_noticia', '$ruta' , $usu_id, $cod_tipo_noti, $id_estado)";
+            $sql = "INSERT INTO t_noticia VALUES($id, '$desc_noticia', '$titulo_noticia', '$fecha_noticia', '$ruta' , $usu_id, $cod_tipo_noti, 1)";
        
             $ejecutar = $obj->update($sql);
 
@@ -97,7 +97,7 @@
 
        
 
-        include_once '../view/Noticia/update.php';
+        include_once '../view/Noticia/ModalUpdate.php';
         }
 
         public function postUpdate(){
@@ -118,11 +118,11 @@
                     $img_vieja = $_POST['img_vieja'];
                     unlink("$img_vieja");
                 }
-                $sql = "UPDATE t_noticia SET  desc_noticia='$desc_noticia', cod_tipo_noti=$cod_tipo_noti,
-                id_estado=$id_estado,img_noticia=$ruta WHERE cod_noticia=$cod_noticia";
+                $sql = "UPDATE t_noticia SET  titulo_noticia='$titulo_noticia', desc_noticia='$desc_noticia', cod_tipo_noti=$cod_tipo_noti,
+                id_estado=$id_estado,img_noticia='$ruta' WHERE cod_noticia=$cod_noticia";
             } else {
-                $sql = "UPDATE t_noticia SET  desc_noticia='$desc_noticia', cod_tipo_noti=$cod_tipo_noti,
-                id_estado=$id_estado, img_noticia=$ruta WHERE cod_noticia=$cod_noticia";
+                $sql = "UPDATE t_noticia SET titulo_noticia='$titulo_noticia', desc_noticia='$desc_noticia', cod_tipo_noti=$cod_tipo_noti, 
+                id_estado=$id_estado,img_noticia='$ruta' WHERE cod_noticia=$cod_noticia";
             }
             $ejecutar = $obj->consult($sql);
 
@@ -131,6 +131,7 @@
                 redirect(getUrl("Noticia", "Noticia", "consult"));
             } else {
                 echo "Ops, ha ocurrido un error inesperado";
+               /*  echo dd($sql); */
                 
             
             }

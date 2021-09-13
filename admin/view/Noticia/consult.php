@@ -1,3 +1,6 @@
+<?php
+include_once '../view/partials/modal.php';
+?>
 <div class="container">
 <table class="mt-4 table table-bordered table-sm table-hover table-striped " id="tabla">
 <a href="<?php echo getUrl("Noticia", "Noticia", "getInsert") ?>"><button class="btn btn-success mt-4">Insertar</button></a>

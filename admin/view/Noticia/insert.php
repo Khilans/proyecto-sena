@@ -33,16 +33,8 @@
 				</select>
 			</div>
 			<div class="col-md-4 form-group">
-				<label>Estado</label>
-				<select name="id_estado" class="form-control">
-					<option value="">Seleccione...</option>
-
-					<?php
-					foreach ($estados  as $estd) {
-						echo "<option value='" . $estd['id_estado'] . "'>" . $estd['desc_estado'] . "</option>";
-					}
-					?>
-				</select>
+				<label></label>
+				<input type="hidden" name="id_estado" class="form-control" >
 			</div>
 
 		</div>

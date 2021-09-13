@@ -5,7 +5,7 @@
     <?php
     foreach ($noticias as $noti){
     ?>
-    <form action="<?php echo getUrl("Noticia","Noticia","postUpdate");?>" method="post">
+    <form action="<?php echo getUrl("Noticia","Noticia","postUpdate");?>" method="post" >
         <div class="row">
             <div class="form-group col-md-7">
                 <label>Descripcion</label>
