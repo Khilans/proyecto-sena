@@ -14,7 +14,9 @@
         public function profile(){
             $obj=new UsuariosModel;
             $id=$_SESSION['user_id'];
-            $sql="SELECT u.usu_nombre, u.usu_nombre2, u.usu_id, u.usu_apellido, td.nom_tipo_doc, u.cod_tipo_doc, u.usu_ndocumento, u.usu_correo FROM t_usuario u, t_tipodocumento td WHERE usu_id=$id AND td.cod_tipo_doc=u.cod_tipo_doc ";
+            $sql="SELECT cod_tipo_doc, nom_tipo_doc FROM t_tipodocumento";
+            $tipos_documentos=$obj->consult($sql);
+            $sql="SELECT u.usu_nombre, u.usu_nombre2, u.usu_id, u.usu_apellido, r.desc_rol,td.nom_tipo_doc, u.cod_tipo_doc, u.usu_ndocumento, u.usu_correo FROM t_usuario u, t_tipodocumento td, t_rol r WHERE usu_id=$id AND td.cod_tipo_doc=u.cod_tipo_doc AND r.cod_rol=u.cod_rol ";
             $usuario=$obj->consult($sql);
             include_once '../view/usuarios/modalProfile.php';
         }
@@ -22,7 +24,9 @@
         public function getUpdateModal(){
             $obj=new UsuariosModel;
             $id=$_GET['id'];
-            $sql="SELECT u.usu_nombre, u.usu_nombre2, u.usu_id, u.usu_apellido, td.nom_tipo_doc, u.cod_tipo_doc, u.usu_ndocumento, u.usu_correo FROM t_usuario u, t_tipodocumento td WHERE usu_id=$id AND td.cod_tipo_doc=u.cod_tipo_doc ";
+            $sql="SELECT cod_tipo_doc, nom_tipo_doc FROM t_tipodocumento";
+            $tipos_documentos=$obj->consult($sql);
+            $sql="SELECT u.usu_nombre, u.usu_nombre2, u.usu_id, u.usu_apellido, td.nom_tipo_doc, u.cod_tipo_doc, u.usu_ndocumento, u.usu_correo FROM t_usuario u, t_tipodocumento td WHERE u.usu_id=$id AND td.cod_tipo_doc=u.cod_tipo_doc ";
             $usuarios=$obj->consult($sql);
             include_once '../view/usuarios/modalUpdate.php';
         }

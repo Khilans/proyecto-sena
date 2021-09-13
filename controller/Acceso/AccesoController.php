@@ -35,7 +35,6 @@
             }else{
                 $_SESSION['mensaje']="No se encuentra registrado";
                 redirect("login.php");
-
             }
         }
 

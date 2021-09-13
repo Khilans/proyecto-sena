@@ -44,7 +44,7 @@
 <hr>
         <ul>
         <li class="botonesInicio">
-                   <a href="<?php echo getUrl("Usuarios", "Usuarios", "consult") ?>">
+                   <a href="<?php echo getUrl("Competencia", "Competencia", "consult") ?>">
                      <div style="background:#fc7323">
                       <span class="fa fa-users"></span>
                       <p>COMPETENCIA</p>
@@ -54,7 +54,7 @@
 
         <li class="botonesInicio">
                     
-                    <a href="<?php echo getUrl("Noticia", "Noticia", "consult") ?>">
+                    <a href="<?php echo getUrl("ResultadoAp", "ResultadoAp", "consult") ?>">
                        <div style="background:#238276">
                         <span class="fa fa-users"></span>
                         <p>RESUL APRENDI.</p>
@@ -65,7 +65,7 @@
 
                     <li class="botonesInicio">
                     
-                        <a href="<?php echo getUrl("Programa", "Programa", "consult") ?>">
+                        <a href="<?php echo getUrl("LineaTecnologica", "LineaTecnologica", "consult") ?>">
                         <div style="background:#5fb219">
                         <span class="fa fa-users"></span>
                         <p>LINEA TEC.</p>
@@ -76,7 +76,7 @@
 
                     <li class="botonesInicio">
                     
-                        <a href="<?php echo getUrl("Oferta", "Oferta", "consult") ?>">
+                        <a href="<?php echo getUrl("ProgramaNivel", "ProgramaNivel", "consult") ?>">
                         <div style="background:#238276"> 
                         <span class="fa fa-users"></span>
                         <p>NIVEL PRO.</p>
