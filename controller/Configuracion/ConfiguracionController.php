@@ -3,23 +3,18 @@
     class ConfiguracionController{
 
 
-<<<<<<< HEAD
         public function getInsert(){
             $obj = new ConfiguracionModel();
             $sql = "SELECT * FROM t_usuario";
             $usuarios = $obj->consult($sql);
-=======
-        
-        public function datos(){
-            
         }
->>>>>>> ca72cc53c5ce3f12540dc830b990e1ab63164e3e
 
+        public function datos(){
+            $obj = new ConfiguracionModel();
             $sql = "SELECT * FROM t_configuracion";
             $configuracion = $obj->consult($sql);
 
             include_once  '../view/Configuracion/insert.php';
- 
         }
 
         public function postInsert(){
