@@ -2,7 +2,7 @@
 include_once '../view/partials/modal.php';
 ?>
 	<!-- Header -->
-	<header class=""> header d-flex flex-row
+	<header class="header d-flex flex-row"> 
 		<div class="header_content d-flex flex-row align-items-center">
 			<!-- Logo -->
 			<div class="logo_container">
@@ -17,13 +17,13 @@ include_once '../view/partials/modal.php';
 				<div class="main_nav">
 					<ul class="main_nav_list">
 						<li class="main_nav_item"><a href="index.php">Inicio</a></li>
-						<li class="main_nav_item"><a href="login.php">Sobre nosotros</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("Pqrs", "Pqrs", "getSend") ?>">PQRSF</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("Foro", "Foro", "post") ?>">Foro Post</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("Foro", "Foro", "feed") ?>">Foros</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("LineaTecnologica", "LineaTecnologica", "consult") ?>">Línea Tecnológica</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("ProgramaArea", "ProgramaArea", "consult") ?>">Área de Programa</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("ProgramaNivel", "ProgramaNivel", "consult") ?>">Nivel de Programa</a></li>
-
 						<li class="main_nav_item"><a href="<?php echo getUrl("Oferta", "Oferta", "consult") ?>">Ofertas</a></li>
-
 						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia", "Noticia", "getInsert") ?>">Noticias</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Usuarios", "Usuarios", "consult") ?>">Usuarios</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Registro", "Registro", "getRegister") ?>">Registro</a></li>
