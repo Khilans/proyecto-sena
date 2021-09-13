@@ -34,8 +34,11 @@ $configuracion = $obj->consult($sql);
 								<span>VISION</span>
 							</div>
 						</div>
-
-						<p><?php  echo $confi['desc_config']?></p>
+						
+						
+							<p style="container-fluid" ><?php  echo $confi['desc_config']?></p>
+						
+						
 						
 
 					</div>

@@ -81,7 +81,7 @@
 											<span class="comment_separator">|</span>
 											<span class="comment_date"><?php echo $comentario['fech_foro_com']; ?></span>
 											<span class="comment_separator">|</span>
-											<span class="comment_reply_link"><a href="#">Responder</a></span>
+											<!-- <span class="comment_reply_link"><a href="#">Responder</a></span> -->
 										</div>
 										<p class="comment_text"><?php echo $comentario['com_foro_com']; ?></p>
 									</div>
