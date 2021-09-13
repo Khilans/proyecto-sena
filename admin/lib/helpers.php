@@ -1,5 +1,8 @@
 <?php
     session_start();
+if($_SESSION['rol']!=1){
+    redirect("../../web/index.php");
+}
 
     function encrypt($pass){
         $result=password_hash($pass,PASSWORD_DEFAULT);
@@ -10,10 +13,7 @@
         echo "<pre>";
         die(print_r($var));
     }
-    
-    function decrypt($pass){
-        
-    }
+
 
     function redirect($url){ //Redirecciona con JS en lugar de header
         echo "<script type='text/javascript'>"."window.location.href='$url'"."</script>";
