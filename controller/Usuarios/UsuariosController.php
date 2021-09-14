@@ -39,7 +39,7 @@
             $sql="UPDATE t_usuario SET usu_nombre='$nombre1',usu_nombre2='$nombre2',usu_apellido='$apellido',cod_tipo_doc=$tipodoc,usu_ndocumento=$ndoc WHERE usu_id=$id";
             $actualizar=$obj->update($sql);
             if($actualizar){
-                redirect(getUrl("Usuarios","Usuarios","consult"));
+                redirect("index.php");
             }else{
                 echo "Paila";
             }

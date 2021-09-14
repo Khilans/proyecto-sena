@@ -20,7 +20,6 @@
 
         public function postInsert(){
             $obj = new NoticiaModel();
-
        
             $desc_noticia=$_POST['desc_noticia'];
             $titulo_noticia = $_POST['titulo_noticia'];
@@ -28,8 +27,6 @@
             $img_noticia = $_FILES['img_noticia']['name'];
             $usu_id=$_SESSION['user_id']; 
             $cod_tipo_noti= $_POST['cod_tipo_noti'];
-            $id_estado= $_POST['id_estado'];
-    
             $ruta = "images/$img_noticia";
         
             move_uploaded_file($_FILES['img_noticia']['tmp_name'], $ruta);
@@ -89,8 +86,8 @@
 
             $obj = new NoticiaModel();
           
-
-            $sql = "SELECT tn.cod_noticia, tn.titulo_noticia, tn.img_noticia, tn.desc_noticia , ttn.desc_tipo_noti , te.desc_estado FROM t_noticia tn, t_tiponoticia ttn, t_estado te WHERE ttn.cod_tipo_noti =tn.cod_tipo_noti AND te.id_estado=tn.id_estado";
+            $noticia_id=$_GET['id'];
+            $sql = "SELECT * FROM t_noticia WHERE cod_noticia=$noticia_id";
             $noticias = $obj->consult($sql);
 
             $sql = "SELECT * FROM t_estado";

@@ -84,7 +84,7 @@
 											<?php if($comentario['usu_id']==$_SESSION['user_id']){
 											?>
 											<span class=""><button class="btn btn-warning btn-sm" href="<?php echo getUrl("Foro","Foro","editComment"); ?>">Editar</button></span>
-											<span class=""><button class="btn btn-danger btn-sm" href="<?php echo getUrl("Foro","Foro","deleteComment"); ?>">Eliminar</button></span>
+											<button class="btn btn-danger btn-sm" id="deletecomment" data-id="<?php echo $comentario['cod_foro_com']; ?>" data-url="<?php echo getUrl("Foro","Foro","deleteComment") ?>">Eliminar</button>
 											<?php
 											}
 											?>

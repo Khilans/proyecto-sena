@@ -33,11 +33,15 @@ include_once '../model/Foro/ForoModel.php';
         }
 
         public function deleteComment(){
+            $obj=new ForoModel;
+            $comentario_id=$_GET['id'];
+            $sql="DELETE * FROM t_forocomentario WHERE cod_foro_com=$comentario_id";
+            $eliminar=$obj->consult($sql);
 
         }
 
         public function editComment(){
-            
+
         }
 
         public function edit(){
