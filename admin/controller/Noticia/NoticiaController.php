@@ -2,16 +2,20 @@
     include_once '../model/Noticia/NoticiaModel.php';
     class NoticiaController{
 
-        public function getInsert(){
+        public function getModalInsert(){
 
             $obj = new NoticiaModel();
+
+            $sql = "SELECT tn.cod_noticia, tn.titulo_noticia, tn.img_noticia, tn.desc_noticia , ttn.desc_tipo_noti , te.desc_estado FROM t_noticia tn, t_tiponoticia ttn, t_estado te";
+            $noticias = $obj->consult($sql);
+
             $sql = "SELECT * FROM t_estado";
             $estados = $obj->consult($sql);
 
             $sql = "SELECT * FROM t_tiponoticia";
             $tipo_noticias = $obj->consult($sql);
 
-            include_once  '../view/Noticia/insert.php';
+            include_once  '../view/Noticia/ModalInsert.php';
         }
 
         public function postInsert(){
@@ -56,13 +60,13 @@
 
             $obj = new NoticiaModel();
 
-            
-
             $sql="SELECT tn.cod_noticia, tn.titulo_noticia, tn.img_noticia, tn.desc_noticia , ttn.desc_tipo_noti , te.desc_estado FROM t_noticia tn, t_tiponoticia ttn, t_estado te WHERE ttn.cod_tipo_noti =tn.cod_tipo_noti AND te.id_estado=tn.id_estado";
             $noticias=$obj->consult($sql);
 
             include_once '../view/Noticia/ModalDelete.php';
         }
+
+        
 
         public function postDelete(){
             $obj=new NoticiaModel();

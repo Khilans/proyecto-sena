@@ -1,19 +1,21 @@
-<div class="jumbotron mt-4">
-    <h2 class="display-4">Editar noticia</h2>
-</div>
 <div class="container">
+    <div class="alert alert-success" role="alert">
+                <h4 class="alert-success text-center">Editar noticia</h4>
+                <p></p>
+        </div>
+
     <?php
     foreach ($noticias as $noti){
     ?>
     <form action="<?php echo getUrl("Noticia","Noticia","postUpdate");?>" method="post" enctype="multipart/form-data">
-        <div class="row">
+        <div style="margin: 1em;" class="row">
             <div class="form-group col-md-7">
-                <label>Descripcion</label>
+                <label>Descripción</label>
                 <input type="hidden" name="cod_noticia" value="<?php echo $noti['cod_noticia']; ?>">
-                <textarea name="desc_noticia" rows="1" cols="50" placeholder="descripcion de la noticia" value="<?php echo $noti['desc_noticia']; ?>"></textarea>
+                <textarea name="desc_noticia" rows="1" cols="50" placeholder="Descripción" value="<?php echo $noti['desc_noticia']; ?>"></textarea>
             </div> 
             <div class="form-group col-md-7">
-                <label>Titulo</label>
+                <label>Título</label>
                 <input type="text" name="titulo_noticia" class="form-control" value="<?php echo $noti['titulo_noticia']; ?>">
             </div>
             <div class="col-md-4">
@@ -57,9 +59,9 @@
             </div>  
         </div> 
         <div class="row">
-            <div class="col-md-4"> 
-                <input type="submit" value="enviar" class="btn btn-success">
-                <a href="<?php echo getUrl("Noticia","Noticia","consult") ?>"><button type="button" class="btn btn-success">Cancelar</button></a>
+            <div style="margin: 1em;" class="col-md-6"> 
+                <input  type="submit" value="enviar" class="btn btn-success">
+                <a href="<?php echo getUrl("Noticia","Noticia","consult") ?>"><button type="button" class="btn btn-danger">Cancelar</button></a>
             </div>
         </div>
         

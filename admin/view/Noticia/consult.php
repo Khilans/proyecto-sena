@@ -3,7 +3,7 @@ include_once '../view/partials/modal.php';
 ?>
 <div class="container">
 <table class="mt-4 table table-bordered table-sm table-hover table-striped " id="tabla">
-<a href="<?php echo getUrl("Noticia", "Noticia", "getInsert") ?>"><button class="btn btn-success mt-4">Insertar</button></a>
+
         <thead class="thead-dark">
             <tr>
                 <th>Id</th>
@@ -34,6 +34,7 @@ include_once '../view/partials/modal.php';
                 echo "<td><button class='btn btn-primary btn-sm' id='modalDeletenoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","getModalDelete",false,"ajax")."' data-notid='".$noti['cod_noticia']."'>ELiminar</button></td>";
                 /* echo "<td><a href='" . getUrl("Noticia", "Noticia", "getDelete", array("cod_noticia" => $noti['cod_noticia'])) . "'><button class='btn btn-danger'>Eliminar</button></a></td>";  */
                 echo "</tr>";
+                echo "<button class='btn btn-primary btn-sm' id='modalInsertnoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","getModalInsert",false,"ajax")."' data-notiIn='".$noti['cod_noticia']."'>Insertar</button>";
             }
             if (isset($_SESSION['mensaje'])) {
                 ?>
