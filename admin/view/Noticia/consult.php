@@ -31,7 +31,8 @@ include_once '../view/partials/modal.php';
                 
                 /*  echo "<td><a href='" . getUrl("Noticia", "Noticia", "getUpdate", array("cod_noticia" => $noti['cod_noticia'])) . "'><button class='btn btn-primary'>Editar</button></a></td>"; */
                 echo "<td><button class='btn btn-primary btn-sm' id='modalnoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","getModalUpdate",false,"ajax")."' data-noti='".$noti['cod_noticia']."'>Editar</button></td>";
-                echo "<td><a href='" . getUrl("Noticia", "Noticia", "getDelete", array("cod_noticia" => $noti['cod_noticia'])) . "'><button class='btn btn-danger'>Eliminar</button></a></td>"; 
+                echo "<td><button class='btn btn-primary btn-sm' id='modalDeletenoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","getModalDelete",false,"ajax")."' data-notid='".$noti['cod_noticia']."'>ELiminar</button></td>";
+                /* echo "<td><a href='" . getUrl("Noticia", "Noticia", "getDelete", array("cod_noticia" => $noti['cod_noticia'])) . "'><button class='btn btn-danger'>Eliminar</button></a></td>";  */
                 echo "</tr>";
             }
             if (isset($_SESSION['mensaje'])) {
