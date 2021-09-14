@@ -12,10 +12,6 @@
 <?php 
 include_once "../model/MasterModel.php";
 
-
-
-
-
 ?>
 <?php
   foreach ($noticias as $noti) {
@@ -34,7 +30,7 @@ include_once "../model/MasterModel.php";
         </div>
         <h5 class="card-title"><?php echo $noti['titulo_noticia']?></h5>
         <p class="card-text"><?php echo $noti['desc_noticia']?></p>
-        <a class="add-to-cart" href=<?php  getUrl("Noticia", "Noticia", "getDetalleNoticia", array("cod_noticia" => $noti['cod_noticia'])) ?>>Ver detalles</a>
+        <a href='"<?php echo getUrl("Noticia", "Noticia", "getDetalleNoticia", array("cod_noticia" => $noti['cod_noticia']))  ?>"' class="btn btn-primary">Ir a la noticia</a>
       </div>
     </div>
 

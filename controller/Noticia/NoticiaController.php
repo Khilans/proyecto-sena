@@ -6,8 +6,9 @@
 
             $obj = new NoticiaModel();
     
+            $cod_noticia = $_GET['cod_noticia'];
 
-            $sql = "SELECT * FROM t_noticia";
+            $sql = "SELECT * FROM t_noticia WHERE cod_noticia=$cod_noticia";
             $noticias = $obj->consult($sql);
             
             include_once '../View/Noticia/detalle.php';
