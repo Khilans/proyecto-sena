@@ -2,6 +2,15 @@
     padding: 0px;
     margin: 0px;
 }
+
+.card-text{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 1;
+	line-clamp: 1;
+	overflow: hidden;
+}
+
 .card{
 position:absolute;
 }

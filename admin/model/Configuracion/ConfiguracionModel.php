@@ -1,6 +1,6 @@
 <?php
     include_once '../model/MasterModel.php';
-    class CofiguracionModel extends MasterModel{
+    class ConfiguracionModel extends MasterModel{
 
     }
 ?>
