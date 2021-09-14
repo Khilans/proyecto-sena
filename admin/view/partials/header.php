@@ -60,14 +60,14 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo getUrl("Programa", "Programa", "consult") ?>">
-              <span data-feather="users"></span>
+              <span data-feather="list"></span>
               PROGRAMAS
             </a>
           </li>
 
           <li class="nav-item">
             <a class="nav-link" href="<?php echo getUrl("Oferta", "Oferta", "consult") ?>">
-              <span data-feather="file"></span>
+              <span data-feather="check"></span>
               OFERTAS
             </a>
           </li>
@@ -79,7 +79,7 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?php echo getUrl("Foro", "Foro", "consult") ?>">
-              <span data-feather="file"></span>
+              <span data-feather="cloud"></span>
               FOROS
             </a>
           </li>
