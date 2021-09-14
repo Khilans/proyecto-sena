@@ -81,6 +81,13 @@
 											<span class="comment_separator">|</span>
 											<span class="comment_date"><?php echo $comentario['fech_foro_com']; ?></span>
 											<span class="comment_separator">|</span>
+											<?php if($comentario['usu_id']==$_SESSION['user_id']){
+											?>
+											<span class=""><button class="btn btn-warning btn-sm" href="<?php echo getUrl("Foro","Foro","editComment"); ?>">Editar</button></span>
+											<button class="btn btn-danger btn-sm" id="deletecomment" data-id="<?php echo $comentario['cod_foro_com']; ?>" data-url="<?php echo getUrl("Foro","Foro","deleteComment") ?>">Eliminar</button>
+											<?php
+											}
+											?>
 											<!-- <span class="comment_reply_link"><a href="#">Responder</a></span> -->
 										</div>
 										<p class="comment_text"><?php echo $comentario['com_foro_com']; ?></p>

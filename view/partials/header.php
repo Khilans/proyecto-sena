@@ -22,7 +22,7 @@ include_once '../view/partials/modal.php';
 						<li class="main_nav_item"><a href="<?php echo getUrl("Foro", "Foro", "feed") ?>">Foros</a></li>
 						
 						<li class="main_nav_item"><a href="<?php echo getUrl("Oferta", "Oferta", "consult") ?>">Ofertas</a></li>
-						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia", "Noticia", "getInsert") ?>">Noticias</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia", "Noticia", "getView") ?>">Noticias</a></li>
 						
 						
 

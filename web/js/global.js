@@ -44,6 +44,10 @@ $(document).ready(function(){
         });
     });
 
+    $(document).on("click","#deletecomment",function(){
+        var url=$(this).attr("data-url");
+    });
+
 
 
     $(document).on("click","#modalnoti",function(){

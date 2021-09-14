@@ -6,17 +6,21 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../web/styles/main.css" />
 	</head>
+	<?php
+
+foreach ($noticias as $noti) {
+?>
 	<body class="single is-preload">
 
 			<div id="wrapper">
 
 	
 					<div id="main">
-			
+					<input type='hidden' name='cod_noticia' value="<?php echo $noti['cod_noticia']?>">
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="#">Nombre de la noticia</a></h2>
+										<h2><a href="#"><?php echo $noti['titulo_noticia']?></a></h2>
 										<p>Sub titulo de la noticia</p>
 									</div>
 									<div class="meta">
@@ -37,4 +41,7 @@
 
 
 	</body>
+	<?php
+		}
+	?>
 </html>

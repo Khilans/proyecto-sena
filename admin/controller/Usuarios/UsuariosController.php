@@ -16,7 +16,7 @@
             $id=$_SESSION['user_id'];
             $sql="SELECT cod_tipo_doc, nom_tipo_doc FROM t_tipodocumento";
             $tipos_documentos=$obj->consult($sql);
-            $sql="SELECT u.usu_nombre, u.usu_nombre2, u.usu_id, u.usu_apellido, r.desc_rol,td.nom_tipo_doc, u.cod_tipo_doc, u.usu_ndocumento, u.usu_correo FROM t_usuario u, t_tipodocumento td, t_rol r WHERE usu_id=$id AND td.cod_tipo_doc=u.cod_tipo_doc AND r.cod_rol=u.cod_rol ";
+            $sql="SELECT u.usu_nombre, u.usu_nombre2, u.usu_id, u.usu_apellido, td.nom_tipo_doc, r.desc_rol,td.nom_tipo_doc, u.cod_tipo_doc, u.usu_ndocumento, u.usu_correo FROM t_usuario u, t_tipodocumento td, t_rol r WHERE usu_id=$id AND td.cod_tipo_doc=u.cod_tipo_doc AND r.cod_rol=u.cod_rol ";
             $usuario=$obj->consult($sql);
             include_once '../view/usuarios/modalProfile.php';
         }
@@ -50,6 +50,7 @@
                     redirect(getUrl("Usuarios","Usuarios","consult"));
                 }else{
                     echo "Paila";
+                    dd($actualizar);
                 }
             }
         }
@@ -71,7 +72,7 @@
             $sql="UPDATE t_usuario SET usu_nombre='$nombre1',usu_nombre2='$nombre2',usu_apellido='$apellido',cod_tipo_doc=$tipodoc,usu_ndocumento=$ndoc WHERE usu_id=$id";
             $actualizar=$obj->update($sql);
             if($actualizar){
-                redirect(getUrl("Usuarios","Usuarios","consult"));
+                redirect("index.php");
             }else{
                 echo "Paila";
             }
@@ -88,7 +89,6 @@
                     }
             }
            }
-   
         }
 
         public function getDeleteModal(){
