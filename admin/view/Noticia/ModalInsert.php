@@ -1,7 +1,7 @@
 <div class="container">
 <div class="alert alert-success" role="alert">
                 <h4 class="alert-success text-center">Registrar noticia</h4>
-                <p></p>
+                <p><b>Por favor llenar todos los campos</b></p>
         </div>
 	<form action="<?php echo getUrl("Noticia", "Noticia", "postInsert"); ?>" method="post" enctype="multipart/form-data">
 		<div style="margin: 1em;" class="row">
