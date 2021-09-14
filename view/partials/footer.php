@@ -1,13 +1,14 @@
 <?php 
 include_once "../model/MasterModel.php";
 
-$obj = new MasterModel();
+$obj = new MasterModel(); 
 
 $sql = "SELECT * FROM t_configuracion";
 $configuracion = $obj->consult($sql);
 
 $sql = "SELECT * FROM t_noticia";
 $noticias = $obj->consult($sql);
+
 
 
 ?>
