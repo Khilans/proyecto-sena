@@ -57,7 +57,8 @@
 
             $obj = new NoticiaModel();
 
-            $sql="SELECT tn.cod_noticia, tn.titulo_noticia, tn.img_noticia, tn.desc_noticia , ttn.desc_tipo_noti , te.desc_estado FROM t_noticia tn, t_tiponoticia ttn, t_estado te WHERE ttn.cod_tipo_noti =tn.cod_tipo_noti AND te.id_estado=tn.id_estado";
+            $noticia_id=$_GET['id'];
+            $sql = "SELECT * FROM t_noticia WHERE cod_noticia=$noticia_id";
             $noticias=$obj->consult($sql);
 
             include_once '../view/Noticia/ModalDelete.php';
