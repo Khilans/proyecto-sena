@@ -2,7 +2,7 @@ $(document).ready(function(){
     $(document).on("click","#cambioDeImagen",function(){
         var ruta=$("#imagen").attr("src");
 
-        $("#cambiarImagen").html("<input type='file' name='ciu_imagen'>");
+        $("#cambiarImagen").html("<input type='file' name='img_noticia'>");
         $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
     });
 
@@ -34,6 +34,21 @@ $(document).ready(function(){
 
     $(document).on("click","#modal",function(){
         var url=$(this).attr("data-url");
+
+        $.ajax({
+            url:url,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+
+
+    $(document).on("click","#modalnoti",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-noti");
 
         $.ajax({
             url:url,
