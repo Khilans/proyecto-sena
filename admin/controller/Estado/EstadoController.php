@@ -6,7 +6,7 @@
         public function getInsertModal(){
 
         $obj = new EstadoModel();
-        $sql = "SELECT * FROM t_noticia";
+        $sql = "SELECT * FROM t_estado";
         $estados = $obj->consult($sql);
 
         include_once  '../view/Estado/insert.php';
@@ -98,7 +98,7 @@
             $ejecutar=$obj->update($sql);
     
            if ($ejecutar) {
-            $_SESSION['mensaje']="Se editó la categoria <b>$desc_estado</b> exitosamente";
+            $_SESSION['mensaje']="Se editó el estado <b>$desc_estado</b> exitosamente";
                redirect(getUrl("Estado","Estado","consult"));
            }else{
                echo "Ops, ha ocurrido un error";
