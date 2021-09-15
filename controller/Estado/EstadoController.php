@@ -37,13 +37,13 @@
         {
             $obj = new EstadoModel();
     
-            $sql="SELECT * FROM t_estado";
+            $sql="SELECT * FROM t_estado ";
             $estados = $obj->consult($sql);
     
             include_once '../view/Estado/consult.php';
         }
 
-        public function getDelete(){
+        public function getDeleteModal(){
             $obj=new EstadoModel();
 
             $id_estado=$_GET['id_estado'];
@@ -76,15 +76,15 @@
     
         }
 
-        public function getUpdate(){
+        public function getUpdateModal (){
 
             $obj=new EstadoModel();
-            $id_estado=$_GET['id_estado'];
-
+            
+             $id_estado=$_GET['id']; 
             $sql="SELECT * FROM t_estado WHERE id_estado=$id_estado";
             $estados=$obj->consult($sql);
 
-            include_once '../view/Estado/update.php';
+            include_once '../view/Estado/UpdateModal.php';
 
 
         }

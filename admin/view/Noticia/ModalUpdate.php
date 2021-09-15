@@ -2,7 +2,7 @@
     <div class="alert alert-success" role="alert">
                 <h4 class="alert-success text-center">Editar noticia</h4>
                 <p></p>
-        </div>
+    </div>
 
     <?php
     foreach ($noticias as $noti){
