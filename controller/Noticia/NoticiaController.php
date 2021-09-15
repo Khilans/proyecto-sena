@@ -23,6 +23,9 @@
             $noticias = $obj->consult($sql);
 
             include_once '../View/Noticia/noticia.php';
+
+            
+            
         } 
         
 
