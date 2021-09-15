@@ -21,7 +21,7 @@ include_once '../view/partials/modal.php';
 
 						<li class="main_nav_item"><a href="<?php echo getUrl("Foro", "Foro", "feed") ?>">Foros</a></li>
 						
-						<li class="main_nav_item"><a href="<?php echo getUrl("Oferta", "Oferta", "consult") ?>">Ofertas</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("Oferta", "Oferta", "getView") ?>">Ofertas</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia", "Noticia", "getView") ?>">Noticias</a></li>
 						
 						
@@ -32,6 +32,7 @@ include_once '../view/partials/modal.php';
 						<li class="main_nav_item"><a href="<?php echo getUrl("Competencia", "Competencia", "consult") ?>">Competencia</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("ResultadoAp", "ResultadoAp", "getinsert") ?>">REsultadoAP</a></li>
 						<li class="main_nav_item"><a href="<?php echo getUrl("Configuracion", "Configuracion", "getInsert") ?>">Configuracion</a></li>
+
 						
 					</ul>
 				</div>
@@ -64,6 +65,7 @@ include_once '../view/partials/modal.php';
 			}
 			?>
 		</div>
+		
 
 		<!-- Hamburger -->
 		<div class="hamburger_container">

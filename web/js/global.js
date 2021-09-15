@@ -1,10 +1,12 @@
 $(document).ready(function(){
+
     $(document).on("click","#cambioDeImagen",function(){
         var ruta=$("#imagen").attr("src");
 
         $("#cambiarImagen").html("<input type='file' name='img_noticia'>");
         $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
     });
+
 
   
    
@@ -30,6 +32,8 @@ $(document).ready(function(){
             },
 
     });
+
+   
  
 
     $(document).on("click","#modal",function(){
