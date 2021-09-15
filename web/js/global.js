@@ -6,7 +6,9 @@ $(document).ready(function(){
         $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
     });
 
-  
+  $(document).on("click","editarComentario",function(){
+      var id_comentario=$("#")
+  })
    
     $('#tabla').DataTable({
         responsive: true,
