@@ -2,7 +2,7 @@
 foreach ($usuario as $usu) {
   ?>
 <div class="modal-body">
-    <form action="<?php echo getUrl("Usuarios","Usuarios","postUpdateProfile")?>" method="post" enctype="multipart/form-data">
+    <form action="<?php echo getUrl("Usuarios","Usuarios","postUpdate")?>" method="post" enctype="multipart/form-data">
         <div class="alert alert-info" role="alert">
             <h4 class="alert-heading text-center">¡Hola, <?php echo $_SESSION['nombre']; ?>!</h4>
             <p class="text-center">Aquí puedes actualizar tus datos personales.</p>
@@ -30,7 +30,7 @@ foreach ($usuario as $usu) {
                     <select class="form-control" name="cod_tipo_doc">
                     <?php foreach($tipos_documentos as $td){
                         if($usu['cod_tipo_doc']==$td['cod_tipo_doc']){
-                            echo "<option value='".$usu['cod_rol']."' selected>".$usu['nom_tipo_doc']."</option>";
+                            echo "<option value='".$usu['cod_tipo_doc']."' selected>".$usu['nom_tipo_doc']."</option>";
                         }else{
                     ?>
                             <option value="<?php echo $td['cod_tipo_doc'];?>"><?php echo $td['nom_tipo_doc']; ?></option>
