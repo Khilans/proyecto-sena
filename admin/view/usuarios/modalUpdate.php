@@ -24,7 +24,7 @@ foreach ($usuarios as $usu) {
                 <select class="form-control" name="cod_tipo_doc">
                     <?php foreach($tipos_documentos as $td){
                         if($usu['cod_tipo_doc']==$td['cod_tipo_doc']){
-                            echo "<option value='".$usu['cod_rol']."' selected>".$usu['nom_tipo_doc']."</option>";
+                            echo "<option value='".$usu['cod_tipo_doc']."' selected>".$usu['nom_tipo_doc']."</option>";
                         }else{
                         ?>
                             <option value="<?php echo $td['cod_tipo_doc'];?>"><?php echo $td['nom_tipo_doc']; ?></option>
@@ -35,10 +35,17 @@ foreach ($usuarios as $usu) {
                 </select>
             </div>
         </div>
-            <div class="col-md-12 form-group">
+        <div class="row">
+        <div class="col-md-6 form-group">
+                <label>Correo</label>
+                <input type="text"  name="usu_correo" class="form-control" value="<?php echo $usu['usu_correo'];?>">
+            </div>
+            <div class="col-md-6 form-group">
                 <label>Número de documento</label>
                 <input type="text"  name="usu_ndocumento" class="form-control" value="<?php echo $usu['usu_ndocumento'];?>">
             </div>
+        </div>
+           
 
     <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>

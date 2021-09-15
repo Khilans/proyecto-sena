@@ -30,7 +30,7 @@ foreach ($usuario as $usu) {
                 <select class="form-control" name="cod_tipo_doc">
                     <?php foreach($tipos_documentos as $td){
                         if($usu['cod_tipo_doc']==$td['cod_tipo_doc']){
-                            echo "<option value='".$usu['cod_rol']."' selected>".$usu['nom_tipo_doc']."</option>";
+                            echo "<option value='".$usu['cod_tipo_doc']."' selected>".$usu['nom_tipo_doc']."</option>";
                         }else{
                         ?>
                             <option value="<?php echo $td['cod_tipo_doc'];?>"><?php echo $td['nom_tipo_doc']; ?></option>

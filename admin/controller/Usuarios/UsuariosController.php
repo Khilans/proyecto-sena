@@ -39,18 +39,25 @@
             $apellido=$_POST['usu_apellido'];
             $tipodoc=$_POST['cod_tipo_doc'];
             $ndoc=$_POST['usu_ndocumento'];
-            $sql="SELECT usu_id FROM t_usuario WHERE usu_ndocumento=$ndoc";
+            $sql="SELECT usu_id, usu_ndocumento FROM t_usuario WHERE usu_id=$id";
             $validar=$obj->consult($sql);
-            if(mysqli_num_rows($validar)>0){
-                echo "Hay un usuario registrado con este número de documento";
-            }else{
-                $sql="UPDATE t_usuario SET usu_nombre='$nombre1',usu_nombre2='$nombre2',usu_apellido='$apellido',cod_tipo_doc=$tipodoc,usu_ndocumento=$ndoc WHERE usu_id=$id";
-                $actualizar=$obj->update($sql);
-                if($actualizar){
-                    redirect(getUrl("Usuarios","Usuarios","consult"));
+            if($validar){
+                $datos=mysqli_fetch_array($validar);
+                if($ndoc==$datos['usu_ndocumento'] && $id=$datos['usu_id']){
+                    $sql="UPDATE t_usuario SET usu_nombre='$nombre1',usu_nombre2='$nombre2',usu_apellido='$apellido',cod_tipo_doc=$tipodoc WHERE usu_id=$id";
+                    $actualizar=$obj->update($sql);
+                    if($actualizar){
+                        redirect(getUrl("Usuarios","Usuarios","consult"));
+                    }else{
+                        echo "Error al actualizar";
+                        dd($_POST);
+                    }
                 }else{
-                    echo "Paila";
-                    dd($actualizar);
+                    $sql="SELECT usu_id FROM t_usuario WHERE usu_ndocumento=$ndoc";
+                    $validación=$obj->consult($sql);
+                    if($validación){
+                        echo "Duplicidad";
+                    }
                 }
             }
         }
