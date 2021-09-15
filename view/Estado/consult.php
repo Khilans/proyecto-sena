@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-
+    <button class="btn btn-success btn-sm" id="InsertEstado" data-toggle="modal" data-target='#exampleModal' data-url=" <?php echo getUrl("Estado","Estado","getInsertModal",false,"ajax"); ?>">Insertar</button>
         <?php
         foreach ($estados as $estd) {
             echo "<tr>";
@@ -17,7 +17,8 @@
             echo    "<td>" . $estd['desc_estado'] . "</td>";
             /* echo    "<td><a href='" . getUrl("Estado", "Estado", "getUpdate", array("id_estado" => $estd['id_estado'])) . "'><button class='btn btn-primary'>Editar</button></a></td>"; */
             echo "<td><button class='btn btn-primary btn-sm' id='EditEstado' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Estado","Estado","getUpdateModal",false,"ajax")."' data-esta='".$estd['id_estado']."'>Editar</button></td>";
-            echo    "<td><a href='" . getUrl("Estado", "Estado", "getDelete", array("id_estado" => $estd['id_estado'])) . "'><button class='btn btn-danger'>Eliminar</button></a></td>";
+            echo "<td><button class='btn btn-danger btn-sm' id='DeleteEstado' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Estado","Estado","getDeleteModal",false,"ajax")."' data-estaD='".$estd['id_estado']."'>Eliminar</button></td>";
+            /* echo    "<td><a href='" . getUrl("Estado", "Estado", "getDelete", array("id_estado" => $estd['id_estado'])) . "'><button class='btn btn-danger'>Eliminar</button></a></td>"; */
             echo "<tr>";
         }
 

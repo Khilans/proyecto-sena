@@ -3,7 +3,7 @@
     
     class EstadoController{
 
-        public function getInsert(){
+        public function getInsertModal(){
 
         $obj = new EstadoModel();
         $sql = "SELECT * FROM t_noticia";
@@ -46,12 +46,12 @@
         public function getDeleteModal(){
             $obj=new EstadoModel();
 
-            $id_estado=$_GET['id_estado'];
+            $id_estado=$_GET['id'];
 
             $sql="SELECT * FROM t_estado WHERE id_estado=$id_estado";
             $estados=$obj->consult($sql);
 
-            include_once '../view/Estado/delete.php';
+            include_once '../view/Estado/DeleteModal.php';
 
         } 
 
@@ -70,7 +70,7 @@
                 redirect(getUrl("Estado","Estado","consult"));
             }else{
                 echo "Ops, ha ocurrido un error";
-                dd($sql);
+                
             }
     
     
@@ -79,8 +79,7 @@
         public function getUpdateModal (){
 
             $obj=new EstadoModel();
-            
-             $id_estado=$_GET['id']; 
+            $id_estado=$_GET['id']; 
             $sql="SELECT * FROM t_estado WHERE id_estado=$id_estado";
             $estados=$obj->consult($sql);
 

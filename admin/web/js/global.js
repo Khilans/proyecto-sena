@@ -31,6 +31,46 @@ $(document).ready(function(){
 
     });
 
+    $(document).on("click","#InsertEstado",function(){
+        var url=$(this).attr("data-url");
+        $.ajax({
+            url:url,
+            
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#DeleteEstado",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-estaD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#EditEstado",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-esta");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
     $(document).on("click","#modalInsertPqrs",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-pqrs");
