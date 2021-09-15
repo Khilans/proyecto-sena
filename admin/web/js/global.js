@@ -30,7 +30,135 @@ $(document).ready(function(){
             },
 
     });
+    //Modales crus Tipo de noticia
+    $(document).on("click","#InsertTnoti",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-Tnoti");
 
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#DeleteTnoti",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-TnotiD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#EditTnoti",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-TnotiE");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    //Modales crud tipo de documento
+    $(document).on("click","#InsertDocu",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-docu");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#DeleteDocu",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-docuD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#EditDocu",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-docuE");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+    //Modales crud del rol
+    $(document).on("click","#InsertRol",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-rolIn");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#DeleteRol",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-rolD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#EditRol",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-rol");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+//Modal crud de estados
     $(document).on("click","#InsertEstado",function(){
         var url=$(this).attr("data-url");
         $.ajax({
@@ -71,6 +199,7 @@ $(document).ready(function(){
         });
     });
 
+    //Modales crud de Pqrsf
     $(document).on("click","#modalInsertPqrs",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-pqrs");
@@ -85,7 +214,7 @@ $(document).ready(function(){
             }
         });
     });
-
+    //Modales de crud configuracion
     $(document).on("click","#modalUpConfi",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-confi");
@@ -100,7 +229,7 @@ $(document).ready(function(){
             }
         });
     });
-
+    //Modales de crud de noticias
     $(document).on("click","#modalInsertnoti",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-notiIn");
@@ -132,21 +261,6 @@ $(document).ready(function(){
         });
     });
 
-
-    $(document).on("click","#modal",function(){
-        var url=$(this).attr("data-url");
-
-        $.ajax({
-            url:url,
-            success:function(datos){
-                $("#contenedor").html(datos);
-                $("#exampleModalCenter").modal("show");
-            }
-        });
-    });
-
-
-
     $(document).on("click","#modalnoti",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-noti");
@@ -161,6 +275,23 @@ $(document).ready(function(){
             }
         });
     });
+
+    
+    $(document).on("click","#modal",function(){
+        var url=$(this).attr("data-url");
+
+        $.ajax({
+            url:url,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+
+
+    
 
     $(document).on("click","#modalUpdate",function(){
         var url=$(this).attr("data-url");

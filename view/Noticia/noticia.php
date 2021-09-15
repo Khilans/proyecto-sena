@@ -1,3 +1,4 @@
+
 <?php 
   foreach ($noticias as $noti) {   
 ?> 
