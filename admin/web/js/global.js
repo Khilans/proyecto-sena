@@ -214,10 +214,40 @@ $(document).ready(function(){
             }
         });
     });
-    //Modales de crud configuracion
-    $(document).on("click","#modalUpConfi",function(){
+    //Modales de crud configuracion 
+    $(document).on("click","#insertConfi",function(){
         var url=$(this).attr("data-url");
-        var id=$(this).attr("data-confi");
+        var id=$(this).attr("data-confiIn");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            type:"GET",
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#EditConfi",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-confiE");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            type:"GET",
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#DeleteConfi",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-confiD");
 
         $.ajax({
             url:url,
