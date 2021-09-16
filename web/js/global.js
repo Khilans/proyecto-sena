@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $(document).on("click","#cambioDeImagen",function(){
         var ruta=$("#imagen").attr("src");
 
@@ -6,7 +7,14 @@ $(document).ready(function(){
         $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
     });
 
+<<<<<<< HEAD
+  $(document).on("click","editarComentario",function(){
+      var id_comentario=$("#")
+  })
+=======
+
   
+>>>>>>> 4dacc4b215fede9bc41837f11cbb4ca09c6fbead
    
     $('#tabla').DataTable({
         responsive: true,
@@ -30,6 +38,8 @@ $(document).ready(function(){
             },
 
     });
+
+   
  
     $(document).on("click","#InsertEstado",function(){
         var url=$(this).attr("data-url");

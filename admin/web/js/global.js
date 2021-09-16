@@ -3,7 +3,7 @@ $(document).ready(function(){
         var ruta=$("#imagen").attr("src");
 
         $("#cambiarImagen").html("<input type='file' name='img_noticia'>");
-        $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
+        $("#cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
     });
 
   

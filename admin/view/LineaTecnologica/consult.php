@@ -1,7 +1,7 @@
 <div class="container">
-    <table class="table table-striped table-dark mt-5">
+    <table class="table table-striped mt-5 table-hover table table-bordered "> 
         <a href="<?php echo getUrl("LineaTecnologica", "LineaTecnologica", "getInsert") ?>"><button class="btn btn-success mt-4">Insertar</button></a>
-        <thead>
+        <thead  class="thead-dark"> 
             <tr>
                 <th>Código</th>
                 <th>Descripción</th>

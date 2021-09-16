@@ -2,7 +2,7 @@
 include_once '../model/Oferta/OfertaModel.php';
 class OfertaController{
 
-    public function getInsert()
+     /*  public function getInsert()
     {
         $obj = new OfertaModel();
         $sql = "SELECT * FROM t_oferta";
@@ -12,7 +12,7 @@ class OfertaController{
         $estados = $obj->consult($sql);
 
         include_once  '../view/Oferta/insert.php';
-    }
+    } 
 
     public function postInsert()
     {
@@ -32,16 +32,10 @@ class OfertaController{
         move_uploaded_file($_FILES['imag_oferta']['tmp_name'], $ruta);
         $id = $obj->autoincrement("t_oferta", "id_oferta");
 
-<<<<<<< HEAD
 
-        $sql = "INSERT INTO t_oferta VALUES($id,$usu_id, '$desc_oferta', '$fech_ini_oferta', '$fech_fin_oferta', '$ruta', $id_estado)";
-=======
+        $sql = "INSERT INTO t_oferta VALUES($id,$usu_id, $id_estado, '$desc_oferta', '$fech_ini_oferta', '$fech_fin_oferta', '$ruta')";
         //$sql = "INSERT INTO t_oferta VALUES($id,$usu_id, '$desc_oferta', $id_estado, '$fech_ini_oferta', '$fech_fin_oferta', '$ruta')";
 
-        $sql = "INSERT INTO t_oferta VALUES($id, $usu_id, '$desc_oferta', '$fech_ini_oferta', '$fech_fin_oferta', '$ruta', $id_estado)";
-
-
->>>>>>> 4e2549d10ed06ba7377c327ec5c09a1748cec698
         $ejecutar = $obj->update($sql);
 
         if ($ejecutar) {
@@ -51,7 +45,7 @@ class OfertaController{
             echo "Ops, ha ocurrido un error";
             
         }
-    }
+    } 
 
 
     public function consult()
@@ -144,5 +138,17 @@ class OfertaController{
         } else {
             echo "Ops, ha ocurrido un error inesperado";
         }
-    }  
+    } */  
+
+
+    public function getView(){
+
+        $obj = new OfertaModel();
+
+        $sql = "SELECT o.id_oferta, o.desc_oferta, o.fech_ini_oferta, o.fech_fin_oferta, o.imag_oferta, te.desc_estado FROM t_oferta o, t_estado te WHERE te.id_estado=o.id_estado";
+
+        $ofertas = $obj->consult($sql);
+
+        include_once '../View/Oferta/oferta.php';
+    } 
 }
