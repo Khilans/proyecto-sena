@@ -10,7 +10,12 @@ include_once '../view/partials/modal.php';
 				<img src="images/logo.png" alt="">
 				<span>senatel</span>
 			</div>
+<<<<<<< HEAD
 		</di>
+=======
+		</div>
+
+>>>>>>> 882ed42e2253777e7ef685b591aee765aff0ce3f
 		<!-- Main Navigation -->
 		<nav class="main_nav_container">
 			<div class="main_nav">
@@ -46,7 +51,6 @@ include_once '../view/partials/modal.php';
 					}
 					?>
 					<a href="<?php echo getUrl("Acceso", "Acceso", "logout"); ?>"><button class="dropdown-item text-center" type="button">Cerrar sesión</button></a>
-
 
 				</div>
 			</div>
