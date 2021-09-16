@@ -37,7 +37,7 @@
      public function getDelete()
     {
         $obj = new TrolModel();
-        $cod_rol=$_GET['cod_rol'];
+        $cod_rol=$_GET['id'];
         $sql="SELECT * FROM t_rol WHERE cod_rol = $cod_rol";
         $rol=$obj->consult($sql);
         include_once '../view/Trol/delete.php';
@@ -62,13 +62,13 @@
     public function getUpdate(){
 
         $obj=new TrolModel();
-        $cod_rol=$_GET['cod_rol'];
+        $cod_rol=$_GET['id'];
 
         $sql="SELECT * FROM t_rol WHERE cod_rol =$cod_rol";
         $rol=$obj->consult($sql);
 
         include_once '../view/Trol/update.php';
-
+       
 
     }
 

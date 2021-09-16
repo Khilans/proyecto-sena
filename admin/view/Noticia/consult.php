@@ -53,3 +53,15 @@ include_once '../view/partials/modal.php';
         </tbody>
     </table>
 </div>
+<hr>
+    <ul>
+        <li class="botonesInicio">
+            <a href="<?php echo getUrl("Tnoticia", "Tnoticia", "consult") ?>">
+                <div style="background:#fc7323">
+                    <span class="fa fa-users"></span>
+                    <p>T.NOTI</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</hr>

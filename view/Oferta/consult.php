@@ -24,7 +24,7 @@
                    
                     echo "<tr>";
                     echo "<td>" . $ofer['id_oferta'] . "</td>";
-                    echo "<td>" . $ofer['usu_id'] . "</td>";
+                    echo "<td>" . $ofer['usu_nombre'] . "</td>";
                     echo "<td>" . $ofer['desc_estado'] . "</td>";
                     echo "<td>" . $ofer['desc_oferta'] . "</td>";       
                     echo "<td>" . $ofer['fech_ini_oferta'] . "</td>";

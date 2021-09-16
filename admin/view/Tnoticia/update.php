@@ -1,7 +1,9 @@
-<div class="jumbotron mt-4">
-    <h2 class="display-4">Editar tipo de noticia</h2>
-</div>
-<div class="container">
+<div class="container">    
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-success text-center">Editar noticia</h4>
+        <p></p>
+    </div>
+    
     <?php
     foreach ($tipo_noticias as $tipo_not){
     ?>
@@ -14,8 +16,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div style="margin: 1em;" class="col-md-6">
                 <input type="submit" value="enviar" class="btn btn-success">
+                <a href="<?php echo getUrl("Tnoticia","Tnoticia","consult") ?>"><button type="button" class="btn btn-danger">Cancelar</button></a>
             </div>
         </div>  
     </form>  

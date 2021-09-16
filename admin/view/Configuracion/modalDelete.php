@@ -10,9 +10,9 @@
 
         <div style="margin: 1em;" class="row">
             <div class="form-group col-md-4">
-                <label>Nombre</label>
+                <label>Descripcion</label>
                 <input type="hidden" name="id_config" value="<?php echo $confi['id_config']; ?>">
-                <input type="text" readonly name="titulo_noticia" class="form-control" value="<?php echo $confi['titulo_noticia']; ?>"> 
+                <input type="text" readonly name="desc_config" class="form-control" value="<?php echo $confi['desc_config']; ?>"> 
             
             </div>
         </div>

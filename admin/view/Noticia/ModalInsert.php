@@ -7,11 +7,11 @@
 		<div style="margin: 1em;" class="row">
 			<div class="col-md-7 form-group">
 				<label>Descripción</label>
-				<textarea name="desc_noticia" rows="1" cols="50" placeholder="Descripcion de la noticia"></textarea>
+				<textarea name="desc_noticia" rows="1" cols="50" placeholder="Descripción de la noticia"></textarea>
 			</div>
 			<div class="col-md-7 form-group">
 				<label>Título</label>
-				<input type="text" name="titulo_noticia" class="form-control" placeholder="Titulo">
+				<input type="text" name="titulo_noticia" class="form-control" placeholder="Título">
 			</div>
 			<div class="col-md-7 form-group">
 				<label>Fecha</label>

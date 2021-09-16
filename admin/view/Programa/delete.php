@@ -1,5 +1,5 @@
-<div class="jumbotron mt-4">
-    <h3 class="display-4">Eliminar programa</h3>
+<div class="jumbotron">
+    <h3 class="display-8">Eliminar programa</h3>
 </div>
 <?php
     foreach ($programas as $prog) {

@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
     $(document).on("click","#cambioDeImagen",function(){
         var ruta=$("#imagen").attr("src");
 
@@ -6,9 +7,14 @@ $(document).ready(function(){
         $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
     });
 
+<<<<<<< HEAD
   $(document).on("click","editarComentario",function(){
       var id_comentario=$("#")
   })
+=======
+
+  
+>>>>>>> 4dacc4b215fede9bc41837f11cbb4ca09c6fbead
    
     $('#tabla').DataTable({
         responsive: true,
@@ -32,13 +38,57 @@ $(document).ready(function(){
             },
 
     });
- 
 
-    $(document).on("click","#modal",function(){
+   
+ 
+    $(document).on("click","#InsertEstado",function(){
         var url=$(this).attr("data-url");
+        $.ajax({
+            url:url,
+            
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#DeleteEstado",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-estaD");
 
         $.ajax({
             url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#EditEstado",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-esta");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#modal",function(){
+        var url=$(this).attr("data-url");
+       
+        
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
             success:function(datos){
                 $("#contenedor").html(datos);
                 $("#exampleModalCenter").modal("show");
@@ -58,6 +108,7 @@ $(document).ready(function(){
 
         $.ajax({
             url:url,
+            data:"id="+id,
             success:function(datos){
                 $("#contenedor").html(datos);
                 $("#exampleModalCenter").modal("show");

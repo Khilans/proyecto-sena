@@ -1,6 +1,7 @@
 <div class="container">
-    <div class="jumbotron mt-4">
-        <h2 class="display-4">Editar Tipodocumento</h2>
+    <div class="alert alert-success" role="alert">
+                <h4 class="alert-success text-center">Editar tipo de documento</h4>
+                
     </div>
     <div class="container">
         <?php
@@ -15,7 +16,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div style="margin:1em;" class="col-md-4">
                         <input type="submit" value="enviar" class="btn btn-success">
                     </div>
                 </div>
