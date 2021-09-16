@@ -47,7 +47,7 @@
         public function getDelete(){
             $obj=new TnoticiaModel();
 
-            $cod_tipo_noti=$_GET['cod_tipo_noti'];
+            $cod_tipo_noti=$_GET['id'];
 
             $sql="SELECT * FROM t_tiponoticia WHERE cod_tipo_noti=$cod_tipo_noti";
             $tipo_noticias=$obj->consult($sql);
@@ -81,7 +81,7 @@
 
             $obj=new TnoticiaModel();
 
-            $cod_tipo_noti=$_GET['cod_tipo_noti'];
+            $cod_tipo_noti=$_GET['id'];
 
             $sql="SELECT * FROM t_tiponoticia WHERE cod_tipo_noti=$cod_tipo_noti";
             $tipo_noticias=$obj->consult($sql);

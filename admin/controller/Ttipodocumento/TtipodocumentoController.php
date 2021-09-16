@@ -37,7 +37,7 @@
      public function getDelete()
     {
         $obj = new TtipodocumentoModel();
-        $cod_tipo_doc=$_GET['cod_tipo_doc'];
+        $cod_tipo_doc=$_GET['id'];
         $sql="SELECT * FROM t_tipodocumento WHERE cod_tipo_doc = $cod_tipo_doc";
         $tipodocumento=$obj->consult($sql);
         include_once '../view/Ttipodocumento/delete.php';
@@ -62,7 +62,7 @@
     public function getUpdate(){
 
         $obj=new TtipodocumentoModel();
-        $cod_tipo_doc=$_GET['cod_tipo_doc'];
+        $cod_tipo_doc=$_GET['id'];
 
         $sql="SELECT * FROM t_tipodocumento WHERE cod_tipo_doc =$cod_tipo_doc";
         $tipodocumento=$obj->consult($sql);

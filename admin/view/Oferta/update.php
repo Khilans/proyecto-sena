@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="jumbotron mt-4">
-        <h2 class="display-4">Editar oferta</h2>
+    <div class="jumbotron">
+        <h2 class="display-8">Editar oferta</h2>
     </div>
     <?php
     foreach ($oferta as $ofer) {

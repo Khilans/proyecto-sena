@@ -83,7 +83,19 @@
               FOROS
             </a>
           </li>
-         
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo getUrl("Configuracion", "Configuracion", "consult") ?>">
+              <span data-feather="cloud"></span>
+              CONFIGURACIÓN
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo getUrl("Estado", "Estado", "consult") ?>">
+              <span data-feather="cloud"></span>
+              ESTADO
+            </a>
+          </li>
+          
         </ul>
 
        

@@ -3,21 +3,23 @@
     class ConfiguracionController{
 
 
-        public function getInsert(){
+        /* public function getInsert(){
             $obj = new ConfiguracionModel();
             $sql = "SELECT * FROM t_usuario";
             $usuarios = $obj->consult($sql);
-        }
 
-        public function datos(){
+            include_once  '../view/Configuracion/insert.php';
+        } */
+
+     /*    public function datos(){
             $obj = new ConfiguracionModel();
             $sql = "SELECT * FROM t_configuracion";
             $configuracion = $obj->consult($sql);
 
             include_once  '../view/Configuracion/insert.php';
-        }
+        } */
 
-        public function postInsert(){
+        /* public function postInsert(){
             $obj = new ConfiguracionModel();
 
             
@@ -40,35 +42,17 @@
             } else {
                 echo "Ops, error ";
             }
-        }
+        } */
 
-        public function consult(){
+       /*  public function consult(){
             $obj = new ConfiguracionModel();
 
             $sql = "SELECT tc.id_config, tc.desc_config, tc.correo_config, tc.dir_config , tc.tel_config  FROM t_configuracion tc ";
             $configuracion = $obj->consult($sql);
 
             include_once '../view/Configuracion/consult.php';
-        }
-        public function getUpdateModal(){
-
-        }
-
-        public function postUpdateModal(){
-
-        }
-
-        public function getDeleteModal(){
-
-        }
-
-        public function postDeleteModal(){
-
-            
-        }
-
-        public function view(){
-            
-        }
+        } */
+        
+        
     }
 ?>
