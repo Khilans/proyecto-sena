@@ -57,11 +57,11 @@
           
             
             $id_config=$_GET['id'];
-            $sql = "SELECT * FROM t_configuracion ";
+            $sql = "SELECT * FROM t_configuracion WHERE id_config=$id_config";
             $configuracion = $obj->consult($sql);
        
-
-        include_once '../view/Configuracion/ModalUpdate.php';
+            
+            include_once '../view/Configuracion/ModalUpdate.php';
 
         }
 
@@ -85,11 +85,12 @@
            }
         }
         
-        /*  public function getModalDeleteCon(){
+         public function getModalDeleteCon(){
 
             $obj = new ConfiguracionModel();
 
-            $sql = "SELECT * FROM t_configuracion";
+            $id_config=$_GET['id'];
+            $sql = "SELECT * FROM t_configuracion WHERE id_config=$id_config";
             $configuracion=$obj->consult($sql);
 
             include_once '../view/Configuracion/ModalDelete.php';
@@ -110,7 +111,7 @@
             } else {
                 echo "Ops,error al eliminar";
             }
-        }  */
+        }  
         
     }
 ?>
