@@ -10,20 +10,7 @@ include_once '../view/partials/modal.php';
 				<img src="images/logo.png" alt="">
 				<span>senatel</span>
 			</div>
-		</di>
-			<!-- Main Navigation -->
-			<nav class="main_nav_container">
-				<div class="main_nav">
-					<ul class="main_nav_list">
-						<li class="main_nav_item"><a href="index.php">Inicio</a></li>
-						<li class="main_nav_item"><a href="<?php echo getUrl("Pqrs", "Pqrs", "getSend") ?>">PQRSF</a></li>
-
-						<li class="main_nav_item"><a href="<?php echo getUrl("Foro", "Foro", "feed") ?>">Foros</a></li>
-						<li class="main_nav_item"><a href="<?php echo getUrl("Estado", "Estado", "consult") ?>">Foros</a></li>
-						<li class="main_nav_item"><a href="<?php echo getUrl("Oferta", "Oferta", "consult") ?>">Ofertas</a></li>
-						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia", "Noticia", "getView") ?>">Noticias</a></li>
-						<li class="main_nav_item"><a href="<?php echo getUrl("Tpqrs", "Tpqrs", "consult") ?>">Pqrsf</a></li>
-						
+		</div>
 
 		<!-- Main Navigation -->
 		<nav class="main_nav_container">
@@ -60,7 +47,6 @@ include_once '../view/partials/modal.php';
 					}
 					?>
 					<a href="<?php echo getUrl("Acceso", "Acceso", "logout"); ?>"><button class="dropdown-item text-center" type="button">Cerrar sesión</button></a>
-
 
 				</div>
 			</div>
