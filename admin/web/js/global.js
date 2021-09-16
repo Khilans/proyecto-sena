@@ -30,7 +30,55 @@ $(document).ready(function(){
             },
 
     });
-    //Modales crus Tipo de noticia
+
+    //Modales del crud tipo de pqrsf
+
+    $(document).on("click","#InsertTpqrs",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-Tpqrs");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#DeleteTpqrs",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-TpqrsD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#EditTpqrs",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-TpqrsE");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+
+
+
+    //Modales crud Tipo de noticia
     $(document).on("click","#InsertTnoti",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-Tnoti");

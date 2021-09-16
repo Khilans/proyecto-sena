@@ -1,9 +1,9 @@
-<?
-    include_once '../model/MasteModel.php';
-    class pqsrModel extends MasterModel 
-    {
-        
-    }
+<?php
+   include_once '../model/MasterModel.php';
+
+   class TpqrsModel extends MasterModel{
+
+   }
     
 
 

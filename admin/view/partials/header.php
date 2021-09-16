@@ -72,7 +72,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?php echo getUrl("Pqrs", "Pqrs", "consult") ?>">
+            <a class="nav-link" href="<?php echo getUrl("pqrs", "pqrs", "consult") ?>">
               <span data-feather="info"></span>
              PQRSF
             </a>
@@ -95,7 +95,12 @@
               ESTADO
             </a>
           </li>
-          
+          <li class="nav-item">
+            <a class="nav-link" href="<?php echo getUrl("Tpqrs", "Tpqrs", "consult") ?>">
+              <span data-feather="info"></span>
+             TPQRSF
+            </a>
+          </li>
         </ul>
 
        
