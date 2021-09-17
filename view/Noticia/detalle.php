@@ -21,7 +21,7 @@
 						<a href="#" class="author">Angie San</span><img src="images/avatar.jpg" alt="" /></a>
 					</div>
 				</header>
-				<span class="image featured"><img class='pic-2' src=" <?php echo $noti['img_noticia'] ?>"></span>			
+				<span class="image featured"><img class='pic-2' src="<?php echo $noti['img_noticia'] ?>"></span>			
 				<p><?php echo $noti['desc_noticia']?></p>
 			</article>
 		</form>
