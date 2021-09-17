@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
   <link rel="stylesheet" href="styles/prueba/bootstrap.css">
   <link rel="stylesheet" href="styles/prueba/style.css">
+  <link rel="stylesheet" href="styles/prueba/main.css">
   <link rel="stylesheet" href="styles/prueba/main.css"> 
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="css/main.css">
