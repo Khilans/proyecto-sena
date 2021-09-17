@@ -23,7 +23,7 @@ include_once '../model/Foro/ForoModel.php';
             $tema=$_POST['tema_foro'];
             $fecha_inicio=hora();
             $fecha_final=$_POST['fecha_final'];
-            $sql="INSERT INTO t_foro VALUES($id,'$titulo','$descripcion','$fecha_inicio','$fecha_final','$ruta',$usu_id,$tema)";
+            $sql="INSERT INTO t_foro VALUES($id,'$titulo','$descripcion','$fecha_inicio','$fecha_final','$ruta',$usu_id,$tema,1)";
             $ejecutar=$obj->insert($sql);
             if($ejecutar){
                 redirect(getUrl("Foro","Foro","feed"));
