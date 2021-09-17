@@ -10,12 +10,8 @@ include_once '../view/partials/modal.php';
 				<img src="images/logo.png" alt="">
 				<span>senatel</span>
 			</div>
-<<<<<<< HEAD
-		</di>
-=======
 		</div>
 
->>>>>>> 882ed42e2253777e7ef685b591aee765aff0ce3f
 		<!-- Main Navigation -->
 		<nav class="main_nav_container">
 			<div class="main_nav">

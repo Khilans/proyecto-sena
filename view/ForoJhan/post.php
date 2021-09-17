@@ -1,5 +1,3 @@
-<link rel="stylesheet" type="text/css" href="styles/news_post_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/news_post_responsive.css">
     <!-- Home -->
 
 	<div class="home">
@@ -7,7 +5,7 @@
 			<div class="home_background prlx" style="background-image:url(images/news_background.jpg)"></div>
 		</div>
 		<div class="home_content">
-			<h1>The News</h1>
+			<h1>Foro</h1>
 		</div>
 	</div>
 

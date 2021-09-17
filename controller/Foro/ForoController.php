@@ -2,10 +2,17 @@
 include_once '../model/Foro/ForoModel.php';
     class ForoController{
         
-        public function newPost(){
+        public function getNewPost(){
             $obj=new ForoModel;
 
             include_once '../view/ForoJhan/newPost.php';
+        }
+
+        public function insertNewPost(){
+            $obj= new ForoModel;
+            $titulo=$_POST['titulo_foro'];
+            $descripcion=$_POST['desc_foro'];
+            $imagen=$_POST['imagen_foro'];
         }
 
         public function post(){

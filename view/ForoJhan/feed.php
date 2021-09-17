@@ -80,6 +80,13 @@
 							<div class="latest_posts">
 								
 								<!-- Latest Post -->
+
+								<div class="latest_post">
+									<div class="latest_post_image">
+										<div class="jumbotron text-center"><a href="<?php echo getUrl("Foro","Foro","newPost") ?>"><h2 class="display-6">Crea un Foro</h2></a></div>
+									</div>
+								</div>
+
 								<div class="latest_post">
 									<div class="latest_post_image">
 										<img src="images/latest_1.jpg" alt="https://unsplash.com/@dsmacinnes">

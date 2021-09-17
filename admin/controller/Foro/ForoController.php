@@ -4,6 +4,8 @@ include_once '../model/Foro/ForoModel.php';
 
         public function consult(){
             $obj=new ForoModel;
+            $sql="SELECT * FROM t_foro";
+            $foros=$obj->consult($sql);
             include_once '../view/ForoJhan/consult.php';  
         }
         
