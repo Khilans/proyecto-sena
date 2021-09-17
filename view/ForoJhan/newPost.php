@@ -15,7 +15,7 @@
 						<!-- News Post -->
 						<div class="news_post">
 							<div class="news_post_image">
-          <form action="<?php echo getUrl("Foro","Foro","insertNewPost") ?>" method="post">
+          <form action="<?php echo getUrl("Foro","Foro","insertNewPost") ?>" method="post" enctype="multipart/form-data">
                   <div class="jumbotron text-center" style="height:300px;">
                     <h2 class="display-5" style="margin-top:35px;">Inserte una imágen</h2>
                     <input type="file"  name="imagen_foro" id="">
