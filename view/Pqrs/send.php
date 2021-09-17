@@ -53,7 +53,7 @@
                                 
 								?>
 								<textarea id="contact_form_message" class="text_field contact_form_message" name="pqrsf_desc" placeholder="Message" required="required" data-error="Por favor escribe el asunto."></textarea>
-								<button id="contact_send_btn" type="submit" class="contact_send_btn trans_200">Radicar</button>
+								<button id="contact_send_btn" type="submit" class="contact_send_btn trans_200" value="Enviar">Radicar</button>
 							</form>
 						</div>
 					</div>
