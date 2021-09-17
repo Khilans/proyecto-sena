@@ -1,29 +1,71 @@
-<!DOCTYPE html>
-<html lang="en">
-    <link rel="stylesheet" href="../web/styles/oferta/Ofertas.css">
-    <link rel="stylesheet" href="../web/styles/oferta/postOferta.css">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ofertas</title>
-</head>
-<body>
-    <center>
-        <h1>Ofertas</h1>
-    </center>
-   
-<div class="container">
-        <div class="card">
-            <img src="img/descargar (2).jpg" alt="">
-            <h4>El tun tun</h4>
-            <p>Esa cintura cuando se menea
-    Y yo estoy dentro de ti me hace enloquecer
-    Hablame en el oido, dime cosas lindas dime papi si
-    Arañame toda la espalda claveme las uñas con toda pasión</p>
-            <a href="ofertas2.html">Leer mas</a>
-        </div>
-  
+<div class="jumbotron mt-4">
+    <h2 class="display-6">Ofertas</h2>
 </div>
-</html> 
+<div class="container">
+    <div class="card-deck col-md-4">
+        <div class="card mb-3">
+            <img class="card-img-top" src="images/course_2.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="card-deck col-md-4">
+        <div class="card mb-3">
+            <img class="card-img-top" src="images/telecomunicaciones-3.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="card-deck col-md-4">
+        <div class="card mb-3">
+            <img class="card-img-top" src="images/login.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    
+</div>
 
+
+<div class="container mt-4">
+    <div class="card-deck col-md-4">
+        <div class="card mb-3">
+            <img class="card-img-top" src="img/foto-cdti-2019.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="card-deck col-md-4">
+        <div class="card mb-3">
+            <img class="card-img-top" src="images/telecomunicaciones-1.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    <div class="card-deck col-md-4">
+        <div class="card mb-3">
+            <img class="card-img-top" src="images/event_3.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+    
+</div>
