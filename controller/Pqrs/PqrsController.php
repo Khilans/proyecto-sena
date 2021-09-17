@@ -24,7 +24,7 @@
         public function postSend(){
             $obj=new PqrsModel;
             $usu_id=$_POST['usu_id'];
-            $mensaje=$_POST['message'];
+            $pqrsf_desc=$_POST['pqrsf_desc'];
             $tipo=$_POST['tipopqrsf'];
             dd($_POST);
             
