@@ -20,10 +20,6 @@
   <link rel="stylesheet" href="styles/prueba/bootstrap.css">
   <link rel="stylesheet" href="styles/prueba/style.css">
   <link rel="stylesheet" href="styles/prueba/main.css">
-  <link rel="stylesheet" href="../web/styles/oferta/Ofertas.css">       <!-- ooooo -->
-  <link rel="stylesheet" href="../web/styles/oferta/postOferta.css">    <!-- ooooo -->
   <link rel="stylesheet" href="styles/main.css" />
-
-
   <link rel="stylesheet" href="css/main.css">
 </head>
