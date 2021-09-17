@@ -39,7 +39,7 @@
 								</div>
 								<div class="news_post_title_container">
 									<div class="news_post_title">
-										<a href="news_post.html"><?php echo $f['titulo_foro']; ?></a>
+										<a href="news_post.html"><?php echo $f['titulo_foro']; ?></a> <?php if($f['usu_id']==$_SESSION['user_id']){ echo "<button class='btn btn-warning mx-1'>Editar</button>}";} ?>
 									</div>
 									<div class="news_post_meta">
 										<span class="news_post_author"><a href="#">Por <?php echo $f['usu_nombre'] ?> <?php echo $f['usu_apellido'] ?></a></span>

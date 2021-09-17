@@ -23,14 +23,12 @@
 
         public function postSend(){
             $obj=new PqrsModel;
-
-            $desc_noticia=$_POST['desc_noticia'];
-            $cod_pqrsf_tipo = $_POST['cod_pqrsf_tipo'];
-            $usu_id=$_SESSION['user_id']; 
-            /* $id_estado = $_POST['id_estado']; */
-            $pqrsf_desc= $_POST['pqrsf_desc'];
-            $pqrsf_fecha= $_POST['pqrsf_fecha'];
-           
+            $usu_id=$_POST['usu_id'];
+            $mensaje=$_POST['message'];
+            $tipo=$_POST['tipopqrsf'];
+            dd($_POST);
+            
+           /*
             $id = $obj->autoincrement("t_pqrsf", "cod_pqrsf");
 
             $sql = "INSERT INTO t_pqrsf VALUES($id, $cod_pqrsf_tipo, $usu_id,1, '$pqrsf_desc','$pqrsf_fecha')";
@@ -42,7 +40,7 @@
                 redirect(getUrl("pqrsf", "pqrsf", "send"));
             } else {
                 echo "Ops, error ";
-            }
+            }*/
         }
 
 
