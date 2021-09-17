@@ -4,15 +4,31 @@ include_once '../model/Foro/ForoModel.php';
         
         public function getNewPost(){
             $obj=new ForoModel;
-
+            $sql="SELECT * FROM t_tema";
+            $temas=$obj->consult($sql);
             include_once '../view/ForoJhan/newPost.php';
         }
 
         public function insertNewPost(){
             $obj= new ForoModel;
+            $id=$obj->autoincrement("t_foro","cod_foro");
+            $usu_id=$_SESSION['user_id'];
             $titulo=$_POST['titulo_foro'];
             $descripcion=$_POST['desc_foro'];
             $imagen=$_POST['imagen_foro'];
+            $tema=$_POST['tema_foro'];
+            $fecha_inicio=hora();
+            $fecha_final=$_POST['fecha_final'];
+            
+            $sql="INSERT INTO t_foro VALUES($id,'$titulo','$descripcion','$fecha_inicio','$fecha_final','$imagen',$usu_id,$tema)";
+            $ejecutar=$obj->insert($sql);
+            if($ejecutar){
+                redirect(getUrl("Foro","Foro","feed"));
+            }else{
+                echo "Ocurrió un error";
+                dd($sql);
+            }
+            
         }
 
         public function post(){

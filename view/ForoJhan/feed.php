@@ -83,7 +83,7 @@
 
 								<div class="latest_post">
 									<div class="latest_post_image">
-										<div class="jumbotron text-center"><a href="<?php echo getUrl("Foro","Foro","newPost") ?>"><h2 class="display-6">Crea un Foro</h2></a></div>
+										<div class="jumbotron text-center"><a href="<?php echo getUrl("Foro","Foro","getNewPost") ?>"><h2 class="display-6">Crea un Foro</h2></a></div>
 									</div>
 								</div>
 
