@@ -4,7 +4,7 @@ include_once '../model/Foro/ForoModel.php';
 
         public function consult(){
             $obj=new ForoModel;
-            $sql="SELECT * FROM t_foro";
+            $sql="SELECT f.cod_foro,f.titulo_foro,f.desc_foro,f.fech_ini_foro,f.fech_fin_foro,f.imag_foro,u.usu_nombre,u.usu_apellido FROM t_foro f,t_usuario u WHERE f.usu_id=u.usu_id";
             $foros=$obj->consult($sql);
             include_once '../view/ForoJhan/consult.php';  
         }

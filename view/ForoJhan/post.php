@@ -1,4 +1,6 @@
-    <!-- Home -->
+<link rel="stylesheet" type="text/css" href="styles/news_post_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/news_post_responsive.css">   
+	<!-- Home -->
 
 	<div class="home">
 		<div class="home_background_container prlx_parent">
@@ -42,7 +44,7 @@
 									<div class="news_post_meta">
 										<span class="news_post_author"><a href="#">Por <?php echo $f['usu_nombre'] ?> <?php echo $f['usu_apellido'] ?></a></span>
 										<span>|</span>
-										<span class="news_post_comments"><a href="#">3 Comments</a></span>
+										<span class="news_post_comments"><a href="#"> Comentarios</a></span>
 									</div>
 								</div>
 							</div>

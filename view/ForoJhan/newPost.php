@@ -15,37 +15,52 @@
 						<!-- News Post -->
 						<div class="news_post">
 							<div class="news_post_image">
-                <div class="jumbotron text-center" style="height:300px;">
-                  <h2 class="display-5">Inserte una imágen</h2>
-                  <input type="file"  name="" id="">
+          <form action="<?php echo getUrl("Foro","Foro","insertNewPost") ?>" method="post">
+                  <div class="jumbotron text-center" style="height:300px;">
+                    <h2 class="display-5" style="margin-top:35px;">Inserte una imágen</h2>
+                    <input type="file"  name="imagen_foro" id="">
+                  </div>
                 </div>
-							</div>
-							<div class="news_post_top d-flex flex-column flex-sm-row">
-								<div class="news_post_date_container">
-									<div class="news_post_date d-flex flex-column align-items-center justify-content-center">
-										<div>18</div>
-										<div>dec</div>
-									</div>
-								</div>
-								<div class="news_post_title_container">
-									<div class="news_post_title ">
-										<input class="form-control" type="text" name="titulo_foro" placeholder="Digite aquí el título del foro" style="width:600px;">
-									</div>
-									<div class="news_post_meta">
-										<span class="news_post_author"><a href="#">Por <?php echo $_SESSION['nombre']; ?> <?php echo $_SESSION['nombre2']; ?> <?php echo $_SESSION['apellidos']; ?></a></span>
-										<span>|</span>
-										<span class="news_post_comments"><a href="#">0 Comentarios</a></span>
-									</div>
-								</div>
-							</div>
-							<div class="news_post_text">
-                <textarea name="desc_foro" id="" cols="88" rows="10"></textarea>
-							</div>					
+                <div class="news_post_top d-flex flex-column flex-sm-row">
+                  <div class="news_post_date_container">
+                    <div class="news_post_date d-flex flex-column align-items-center justify-content-center">
+                      <div>18</div>
+                      <div>dec</div>
+                    </div>
+                  </div>
+                  <div class="news_post_title_container">
+                    <div class="news_post_title ">
+                      <input class="form-control" type="text" name="titulo_foro" placeholder="Digite aquí el título del foro" style="width:600px;">
+                    </div>
+                    <div class="news_post_meta">
+                      <span class="news_post_author"><a href="#">Por <?php echo $_SESSION['nombre']; ?> <?php echo $_SESSION['nombre2']; ?> <?php echo $_SESSION['apellidos']; ?></a></span>
+                      <span>|</span>
+                      <span class="news_post_comments"><a href="#">0 Comentarios</a></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="news_post_text">
+                  <textarea name="desc_foro" id="" cols="88" rows="10"></textarea>
+                </div>
+                
+                <div class="row">
+                  <input type="date" name="fecha_final" class="form-control col-md-6">
+                  <select class="form-control col-md-5 mx-1" name="tema_foro">
+                    <option value="">Seleccione...</option>
+                    <?php foreach($temas as $tema){
+                      echo "<option value='".$tema['cod_tema']."'>".$tema['desc_tema']."</option>";
+                    }
+                    ?>
+                  </select>
+                </div>
 
-						</div>
+                <div class="row" style="margin-top:10px;">
+                  <button type="submit" class="btn btn-success btn-block">Registrar foro</button>
+                </div>
+              </div>
 
-					</div>
-
+            </div>
+          </form>
 				</div>
 
 				<!-- Sidebar Column -->
