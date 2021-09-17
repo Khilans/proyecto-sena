@@ -28,7 +28,7 @@
 						?>
 						<div class="news_post">
 							<div class="news_post_image">
-								<img src="images/news_1.jpg" alt="https://unsplash.com/@dsmacinnes">
+								<img src="<?php echo $f['imag_foro']; ?>" alt="<?php echo $f['imag_foro']; ?>">
 							</div>
 							<div class="news_post_top d-flex flex-column flex-sm-row">
 								<div class="news_post_date_container">

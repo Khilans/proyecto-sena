@@ -370,7 +370,7 @@ $(document).ready(function(){
 
 
     
-
+ //Modal usuario
     $(document).on("click","#modalUpdate",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-usu_id");
@@ -427,9 +427,26 @@ $(document).ready(function(){
         });
     });
 
+    //Modal usuario perfil
     $(document).on("click","#modalProfile",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-usu_id");
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            type:"GET",
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+
+    //Modales Foro
+    $(document).on("click","#modalUpdateForo",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-foro_id");
         $.ajax({
             url:url,
             data:"id="+id,

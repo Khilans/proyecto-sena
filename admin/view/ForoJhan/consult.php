@@ -20,9 +20,10 @@ include_once '../view/partials/modal.php';
                 echo "<td>" . $foro['titulo_foro'] . "</td>";
                 echo "<td class='text-center'>" . $foro['fech_ini_foro'] . "-" . $foro['fech_fin_foro'] . "</td>";
                 echo "<td class='text-center'>" . $foro['usu_nombre']." ". $foro['usu_apellido'] . "</td>";
-                echo "<td class='text-center'><a href='" . getUrl("Foro", "Foro", "getModalUpdate", array("foro_id" => $foro['cod_foro'])) . "'><button class='btn btn-warning btn-sm'>Editar</button></a>
-                <a href='" . getUrl("Foro", "Foro", "getModalDelete", array("foro_id" => $foro['cod_foro'])) . "'><button class='btn btn-danger btn-sm'>Eliminar</button></a>
-                <a href='" . getUrl("Foro", "Foro", "getModalInfo", array("foro_id" => $foro['cod_foro'])) . "'><button class='btn btn-info btn-sm'>Detalles</button></a></td>";
+                echo "<td class='text-center'><a href='" . getUrl("Foro", "Foro", "getModalUpdate", array("foro_id" => $foro['cod_foro'])) . "'><button class='btn btn-danger btn-sm'>Eliminar</button></a>
+                <button type='button' class='btn btn-warning btn-sm' type='button' id='modalUpdateForo' data-toggle='modal' data-target='#exampleModal' data-url='". getUrl('Foro', 'Foro', 'getModalEdit', false, 'ajax')."' data-foro_id='".$foro['cod_foro']."'>Editar</button>
+                <button type='button' class='btn btn-info btn-sm' type='button' id='modalInfoForo' data-toggle='modal' data-target='#exampleModal' data-url='". getUrl('Foro', 'Foro', 'profile', false, 'ajax')."' data-foro_id='".$foro['cod_foro']."'>Detalles</button>
+                </td>";
                 echo "</tr>";
             }
             ?>
