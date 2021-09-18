@@ -12,15 +12,6 @@ include_once '../view/partials/modal.php';
 			</div>
 
 
-<<<<<<< HEAD
-						<li class="main_nav_item"><a href="<?php echo getUrl("Foro", "Foro", "feed") ?>">Foros</a></li>
-						<li class="main_nav_item"><a href="<?php echo getUrl("Estado", "Estado", "consult") ?>">Foros</a></li>
-						<li class="main_nav_item"><a href="Oferta/ofertas.php">Ofertas</a></li>
-						<li class="main_nav_item"><a href="<?php echo getUrl("Noticia", "Noticia", "getView") ?>">Noticias</a></li>
-						<li class="main_nav_item"><a href="<?php echo getUrl("Pqrs", "Pqrs", "consult") ?>">Pqrsf</a></li>
-						
-=======
->>>>>>> 9aecbc786d905ed820fa5b7de7ce1093466331f8
 
 
 
