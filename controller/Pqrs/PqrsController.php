@@ -13,7 +13,7 @@
             include_once '../view/Pqrs/consult.php';
         }
 
-        public function getInsert(){
+        public function getSend(){
             $obj=new PqrsModel;
             $sql="SELECT * FROM t_pqrsftipo";
             $tipoPQRSF=$obj->consult($sql);
@@ -21,9 +21,9 @@
             include_once '../view/Pqrs/send.php';
         }
 
-        public function postInsert(){
+        public function postSend(){
             $obj=new PqrsModel;
-
+            
            
             $cod_pqrsf_tipo=$_POST['tipopqrsf'];
             $usu_id=$_POST['usu_id'];
@@ -31,16 +31,17 @@
             $pqrsf_fecha=hora();
             
            /*  dd($_POST); */
+            
            
-            $id = $obj->autoincrement("t_pqrsf", "cod_pqrsf");
+           $id = $obj->autoincrement("t_pqrsf", "cod_pqrsf");
+
             $sql = "INSERT INTO t_pqrsf VALUES($id,$cod_pqrsf_tipo,$usu_id,1,'$pqrsf_desc','$pqrsf_fecha')";
        
             $ejecutar = $obj->update($sql);
+
             if ($ejecutar) {
                 $_SESSION['mensaje'] = "Se registró tu <b>$cod_pqrsf_tipo</b> exitosamente";
-
                 redirect(getUrl("Pqrs", "Pqrs", "getSend"));
-
             } else {
                 echo "Ops, error ";
                 /* dd($sql); */

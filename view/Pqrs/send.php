@@ -24,22 +24,16 @@
 						<div class="contact_title">Radica tu PQRSF</div>
 
 						<div class="contact_form_container">
-
-
 							<form action="<?php echo getUrl("Pqrs","Pqrs","postSend"); ?>" method="POST">
-
 								<?php
 								if (isset($_SESSION['user_id'])) {
 								?>
 									<div class="row">
-
-
 										<input class="input_field contact_form_name col-md-4" type="text" value="<?php echo $_SESSION['nombre']; ?>" required="required" data-error="Se requiere el nombre.">
 										<input type="hidden" name="usu_id" value="<?php echo $_SESSION['user_id']; ?>">
                                         <!-- <input type="hidden" name="pqrsf_fecha"> -->
 										<input class="input_field contact_form_email col-md-4 mx-1" name="usuario_correo" type="email" value="<?php echo $_SESSION['correo']; ?>" required="required" data-error="Valid email is required.">
 										<select class="input_field col-md-3" name="tipopqrsf">
-
 											<option value="">Seleccione</option>
 											<?php
 											foreach ($tipoPQRSF as $tpq) {
@@ -66,10 +60,7 @@
 
 				</div>
 
-
-
 				 <div class="col-lg-4">
-
 					<div class="about">
 						<div class="about_title">Join Courses</div>
 						<p class="about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum. Etiam eu purus nec eros varius luctus. Praesent finibus risus facilisis ultricies. Etiam eu purus nec eros varius luctus.</p>
@@ -97,10 +88,7 @@
 						</div>
 
 					</div>
-
-				
 				</div> 
-
 
 			</div>
 
