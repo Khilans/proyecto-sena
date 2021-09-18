@@ -26,7 +26,12 @@ include_once '../view/partials/modal.php';
                 echo "<tr>";
                  echo "<td>" . $pq['cod_pqrsf'] . "</td>";
                  echo "<td>" . $pq['desc_pqrsf_tipo'] . "</td>"; 
-                echo "<td>" . $pq['usu_nombre'] . "</td>";
+                 if (isset($pq['usu_id'])){
+                    echo "<td>" . $pq['usu_id'] . "</td>";
+                 }else{
+                     echo "<td>Aninimus</td>";
+                 }
+                
                 echo "<td>" . $pq['desc_estado'] . "</td>";
                 echo "<td>" . $pq['pqrsf_desc'] . "</td>";
                 echo "<td>" . $pq['pqrsf_fecha'] . "</td>";

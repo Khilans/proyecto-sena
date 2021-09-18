@@ -23,16 +23,11 @@
 						<div class="contact_title">Radica tu PQRSF</div>
 
 						<div class="contact_form_container">
-							<form action="<?php echo getUrl("Pqrs", "Pqrs", "postSend"); ?>" method="POST">
-								<?php
-								if (isset($_SESSION['user_id'])) {
-								?>
-									<div class="row">
-										<input class="input_field contact_form_name col-md-4" type="text" value="<?php echo $_SESSION['nombre']; ?>" required="required" data-error="Se requiere el nombre.">
-										<input type="hidden" name="usu_id" value="<?php echo $_SESSION['user_id']; ?>">
-										<!-- <input type="hidden" name="pqrsf_fecha"> -->
-										<input class="input_field contact_form_email col-md-4 mx-1" name="usuario_correo" type="email" value="<?php echo $_SESSION['correo']; ?>" required="required" data-error="Valid email is required.">
-										<select class="input_field col-md-3" name="tipopqrsf">
+							<form action="<?php echo getUrl("Pqrs","Pqrs","postSendU"); ?>" method="POST">
+
+								<input class="input_field contact_form_name col-md-4" name="nombre" type="text" placeholder="Name" required="required" data-error="Name is required.">
+								<input class="input_field contact_form_email col-md-4 mx-1" name="correo" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
+                                <select class="input_field col-md-3" name="tipopqrsf">
 											<option value="">Seleccione</option>
 											<?php
 											foreach ($tipoPQRSF as $tpq) {
@@ -40,11 +35,7 @@
 											}
 											?>
 										</select>
-										<textarea id="contact_form_message" class="text_field contact_form_message" name="pqrsf_desc" placeholder="Message" required="required" data-error="Por favor escribe el asunto."></textarea>
-									</div>
-								<?Php
-									}
-								?>
+								<textarea id="contact_form_message" class="text_field contact_form_message" name="pqrsf_desc" placeholder="Message" required="required" data-error="Por favor escribe el asunto."></textarea>
 								<button id="contact_send_btn" type="submit" class="contact_send_btn trans_200" value="Enviar">Radicar</button>
 							</form>
 						</div>
