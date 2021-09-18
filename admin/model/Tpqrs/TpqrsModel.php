@@ -1,6 +1,6 @@
 <?
     include_once '../model/MasteModel.php';
-    class pqsrModel extends MasterModel 
+    class TpqrsModel extends MasterModel 
     {
         
     }
