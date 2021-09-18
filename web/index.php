@@ -14,7 +14,13 @@ include_once '../lib/helpers.php';
                     include_once '../view/partials/register.php';
                     
                 }
+                
+                /* if (!isset($_SESSION['user_id'])){
+                    include_once '../view/Pqrs/sendU.php'; 
+                } */
+
                 /*  include_once '../view/partials/footer.php';  */
+                
             echo "</div>";
             include_once '../view/partials/scripts.php';
         echo "</body>";
