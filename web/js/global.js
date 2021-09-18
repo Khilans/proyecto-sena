@@ -7,14 +7,8 @@ $(document).ready(function(){
         $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
     });
 
-<<<<<<< HEAD
-  $(document).on("click","editarComentario",function(){
-      var id_comentario=$("#")
-  })
-=======
 
   
->>>>>>> 4dacc4b215fede9bc41837f11cbb4ca09c6fbead
    
     $('#tabla').DataTable({
         responsive: true,
@@ -39,6 +33,12 @@ $(document).ready(function(){
 
     });
 
+    $(document).on("click","#cambioImgForo",function(){
+        var ruta=$("#imagen").attr("src");
+
+        $("#cambiarImagen").html("<input type='file' name='img_nueva'>");
+        $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
+    });
    
  
     $(document).on("click","#InsertEstado",function(){
@@ -50,6 +50,33 @@ $(document).ready(function(){
                 $("#contenedor").html(datos);
                 $("#exampleModalCenter").modal("show");
             }
+        });
+    });
+
+    $(document).on("click","#comment_send_btn",function(){
+        var url=$(this).attr("data-url");
+        var foro_id=$(this).attr("data-foro_id");
+        var comentario =$("#comment_form_message").val();
+        var dataString= 'foro_id='+foro_id+'&comentario='+comentario;
+        $.ajax({
+            url:url,
+            data:dataString,
+            type:"GET",
+            success:function(datos){
+                location.reload(true);
+            }
+        });
+    });
+
+    $(document).on("click","#eliminar_comentario",function(){
+        var url=$(this).attr("data-url");
+        var id_comentario=$(this).attr("data-id_comentario");
+        $.ajax({
+            url:url,
+            data:"comentario_id="+id_comentario,
+            type:"GET",
+            success:function(datos){
+                location.reload(true);            }
         });
     });
 
