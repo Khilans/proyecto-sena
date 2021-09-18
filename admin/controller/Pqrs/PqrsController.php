@@ -13,6 +13,7 @@
             include_once '../view/Pqrs/consult.php';
         }
 
+<<<<<<< HEAD
         public function getModalInsert(){
 
             $obj = new PqrsModel();
@@ -53,7 +54,11 @@
                 echo "Ops, error ";
             }
         } 
+=======
+        
+>>>>>>> 1899a5bafbc64d395962c924a333c4fb7d5f4aa7
 
+        
     }
 
 ?>

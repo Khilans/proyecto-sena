@@ -2,8 +2,24 @@
 include_once '../model/Foro/ForoModel.php';
     class ForoController{
 
+        public function getModalEdit(){
+            $obj=new ForoModel;
+            $foro_id=$_GET['id'];
+            $sql="SELECT f.cod_foro,f.titulo_foro,f.desc_foro,f.fech_ini_foro,f.fech_fin_foro,f.imag_foro,u.usu_nombre,u.usu_apellido FROM t_foro f,t_usuario u WHERE f.usu_id=u.usu_id AND f.cod_foro=$foro_id";
+            $foro=$obj->consult($sql);
+            if($foro){
+                include_once '../view/ForoJhan/modalEdit.php';
+            }else{
+                echo "Ocurrió un error";
+                dd($sql);
+            }
+            
+        }
+
         public function consult(){
             $obj=new ForoModel;
+            $sql="SELECT f.cod_foro,f.titulo_foro,f.desc_foro,f.fech_ini_foro,f.fech_fin_foro,f.imag_foro,u.usu_nombre,u.usu_apellido FROM t_foro f,t_usuario u WHERE f.usu_id=u.usu_id";
+            $foros=$obj->consult($sql);
             include_once '../view/ForoJhan/consult.php';  
         }
         
