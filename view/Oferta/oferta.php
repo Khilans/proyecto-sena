@@ -1,5 +1,10 @@
+<link rel="stylesheet" href="styles/oferta/Ofertas.css">   
+<link rel="stylesheet" href="styles/oferta/postOferta.css"> 
+<br><br><br><br><br>
+
+
 <div class="jumbotron mt-4">
-    <h2 class="display-6">Ofertas</h2>
+   <center><h1>Oferta académica</h1></center> 
 </div>
 <div class="container">
     <div class="card-deck col-md-4">

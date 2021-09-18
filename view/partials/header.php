@@ -10,6 +10,11 @@ include_once '../view/partials/modal.php';
 				<img src="images/logo.png" alt="">
 				<span>senatel</span>
 			</div>
+
+
+
+
+
 		</div>
 
 		<!-- Main Navigation -->
