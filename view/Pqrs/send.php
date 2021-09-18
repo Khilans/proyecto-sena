@@ -26,11 +26,13 @@ include_once '../lib/helpers.php';
 						<div class="contact_title">Radica tu PQRSF</div>
 
 						<div class="contact_form_container">
-							<form action="post">
+							<form action="<?php echo getUrl("Pqrs", "Pqrs", "getSend"); ?>" method="post">
 								<?php
 								if (isset($_SESSION['user_id'])) {
 								?>
 									<div class="row">
+										<input type="hidden" name="cod_pqrsf" >
+										<input class="input_field contact_form_name col-md-4" name="usuario" type="text" value="<?php echo $_SESSION['nombre']; ?>" required="required" data-error="Name is required." disabled>
 										<input class="input_field contact_form_name col-md-4" name="usuario" type="text" value="<?php echo $_SESSION['nombre']; ?>" required="required" data-error="Name is required." disabled>
 										<input class="input_field contact_form_email col-md-4 mx-1" name="usuario_correo" type="email" value="<?php echo $_SESSION['correo']; ?>" required="required" data-error="Valid email is required." disabled>
 										<select class="input_field col-md-3" name="tipopqrsf" id="">
@@ -58,7 +60,7 @@ include_once '../lib/helpers.php';
 
 				</div>
 
-				<!-- <div class="col-lg-4">
+				<div class="col-lg-4">
 					<div class="about">
 						<div class="about_title">Join Courses</div>
 						<p class="about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum. Etiam eu purus nec eros varius luctus. Praesent finibus risus facilisis ultricies. Etiam eu purus nec eros varius luctus.</p>
@@ -86,7 +88,7 @@ include_once '../lib/helpers.php';
 						</div>
 
 					</div>
-				</div> -->
+				</div>
 
 			</div>
 

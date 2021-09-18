@@ -2,7 +2,7 @@
 include_once '../view/partials/modal.php';
 ?>
 <!-- Header -->
-<header class="header d-flex flex-row">
+<header class="">header d-flex flex-row
 	<div class="header_content d-flex flex-row align-items-center">
 		<!-- Logo -->
 		<div class="logo_container">
@@ -10,18 +10,16 @@ include_once '../view/partials/modal.php';
 				<img src="images/logo.png" alt="">
 				<span>senatel</span>
 			</div>
-<<<<<<< HEAD
-		</di>
-=======
+
+
 		</div>
 
->>>>>>> 882ed42e2253777e7ef685b591aee765aff0ce3f
 		<!-- Main Navigation -->
 		<nav class="main_nav_container">
 			<div class="main_nav">
 				<ul class="main_nav_list">
 					<li class="main_nav_item"><a href="index.php">Inicio</a></li>
-					<li class="main_nav_item"><a href="<?php echo getUrl("Pqrs", "Pqrs", "getSend") ?>">PQRSF</a></li>
+					<li class="main_nav_item"><a href="<?php echo getUrl("Pqrs", "Pqrs", "getInsert") ?>">PQRSF</a></li>
 					<li class="main_nav_item"><a href="<?php echo getUrl("Foro", "Foro", "feed") ?>">Foros</a></li>
 					<li class="main_nav_item"><a href="<?php echo getUrl("Oferta", "Oferta", "getView") ?>">Ofertas</a></li>
 					<li class="main_nav_item"><a href="<?php echo getUrl("Noticia", "Noticia", "getView") ?>">Noticias</a></li>
