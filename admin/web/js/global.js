@@ -3,7 +3,7 @@ $(document).ready(function(){
         var ruta=$("#imagen").attr("src");
 
         $("#cambiarImagen").html("<input type='file' name='img_noticia'>");
-        $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
+        $("#cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
     });
 
   
@@ -31,6 +31,223 @@ $(document).ready(function(){
 
     });
 
+    //Modales del crud tipo de pqrsf
+
+    $(document).on("click","#InsertTpqrs",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-Tpqrs");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#DeleteTpqrs",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-TpqrsD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#EditTpqrs",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-TpqrsE");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+
+
+
+    //Modales crud Tipo de noticia
+    $(document).on("click","#InsertTnoti",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-Tnoti");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#DeleteTnoti",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-TnotiD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#EditTnoti",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-TnotiE");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    //Modales crud tipo de documento
+    $(document).on("click","#InsertDocu",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-docu");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#DeleteDocu",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-docuD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#EditDocu",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-docuE");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+    //Modales crud del rol
+    $(document).on("click","#InsertRol",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-rolIn");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#DeleteRol",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-rolD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#EditRol",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-rol");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+//Modal crud de estados
+    $(document).on("click","#InsertEstado",function(){
+        var url=$(this).attr("data-url");
+        $.ajax({
+            url:url,
+            
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#DeleteEstado",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-estaD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#EditEstado",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-esta");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    //Modales crud de Pqrsf
     $(document).on("click","#modalInsertPqrs",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-pqrs");
@@ -45,10 +262,10 @@ $(document).ready(function(){
             }
         });
     });
-
-    $(document).on("click","#modalUpConfi",function(){
+    //Modales de crud configuracion 
+    $(document).on("click","#insertConfi",function(){
         var url=$(this).attr("data-url");
-        var id=$(this).attr("data-confi");
+        var id=$(this).attr("data-confiIn");
 
         $.ajax({
             url:url,
@@ -61,6 +278,36 @@ $(document).ready(function(){
         });
     });
 
+    $(document).on("click","#EditConfi",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-confiE");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            type:"GET",
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#DeleteConfi",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-confiD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            type:"GET",
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+    //Modales de crud de noticias
     $(document).on("click","#modalInsertnoti",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-notiIn");
@@ -92,21 +339,6 @@ $(document).ready(function(){
         });
     });
 
-
-    $(document).on("click","#modal",function(){
-        var url=$(this).attr("data-url");
-
-        $.ajax({
-            url:url,
-            success:function(datos){
-                $("#contenedor").html(datos);
-                $("#exampleModalCenter").modal("show");
-            }
-        });
-    });
-
-
-
     $(document).on("click","#modalnoti",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-noti");
@@ -122,6 +354,23 @@ $(document).ready(function(){
         });
     });
 
+    
+    $(document).on("click","#modal",function(){
+        var url=$(this).attr("data-url");
+
+        $.ajax({
+            url:url,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+
+
+    
+ //Modal usuario
     $(document).on("click","#modalUpdate",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-usu_id");
@@ -178,9 +427,26 @@ $(document).ready(function(){
         });
     });
 
+    //Modal usuario perfil
     $(document).on("click","#modalProfile",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-usu_id");
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            type:"GET",
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+
+    //Modales Foro
+    $(document).on("click","#modalUpdateForo",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-foro_id");
         $.ajax({
             url:url,
             data:"id="+id,

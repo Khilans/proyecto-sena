@@ -1,6 +1,7 @@
 <div class="container">
-    <div class="jumbotron mt-4">
-        <h3 class="dislay-4">Registra tipo de noticia</h3>
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-success text-center">Registrar tipo de noticia</h4>
+        <p><b>Por favor llenar todos los campos</b></p>
     </div>
     <form action="<?php echo getUrl("Tnoticia", "Tnoticia", "postInsert"); ?>" method="post">
         <div class="row">
@@ -10,7 +11,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
+            <div style="margin: 1em;" class="col-md-4">
                 <input type="submit" value="Enviar" class="btn btn-success">
             </div>
         </div>

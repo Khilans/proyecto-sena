@@ -1,9 +1,18 @@
+<<<<<<< HEAD
 <?
     include_once '../model/MasteModel.php';
     class TpqrsModel extends MasterModel 
     {
         
     }
+=======
+<?php
+   include_once '../model/MasterModel.php';
+
+   class TpqrsModel extends MasterModel{
+
+   }
+>>>>>>> 9aecbc786d905ed820fa5b7de7ce1093466331f8
     
 
 

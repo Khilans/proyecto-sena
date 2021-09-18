@@ -1,13 +1,13 @@
 <link rel="stylesheet" type="text/css" href="styles/news_post_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/news_post_responsive.css">
-    <!-- Home -->
+<link rel="stylesheet" type="text/css" href="styles/news_post_responsive.css">   
+	<!-- Home -->
 
 	<div class="home">
 		<div class="home_background_container prlx_parent">
 			<div class="home_background prlx" style="background-image:url(images/news_background.jpg)"></div>
 		</div>
 		<div class="home_content">
-			<h1>The News</h1>
+			<h1>Foro</h1>
 		</div>
 	</div>
 
@@ -28,7 +28,7 @@
 						?>
 						<div class="news_post">
 							<div class="news_post_image">
-								<img src="images/news_1.jpg" alt="https://unsplash.com/@dsmacinnes">
+								<img src="<?php echo $f['imag_foro']; ?>" alt="<?php echo $f['imag_foro']; ?>">
 							</div>
 							<div class="news_post_top d-flex flex-column flex-sm-row">
 								<div class="news_post_date_container">
@@ -39,12 +39,15 @@
 								</div>
 								<div class="news_post_title_container">
 									<div class="news_post_title">
-										<a href="news_post.html"><?php echo $f['titulo_foro']; ?></a>
+										<a href="news_post.html"><?php echo $f['titulo_foro']; ?></a> 
+										<?php if($f['usu_id']==$_SESSION['user_id'])
+											echo "<button class='btn btn-warning mx-2' href='".getUrl("Foro","Foro","getEditForo")."'>Editar</button>";
+											 ?>
 									</div>
 									<div class="news_post_meta">
 										<span class="news_post_author"><a href="#">Por <?php echo $f['usu_nombre'] ?> <?php echo $f['usu_apellido'] ?></a></span>
 										<span>|</span>
-										<span class="news_post_comments"><a href="#">3 Comments</a></span>
+										<span class="news_post_comments"><a href="#"> Comentarios</a></span>
 									</div>
 								</div>
 							</div>
@@ -83,8 +86,8 @@
 											<span class="comment_separator">|</span>
 											<?php if($comentario['usu_id']==$_SESSION['user_id']){
 											?>
-											<span class=""><button class="btn btn-warning btn-sm" href="<?php echo getUrl("Foro","Foro","editComment"); ?>">Editar</button></span>
-											<button class="btn btn-danger btn-sm" id="deletecomment" data-id="<?php echo $comentario['cod_foro_com']; ?>" data-url="<?php echo getUrl("Foro","Foro","deleteComment") ?>">Eliminar</button>
+											<span class=""><button class="btn btn-warning btn-sm" href="<?php echo getUrl("Foro","Foro","editComment",false,"ajax"); ?>" id="eliminar_comentario"  data-id_comentario="<?php echo $comentario['cod_foro_com']; ?>">Editar</button></span>
+											<button class="btn btn-danger btn-sm" id="eliminar_comentario" data-id_comentario="<?php echo $comentario['cod_foro_com']; ?>" data-url="<?php echo getUrl("Foro","Foro","deleteComment",false,"ajax") ?>">Eliminar</button>
 											<?php
 											}
 											?>
@@ -107,15 +110,8 @@
 						<div class="leave_comment_title">Deja un comentario</div>
 
 						<div class="leave_comment_form_container">
-							<form action="<?php echo getUrl("Foro","Foro","sendComment") ?>" method="post">
-								<?php foreach($foro as $f){
-									echo "<input type='hidden' name='foro_id' value='".$f['cod_foro']."'> ";
-								}
-								?>
-                                <textarea id="comment_form_message" class="text_field contact_form_message" name="comentario" placeholder="Message" required="required" data-error="Please, write us a message."></textarea>
-								<button id="comment_send_btn" type="submit" class="comment_send_btn trans_200" value="Submit">Enviar comentario</button>
-
-							</form>
+                                <textarea id="comment_form_message" class="text_field contact_form_message" name="comentario" placeholder="Message" required="required"></textarea>
+								<button id="comment_send_btn" type="submit" class="comment_send_btn trans_200" value="Submit" data-url="<?php echo getUrl("Foro","Foro","sendComment",false,"ajax"); ?>"  data-foro_id="<?php echo $f['cod_foro']; ?>">Enviar comentario</button>
 						</div>
 					</div>
 								

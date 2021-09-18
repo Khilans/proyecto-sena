@@ -1,9 +1,13 @@
+
 <?php 
   foreach ($noticias as $noti) {   
 ?> 
   <div class="caja">
     <div class="card" style="width: 18rem;">
       <img class="card-img-top" src="<?php echo $noti['img_noticia'] ?>" alt="Error al cargar la imagen">
+      <?php
+        /* dd($noti); */
+      ?>
     </div>
     <div class="card-body">
       <div class="meta">

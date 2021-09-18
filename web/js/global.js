@@ -1,10 +1,12 @@
 $(document).ready(function(){
+
     $(document).on("click","#cambioDeImagen",function(){
         var ruta=$("#imagen").attr("src");
 
         $("#cambiarImagen").html("<input type='file' name='img_noticia'>");
         $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
     });
+
 
   
    
@@ -30,7 +32,68 @@ $(document).ready(function(){
             },
 
     });
+
+    $(document).on("click","#cambioImgForo",function(){
+        var ruta=$("#imagen").attr("src");
+
+        $("#cambiarImagen").html("<input type='file' name='img_nueva'>");
+        $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
+    });
+   
  
+    $(document).on("click","#InsertEstado",function(){
+        var url=$(this).attr("data-url");
+        $.ajax({
+            url:url,
+            
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#comment_send_btn",function(){
+        var url=$(this).attr("data-url");
+        var foro_id=$(this).attr("data-foro_id");
+        var comentario =$("#comment_form_message").val();
+        var dataString= 'foro_id='+foro_id+'&comentario='+comentario;
+        $.ajax({
+            url:url,
+            data:dataString,
+            type:"GET",
+            success:function(datos){
+                location.reload(true);
+            }
+        });
+    });
+
+    $(document).on("click","#eliminar_comentario",function(){
+        var url=$(this).attr("data-url");
+        var id_comentario=$(this).attr("data-id_comentario");
+        $.ajax({
+            url:url,
+            data:"comentario_id="+id_comentario,
+            type:"GET",
+            success:function(datos){
+                location.reload(true);            }
+        });
+    });
+
+    $(document).on("click","#DeleteEstado",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-estaD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
     $(document).on("click","#EditEstado",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-esta");

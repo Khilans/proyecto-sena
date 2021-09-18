@@ -1,6 +1,7 @@
 <div class="container">
-    <div class="jumbotron mt-4">
-        <h3 class="display-4">Eliminar línea tecnológica</h3>
+<div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading text-center">¿Está seguro de realizar esta acción?</h4>
+            <p>EL rol será inhabilitado indefinidamente</p>
     </div>
     <?php
     foreach ($rol as $rol) {
@@ -13,7 +14,7 @@
                         <input type="hidden" name="cod_rol" value="<?php echo $rol['cod_rol']; ?>">
                         <input type="text" readonly name="desc_rol" value="<?php echo $rol['desc_rol'] ?>">
                     </div>
-                    <p class="mt-4">¿Está seguro de eliminar este rol?</p>
+                    
                 </div>
             </div>
             <div class="row">

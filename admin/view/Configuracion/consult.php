@@ -3,14 +3,14 @@ include_once '../view/partials/modal.php';
 ?>
 <div class="container">
 <table class="mt-4 table table-bordered table-sm table-hover table-striped " id="tabla">
-<a href="<?php echo getUrl("Configuracion", "Configuracion", "getInsert") ?>"><button class="btn btn-success mt-4">Insertar</button></a>
+
         <thead class="thead-dark">
             <tr>
                 <th>Id</th>
                 <th>Descripción</th>
                 <th>Correo</th>
 				<th>Dirección</th>
-                <th>Telefono</th>
+                <th>Télefono</th>
                 <th>Editar</th>
                 <th>Eliminar</th>
 
@@ -18,6 +18,8 @@ include_once '../view/partials/modal.php';
             </tr>
         </thead>
         <tbody>
+       
+        <button class="btn btn-primary btn-sm" id="insertConfi" data-toggle="modal" data-target='#exampleModal' data-url=" <?php echo getUrl("Configuracion","Configuracion","getInsert",false,"ajax"); ?>">Insertar</button>
             <?php
             foreach ($configuracion as $confi) {
                 echo "<tr>";
@@ -29,8 +31,8 @@ include_once '../view/partials/modal.php';
                 
                 
                 /*  echo "<td><a href='" . getUrl("Configuracion", "Configuracion", "getUpdate", array("id_config" => $confi['id_config'])) . "'><button class='btn btn-primary'>Editar</button></a></td>"; */
-                echo "<td><button class='btn btn-primary btn-sm' id='modalUpConfi' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Configuracion","Configuracion","getUpdateModal",false,"ajax")."' data-confi='".$confi['id_config']."'>Editar</button></td>";
-                echo "<td><button class='btn btn-danger btn-sm' id='modalDeConfi' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Configuracion","Configuracion","getModalDeleteCon",false,"ajax")."' data-confiD='".$confi['id_config']."'>Eliminar</button></td>";
+                echo "<td><button class='btn btn-primary btn-sm' id='EditConfi' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Configuracion","Configuracion","getUpdateModal",false,"ajax")."' data-confiE='".$confi['id_config']."'>Editar</button></td>";
+                echo "<td><button class='btn btn-danger btn-sm' id='DeleteConfi' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Configuracion","Configuracion","getModalDeleteCon",false,"ajax")."' data-confiD='".$confi['id_config']."'>Eliminar</button></td>";
                 /* echo "<td><a href='" . getUrl("Configuracion", "Configuracion", "getDelete", array("id_config" => $confi['id_config'])) . "'><button class='btn btn-danger'>Eliminar</button></a></td>";  */
                 echo "</tr>";
             }
