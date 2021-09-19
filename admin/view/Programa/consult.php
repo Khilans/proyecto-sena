@@ -1,6 +1,9 @@
+<?php
+include_once '../view/partials/modal.php';
+?>
 <div class="container">
-    <table class="table table-striped mt-5 table-hover table table-bordered ">
-        <a href="<?php echo getUrl("Programa", "Programa", "getInsert") ?>"><button class="btn btn-success mt-4">Insertar</button></a>
+    <table class="table table-striped mt-5 table-hover table table-bordered " id="tabla">
+        <!-- <a href="<?php// echo getUrl("Programa", "Programa", "getInsert") ?>"><button class="btn btn-success mt-4">Insertar</button></a> -->
         <thead class="thead-dark">
             <tr>
                 <th>Id</th>
@@ -17,6 +20,8 @@
             </tr>
         </thead>
         <tbody>
+        <button class="btn btn-primary btn-sm" id="modalProg" data-toggle="modal" data-target='#exampleModal' data-url=" <?php echo getUrl("Programa","Programa","getModalInsert",false,"ajax"); ?>">Insertar</button>
+
             <?php
             foreach ($programas as $prog) {
                 echo "<tr>";

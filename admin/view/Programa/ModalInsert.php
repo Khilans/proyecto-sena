@@ -1,6 +1,6 @@
 <div class="container">
-	<div class="jumbotron">
-		<h3 class="display-4">Registrar programa</h3>
+	<div class="alert alert-success" role="alert">
+		<h4 class="alert-success text-center">Registrar Programa</h4>
 	</div>
 	<form action="<?php echo getUrl("Programa", "Programa", "postInsert"); ?>" method="post" enctype="multipart/form-data">
 		<div class="row">

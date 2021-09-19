@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="styles/prueba/bootstrap.css">
 <link rel="stylesheet" href="styles/oferta/Ofertas.css">
 <link rel="stylesheet" href="styles/oferta/postOferta.css">
@@ -8,17 +7,26 @@
 
 	<div id="wrapper">
 		<div id="main">
-
 			<article class="post">
 				<header>
+					<div class="tittle col mt-4">
+						<h1>OFERTA ACADÉMICA</h1>
+					</div>
+                    
+					<div class='container col-md-4'>
+					
+							<div class='card'>
+								<img src="" alt="">
+							</div>
+					
+					</div>
+
 					<div class="title">
-					<span><a href="#"><?php echo $_POST['desc_oferta']; ?></a></span>
-						
-						<p>Sub titulo de la oferta</p>
 						<a href=""><button type="button" class="btn btn-secondary">Disponible</button></a>
 					</div>
 					<div class="meta">
 						<time class="published" datetime="2015-11-01">fecha de inicio</time>
+
 						<time class="published" datetime="2015-11-01">fecha de final</time>
 						<a href="#" class="author"><span class="name">Nombre de usuario</span><img src="images/avatar.jpg" alt="" /></a>
 					</div>

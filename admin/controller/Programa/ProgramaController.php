@@ -4,7 +4,7 @@ include_once '../model/Programa/ProgramaModel.php';
 
 class ProgramaController {
 
-    public function getInsert()
+    public function getModalInsert()
     {
         $obj = new ProgramaModel();
         $sql = "SELECT * FROM t_programa";
@@ -15,7 +15,7 @@ class ProgramaController {
 
         $sql = "SELECT * FROM t_programanivel";
         $nivel = $obj->consult($sql);
-        include_once  '../view/Programa/insert.php';
+        include_once  '../view/Programa/ModalInsert.php';
     }
 
     public function postInsert(){
