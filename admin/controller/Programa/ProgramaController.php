@@ -57,11 +57,11 @@ class ProgramaController {
         include_once '../view/Programa/consult.php';
     }
 
-    public function getUpdate()
+    public function getModalUpdate()
     {
 
         $obj = new ProgramaModel();
-        $id_prog=$_GET['id_prog'];
+        $id_prog=$_GET['id'];
 
         $sql = "SELECT * FROM t_programa WHERE id_prog=$id_prog";
         $programas = $obj->consult($sql);
@@ -72,7 +72,7 @@ class ProgramaController {
         $sql = "SELECT * FROM t_programanivel";
         $nivel = $obj->consult($sql);
 
-        include_once '../view/Programa/update.php';
+        include_once '../view/Programa/ModalUpdate.php';
     }
 
     public function postUpdate()
@@ -115,16 +115,16 @@ class ProgramaController {
 
     }
 
-    public function getDelete(){
+    public function getModalDelete(){
 
         $obj = new ProgramaModel();
 
-        $id_prog=$_GET['id_prog'];
+        $id_prog=$_GET['id'];
 
         $sql="SELECT * FROM t_programa WHERE id_prog=$id_prog";
         $programas=$obj->consult($sql);
 
-        include_once '../view/Programa/delete.php';
+        include_once '../view/Programa/ModalDelete.php';
     }
 
     public function postDelete(){

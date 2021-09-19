@@ -14,8 +14,6 @@ include_once '../view/partials/modal.php';
                 <th>Fecha</th>
                 <th>Ver más</th>
                 <th>Reponder</th>
-
-                
             </tr>
         </thead>
         <tbody>

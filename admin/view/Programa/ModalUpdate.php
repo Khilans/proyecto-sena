@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="jumbotron">
-        <h2 class="display-8">Editar programa</h2>
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-success text-center">Editar programa</h4>
     </div>
 
     <?php
@@ -73,20 +73,15 @@
                         <button type="button" id="cambioDeImagen" class="btn btn-outline-secondary mt-2">Cambiar imagen</button>
                     </div>
                 </div>
-
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <input type="submit" value="Enviar" class="btn btn-success">
-                    <a href="<?php echo getUrl("Programa", "Programa", "consult"); ?>"><button type="button" class="btn btn-primary">Volver</button></a>
+                <div  style="margin: 1em;" class="col-md-6">
+                    <input type="submit" value="Enviar" class="btn btn-outline-success">
+                    <a href="<?php echo getUrl("Programa", "Programa", "consult"); ?>"><button type="button" class="btn btn-outline-primary">Cancelar</button></a>
                 </div>
             </div>
-
-
         </form>
-
     <?php
-
     }
     ?>
 </div>

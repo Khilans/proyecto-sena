@@ -1,13 +1,14 @@
 <div class="container">
-    <div class="jumbotron mt-4">
-        <h3 class="display-4">Eliminar el nivel</h3>
+<div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading text-center">ELIMINAR NIVEL DE PROGRAMA</h4>
+        <p class="text-center" >! El nivel deprograma será inhabilitado ¡</p>
     </div>
     <?php
     foreach ($nivel as $niv) {
     ?>
         <form action="<?php echo getUrl("ProgramaNivel", "ProgramaNivel", "postDelete"); ?>" method="post">
             <div class="row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
                     <label>Nivel</label>
                     <div>
                         <input type="hidden" name="id_prog_niv" value="<?php echo $niv['id_prog_niv']; ?>">
@@ -17,9 +18,9 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <input type="submit" value="Eliminar" class="btn btn-danger">
-                    <a href="<?php echo getUrl("ProgramaNivel","ProgramaNivel","consult") ?>"><button type="button" class="btn btn-success">Cancelar</button></a>
+                <div style="margin: 1em;" class="col-md-6">
+                    <input type="submit" value="Eliminar" class="btn btn-outline-danger">
+                    <a href="<?php echo getUrl("ProgramaNivel","ProgramaNivel","consult") ?>"><button type="button" class="btn btn-outline-success">Cancelar</button></a>
                 </div>
             </div><br>
         </form>

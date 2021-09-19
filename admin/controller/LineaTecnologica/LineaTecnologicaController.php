@@ -2,12 +2,12 @@
     include_once '../model/LineaTecnologica/LineaTecnologicaModel.php';
     class LineaTecnologicaController{
 
-        public function getInsert()
+        public function getModalInsert()
     {
         $obj = new LineaTecnologicaModel();
         $sql = "SELECT * FROM t_lineatecnologica";
         $linea = $obj->consult($sql);
-        include_once  '../view/LineaTecnologica/insert.php';
+        include_once  '../view/LineaTecnologica/ModalInsert.php';
     }
 
     public function postInsert()
@@ -35,13 +35,13 @@
         include_once '../view/LineaTecnologica/consult.php';
     }
 
-     public function getDelete()
+     public function getModalDelete()
     {
         $obj = new LineaTecnologicaModel();
-        $lin_tec_cod=$_GET['lin_tec_cod'];
+        $lin_tec_cod=$_GET['id'];
         $sql="SELECT * FROM t_lineatecnologica WHERE lin_tec_cod = $lin_tec_cod";
         $lineatecnologica=$obj->consult($sql);
-        include_once '../view/LineaTecnologica/delete.php';
+        include_once '../view/LineaTecnologica/ModalDelete.php';
     } 
 
      public function postDelete()
@@ -60,15 +60,15 @@
         }
     } 
 
-    public function getUpdate(){
+    public function getModalUpdate(){
 
         $obj=new LineaTecnologicaModel();
-        $lin_tec_cod=$_GET['lin_tec_cod'];
+        $lin_tec_cod=$_GET['id'];
 
         $sql="SELECT * FROM t_lineatecnologica WHERE lin_tec_cod =$lin_tec_cod";
         $lineatecnologica=$obj->consult($sql);
 
-        include_once '../view/LineaTecnologica/update.php';
+        include_once '../view/LineaTecnologica/ModalUpdate.php';
 
 
     }

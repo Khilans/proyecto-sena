@@ -3,9 +3,7 @@
 		<h4 class="alert-success text-center">Registrar Programa</h4>
 	</div>
 	<form action="<?php echo getUrl("Programa", "Programa", "postInsert"); ?>" method="post" enctype="multipart/form-data">
-		<div class="row">
-
-
+		<div style="margin: 1em;" class="row">
 			<div class="col-md-4 form-group">
 				<label>Linea tecnologica</label>
 				<select name="lin_tec_cod" class="form-control">
@@ -57,11 +55,9 @@
 
 		</div>
 		<div class="row">
-			<div class="col-md-4">
-				<input type="submit" value="Enviar" class="btn btn-success">
-				<a href="<?php echo getUrl("Programa", "Programa", "consult"); ?>"><button type="button" class="btn btn-primary">Volver</button></a>
+			<div style="margin: 1em;" class="col-md-6">
+				<input type="submit" value="Enviar" class="btn btn-outline-success">
+				<a href="<?php echo getUrl("Programa", "Programa", "consult"); ?>"><button type="button" class="btn btn-outline-primary">Cancelar</button></a>
 			</div>
 		</div>
-
-
 	</form>

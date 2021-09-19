@@ -2,12 +2,12 @@
     include_once '../model/ProgramaNivel/ProgramaNivelModel.php';
     class ProgramaNivelController{
 
-        public function getInsert()
+        public function getModalInsert()
     {
         $obj = new ProgramaNivelModel();
         $sql = "SELECT * FROM t_programanivel";
         $nivel = $obj->consult($sql);
-        include_once  '../view/ProgramaNivel/insert.php';
+        include_once  '../view/ProgramaNivel/ModalInsert.php';
     }
 
     public function postInsert()
@@ -34,13 +34,13 @@
         include_once '../view/ProgramaNivel/consult.php';
     }
 
-     public function getDelete()
+     public function getModalDelete()
     {
         $obj = new ProgramaNivelModel();
-        $id_prog_niv=$_GET['id_prog_niv'];
+        $id_prog_niv=$_GET['id'];
         $sql="SELECT * FROM t_programanivel WHERE id_prog_niv = $id_prog_niv";
         $nivel=$obj->consult($sql);
-        include_once '../view/ProgramaNivel/delete.php';
+        include_once '../view/ProgramaNivel/ModalDelete.php';
     } 
 
      public function postDelete()
@@ -59,15 +59,15 @@
         }
     } 
 
-    public function getUpdate(){
+    public function getModalUpdate(){
 
         $obj=new ProgramaNivelModel();
-        $id_prog_niv=$_GET['id_prog_niv'];
+        $id_prog_niv=$_GET['id'];
 
         $sql="SELECT * FROM t_programanivel WHERE id_prog_niv =$id_prog_niv";
         $nivel=$obj->consult($sql);
 
-        include_once '../view/ProgramaNivel/update.php';
+        include_once '../view/ProgramaNivel/ModalUpdate.php';
 
 
     }

@@ -3,7 +3,6 @@ include_once '../view/partials/modal.php';
 ?>
 <div class="container">
     <table class="table table-striped mt-5 table-hover table table-bordered " id="tabla">
-        <!-- <a href="<?php// echo getUrl("Programa", "Programa", "getInsert") ?>"><button class="btn btn-success mt-4">Insertar</button></a> -->
         <thead class="thead-dark">
             <tr>
                 <th>Id</th>
@@ -15,12 +14,11 @@ include_once '../view/partials/modal.php';
                 <th>Duración</th>
                 <th>Código</th>
                 <th>Imagen</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
-        <button class="btn btn-primary btn-sm" id="modalProg" data-toggle="modal" data-target='#exampleModal' data-url=" <?php echo getUrl("Programa","Programa","getModalInsert",false,"ajax"); ?>">Insertar</button>
+        <button class="btn btn-success btn-sm" id="insertPrograma" data-toggle="modal" data-target='#exampleModal' data-url=" <?php echo getUrl("Programa","Programa","getModalInsert",false,"ajax"); ?>">Insertar</button>
 
             <?php
             foreach ($programas as $prog) {
@@ -34,8 +32,15 @@ include_once '../view/partials/modal.php';
                 echo "<td>" . $prog['duracion_prog'] . "</td>";
                 echo "<td>" . $prog['cod_prog'] . "</td>";
                 echo "<td><img src='" . $prog['imag_prog'] . "' width='50px'></td>";
-                echo "<td><a href='" . getUrl("Programa", "Programa", "getUpdate", array("id_prog" => $prog['id_prog'])) . "'><button class='btn btn-primary'>Editar</button></a></td>";
-                echo "<td><a href='" . getUrl("Programa", "Programa", "getDelete", array("id_prog" => $prog['id_prog'])) . "'><button class='btn btn-danger'>Eliminar</button></a></td>";
+                echo "<td class='text-center'>
+                <button class='btn btn-outline-warning btn-sm' id='editPrograma' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Programa","Programa","getModalUpdate",false,"ajax")."' data-progEd='".$prog['id_prog']."'>
+                <i class='fa fa-edit'></i>                   
+                </button>
+
+                <button class='btn btn-outline-danger btn-sm' id='deletePrograma' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Programa","Programa","getModalDelete",false,"ajax")."' data-progDel='".$prog['id_prog']."'>
+                <i class='fa fa-trash'></i>                   
+                </button>
+                </td>";
                 echo "</tr>";
             }
             if (isset($_SESSION['mensaje'])) {
