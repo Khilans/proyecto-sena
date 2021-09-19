@@ -67,7 +67,7 @@ include_once '../view/partials/modal.php';
         <li class="botonesInicio">
             <a href="<?php echo getUrl("Tnoticia", "Tnoticia", "consult") ?>">
                 <div style="background:#fc7323">
-                    <span class="fa fa-users"></span>
+                    <span class="fa fa-book"></span>
                     <p>T.NOTI</p>
                 </div>
             </a>
