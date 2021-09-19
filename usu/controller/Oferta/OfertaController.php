@@ -13,8 +13,11 @@ class OfertaController{
 
     public function getPostOferta(){
         $obj=new ofertaModel;
-        $sql="SELECT * FROM t_oferta";
+        $id_oferta=$_GET['id_oferta'];
+
+        $sql = "SELECT * FROM t_oferta WHERE id_oferta=$id_oferta";
         $ofertas=$obj->consult($sql);
+
         include_once '../view/Oferta/postOfertas.php';
     }
 }
