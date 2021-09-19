@@ -21,6 +21,11 @@
   <link rel="stylesheet" href="styles/prueba/main.css">
   <link rel="stylesheet" href="styles/main.css" />
   <link rel="stylesheet" href="css/main.css">
+<<<<<<< HEAD
+=======
+  
+  
  
 
+>>>>>>> 418e783ca7805215ff1b81c96851eae64c4a5700
 </head>

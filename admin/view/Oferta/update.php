@@ -1,6 +1,7 @@
 <div class="container">
-    <div class="jumbotron">
-        <h2 class="display-8">Editar oferta</h2>
+<div class="alert alert-success" role="alert">
+                <h4 class="alert-success text-center">Editar noticia</h4>
+                <p></p>
     </div>
     <?php
     foreach ($oferta as $ofer) {
@@ -14,6 +15,10 @@
                 <div class="col-md-4 form-group">
                     <label>Descripción oferta</label>
                     <input type="text" name="desc_oferta" class="form-control" placeholder="Descripción" value="<?php echo $ofer['desc_oferta']; ?>">
+                </div>
+                <div class="col-md-4 form-group">
+                    <label>Cupos disponibles</label>
+                    <input type="number" name="cupos_oferta" class="form-control"  value="<?php echo $ofer['cupos_oferta']; ?>">
                 </div>
 
                 <div class="col-md-4 form-group">
@@ -51,7 +56,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-4">
+                <div style="margin: 1em;" class="col-md-6">
                     <input type="submit" value="Enviar" class="btn btn-outline-success">
                     <a href="<?php echo getUrl("Oferta", "Oferta", "consult"); ?>"><button type="button" class="btn btn-outline-primary">Volver</button></a>
                 </div>

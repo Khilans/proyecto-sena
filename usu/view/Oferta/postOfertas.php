@@ -1,54 +1,31 @@
 
-<link rel="stylesheet" href="styles/prueba/bootstrap.css">
-<link rel="stylesheet" href="styles/oferta/Ofertas.css">
-<link rel="stylesheet" href="styles/oferta/postOferta.css">
-
-
-<body class="single is-preload">
-
+<?php
+	foreach ($ofertas as $ofer) {
+?>
 	<div id="wrapper">
 		<div id="main">
 
 			<article class="post">
 				<header>
 					<div class="title">
-					<span><a href="#"><?php echo $_POST['desc_oferta']; ?></a></span>
-						
-						<p>Sub titulo de la oferta</p>
-						<a href=""><button type="button" class="btn btn-secondary">Disponible</button></a>
+					<span><a href="#"><?php echo $ofer['desc_oferta']; ?></a></span>
+						<!-- <p>Sub titulo de la oferta</p> -->
+						<!-- <a href=""><button type="button" class="btn btn-secondary">Disponible</button></a> -->
 					</div>
 					<div class="meta">
-						<time class="published" datetime="2015-11-01">fecha de inicio</time>
-						<time class="published" datetime="2015-11-01">fecha de final</time>
-						<a href="#" class="author"><span class="name">Nombre de usuario</span><img src="images/avatar.jpg" alt="" /></a>
+						<time class="published" datetime="2015-11-01"><?php echo $ofer['fech_ini_oferta']?></time>
+						<time class="published" datetime="2015-11-01"><?php echo $ofer['fech_fin_oferta']?></time>
 					</div>
 				</header>
-				<span class="image featured"><img src="img/fondo.jpg" alt="" /></span>
+				<span class="image featured"><img class='pic-2' src="<?php echo $ofer['imag_oferta']?>"></span>
 				<div class="fondo">
 					<div>
-						<h2> HORA Y UBICACION</h2>
-					</div>
-					<div>
-						17 de mar. de 2025, 5:00 p. m.
-					</div>
-					<div>
-						Cali, Cali, Valle del Cauca, Colombia
-					</div>
-					<div>
 						<h2>Acerca de la oferta</h2>
+						<p><?php echo $ofer['desc_oferta']?></p>
 					</div>
 					<div>
-						<p>
-							Esta es la descripción de tu evento. Utiliza este espacio para ofrecer un breve resumen del evento e información adicional para que tus invitados sepan lo que les espera.
-						</p>
-					</div>
-					<div>
-						<p>
-							Puedes agregar datos del evento como el programa, la etiqueta de vestir recomendada, y cualquier otra información útil para los invitados. Si alguien tiene previsto hablar en público en tu evento, esta es una buena ocasión para indicar los temas que tratará o incluir una breve biografía. Si el evento está dirigido a un público específico, lo puedes mencionar aquí.
-						</p>
 						<h5>Numero de cupos disponibles:</h5>
-						<button type="button" class="btn btn-secondary">50</button>
-
+						<?php echo $ofer['cupos_oferta']?>
 					</div>
 					<center>
 						<a href="#"></a><button type="button" class="btn btn-success" style="margin-bottom: 20px; ">reservar</button></a>
@@ -60,4 +37,6 @@
 			</article>
 		</div>
 	</div>
-</body>
+<?php
+	}
+?>
