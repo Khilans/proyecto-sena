@@ -12,29 +12,33 @@ include_once '../view/partials/modal.php';
 				<th>Estado</th>
                 <th>Descripción</th>
                 <th>Fecha</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
+                <th>Ver más</th>
+                <th>Reponder</th>
 
                 
             </tr>
         </thead>
         <tbody>
-        <button class="btn btn-primary btn-sm" id="modalInsertPqrs" data-toggle="modal" data-target='#exampleModal' data-pqrsf=" <?php echo getUrl("Pqrs","Pqrs","getModalInsert",false,"ajax"); ?>">Insertar</button>
-
+        
             <?php
             foreach ($pqrsf as $pq) {
                 echo "<tr>";
                  echo "<td>" . $pq['cod_pqrsf'] . "</td>";
                  echo "<td>" . $pq['desc_pqrsf_tipo'] . "</td>"; 
-                echo "<td>" . $pq['usu_nombre'] . "</td>";
+                 if (isset($pq['usu_id'])){
+                    echo "<td>" . $pq['usu_id'] . "</td>";
+                 }else{
+                     echo "<td>Aninimus</td>";
+                 }
+                
                 echo "<td>" . $pq['desc_estado'] . "</td>";
                 echo "<td>" . $pq['pqrsf_desc'] . "</td>";
                 echo "<td>" . $pq['pqrsf_fecha'] . "</td>";
                
                 
                 /*  echo "<td><a href='" . getUrl("Pqrsf", "Pqrsf", "getUpdate", array("cod_pqrsf" => $pq['cod_pqrsf'])) . "'><button class='btn btn-primary'>Editar</button></a></td>"; */
-                echo "<td><button class='btn btn-primary btn-sm' id='modalnoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrsf","Pqrsf","getModalUpdate",false,"ajax")."' data-pq='".$pq['cod_pqrsf']."'>Editar</button></td>";
-                echo "<td><button class='btn btn-primary btn-sm' id='modalDeletenoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrsf","Pqrsf","getModalDelete",false,"ajax")."' data-notid='".$pq['cod_pqrsf']."'>ELiminar</button></td>";
+                echo "<td><button class='btn btn-primary btn-sm' id='modalnoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrsf","Pqrsf","getModalUpdate",false,"ajax")."' data-pq='".$pq['cod_pqrsf']."'>Ver más</button></td>";
+                echo "<td><button class='btn btn-primary btn-sm' id='modalDeletenoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrsf","Pqrsf","getModalDelete",false,"ajax")."' data-notid='".$pq['cod_pqrsf']."'>Responder</button></td>";
                 /* echo "<td><a href='" . getUrl("Pqrsf", "Pqrsf", "getDelete", array("cod_pqrsf" => $pq['cod_pqrsf'])) . "'><button class='btn btn-danger'>Eliminar</button></a></td>";  */
                 echo "</tr>";
             }
