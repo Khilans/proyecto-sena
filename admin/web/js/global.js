@@ -413,6 +413,23 @@ $(document).ready(function(){
     });
 
 
+   // modal programas
+$(document).on("click","#modalProg",function(){
+    alert("funciona");
+        /* var url=$(this).attr("data-url");
+        var id=$(this).attr("data-progIn");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            type:"GET",
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        }); */
+    });
+
 
     
  //Modal usuario

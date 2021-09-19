@@ -125,7 +125,7 @@
                 id_estado=$id_estado,img_noticia='$ruta' WHERE cod_noticia=$cod_noticia";
             } else {
                 $sql = "UPDATE t_noticia SET titulo_noticia='$titulo_noticia', desc_noticia='$desc_noticia', cod_tipo_noti=$cod_tipo_noti, 
-                id_estado=$id_estado,img_noticia='$ruta' WHERE cod_noticia=$cod_noticia";
+                id_estado=$id_estado WHERE cod_noticia=$cod_noticia";
             }
             $ejecutar = $obj->consult($sql);
 
