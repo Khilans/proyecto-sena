@@ -1,6 +1,7 @@
 <div class="container">
-    <div class="jumbotron mt-4">
-        <h3 class="display-4">Eliminar oferta</h3>
+<div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading text-center">¿Está seguro de realizar esta acción?</h4>
+            <p>La oferta será inhabilitada indefinidamente</p>
     </div>
     <?php
     foreach ($oferta as $ofer) {
@@ -11,12 +12,11 @@
                     <label>Nombre</label>
                     <input type="hidden" name="id_oferta" value="<?php echo $ofer['id_oferta']; ?>">
                     <input type="text" readonly name="desc_oferta" class="form-control" value="<?php echo $ofer['desc_oferta']; ?>">
-                    <p class="mt-4">¿Esta seguro de eliminar esta oferta?</p>
                 </div>
             </div>
          
             <div class="row">
-                <div class="col-md-4">
+                <div style="margin: 1em;" class="col-md-6">
                     <input type="submit" value="Eliminar" class="btn btn-success">
                     <a href="<?php echo getUrl("Oferta", "Oferta", "consult"); ?>"><button type="button" class="btn btn-primary">Cancelar</button></a>
                 </div>

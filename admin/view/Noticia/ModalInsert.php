@@ -13,10 +13,10 @@
 				<label>Título</label>
 				<input type="text" name="titulo_noticia" class="form-control" placeholder="Título">
 			</div>
-			<div class="col-md-7 form-group">
+			<!-- <div class="col-md-7 form-group">
 				<label>Fecha</label>
 				<input type="date" name="fecha_noticia" class="form-control" placeholder="Fecha">
-			</div>
+			</div> -->
 			<div class="col-md-7">
 				<label>Imagen</label>
 				<input type="file" name="img_noticia">
