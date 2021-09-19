@@ -13,7 +13,7 @@
 							<a href="<?php echo getUrl("Usuarios","Usuarios","mail",false,"ajax"); ?>"><button class="dropdown-item text-center">Correo</button></a>
 							<?php 
 								if($_SESSION['rol']==1){
-									echo "<a href='../../web/index.php'><button class='dropdown-item text-center' type='button'>Página principal</button></a>";
+									echo "<a href='../../usu/web/index.php'><button class='dropdown-item text-center' type='button'>Página principal</button></a>";
 								}
 							?>
 							<a href="<?php echo getUrl("Acceso","Acceso","logout"); ?>"><button class="dropdown-item text-center" type="button">Cerrar sesión</button></a>
