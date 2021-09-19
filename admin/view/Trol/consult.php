@@ -17,7 +17,6 @@ include_once '../view/partials/modal.php';
     ?>
     <table class="mt-4 table table-bordered table-sm table-hover table-striped " id="tabla">
        
-    <br><br>
         <thead class="thead-dark">
             <tr>
                 <th class="text-center w-5">Código</th>
@@ -27,7 +26,8 @@ include_once '../view/partials/modal.php';
         </thead>
         <tbody>
         <button class="btn btn-success btn-sm" id="InsertRol" data-toggle="modal" data-target='#exampleModal' data-url=" <?php echo getUrl("Trol","Trol","getInsert",false,"ajax"); ?>">Insertar</button>
-            <?php
+           
+           <?php
             foreach ($rol as $rol) {
                 echo "<tr>";
                     echo "<td class='text-center'>".$rol['cod_rol']."</td>";
