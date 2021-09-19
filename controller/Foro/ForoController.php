@@ -20,8 +20,6 @@ include_once '../model/Foro/ForoModel.php';
             $imag_foro = $_FILES['imagen_foro']['name'];
             $ruta = "images/$imag_foro";
             move_uploaded_file($_FILES['imagen_foro']['tmp_name'], $ruta);
-            $rutaAdmin = "../admin/web/images/$imag_foro";
-            move_uploaded_file($_FILES['imagen_foro']['tmp_name'], $rutaAdmin);
             $tema=$_POST['tema_foro'];
             $fecha_inicio=hora();
             $fecha_final=$_POST['fecha_final'];
