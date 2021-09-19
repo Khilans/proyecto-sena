@@ -19,28 +19,17 @@ include_once '../view/partials/modal.php';
 
         <thead class="thead-dark">
             <tr>
-<<<<<<< HEAD
+
                 <th class="text-center w-5">Id</th>
                 <th class="text-center w-15">Descripción</th>
                 <th class="text-center">Titulo</th>
+                <th class="text-center">Fecha de creación</th>
 				<th class="text-center">Imagen</th>
                 <th class="text-center">Tipo de noticia</th>
                 <th class="text-center">Estado</th>
                 <th class="text-center">Acciones</th>
  
-=======
-                <th>Id</th>
-                <th>Descripción</th>
-                <th>Titulo</th>
-                <th>Fecha de creación</th>
-				<th>Imagen</th>
-                <th>Tipo de noticia</th>
-                <th>Estado</th>
-                <th>Editar</th>
-                <th>Eliminar</th>
 
-                
->>>>>>> 418e783ca7805215ff1b81c96851eae64c4a5700
             </tr>
         </thead>
         <tbody>
@@ -50,10 +39,11 @@ include_once '../view/partials/modal.php';
             foreach ($noticias as $noti) {
 
                 echo "<tr>";
-<<<<<<< HEAD
+
                     echo "<td class='text-center'>".$noti['cod_noticia']."</td>";
                     echo "<td class='text-center'>".$noti['desc_noticia']."</td>";
                     echo "<td class='text-center'>".$noti['titulo_noticia']."</td>";
+                    echo "<td class='text-center'>" . $noti['fecha_noticia'] . "</td>";
                     echo "<td><img src='" . $noti['img_noticia'] . "' width='100px'></td>";
                     echo "<td class='text-center'>".$noti['desc_tipo_noti']."</td>";
                     echo "<td class='text-center'>".$noti['desc_estado']."</td>";
@@ -65,20 +55,6 @@ include_once '../view/partials/modal.php';
                     <i class='fa fa-trash'></i>                   
                     </button>
                     </td>";
-=======
-                 echo "<td>" . $noti['cod_noticia'] . "</td>"; 
-                echo "<td>" . $noti['desc_noticia'] . "</td>";
-                echo "<td>" . $noti['titulo_noticia'] . "</td>";
-                echo "<td>" . $noti['fecha_noticia'] . "</td>";
-                echo "<td><img src='" . $noti['img_noticia'] . "' width='100px'></td>";
-                echo "<td>" . $noti['desc_tipo_noti'] . "</td>";
-                echo "<td>" . $noti['desc_estado'] . "</td>";
-                
-               
-                echo "<td><button class='btn btn-primary btn-sm' id='modalnoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","getModalUpdate",false,"ajax")."' data-noti='".$noti['cod_noticia']."'>Editar</button></td>";
-                echo "<td><button class='btn btn-primary btn-sm' id='modalDeletenoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","getModalDelete",false,"ajax")."' data-notid='".$noti['cod_noticia']."'>ELiminar</button></td>";
-               
->>>>>>> 418e783ca7805215ff1b81c96851eae64c4a5700
                 echo "</tr>";
              }
             ?>
