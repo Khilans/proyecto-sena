@@ -60,7 +60,7 @@ include_once '../view/partials/modal.php';
         <li class="botonesInicio">
                    <a href="<?php echo getUrl("Ttipodocumento", "Ttipodocumento", "consult") ?>">
                      <div style="background:#fc7323">
-                      <span class="fa fa-users"></span>
+                      <span class="fa fa-list"></span>
                       <p>T.DOCUMENTO</p>
                      </div>
                    </a>

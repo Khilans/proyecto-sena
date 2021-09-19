@@ -60,14 +60,27 @@
 					</li>
 					<li class="botonesInicio">
 					
-						<a href="<?php echo getUrl("Foros", "Foros", "consult") ?>">
+						<a href="<?php echo getUrl("Foro", "Foro", "consult") ?>">
 						<div style="background:#fc7323">
 						<span class="fa fa-cloud"></span>
-						<p>PQRS</p>
+						<p>FOROS</p>
 						</div>
 						</a>
 
 					</li>
+
+					<li class="botonesInicio">
+					
+					<a href="<?php echo getUrl("Estado", "Estado", "consult") ?>">
+					   <div style="background:#238276">
+					   <span class="fa fa-list"></span>
+					    <p>ESTADO</p>
+					   </div>
+					</a>
+
+		</li>
+
+
 
 				</ul>
 
