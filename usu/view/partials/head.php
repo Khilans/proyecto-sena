@@ -16,14 +16,9 @@
   <link rel="stylesheet" type="text/css" href="styles/responsive.css">
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
-  
-  <link rel="stylesheet" href="styles/bootstrap.css">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/prueba/bootstrap.css">
+  <link rel="stylesheet" href="styles/prueba/style.css">
+  <link rel="stylesheet" href="styles/prueba/main.css">
   <link rel="stylesheet" href="styles/main.css" />
-<<<<<<< HEAD:view/partials/head.php
-  <link rel="stylesheet" href="styles/oferta/Oferta.css" />
-=======
   <link rel="stylesheet" href="css/main.css">
-
->>>>>>> b461e1b2b57d4401103778422414f0470c3eba5b:usu/view/partials/head.php
 </head>

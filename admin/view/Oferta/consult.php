@@ -32,7 +32,7 @@ include_once '../view/partials/modal.php';
             </tr>
         </thead>
         <tbody>
-        <button class="btn btn-success mt-4" id="insertOferta" data-toggle="modal" data-target='#exampleModal' data-url=" <?php echo getUrl("Oferta","Oferta","getInsert",false,"ajax"); ?>">Insertar</button>
+        <button class="btn btn-success btn-sm" id="insertOferta" data-toggle="modal" data-target='#exampleModal' data-url=" <?php echo getUrl("Oferta","Oferta","getInsert",false,"ajax"); ?>">Insertar</button>
             <?php
             foreach ($oferta as $ofer) {
 
