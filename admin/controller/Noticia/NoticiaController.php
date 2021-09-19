@@ -27,7 +27,7 @@
             $img_noticia = $_FILES['img_noticia']['name'];
             $usu_id=$_SESSION['user_id']; 
             $cod_tipo_noti= $_POST['cod_tipo_noti'];
-            $ruta = "images/$img_noticia";
+            $ruta = "../../usu/web/images/$img_noticia";
         
             move_uploaded_file($_FILES['img_noticia']['tmp_name'], $ruta);
             $id = $obj->autoincrement("t_noticia", "cod_noticia");
