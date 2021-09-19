@@ -51,7 +51,7 @@ include_once '../view/partials/modal.php';
                     <button class='btn btn-warning btn-sm' id='modalnoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","getModalUpdate",false,"ajax")."' data-noti='".$noti['cod_noticia']."'>
                     <i class='fa fa-edit'></i>                   
                     </button>
-                    <button class='btn btn-danger btn-sm' id='modalDeletenoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","getModalDelete",false,"ajax")."' data-noti='".$noti['cod_noticia']."'>
+                    <button class='btn btn-danger btn-sm' id='modalDeletenoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","getModalDelete",false,"ajax")."' data-notid='".$noti['cod_noticia']."'>
                     <i class='fa fa-trash'></i>                   
                     </button>
                     </td>";
