@@ -19,11 +19,6 @@
   <link rel="stylesheet" href="styles/prueba/bootstrap.css">
   <link rel="stylesheet" href="styles/prueba/style.css">
   <link rel="stylesheet" href="styles/prueba/main.css">
-<<<<<<< HEAD
-=======
   <link rel="stylesheet" href="styles/main.css" />
->>>>>>> 98298056137b2372fc40a222d130b3666a3721de
   <link rel="stylesheet" href="css/main.css">
- 
-
 </head>
