@@ -71,6 +71,17 @@
 						<!-- Latest Posts -->
 
 						<div class="sidebar_section">
+							<?php if($_SESSION['rol']==1){
+								?>
+							
+								<div class="latest_post">
+									<div class="latest_post_image">
+										<div class="jumbotron text-center"><a href="<?php echo getUrl("Foro","Foro","getNewPost") ?>"><h2 class="display-6">Crea un Foro</h2></a></div>
+									</div>
+								</div>
+							<?php
+							}
+							?>
 							<div class="sidebar_section_title">
 								<h3>Recientes</h3>
 							</div>
@@ -78,12 +89,6 @@
 							<div class="latest_posts">
 								
 								<!-- Latest Post -->
-
-								<div class="latest_post">
-									<div class="latest_post_image">
-										<div class="jumbotron text-center"><a href="<?php echo getUrl("Foro","Foro","getNewPost") ?>"><h2 class="display-6">Crea un Foro</h2></a></div>
-									</div>
-								</div>
 
 								<div class="latest_post">
 									<div class="latest_post_image">

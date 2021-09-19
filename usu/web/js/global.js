@@ -7,6 +7,28 @@ $(document).ready(function(){
         $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
     });
 
+    $(document).on("click","#editar_comentario",function(){
+            var id_comentario=$(this).attr("data-id_comentario");
+            var url=$(this).attr("data-url");
+
+            $("#comentario"+id_comentario).html("<input type='text' id='nuevo_comentario'>"+"<button type='button' class='btn btn-success btn-sm ml-2' id='comentario_editado' data-comentario_id='"+id_comentario+"' data-url='"+url+"'>Enviar</button>");     
+    });
+
+    $(document).on("click","#comentario_editado",function(){
+        var url=$(this).attr("data-url");
+        var comentario_id=$(this).attr("data-comentario_id");
+        var comentario =$("#nuevo_comentario").val();
+        var dataString= 'comentario_id='+comentario_id+'&comentario='+comentario;
+        $.ajax({
+            url:url,
+            data:dataString,
+            type:"GET",
+            success:function(datos){
+                location.reload(true);
+            }
+        });
+    });
+
 
   
    

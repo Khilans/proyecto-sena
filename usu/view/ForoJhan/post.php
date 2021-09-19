@@ -40,9 +40,6 @@
 								<div class="news_post_title_container">
 									<div class="news_post_title">
 										<a href="news_post.html"><?php echo $f['titulo_foro']; ?></a> 
-										<?php if($f['usu_id']==$_SESSION['user_id'])
-											echo "<button class='btn btn-warning mx-2' href='".getUrl("Foro","Foro","getEditForo")."'>Editar</button>";
-											 ?>
 									</div>
 									<div class="news_post_meta">
 										<span class="news_post_author"><a href="#">Por <?php echo $f['usu_nombre'] ?> <?php echo $f['usu_apellido'] ?></a></span>
@@ -79,21 +76,21 @@
 										</div>
 									</div>
 									<div class="comment_content">
-										<div class="comment_meta">
+										<div class="comment_meta" id="div_comentario<?php echo $comentario['cod_foro_com']; ?>">
 											<span class="comment_name"><a href="#"><?php echo $comentario['usu_nombre']; ?> <?php echo $comentario['usu_apellido']; ?></a></span>
 											<span class="comment_separator">|</span>
 											<span class="comment_date"><?php echo $comentario['fech_foro_com']; ?></span>
 											<span class="comment_separator">|</span>
-											<?php if($comentario['usu_id']==$_SESSION['user_id']){
+											<?php if($comentario['usu_id']==$_SESSION['user_id'] || $_SESSION['rol']==1){
 											?>
-											<span class=""><button class="btn btn-warning btn-sm" href="<?php echo getUrl("Foro","Foro","editComment",false,"ajax"); ?>" id="eliminar_comentario"  data-id_comentario="<?php echo $comentario['cod_foro_com']; ?>">Editar</button></span>
+											<span class=""><button class="btn btn-warning btn-sm" id="editar_comentario"  data-id_comentario="<?php echo $comentario['cod_foro_com']; ?>" data-url="<?php echo getUrl("Foro","Foro","editComment",false,"ajax") ?>">Editar</button></span>
 											<button class="btn btn-danger btn-sm" id="eliminar_comentario" data-id_comentario="<?php echo $comentario['cod_foro_com']; ?>" data-url="<?php echo getUrl("Foro","Foro","deleteComment",false,"ajax") ?>">Eliminar</button>
 											<?php
 											}
 											?>
 											<!-- <span class="comment_reply_link"><a href="#">Responder</a></span> -->
 										</div>
-										<p class="comment_text"><?php echo $comentario['com_foro_com']; ?></p>
+										<p class="comment_text" id="comentario<?php echo $comentario['cod_foro_com']; ?>" name="comentario<?php echo $comentario['cod_foro_com']; ?>"><?php echo $comentario['com_foro_com']; ?></p>
 									</div>
 								</div>
 							</li>
@@ -125,6 +122,14 @@
 						<!-- Latest Posts -->
 
 						<div class="sidebar_section">
+							<div class="sidebar_section_title mb-3">
+								<h3>Acciones</h3>
+								<?php if($f['usu_id']==$_SESSION['user_id']  || $_SESSION['rol']==1)
+											echo "<button class='btn btn-warning mx-2' href='".getUrl("Foro","Foro","getEditForo")."'>Editar foro</button>";
+											echo "<button class='btn btn-danger mx-2' href='".getUrl("Foro","Foro","getEditForo")."'>Eliminar foro</button>";
+											 ?>
+							</div>
+
 							<div class="sidebar_section_title">
 								<h3>Recientes</h3>
 							</div>
