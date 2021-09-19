@@ -73,7 +73,17 @@ include_once '../model/Foro/ForoModel.php';
         }
 
         public function editComment(){
-            
+            $obj= new ForoModel;
+            $usu_id=$_SESSION['user_id'];
+            $comentario_id=$_GET['comentario_id'];
+            $comentario=$_GET['comentario'];
+            $sql="UPDATE t_forocomentario SET com_foro_com='$comentario' WHERE cod_foro_com=$comentario_id";
+            $comentar=$obj->insert($sql);
+            if($comentar){
+                echo "SII";
+            }else{
+                dd($sql);
+            }
         }
 
         public function getEditForo(){

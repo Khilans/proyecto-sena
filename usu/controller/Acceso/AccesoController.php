@@ -25,7 +25,7 @@
                     }
                     $_SESSION['mensaje']="Sesión iniciada exitosamente";
                     if($_SESSION['rol']==1){
-                        redirect("../../admin/web/index.php");
+                        redirect("index.php");
                     }else
                     redirect("index.php");
                 }else{
