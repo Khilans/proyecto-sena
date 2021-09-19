@@ -1,35 +1,9 @@
-<?php 
-include_once "../model/MasterModel.php";
-
-$obj = new MasterModel(); 
-
-$sql = "SELECT * FROM t_configuracion";
-$configuracion = $obj->consult($sql);
-
-$sql = "SELECT * FROM t_noticia";
-$noticias = $obj->consult($sql);
-
-
-
-?>
-	<!-- Footer -->
-
 <br>
 	<footer class="footer">
 		<div class="container">
-			
-
-
-			<!-- Footer Content -->
-
 			<div class="footer_content">
 				<div class="row">
-<!-- Footer Column - About -->
-<?php
-				foreach ($configuracion  as $confi) {	
-					?>	
 					<div class="col-lg-3 footer_col">
-
 						<!-- Logo -->
 						<div class="logo_container">
 							<div class="logo">
@@ -37,17 +11,9 @@ $noticias = $obj->consult($sql);
 								<span>VISION</span>
 							</div>
 						</div>
-						
-						
-							<p style="container-fluid" ><?php  echo $confi['desc_config']?></p>
-						
-						
-						
-
+						<p style="container-fluid" >DEscricion quemada aqui</p>
 					</div>
-
 					<!-- Footer Column - Usefull Links -->
-
 					<div class="col-lg-3 footer_col">
 						<div class="footer_column_title">Links</div>
 						<div class="footer_column_content">
@@ -59,9 +25,7 @@ $noticias = $obj->consult($sql);
 							</ul>
 						</div>
 					</div>
-
 					<!-- Footer Column - Contact -->
-
 					<div class="col-lg-3 footer_col">
 						<div class="footer_column_title">Contact</div>
 						<div class="footer_column_content">
@@ -70,19 +34,19 @@ $noticias = $obj->consult($sql);
 									<div class="footer_contact_icon">
 										<img src="images/placeholder.svg" alt="https://www.flaticon.com/authors/lucy-g">
 									</div>
-									<?php echo $confi['dir_config']?>
+									Cl. 72f #26i 2-19, Cali, Valle del Cauca
 								</li>
 								<li class="footer_contact_item">
 									<div class="footer_contact_icon">
 										<img src="images/smartphone.svg" alt="https://www.flaticon.com/authors/lucy-g">
 									</div>
-									<?php echo $confi['tel_config']?>
+									319 5409595
 								</li>
 								<li class="footer_contact_item">
 									<div class="footer_contact_icon">
 										<img src="images/envelope.svg" alt="https://www.flaticon.com/authors/lucy-g">
 									</div>
-									<?php  echo $confi['correo_config']?>
+									egresados.cdti@sena.edu.co
 								</li>
 							</ul>
 						</div>
@@ -96,8 +60,8 @@ $noticias = $obj->consult($sql);
 			<div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
 				<div class="footer_copyright">
 					<span><!-- Link back to Colorlib can"t be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can"t be removed. Template is licensed under CC BY 3.0. --></span>
+					Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+					<!-- Link back to Colorlib can"t be removed. Template is licensed under CC BY 3.0. --></span>
 				</div>
 				<div class="footer_social ml-sm-auto">
 					<ul class="menu_social">
@@ -109,7 +73,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			</div>
 
 		</div>
-		<?php
-				}
-		?>
+		
 	</footer>
+	
