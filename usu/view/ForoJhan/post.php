@@ -83,8 +83,8 @@
 											<span class="comment_separator">|</span>
 											<?php if($comentario['usu_id']==$_SESSION['user_id'] || $_SESSION['rol']==1){
 											?>
-											<span class=""><button class="btn btn-warning btn-sm" id="editar_comentario"  data-id_comentario="<?php echo $comentario['cod_foro_com']; ?>" data-url="<?php echo getUrl("Foro","Foro","editComment",false,"ajax") ?>">Editar</button></span>
-											<button class="btn btn-danger btn-sm" id="eliminar_comentario" data-id_comentario="<?php echo $comentario['cod_foro_com']; ?>" data-url="<?php echo getUrl("Foro","Foro","deleteComment",false,"ajax") ?>">Eliminar</button>
+											<span><button class="btn btn-warning btn-sm" id="editar_comentario"  data-id_comentario="<?php echo $comentario['cod_foro_com']; ?>" data-url="<?php echo getUrl("Foro","Foro","editComment",false,"ajax") ?>">Editar</button></span>
+											<span><button class="btn btn-danger btn-sm" id="eliminar_comentario" data-id_comentario="<?php echo $comentario['cod_foro_com']; ?>" data-url="<?php echo getUrl("Foro","Foro","deleteComment",false,"ajax") ?>">Eliminar</button></span>
 											<?php
 											}
 											?>
@@ -123,11 +123,12 @@
 
 						<div class="sidebar_section">
 							<div class="sidebar_section_title mb-3">
-								<h3>Acciones</h3>
-								<?php if($f['usu_id']==$_SESSION['user_id']  || $_SESSION['rol']==1)
+							<?php if($f['usu_id']==$_SESSION['user_id']  || $_SESSION['rol']==1){
+											echo "<h3>Acciones</h3>";
 											echo "<button class='btn btn-warning mx-2' href='".getUrl("Foro","Foro","getEditForo")."'>Editar foro</button>";
 											echo "<button class='btn btn-danger mx-2' href='".getUrl("Foro","Foro","getEditForo")."'>Eliminar foro</button>";
-											 ?>
+							}
+							?>
 							</div>
 
 							<div class="sidebar_section_title">

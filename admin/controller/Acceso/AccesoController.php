@@ -5,7 +5,7 @@
 
         public function logout(){
             session_destroy();
-            redirect("../../web/login.php");
+            redirect("../../usu/web/login.php");
         }
     }
 ?>

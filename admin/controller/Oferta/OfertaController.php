@@ -38,6 +38,7 @@ class OfertaController{
             redirect(getUrl("Oferta", "Oferta", "consult"));
         } else {
             echo "Ops, ha ocurrido un error";
+            dd($sql);
             
         }
     }
