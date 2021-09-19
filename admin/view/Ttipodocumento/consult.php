@@ -17,7 +17,7 @@ include_once '../view/partials/modal.php';
     ?>
      <table class="mt-4 table table-bordered table-sm table-hover table-striped " id="tabla">
         
-    <br><br>
+   
         <thead class="thead-dark">
             <tr>
                 <th class="text-center w-5">Código</th>
@@ -27,7 +27,8 @@ include_once '../view/partials/modal.php';
         </thead>
         <tbody>
         <button class="btn btn-success btn-sm" id="InsertDocu" data-toggle="modal" data-target='#exampleModal' data-url=" <?php echo getUrl("Ttipodocumento","Ttipodocumento","getInsert",false,"ajax"); ?>">Insertar</button>
-            <?php
+           <br><br>
+           <?php
             foreach ($tipodocumento as $tipodocu) {
                 echo "<tr>";
                     echo "<td class='text-center'>".$tipodocu['cod_tipo_doc']."</td>";

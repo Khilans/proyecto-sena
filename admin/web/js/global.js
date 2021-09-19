@@ -31,6 +31,51 @@ $(document).ready(function(){
 
     });
 
+    //Modales del crud oferta
+
+    $(document).on("click","#insertOferta",function(){
+        var url=$(this).attr("data-url");
+        
+
+        $.ajax({
+            url:url,
+            
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#editOferta",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-oferE");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#DeleteOferta",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-oferD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+
     //Modales del crud tipo de pqrsf
 
     $(document).on("click","#InsertTpqrs",function(){

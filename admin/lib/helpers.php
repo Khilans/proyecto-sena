@@ -13,7 +13,15 @@ if($_SESSION['rol']!=1){
         echo "<pre>";
         die(print_r($var));
     }
+    function hora(){
+        $unixTime = time();
+        $timeZone = new \DateTimeZone('America/Bogota');
+        $time = new \DateTime();
+        $time->setTimestamp($unixTime)->setTimezone($timeZone);
+        $formattedTime = $time->format('Y/m/d');
 
+        return $formattedTime;
+    }
 
     function redirect($url){ //Redirecciona con JS en lugar de header
         echo "<script type='text/javascript'>"."window.location.href='$url'"."</script>";

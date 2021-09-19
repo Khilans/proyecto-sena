@@ -83,6 +83,5 @@ include_once '../view/partials/modal.php';
 
             </div>
 
-        
-            <!--====  Fin de INICIO  ====-->
+
 

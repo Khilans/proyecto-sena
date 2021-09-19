@@ -41,3 +41,4 @@ include_once '../view/partials/modal.php';
         ?>
     </tbody>
 </table>
+

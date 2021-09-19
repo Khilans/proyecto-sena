@@ -1,6 +1,5 @@
 <?php
-
-    include_once '../model/Tpqrs/TpqrsModel.php';
+ include_once '../model/Tpqrs/TpqrsModel.php';
 
     class TpqrsController {
  
@@ -113,3 +112,4 @@
     }
 
 ?>
+

@@ -67,30 +67,19 @@ include_once '../view/partials/modal.php';
 
     <li class="botonesInicio">
 
-        <a href="<?php echo getUrl("ResultadoAp", "ResultadoAp", "consult") ?>">
-            <div style="background:#238276">
-                <span class="fa fa-users"></span>
-                <p>RESUL APRENDI.</p>
-            </div>
-        </a>
-
-    </li>
-
-    <li class="botonesInicio">
-
         <a href="<?php echo getUrl("LineaTecnologica", "LineaTecnologica", "consult") ?>">
-            <div style="background:#5fb219">
+            <div style="background:#238276">
                 <span class="fa fa-users"></span>
                 <p>LINEA TEC.</p>
             </div>
         </a>
-
+       
     </li>
 
     <li class="botonesInicio">
 
         <a href="<?php echo getUrl("ProgramaNivel", "ProgramaNivel", "consult") ?>">
-            <div style="background:#238276">
+            <div style="background:#5fb219">
                 <span class="fa fa-users"></span>
                 <p>NIVEL PRO.</p>
             </div>
