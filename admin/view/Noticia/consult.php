@@ -48,7 +48,7 @@ include_once '../view/partials/modal.php';
                     echo "<td class='text-center'>".$noti['desc_tipo_noti']."</td>";
                     echo "<td class='text-center'>".$noti['desc_estado']."</td>";
                     echo "<td class='text-center'>
-                    <button class='btn btn-success btn-sm' id='Morenoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","getMore",false,"ajax")."' data-notiM='".$noti['cod_noticia']."'>
+                    <button class='btn btn-success btn-sm' id='Morenoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","More",false,"ajax")."' data-notiM='".$noti['cod_noticia']."'>
                     <i class='fa fa-eye'></i>                   
                     </button>
                     <button class='btn btn-warning btn-sm' id='modalnoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","getModalUpdate",false,"ajax")."' data-noti='".$noti['cod_noticia']."'>
