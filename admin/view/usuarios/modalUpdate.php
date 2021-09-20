@@ -14,7 +14,7 @@ foreach ($usuarios as $usu) {
                 <input type="text"  name="usu_nombre2" class="form-control" value="<?php echo $usu['usu_nombre2'];?>">
             </div>
             <div class="col-md-4 form-group">
-                <label>Tipo de documento</label>
+                <label>Tipo de rol</label>
                 <select class="form-control" name="cod_rol">
                     <?php foreach($roles as $rol){
                         if($usu['cod_rol']==$rol['cod_rol']){

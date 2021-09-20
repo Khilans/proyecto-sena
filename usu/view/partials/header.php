@@ -2,12 +2,11 @@
 include_once '../view/partials/modal.php';
 ?>
 <!-- Header -->
-<header class="">header d-flex flex-row
+<header class="header d-flex flex-row">
 	<div class="header_content d-flex flex-row align-items-center">
 		<!-- Logo -->
 		<div class="logo_container">
 			<div class="logo">
-				<img src="images/logo.png" alt="">
 				<span>senatel</span>
 			</div>
 
@@ -66,12 +65,6 @@ include_once '../view/partials/modal.php';
 		<?php
 		}
 		?>
-	</div>
-
-
-	<!-- Hamburger -->
-	<div class="hamburger_container">
-		<i class="fas fa-bars trans_200"></i>
 	</div>
 
 </header>

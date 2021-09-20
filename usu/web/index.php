@@ -11,7 +11,6 @@ include_once '../lib/helpers.php';
                 }else{
                     include_once '../view/partials/home.php';
                     include_once '../view/partials/popular.php';
-                    include_once '../view/partials/register.php';
                     
                 }
 

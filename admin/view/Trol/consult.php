@@ -26,7 +26,7 @@ include_once '../view/partials/modal.php';
         </thead>
         <tbody>
         <button class="btn btn-success btn-sm" id="InsertRol" data-toggle="modal" data-target='#exampleModal' data-url=" <?php echo getUrl("Trol","Trol","getInsert",false,"ajax"); ?>">Insertar</button>
-           
+           <br><br>
            <?php
             foreach ($rol as $rol) {
                 echo "<tr>";

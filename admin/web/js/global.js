@@ -31,12 +31,138 @@ $(document).ready(function(){
 
     });
 
+
+
+       // modal programas
+    $(document).on("click","#insertPrograma",function(){
+         var url=$(this).attr("data-url");
+        $.ajax({
+            url:url,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        }); 
+    });
+
+
+    $(document).on("click","#editPrograma",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-progEd");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#deletePrograma",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-progDel");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+
+      // modal Linea Tecnologica
+      $(document).on("click","#insertLinTec",function(){
+        var url=$(this).attr("data-url");
+       $.ajax({
+           url:url,
+           success:function(datos){
+               $("#contenedor").html(datos);
+               $("#exampleModalCenter").modal("show");
+           }
+       }); 
+   });
+
+
+   $(document).on("click","#editLinTec",function(){
+       var url=$(this).attr("data-url");
+       var id=$(this).attr("data-LinTecEd");
+
+       $.ajax({
+           url:url,
+           data:"id="+id,
+           success:function(datos){
+               $("#contenedor").html(datos);
+               $("#exampleModalCenter").modal("show");
+           }
+       });
+   });
+
+   $(document).on("click","#deleteLinTec",function(){
+       var url=$(this).attr("data-url");
+       var id=$(this).attr("data-LinTecDel");
+
+       $.ajax({
+           url:url,
+           data:"id="+id,
+           success:function(datos){
+               $("#contenedor").html(datos);
+               $("#exampleModalCenter").modal("show");
+           }
+       });
+   });
+   
+    // MODALES PROGRAMA NIVEL
+    $(document).on("click","#insertProgNiv",function(){
+        var url=$(this).attr("data-url");
+       $.ajax({
+           url:url,
+           success:function(datos){
+               $("#contenedor").html(datos);
+               $("#exampleModalCenter").modal("show");
+           }
+       }); 
+   });
+
+
+   $(document).on("click","#editProgNiv",function(){
+       var url=$(this).attr("data-url");
+       var id=$(this).attr("data-ProgNivEd");
+
+       $.ajax({
+           url:url,
+           data:"id="+id,
+           success:function(datos){
+               $("#contenedor").html(datos);
+               $("#exampleModalCenter").modal("show");
+           }
+       });
+   });
+
+   $(document).on("click","#deleteProgNiv",function(){
+       var url=$(this).attr("data-url");
+       var id=$(this).attr("data-ProgNivDel");
+
+       $.ajax({
+           url:url,
+           data:"id="+id,
+           success:function(datos){
+               $("#contenedor").html(datos);
+               $("#exampleModalCenter").modal("show");
+           }
+       });
+   });
+
+
+
     //Modales del crud oferta
 
     $(document).on("click","#insertOferta",function(){
         var url=$(this).attr("data-url");
-        
-
         $.ajax({
             url:url,
             
@@ -46,6 +172,9 @@ $(document).ready(function(){
             }
         });
     });
+
+
+
 
     $(document).on("click","#editOferta",function(){
         var url=$(this).attr("data-url");
@@ -126,11 +255,11 @@ $(document).ready(function(){
     //Modales crud Tipo de noticia
     $(document).on("click","#InsertTnoti",function(){
         var url=$(this).attr("data-url");
-        var id=$(this).attr("data-Tnoti");
+       
 
         $.ajax({
             url:url,
-            data:"id="+id,
+            
             success:function(datos){
                 $("#contenedor").html(datos);
                 $("#exampleModalCenter").modal("show");
@@ -307,51 +436,9 @@ $(document).ready(function(){
             }
         });
     });
-    //Modales de crud configuracion 
-    $(document).on("click","#insertConfi",function(){
-        var url=$(this).attr("data-url");
-        var id=$(this).attr("data-confiIn");
+   
 
-        $.ajax({
-            url:url,
-            data:"id="+id,
-            type:"GET",
-            success:function(datos){
-                $("#contenedor").html(datos);
-                $("#exampleModalCenter").modal("show");
-            }
-        });
-    });
-
-    $(document).on("click","#EditConfi",function(){
-        var url=$(this).attr("data-url");
-        var id=$(this).attr("data-confiE");
-
-        $.ajax({
-            url:url,
-            data:"id="+id,
-            type:"GET",
-            success:function(datos){
-                $("#contenedor").html(datos);
-                $("#exampleModalCenter").modal("show");
-            }
-        });
-    });
-
-    $(document).on("click","#DeleteConfi",function(){
-        var url=$(this).attr("data-url");
-        var id=$(this).attr("data-confiD");
-
-        $.ajax({
-            url:url,
-            data:"id="+id,
-            type:"GET",
-            success:function(datos){
-                $("#contenedor").html(datos);
-                $("#exampleModalCenter").modal("show");
-            }
-        });
-    });
+   
     //Modales de crud de noticias
     $(document).on("click","#modalInsertnoti",function(){
         var url=$(this).attr("data-url");
@@ -413,22 +500,7 @@ $(document).ready(function(){
     });
 
 
-   // modal programas
-$(document).on("click","#modalProg",function(){
-    alert("funciona");
-        /* var url=$(this).attr("data-url");
-        var id=$(this).attr("data-progIn");
 
-        $.ajax({
-            url:url,
-            data:"id="+id,
-            type:"GET",
-            success:function(datos){
-                $("#contenedor").html(datos);
-                $("#exampleModalCenter").modal("show");
-            }
-        }); */
-    });
 
 
     
