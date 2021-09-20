@@ -11,7 +11,8 @@
 								<span>VISION</span>
 							</div>
 						</div>
-						<p style="container-fluid" >DEscricion quemada aqui</p>
+						<p style="container-fluid" >En el año 2022 el SENA se consolidará como una entidad referente de formación integral para el trabajo, por su aporte a la empleabilidad, el emprendimiento y la equidad, que atiende con pertinencia y calidad las necesidades productivas y sociales del país.
+</p>
 					</div>
 					<!-- Footer Column - Usefull Links -->
 					<div class="col-lg-3 footer_col">

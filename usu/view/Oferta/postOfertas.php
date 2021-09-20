@@ -1,4 +1,5 @@
 <link rel="stylesheet" href="styles/oferta/Oferta.css" />
+
 <?php
 	foreach ($ofertas as $ofer) {
 ?>
