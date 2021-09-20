@@ -3,7 +3,7 @@
                 <h4 class="alert-success text-center">Registrar noticia</h4>
                 <p><b>Por favor llenar todos los campos</b></p>
         </div>
-	<form action="<?php echo getUrl("Oferta", "Oferta", "postInsert"); ?>" method="post" enctype="multipart/form-data">
+	<form action="<?php echo getUrl("Oferta", "Oferta", "postInsert"); ?>" method="post">
 		<div class="row">
 		    
 			<div class="col-md-7 form-group">

@@ -15,30 +15,19 @@ include_once '../view/partials/modal.php';
         unset($_SESSION['mensaje']);
         }
     ?>
-<table class="mt-4 table table-bordered table-sm table-hover table-striped">
+<table class="mt-4 table table-bordered table-sm table-hover table-striped" id="tabla">
 
         <thead class="thead-dark">
             <tr>
-<<<<<<< HEAD
-                <th>Id</th>
-                <th>Tipo pqrs</th>
-                <th>Usuario</th>
-				<th>Estado</th>
-                <th>Descripción</th>
-                <th>Fecha</th>
-                <th>Ver más</th>
-                <th>Reponder</th>
-=======
                 <th class="text-center w-5">Id</th>
                 <th class="text-center w-15">Tipo pqrs</th>
                 <th class="text-center">Usuario</th>
+                <th class="text-center">Nombre</th>
+                <th class="text-center">Correo</th>
 				<th class="text-center">Estado</th>
                 <th class="text-center">Descripción</th>
                 <th class="text-center">Fecha</th>
                 <th class="text-center">Acciones</th>
-
-                
->>>>>>> 085caef74bb42db400ade89d873295774a62e554
             </tr>
         </thead>
         <tbody>
@@ -54,14 +43,16 @@ include_once '../view/partials/modal.php';
                      }else{
                          echo "<td class='text-center'>Aninimus</td>";
                      }
+                     echo "<td class='text-center'>".$pq['nombre']."</td>";
+                     echo "<td class='text-center'>".$pq['correo']."</td>";
                     echo "<td class='text-center'>".$pq['desc_estado']."</td>";
                     echo "<td class='text-center'>".$pq['pqrsf_desc']."</td>";
                     echo "<td class='text-center'>".$pq['pqrsf_fecha']."</td>";
                     echo "<td class='text-center'>
-                    <button class='btn btn-warning btn-sm' id='modalnoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrsf","Pqrsf","getModalUpdate",false,"ajax")."' data-pq='".$pq['cod_pqrsf']."'>
+                    <button class='btn btn-warning btn-sm' id='#' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrsf","Pqrsf","getModalUpdate",false,"ajax")."' data-pq='".$pq['cod_pqrsf']."'>
                     <i class='fa fa-eye'></i>                   
                     </button>
-                    <button class='btn btn-danger btn-sm' id='modalnoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrsf","Pqrsf","getModalDelete",false,"ajax")."' data-notid='".$pq['cod_pqrsf']."'>
+                    <button class='btn btn-danger btn-sm' id='Responder' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrs","Pqrs","getAnswer",false,"ajax")."' data-pqrsRes='".$pq['cod_pqrsf']."'>
                     <i class='fa fa-sms'></i>                   
                     </button>
                     </td>";
@@ -73,18 +64,24 @@ include_once '../view/partials/modal.php';
     </table>
 </div>
 <hr>
-        <ul>
+    <ul>
         <li class="botonesInicio">
-                   <a href="<?php echo getUrl("Tpqrs", "Tpqrs", "consult") ?>">
-                     <div style="background:#fc7323">
+            <a href="<?php echo getUrl("Tpqrs", "Tpqrs", "consult") ?>">
+                <div style="background:#fc7323">
                       <span class="fa fa-info"></span>
                       <p>T.PQRSF</p>
-                     </div>
-                   </a>
+                </div>
+            </a>
         </li>
-
-                  
-
-                </ul>
-
-            </div>
+    </ul>
+    <ul>
+        <li class="botonesInicio">
+            <a href="<?php echo getUrl("Pqrs", "Pqrs", "consultRes") ?>">
+                <div style="background:#238276">
+                      <span class="fa fa-info"></span>
+                      <p>RESPUESTAS <br>PQRSF</p>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

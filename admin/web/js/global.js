@@ -422,9 +422,9 @@ $(document).ready(function(){
     });
 
     //Modales crud de Pqrsf
-    $(document).on("click","#modalInsertPqrs",function(){
+    $(document).on("click","#Responder",function(){
         var url=$(this).attr("data-url");
-        var id=$(this).attr("data-pqrs");
+        var id=$(this).attr("data-pqrsRes");
 
         $.ajax({
             url:url,

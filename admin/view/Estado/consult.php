@@ -15,7 +15,7 @@ include_once '../view/partials/modal.php';
         unset($_SESSION['mensaje']);
         }
     ?>
-<table class="mt-4 table table-bordered table-sm table-hover">
+<table class="mt-4 table table-bordered table-sm table-hover" id="tabla">
 
 <thead class="thead-dark">
         <tr>
