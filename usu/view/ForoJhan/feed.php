@@ -71,7 +71,7 @@
 						<!-- Latest Posts -->
 
 						<div class="sidebar_section">
-							<?php if($_SESSION['rol']==1){
+							<?php if($_SESSION['rol']==1 || $_SESSION['rol']==3){
 								?>
 							
 								<div class="latest_post">
