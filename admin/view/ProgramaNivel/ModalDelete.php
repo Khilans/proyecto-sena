@@ -11,18 +11,15 @@
                 <div class="form-group col-md-6">
                     <label>Nivel</label>
                     <div>
-                        <input type="hidden" name="id_prog_niv" value="<?php echo $niv['id_prog_niv']; ?>">
-                        <input type="text" readonly name="nom_prog_niv" value="<?php echo $niv['nom_prog_niv'] ?>">
+                        <input type="hidden" name="id_prog_niv" class="form-control" value="<?php echo $niv['id_prog_niv']; ?>">
+                        <input type="text" readonly name="nom_prog_niv" class="form-control" value="<?php echo $niv['nom_prog_niv'] ?>">
                     </div>
-                    <p class="mt-4">¿Está seguro de eliminar este nivel de programas?</p>
                 </div>
             </div>
-            <div class="row">
-                <div style="margin: 1em;" class="col-md-6">
-                    <input type="submit" value="Eliminar" class="btn btn-outline-danger">
-                    <a href="<?php echo getUrl("ProgramaNivel","ProgramaNivel","consult") ?>"><button type="button" class="btn btn-outline-success">Cancelar</button></a>
-                </div>
-            </div><br>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-success">Confirmar</button>
+            </div>
         </form>
     <?php
     }

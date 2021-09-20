@@ -14,11 +14,9 @@
                     <input type="text" readonly name="nom_prog" class="form-control" value="<?php echo $prog['nom_prog']; ?>">
                 </div>
             </div>
-            <div class="row">
-                <div style="margin: 1em;" class="col-md-6">
-                    <input type="submit" value="Eliminar" class="btn btn-outline-danger">
-                    <a href="<?php echo getUrl("Programa", "Programa", "consult") ?>"><button type="button" class="btn btn-outline-success">Cancelar</button></a>
-                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-success">Confirmar</button>
             </div>
         </form>
 </div>

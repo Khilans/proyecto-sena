@@ -28,6 +28,11 @@ include_once '../view/partials/modal.php';
                 <th class="text-center">Descripción</th>
                 <th class="text-center">Fecha</th>
                 <th class="text-center">Acciones</th>
+<<<<<<< HEAD
+=======
+
+                
+>>>>>>> cf315da4aab74c0091170dbce2b13dd391ad14e8
             </tr>
         </thead>
         <tbody>
