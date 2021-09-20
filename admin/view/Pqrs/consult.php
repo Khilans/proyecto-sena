@@ -21,13 +21,14 @@ include_once '../view/partials/modal.php';
             <tr>
                 <th class="text-center w-5">Id</th>
                 <th class="text-center w-15">Tipo pqrs</th>
-                <th class="text-center">Usuario</th>
+                <th class="text-center">Id usuario</th>
                 <th class="text-center">Nombre</th>
                 <th class="text-center">Correo</th>
 				<th class="text-center">Estado</th>
                 <th class="text-center">Descripción</th>
                 <th class="text-center">Fecha</th>
                 <th class="text-center">Acciones</th>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 
@@ -36,6 +37,8 @@ include_once '../view/partials/modal.php';
 =======
 >>>>>>> cf315da4aab74c0091170dbce2b13dd391ad14e8
 >>>>>>> a8a03d9b6587d68cd533fa0a4eac0a93ba5ef051
+=======
+>>>>>>> 85170f1f0c60d0f699cacfcc40183a01edcda8ae
             </tr>
         </thead>
         <tbody>
@@ -49,7 +52,7 @@ include_once '../view/partials/modal.php';
                     if (isset($pq['usu_id'])){
                         echo "<td class='text-center'>" . $pq['usu_id'] . "</td>";
                      }else{
-                         echo "<td class='text-center'>Aninimus</td>";
+                         echo "<td class='text-center'>Sin registrar</td>";
                      }
                      echo "<td class='text-center'>".$pq['nombre']."</td>";
                      echo "<td class='text-center'>".$pq['correo']."</td>";

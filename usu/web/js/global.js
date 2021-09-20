@@ -42,6 +42,15 @@ $(document).ready(function(){
             }
         });
     });
+
+    $(document).on("click","#cambioImagenForo",function(){
+        var ruta=$("#imagen").attr("src");
+
+        $("#cambiarImagenForo").html("<input type='file' name='imag_nueva'>");
+        $("$cambiarImagenForo").append("<input type='hidden' name='imag_vieja' value='"+ruta+"'>");
+    });
+
+    
    
     $('#tabla').DataTable({
         responsive: true,

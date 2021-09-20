@@ -95,6 +95,10 @@ include_once '../model/Foro/ForoModel.php';
 
         }
 
+        public function postEditForo(){
+            dd($_POST);
+        }
+
         public function delete(){
 
         }
