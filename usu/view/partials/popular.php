@@ -20,8 +20,8 @@
 						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
 							<img src="images/earth-globe.svg" class="svg" alt="">
 							<div class="hero_box_content">
-								<h2 class="hero_box_title">Cursos en linea</h2>
-								<a href="courses.html" class="hero_box_link">Conoce mas</a>
+								<h2 class="hero_box_title">IR A</h2>
+								<a href="<?php echo getUrl("Foro", "Foro", "feed") ?>">Foros</a>
 							</div>
 						</div>
 					</div>
@@ -30,8 +30,8 @@
 						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
 							<img src="images/books.svg" class="svg" alt="">
 							<div class="hero_box_content">
-								<h2 class="hero_box_title">Our Library</h2>
-								<a href="courses.html" class="hero_box_link">view more</a>
+								<h2 class="hero_box_title">IR A</h2>
+								<a href="<?php echo getUrl("Oferta", "Oferta", "getOferta") ?>">Ofertas</a>
 							</div>
 						</div>
 					</div>
@@ -40,22 +40,12 @@
 						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
 							<img src="images/professor.svg" class="svg" alt="">
 							<div class="hero_box_content">
-								<h2 class="hero_box_title">Our Teachers</h2>
-								<a href="teachers.html" class="hero_box_link">view more</a>
+								<h2 class="hero_box_title">IR A</h2>
+								<a href="<?php echo getUrl("Noticia", "Noticia", "getView") ?>">Noticias</a>
 							</div>
 						</div>
 					</div>
-					<br>
-					<br>
-					<div class="col-lg-4 hero_box_col">
-						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
-							<img src="images/books.svg" class="svg" alt="">
-							<div class="hero_box_content">
-								<h2 class="hero_box_title">Our Library</h2>
-								<a href="courses.html" class="hero_box_link">view more</a>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</div>
