@@ -58,11 +58,9 @@
                 </Select>
             </div>  
         </div> 
-        <div class="row">
-            <div style="margin: 1em;" class="col-md-6"> 
-                <input  type="submit" value="enviar" class="btn btn-success">
-                <a href="<?php echo getUrl("Noticia","Noticia","consult") ?>"><button type="button" class="btn btn-danger">Cancelar</button></a>
-            </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-success">Confirmar</button>
         </div>
         
     </form>

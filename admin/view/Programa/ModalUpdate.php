@@ -74,12 +74,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div  style="margin: 1em;" class="col-md-6">
-                    <input type="submit" value="Enviar" class="btn btn-outline-success">
-                    <a href="<?php echo getUrl("Programa", "Programa", "consult"); ?>"><button type="button" class="btn btn-outline-primary">Cancelar</button></a>
-                </div>
-            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-success">Confirmar</button>
+        </div>
         </form>
     <?php
     }

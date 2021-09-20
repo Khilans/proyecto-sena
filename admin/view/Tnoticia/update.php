@@ -15,12 +15,10 @@
                 <input type="text" name="desc_tipo_noti" class="form-control" value="<?php echo $tipo_not['desc_tipo_noti'];?>">
             </div>
         </div>
-        <div class="row">
-            <div style="margin: 1em;" class="col-md-6">
-                <input type="submit" value="enviar" class="btn btn-success">
-                <a href="<?php echo getUrl("Tnoticia","Tnoticia","consult") ?>"><button type="button" class="btn btn-danger">Cancelar</button></a>
-            </div>
-        </div>  
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-success">Confirmar</button>
+        </div>
     </form>  
     <?php
         }
