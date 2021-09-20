@@ -20,7 +20,7 @@
 						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
 							<img src="images/earth-globe.svg" class="svg" alt="">
 							<div class="hero_box_content">
-								<h2 class="hero_box_title">IR A</h2>
+								<h2 class="hero_box_title">Ir a la Seccion de</h2>
 								<a href="<?php echo getUrl("Foro", "Foro", "feed") ?>">Foros</a>
 							</div>
 						</div>
@@ -30,7 +30,7 @@
 						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
 							<img src="images/books.svg" class="svg" alt="">
 							<div class="hero_box_content">
-								<h2 class="hero_box_title">IR A</h2>
+								<h2 class="hero_box_title">Ir a la Seccion de</h2>
 								<a href="<?php echo getUrl("Oferta", "Oferta", "getOferta") ?>">Ofertas</a>
 							</div>
 						</div>
@@ -40,7 +40,7 @@
 						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
 							<img src="images/professor.svg" class="svg" alt="">
 							<div class="hero_box_content">
-								<h2 class="hero_box_title">IR A</h2>
+								<h2 class="hero_box_title">Ir a la Seccion de</h2>
 								<a href="<?php echo getUrl("Noticia", "Noticia", "getView") ?>">Noticias</a>
 							</div>
 						</div>

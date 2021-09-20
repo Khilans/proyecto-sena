@@ -7,12 +7,23 @@
 						<!-- Logo -->
 						<div class="logo_container">
 							<div class="logo">
-								<img src="images/logo.png" alt="">
 								<span>VISION</span>
 							</div>
 						</div>
 						<p style="container-fluid" >En el año 2022 el SENA se consolidará como una entidad referente de formación integral para el trabajo, por su aporte a la empleabilidad, el emprendimiento y la equidad, que atiende con pertinencia y calidad las necesidades productivas y sociales del país.
 </p>
+
+					</div>
+					<div class="col-lg-3 footer_col">
+						<!-- Logo -->
+						<div class="logo_container">
+							<div class="logo">
+								<span>MISION</span>
+							</div>
+						</div>
+						<p style="container-fluid" >El SENA está  encargado de cumplir la función que le corresponde al Estado de invertir en el desarrollo social y técnico de los trabajadores colombianos, ofreciendo y ejecutando la formación profesional integral, para la incorporación y el desarrollo de las personas en actividades productivas que contribuyan al desarrollo social, económico y tecnológico del país (Ley 119/1994).​
+</p>
+
 					</div>
 					<!-- Footer Column - Usefull Links -->
 					<div class="col-lg-3 footer_col">
@@ -61,15 +72,8 @@
 			<div class="footer_bar d-flex flex-column flex-sm-row align-items-center">
 				<div class="footer_copyright">
 					<span><!-- Link back to Colorlib can"t be removed. Template is licensed under CC BY 3.0. -->
-					Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+					Copyright &copy;<script>document.write(new Date().getFullYear());</script> Servicio Nacional de Aprendizaje SENA
 					<!-- Link back to Colorlib can"t be removed. Template is licensed under CC BY 3.0. --></span>
-				</div>
-				<div class="footer_social ml-sm-auto">
-					<ul class="menu_social">
-						<li class="menu_social_item"><a href="https://www.instagram.com/senacomunica/?hl=es-la"><i class="fab fa-instagram"></i></a></li>
-						<li class="menu_social_item"><a href="https://www.facebook.com/CDTISENAVALLE"><i class="fab fa-facebook-f"></i></a></li>
-						<li class="menu_social_item"><a href="https://twitter.com/SENAComunica"><i class="fab fa-twitter"></i></a></li>
-					</ul>
 				</div>
 			</div>
 
