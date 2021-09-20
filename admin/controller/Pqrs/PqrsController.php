@@ -49,14 +49,14 @@
                     $mail->isSMTP();
                     $mail->Host="smtp.gmail.com";
                     $mail->SMTPAuth=true;
-                    $mail->Username="lauracrud908@gmail.com";
-                    $mail->Password="lauracrud";
+                    $mail->Username="SENATELgestion@gmail.com";
+                    $mail->Password="senatel12";
                     $mail->SMTPSecura="TLS";
                     $mail->Port=587;
 
                     //Información del destinatario y remitente
                     //Remitente
-                    $mail->setFrom("lauracrud908@gmail.com");
+                    $mail->setFrom("SENATELgestion@gmail.com");
                     //Destinatario
                     $mail->addAddress($correo,$nombre);
                     
