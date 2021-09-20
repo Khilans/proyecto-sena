@@ -18,6 +18,27 @@ foreach ($foros as $foro) {
             </div>
         </div>
         <div class="row">
+            <div class="col-md-6">
+                <label>Fecha fin</label>
+                <input type="date" class="form-control" name="fech_fin_foro" value="<?php echo $foro['fech_fin_foro'] ?>">
+            </div>
+            <div class="col-md-6">
+                <label>Tema</label>
+                <select name="cod_tema" class="form-control">
+                    <option value="">Seleccione...</option>
+                    <?php
+                    foreach($temas as $tema){
+                        if($foro['cod_tema']==$tema['cod_tema']){
+                            echo "<option value='".$tema['cod_tema']."' selected>".$tema['desc_tema']."</option>";
+                        }else
+                        echo "<option value='".$tema['cod_tema']."'>".$tema['desc_tema']."</option>";
+                    }
+
+                    ?>
+                </select>
+            </div>
+        </div>
+        <div class="row mt-4">
             <div class="col-md-12">
                 <textarea class="form-control" name="desc_foro" id="desc_editada" cols="50" rows="7"><?php echo $foro['desc_foro'];?></textarea>
             </div>

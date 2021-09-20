@@ -89,6 +89,8 @@ include_once '../model/Foro/ForoModel.php';
         public function getEditForo(){
             $obj=new ForoModel;
             $foro_id=$_GET['id'];
+            $sql="SELECT * FROM t_tema";
+            $temas=$obj->consult($sql);
             $sql="SELECT * FROM t_foro WHERE cod_foro=$foro_id";
             $foros=$obj->consult($sql);
             include_once '../view/ForoJhan/modalUpdate.php';
@@ -96,6 +98,27 @@ include_once '../model/Foro/ForoModel.php';
         }
 
         public function postEditForo(){
+  /*           $obj= new ForoModel;
+            $cod_foro=$_POST['id_foro'];
+            $titulo=$_POST['titulo_foro'];
+            $imag_oferta = $_FILES['imag_nueva']['name'];
+            if (isset($_FILES['imag_nueva']['name'])) {
+                $imag_oferta = $_FILES['imag_nueva']['name'];
+                $ruta = "images/$imag_oferta";
+                move_uploaded_file($_FILES['imag_nueva']['tmp_name'], $ruta);
+    
+                if (isset($_POST['imag_vieja'])) {
+                    $imag_vieja = $_POST['imag_vieja'];
+                    unlink("$imag_vieja");
+                }
+            
+                $sql = "UPDATE t_foro SET  imag_foro='$ruta' where cod_foro=$cod_foro";
+    
+            } else {
+                $sql = "UPDATE t_oferta SET id_estado=$id_estado, desc_oferta='$desc_oferta', cupos_oferta=$cupos_oferta, fech_ini_oferta='$fech_ini_oferta', fech_fin_oferta='$fech_fin_oferta' where id_oferta=$id_oferta";
+    
+            }
+            $ejecutar = $obj->consult($sql); */
             dd($_POST);
         }
 
