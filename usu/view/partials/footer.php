@@ -1,4 +1,4 @@
-<br>
+
 	<footer class="footer">
 		<div class="container">
 			<div class="footer_content">
