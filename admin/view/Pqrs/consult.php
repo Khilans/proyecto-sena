@@ -19,16 +19,6 @@ include_once '../view/partials/modal.php';
 
         <thead class="thead-dark">
             <tr>
-<<<<<<< HEAD
-                <th>Id</th>
-                <th>Tipo pqrs</th>
-                <th>Usuario</th>
-				<th>Estado</th>
-                <th>Descripción</th>
-                <th>Fecha</th>
-                <th>Ver más</th>
-                <th>Reponder</th>
-=======
                 <th class="text-center w-5">Id</th>
                 <th class="text-center w-15">Tipo pqrs</th>
                 <th class="text-center">Usuario</th>
@@ -38,7 +28,6 @@ include_once '../view/partials/modal.php';
                 <th class="text-center">Acciones</th>
 
                 
->>>>>>> 085caef74bb42db400ade89d873295774a62e554
             </tr>
         </thead>
         <tbody>

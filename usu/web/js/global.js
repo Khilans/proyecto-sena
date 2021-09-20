@@ -29,8 +29,19 @@ $(document).ready(function(){
         });
     });
 
-
-  
+    //MODAL FORO
+    $(document).on("click","#modalUpdateForo",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-id_foro");
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
    
     $('#tabla').DataTable({
         responsive: true,
@@ -132,8 +143,6 @@ $(document).ready(function(){
 
     $(document).on("click","#modal",function(){
         var url=$(this).attr("data-url");
-       
-        
 
         $.ajax({
             url:url,

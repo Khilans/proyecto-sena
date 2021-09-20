@@ -1,5 +1,9 @@
 <link rel="stylesheet" type="text/css" href="styles/news_post_styles.css">
-<link rel="stylesheet" type="text/css" href="styles/news_post_responsive.css">   
+<link rel="stylesheet" type="text/css" href="styles/news_post_responsive.css"> 
+<?php
+include_once '../view/partials/modal.php';
+?>
+
 	<!-- Home -->
 
 	<div class="home">
@@ -25,6 +29,7 @@
 						<!-- News Post -->
 						<?php
 						foreach($foro as $f){
+							$id_foro=$f['cod_foro'];
 						?>
 						<div class="news_post">
 							<div class="news_post_image">
@@ -125,7 +130,7 @@
 							<div class="sidebar_section_title mb-3">
 							<?php if($f['usu_id']==$_SESSION['user_id']  || $_SESSION['rol']==1){
 											echo "<h3>Acciones</h3>";
-											echo "<button class='btn btn-warning mx-2' href='".getUrl("Foro","Foro","getEditForo")."'>Editar foro</button>";
+											echo "<button class='btn btn-warning mx-2' id='modalUpdateForo' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Foro","Foro","getEditForo",false,"ajax")."' data-id_foro='".$id_foro."'>Editar foro</button>";
 											echo "<button class='btn btn-danger mx-2' href='".getUrl("Foro","Foro","getEditForo")."'>Eliminar foro</button>";
 							}
 							?>

@@ -88,7 +88,11 @@ include_once '../model/Foro/ForoModel.php';
 
         public function getEditForo(){
             $obj=new ForoModel;
-            $foro_id=$_GET[''];
+            $foro_id=$_GET['id'];
+            $sql="SELECT * FROM t_foro WHERE cod_foro=$foro_id";
+            $foros=$obj->consult($sql);
+            include_once '../view/ForoJhan/modalUpdate.php';
+
         }
 
         public function delete(){

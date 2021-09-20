@@ -1,7 +1,5 @@
 <?php
     include_once '../model/Usuarios/UsuariosModel.php';
-    use PHPMAILER\PHPMAILER\PHPMailer;
-    use PHPMAILER\PHPMAILER\Exception;
     class UsuariosController{
 
         public function profile(){

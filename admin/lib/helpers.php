@@ -22,7 +22,7 @@ if($_SESSION['rol']!=1){
 
         return $formattedTime;
     }
-
+    
     function redirect($url){ //Redirecciona con JS en lugar de header
         echo "<script type='text/javascript'>"."window.location.href='$url'"."</script>";
     }
