@@ -32,7 +32,7 @@ include_once '../lib/helpers.php';
             <form action="<?php echo getUrl("Acceso", "Acceso", "login") ?>" method="POST">
                 <div class="form-group">
                     <label for="username">Numero de documento:</label>
-                    <input type="text" class="form-control" name="usu_ndocumento" placeholder="Numero de identidad">
+                    <input type="number" class="form-control" name="usu_ndocumento" placeholder="Numero de identidad">
                 </div>
                 <div class="form-group">
                     <label for="pwd">Contraseña:</label>
@@ -43,7 +43,7 @@ include_once '../lib/helpers.php';
                     <button type="submit" class="btn btn-warning">Ingresar</button>
                 </div>
                 <div class="form-group">
-                <a href="<?php echo getUrl("Registro", "Registro", "getRegister"); ?>"><button type="button" class="btn btn-warning">Registrarse</button></a>
+                <a href="<?php echo getUrl("Registro", "Registro", "getRegister", false, "ajax"); ?>"><button type="button" class="btn btn-warning">Registrarse</button></a>
                 </div>
             
         </div>
