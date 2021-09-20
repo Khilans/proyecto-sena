@@ -141,7 +141,7 @@
         }
 
 
-        public function getMore(){
+        public function More(){
 
             $obj=new NoticiaModel();
             

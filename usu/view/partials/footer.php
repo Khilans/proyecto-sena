@@ -3,17 +3,7 @@
 		<div class="container">
 			<div class="footer_content">
 				<div class="row">
-				<div class="col-lg-3 footer_col">
-						<!-- Logo -->
-						<div class="logo_container">
-							<div class="logo">
-								<img src="images/logo.png" alt="">
-								<span>MISION</span>
-							</div>
-						</div>
-						<p style="container-fluid" >El SENA está  encargado de cumplir la función que le corresponde al Estado de invertir en el desarrollo social y técnico de los trabajadores colombianos, ofreciendo y ejecutando la formación profesional integral, para la incorporación y 
-						el desarrollo de las personas.​</p>
-					</div>
+				
 					<div class="col-lg-3 footer_col">
 						<!-- Logo -->
 						<div class="logo_container">
@@ -21,11 +11,10 @@
 								<span>VISION</span>
 							</div>
 						</div>
-<<<<<<< HEAD
+
 						<p style="container-fluid" >En el año 2022 el SENA se consolidará como una entidad referente de formación integral para el trabajo, por su aporte a la empleabilidad, el emprendimiento y la equidad, que atiende con pertinencia y calidad las necesidades productivas y sociales del país.</p>
-=======
-						<p style="container-fluid" >En el año 2022 el SENA se consolidará como una entidad referente de formación integral para el trabajo, por su aporte a la empleabilidad, el emprendimiento y la equidad, que atiende con pertinencia y calidad las necesidades productivas y sociales del país.
-</p>
+						
+
 
 					</div>
 					<div class="col-lg-3 footer_col">
@@ -38,7 +27,7 @@
 						<p style="container-fluid" >El SENA está  encargado de cumplir la función que le corresponde al Estado de invertir en el desarrollo social y técnico de los trabajadores colombianos, ofreciendo y ejecutando la formación profesional integral, para la incorporación y el desarrollo de las personas en actividades productivas que contribuyan al desarrollo social, económico y tecnológico del país (Ley 119/1994).​
 </p>
 
->>>>>>> 3ef0331b4488a286297c7534df1a5eba6cd37050
+
 					</div>
 					
 					<!-- Footer Column - Usefull Links -->
