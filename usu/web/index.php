@@ -10,6 +10,7 @@ include_once '../lib/helpers.php';
                     resolve();
                 }else{
                     include_once '../view/partials/home.php';
+                    include_once '../view/partials/popular.php';
                     
                 }
 
