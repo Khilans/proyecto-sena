@@ -267,6 +267,20 @@ $(document).ready(function(){
         });
     });
 
+    $(document).on("click","#Morenoti",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-TnotiM");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
     $(document).on("click","#DeleteTnoti",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-TnotiD");

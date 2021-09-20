@@ -42,7 +42,7 @@
 		<div class="row">
 			<div style="margin: 1em;" class="col-md-6">
 				<input type="submit" value="Enviar" class="btn btn-success">
-				<a href="<?php echo getUrl("Noticia", "Noticia", "consult"); ?>"><button type="button" class="btn btn-primary">Volver</button></a>
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
 			</div>
 		</div>
 

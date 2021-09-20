@@ -11,7 +11,7 @@
                 <div class="form-group col-md-4">
                     <label>Nombre</label>
                     <input type="hidden" name="id_oferta" value="<?php echo $ofer['id_oferta']; ?>">
-                    <input type="text" readonly name="desc_oferta" class="form-control" value="<?php echo $ofer['desc_oferta']; ?>">
+                    <input type="text" readonly name="nom_oferta" class="form-control" value="<?php echo $ofer['nom_oferta']; ?>">
                 </div>
             </div>
          

@@ -9,7 +9,7 @@
 			<article class="post">
 				<header>
 					<div class="title">
-					<span><a href="#"><?php echo $ofer['desc_oferta']; ?></a></span>
+					<span><a href="#"><?php echo $ofer['nom_oferta']; ?></a></span>
 						<!-- <p>Sub titulo de la oferta</p> -->
 						<!-- <a href=""><button type="button" class="btn btn-secondary">Disponible</button></a> -->
 					</div>

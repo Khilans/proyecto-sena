@@ -5,10 +5,14 @@
         </div>
 	<form action="<?php echo getUrl("Oferta", "Oferta", "postInsert"); ?>" method="post">
 		<div class="row">
-		    
+		<div class="col-md-7 form-group">
+				<label>Nombre de la oferta</label>
+				<input type="text" name="nom_oferta" class="form-control" placeholder="Nombre">
+				
+			</div>
 			<div class="col-md-7 form-group">
 				<label>Descripción oferta</label>
-				<input type="text" name="desc_oferta" class="form-control" placeholder="Descripción">
+				<textarea name="desc_oferta" rows="1" cols="40" placeholder="Nombre"></textarea>
 			</div>
 			<div class="col-md-7 form-group">
 				<label>Fecha final</label>

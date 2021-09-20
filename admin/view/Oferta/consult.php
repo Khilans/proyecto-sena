@@ -22,6 +22,7 @@ include_once '../view/partials/modal.php';
             <tr>
                 <th class="text-center w-5">Id</th>
                 <th class="text-center w-15">Usuario</th>
+                <th class="text-center">Nombre oferta</th>
                 <th class="text-center">Descripción</th>
                 <th class="text-center">Cupos</th>
                 <th class="text-center">Fecha inicial</th>
@@ -42,6 +43,7 @@ include_once '../view/partials/modal.php';
 
                 echo "<td class='text-center'>" . $ofer['id_oferta'] . "</td>";
                 echo "<td class='text-center'>" . $ofer['usu_nombre'] . "</td>";
+                echo "<td class='text-center'>" . $ofer['nom_oferta'] . "</td>";
                 echo "<td class='text-center'>" . $ofer['desc_oferta'] . "</td>";
                 echo "<td class='text-center'>" . $ofer['cupos_oferta'] . "</td>";
                 echo "<td class='text-center'>" . $ofer['fech_ini_oferta'] . "</td>";
