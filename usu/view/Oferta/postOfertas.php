@@ -1,4 +1,4 @@
-
+<link rel="stylesheet" href="styles/oferta/Oferta.css" />
 <?php
 	foreach ($ofertas as $ofer) {
 ?>
@@ -13,8 +13,10 @@
 						<!-- <a href=""><button type="button" class="btn btn-secondary">Disponible</button></a> -->
 					</div>
 					<div class="meta">
-						<time class="published" datetime="2015-11-01"><?php echo $ofer['fech_ini_oferta']?></time>
-						<time class="published" datetime="2015-11-01"><?php echo $ofer['fech_fin_oferta']?></time>
+						<time class="published" datetime="2015-11-01">Fecha inicio:
+							<?php echo $ofer['fech_ini_oferta']?></time>
+						<time class="published" datetime="2015-11-01">FEcha fin:
+							<?php echo $ofer['fech_fin_oferta']?></time>
 					</div>
 				</header>
 				<span class="image featured"><img class='pic-2' src="<?php echo $ofer['imag_oferta']?>"></span>
