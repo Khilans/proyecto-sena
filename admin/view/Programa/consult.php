@@ -64,7 +64,7 @@ include_once '../view/partials/modal.php';
     <li class="botonesInicio">
         <a href="<?php echo getUrl("Competencia", "Competencia", "consult") ?>">
             <div style="background:#fc7323">
-                <span class="fa fa-users"></span>
+                <span class="fa fa-list"></span>
                 <p>COMPETENCIA</p>
             </div>
         </a>
@@ -74,7 +74,7 @@ include_once '../view/partials/modal.php';
 
         <a href="<?php echo getUrl("LineaTecnologica", "LineaTecnologica", "consult") ?>">
             <div style="background:#238276">
-                <span class="fa fa-users"></span>
+                <span class="fa fa-list"></span>
                 <p>LINEA TEC.</p>
             </div>
         </a>
@@ -85,9 +85,20 @@ include_once '../view/partials/modal.php';
 
         <a href="<?php echo getUrl("ProgramaNivel", "ProgramaNivel", "consult") ?>">
             <div style="background:#5fb219">
-                <span class="fa fa-users"></span>
+                <span class="fa fa-list"></span>
                 <p>NIVEL PRO.</p>
             </div>
         </a>
 
     </li>
+
+    <li class="botonesInicio">
+
+<a href="<?php echo getUrl("ProgramaArea", "ProgramaArea", "consult") ?>">
+    <div style="background:#238276">
+        <span class="fa fa-list"></span>
+        <p>AREA PROG.</p>
+    </div>
+</a>
+
+</li>

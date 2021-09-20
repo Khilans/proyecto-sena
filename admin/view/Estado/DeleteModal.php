@@ -16,12 +16,10 @@
             
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6">
-                <input style="margin:1em;" type="submit" value="Eliminar" class="btn btn-danger">
-                <a href="<?php echo getUrl("Estado","Estado","consult") ?>"><button type="button" class="btn btn-success">Cancelar</button></a>
+        <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-success">Confirmar</button>
             </div>
-        </div>
     </form>
 </div>
 <?php

@@ -14,10 +14,9 @@
                 <input type="text" name="desc_estado" class="form-control" value="<?php echo $estd['desc_estado']; ?>">
             </div>
         </div>
-        <div class="row">
-            <div style="margin: 1em;" class="col-md-4">
-                <input type="submit" value="enviar" class="btn btn-success">
-            </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-success">Confirmar</button>
         </div>
     </form>
     <?php
