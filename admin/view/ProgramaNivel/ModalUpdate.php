@@ -14,12 +14,10 @@
                         <input type="text" name="nom_prog_niv" class="form-control" value="<?php echo $niv['nom_prog_niv']; ?>">
                     </div>
                 </div>
-                <div class="row">
-                    <div style="margin: 1em;" class="col-md-6">
-                        <input type="submit" value="enviar" class="btn btn-outline-primary">
-                        <a href="<?php echo getUrl("ProgramaNivel", "ProgramaNivel", "consult") ?>"> <button type="button" class="btn btn-outline-success">Cancelar</button></a>
-                    </div>
-                </div>
+                <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-success">Confirmar</button>
+        </div>
             </form>
         <?php
         }

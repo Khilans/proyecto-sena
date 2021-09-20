@@ -11,15 +11,14 @@
         <div  class="row">
             <div class="form-group col-md-4">
                 <label>Nombre</label>
-                <input type="hidden" name="cod_noticia" value="<?php echo $not['cod_noticia']; ?>">
+                <input type="hidden" name="cod_noticia" class="form-control" value="<?php echo $not['cod_noticia']; ?>">
                 <input type="text" readonly name="titulo_noticia" class="form-control" value="<?php echo $not['titulo_noticia']; ?>"> 
             
             </div>
         </div>
-        <div class="row">
-            <div style="margin: 1em;" class="col-md-6">
-                <input  type="submit" value="Eliminar" class="btn btn-danger">
-                <a href="<?php echo getUrl("Noticia","Noticia","consult") ?>"><button type="button" class="btn btn-success">Cancelar</button></a>
+        <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-success">Confirmar</button>
             </div>
         </div>
     </form>

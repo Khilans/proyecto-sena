@@ -19,7 +19,7 @@ include_once '../view/partials/modal.php';
         </thead>
         <tbody>
         <button class="btn btn-success btn-sm" id="insertPrograma" data-toggle="modal" data-target='#exampleModal' data-url=" <?php echo getUrl("Programa","Programa","getModalInsert",false,"ajax"); ?>">Insertar</button>
-
+<br><br>
             <?php
             foreach ($programas as $prog) {
                 echo "<tr>";
@@ -33,11 +33,11 @@ include_once '../view/partials/modal.php';
                 echo "<td>" . $prog['cod_prog'] . "</td>";
                 echo "<td><img src='" . $prog['imag_prog'] . "' width='50px'></td>";
                 echo "<td class='text-center'>
-                <button class='btn btn-outline-warning btn-sm' id='editPrograma' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Programa","Programa","getModalUpdate",false,"ajax")."' data-progEd='".$prog['id_prog']."'>
+                <button class='btn btn-warning btn-sm' id='editPrograma' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Programa","Programa","getModalUpdate",false,"ajax")."' data-progEd='".$prog['id_prog']."'>
                 <i class='fa fa-edit'></i>                   
                 </button>
 
-                <button class='btn btn-outline-danger btn-sm' id='deletePrograma' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Programa","Programa","getModalDelete",false,"ajax")."' data-progDel='".$prog['id_prog']."'>
+                <button class='btn btn-danger btn-sm' id='deletePrograma' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Programa","Programa","getModalDelete",false,"ajax")."' data-progDel='".$prog['id_prog']."'>
                 <i class='fa fa-trash'></i>                   
                 </button>
                 </td>";

@@ -11,17 +11,17 @@
                 <div class="form-group col-md-4">
                     <label>Línea tecnológica</label>
                     <div>
-                        <input type="hidden" name="cod_rol" value="<?php echo $rol['cod_rol']; ?>">
-                        <input type="text" readonly name="desc_rol" value="<?php echo $rol['desc_rol'] ?>">
+                        <input type="hidden" name="cod_rol" class="form-control" value="<?php echo $rol['cod_rol']; ?>">
+                        <input type="text" readonly name="desc_rol" class="form-control" value="<?php echo $rol['desc_rol'] ?>">
+                        
                     </div>
                     
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <input type="submit" value="Eliminar" class="btn btn-danger">
-                </div>
-            </div><br>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-success">Confirmar</button>
+            </div>
         </form>
     <?php
     }

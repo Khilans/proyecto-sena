@@ -45,8 +45,8 @@
 
 				<div class="col-lg-4">
 					<div class="about">
-						<div class="about_title">Join Courses</div>
-						<p class="about_text">In aliquam, augue a gravida rutrum, ante nisl fermentum nulla, vitae tempor nisl ligula vel nunc. Proin quis mi malesuada, finibus tortor fermentum. Etiam eu purus nec eros varius luctus. Praesent finibus risus facilisis ultricies. Etiam eu purus nec eros varius luctus.</p>
+						<div class="about_title">¿Qué son los PQRSF?</div>
+						<p class="about_text">Las PQRSF son las solicitudes, quejas, reclamos, sugerencias y felicitaciones que los usuarios pueden enviar de manera verbal o escrita a través de los canales de contacto de PQRSF</p>
 
 						<div class="contact_info">
 							<ul>
