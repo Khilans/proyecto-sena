@@ -8,29 +8,25 @@
     ?>
         <form action="<?php echo getUrl("Oferta", "Oferta", "postUpdate"); ?>" method="post" enctype="multipart/form-data">
             <div class="row">
-                <div class="col-md-4 form-group">
-                    <label>Id</label>
-                    <input type="number" readonly name="id_oferta" class="form-control" value="<?php echo $ofer['id_oferta']; ?>">
+                <div class="col-md-6 form-group">
+                    <label>Nombre oferta</label>
+                    <input type="hidden" readonly name="id_oferta" class="form-control" value="<?php echo $ofer['id_oferta']; ?>">
+                    <input type="text" name="nom_oferta" class="form-control" placeholder="Nombre" value="<?php echo $ofer['nom_oferta']; ?>">
                 </div>
-                <div class="col-md-4 form-group">
+                <div class="col-md-6 form-group">
                     <label>Descripción oferta</label>
-                    <input type="text" name="desc_oferta" class="form-control" placeholder="Descripción" value="<?php echo $ofer['desc_oferta']; ?>">
+                <textarea name="desc_oferta" rows="1" cols="30" placeholder="Descripción" value="<?php echo $ofer['desc_oferta']; ?>"></textarea>
                 </div>
-                <div class="col-md-4 form-group">
+                <div class="col-md-6 form-group">
                     <label>Cupos disponibles</label>
                     <input type="number" name="cupos_oferta" class="form-control"  value="<?php echo $ofer['cupos_oferta']; ?>">
                 </div>
-
-                <div class="col-md-4 form-group">
-                    <label>Fecha inicio</label>
-                    <input type="date" name="fech_ini_oferta" class="form-control" placeholder="Fecha inicio" value="<?php echo $ofer['fech_ini_oferta']; ?>">
-                </div>
-                <div class="col-md-4 form-group">
+                <div class="col-md-6 form-group">
                     <label>Fecha final</label>
                     <input type="date" name="fech_fin_oferta" class="form-control" placeholder="Fecha final" value="<?php echo $ofer['fech_fin_oferta']; ?>">
                 </div>
 
-                <div class=" form-group col-md-4">
+                <div class=" form-group col-md-6">
                     <label>Estado</label>
                     <select name="id_estado" class="form-control">
                         <option value="">Seleccione...</option>
@@ -46,7 +42,7 @@
                         ?>
                     </Select>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-6">
                     <label>.</label>
                     <div id="cambiarImagen">
                         <img class="d-block" id="imagen" src="<?php echo $ofer['imag_oferta'] ?>" width="50px">
