@@ -28,6 +28,19 @@
             
         } 
         
+        public function filtroNoti(){
+
+            $obj = new NoticiaModel();
+
+            $buscar = $_POST['buscar'];
+
+            $sql = "SELECT n.cod_noticia, c.titulo_noticia, n.desc_noticia, n.img_noticia,  n.fecha_noticia
+            FROM t_noticia n WHERE n.cod_noticia =n.cod_noticia  AND 
+        (n.titulo_noticia LIKE '%$buscar%'OR n.desc_noticia LIKE '%$buscar%') ORDER BY n.cod_noticia ASC";
+            $noticias = $obj->consult($sql);
+
+        include_once '../view/Noticia/filtroNoti.php';
+        }
 
     }     
 

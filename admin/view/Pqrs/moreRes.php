@@ -1,6 +1,6 @@
 <div class="container">
     <div class="alert alert-success" role="alert">
-        <h4 class="alert-success text-center">Detalles</h4>
+        <h4 class="alert-success text-center">Respuestas de Pqrsf al usuario</h4>
         <p></p>
     </div>
 
