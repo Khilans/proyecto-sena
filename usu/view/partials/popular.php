@@ -5,7 +5,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title text-center">
-						<h1>Popular Courses</h1>
+						<h1></h1>
 					</div>
 				</div>
 			</div>
@@ -49,7 +49,7 @@
 						<div class="hero_box d-flex flex-row align-items-center justify-content-start">
 							<img src="images/earth-globe.svg" class="svg" alt="">
 							<div class="hero_box_content">
-								<h2 class="hero_box_title"><a href="<?php echo getUrl("Pqrs", "Pqrs", "getView") ?>">Pqrsf</a></h2>
+								<h2 class="hero_box_title"><a href="<?php echo getUrl("Pqrs", "Pqrs", "getSend") ?>">Pqrsf</a></h2>
 								
 							</div>
 						</div>

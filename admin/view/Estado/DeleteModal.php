@@ -8,7 +8,7 @@
     ?>
     <form action="<?php echo getUrl("Estado","Estado","postDelete"); ?>" method="post">
 
-        <div style="margin: 1em;" class="row">
+        <div  class="row">
             <div class="form-group col-md-4">
                 <label>Nombre</label>
                 <input type="hidden" name="id_estado" value="<?php echo $estd['id_estado']; ?>">
