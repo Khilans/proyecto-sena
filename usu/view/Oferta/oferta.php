@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="styles/oferta/Ofertas.css">
 <div class="home">
-  <img src="images/lam.jpg" class="img-fluid" alt="...">
+  <img src="images/ofertas.png" class="img-fluid" alt="...">
 
   <div class="col mt-2">
     <p class="h1 text-info">Ofertas</p>
