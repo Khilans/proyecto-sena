@@ -9,9 +9,15 @@
 				<input required="required" type="text" name="desc_competencia" class="form-control" placeholder="Descripción">
 			</div>
 		</div>
+		<div style="margin: 1em;" class="row">
+			<div class="col-md-4 form-group">
+				<label>Código</label>
+				<input  type="number" name="cod_competencia" class="form-control" placeholder="Descripción">
+			</div>
+		</div>
 
 
-		<div class="col-md-6 form-group">
+		 <div class="col-md-6 form-group">
 			<label>Programa</label>
 			<select name="id_prog" class="form-control">
 				<option value="">Seleccione...</option>
@@ -22,7 +28,7 @@
 				}
 				?>
 			</select>
-		</div>
+		</div> 
 
 		<div class="row">
 			<div style="margin: 1em;" class="col-md-6">

@@ -6,6 +6,7 @@ include_once '../view/partials/modal.php';
         <thead class="thead-dark">
             <tr>
                 <th class="text-center">Id</th>
+                <th class="text-center">Código</th>
                 <th class="text-center">Descripción</th>
                 <th class="text-center">Programa</th>
                 <th class="text-center">Acciones</th>
@@ -20,7 +21,8 @@ include_once '../view/partials/modal.php';
                 echo "<tr>";
 
                 echo "<td class='text-center'>" . $comp['id_competencia'] . "</td>";
-                echo "<td class='text-center'>" . $comp['desc_competencia'] . "</td>";
+                echo "<td class='text-center'>" . $comp['cod_competencia'] . "</td>";
+                echo "<td>" . $comp['desc_competencia'] . "</td>";
                 echo "<td class='text-center'>" . $comp['id_prog'] . "</td>";
                 echo "<td class='text-center'>
                     <button class='btn btn-warning btn-sm' id='editCompetencia' data-toggle='modal' data-target='#exampleModal' data-url='" . getUrl("Competencia", "Competencia", "getModalUpdate", false, "ajax") . "' data-compEd='" . $comp['id_competencia'] . "'>
