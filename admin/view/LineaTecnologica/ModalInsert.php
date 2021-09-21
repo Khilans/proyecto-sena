@@ -10,6 +10,8 @@
 				<input  required="required"  type="text" name="lin_tec_desc" class="form-control" placeholder="Descripción">
 			</div>
 		</div>
+
+		
 		<div class="row">
 			<div style="margin: 1em;" class="col-md-6">
 				<input type="submit" value="Enviar" class="btn btn-success">

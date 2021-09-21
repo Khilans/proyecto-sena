@@ -49,8 +49,8 @@
         $obj=new LineaTecnologicaModel();
         $lin_tec_cod=$_POST['lin_tec_cod'];
         $lin_tec_desc=$_POST['lin_tec_desc'];
-        $sql="DELETE FROM `t_lineatecnologica` WHERE lin_tec_cod = $lin_tec_cod";
-        $ejecutar=$obj->delete($sql);
+        $sql="DELETE FROM t_lineatecnologica WHERE lin_tec_cod = $lin_tec_cod";
+        $ejecutar=$obj->update($sql);
 
         if ($ejecutar){
             $_SESSION['mensaje']="Se eliminó la linea tecnologica <b>$lin_tec_desc</b> exitosamente";

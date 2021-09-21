@@ -21,7 +21,7 @@ include_once '../view/partials/modal.php';
 
                 echo "<td class='text-center'>" . $comp['id_competencia'] . "</td>";
                 echo "<td class='text-center'>" . $comp['desc_competencia'] . "</td>";
-                echo "<td class='text-center'>" . $comp['nom_prog'] . "</td>";
+                echo "<td class='text-center'>" . $comp['id_prog'] . "</td>";
                 echo "<td class='text-center'>
                     <button class='btn btn-warning btn-sm' id='editCompetencia' data-toggle='modal' data-target='#exampleModal' data-url='" . getUrl("Competencia", "Competencia", "getModalUpdate", false, "ajax") . "' data-compEd='" . $comp['id_competencia'] . "'>
                     <i class='fa fa-edit'></i>                   

@@ -6,21 +6,24 @@
 		<div style="margin: 1em;" class="row">
 			<div class="col-md-4 form-group">
 				<label>Descripción</label>
-				<input type="text" name="desc_competencia" class="form-control" placeholder="Descripción">
+				<input required="required" type="text" name="desc_competencia" class="form-control" placeholder="Descripción">
 			</div>
 		</div>
+
+
 		<div class="col-md-6 form-group">
 			<label>Programa</label>
 			<select name="id_prog" class="form-control">
 				<option value="">Seleccione...</option>
 
 				<?php
-				foreach ($programas as $prog) {
-					echo "<option value='" . $prog['id_prog'] . "'>" . $prog['nom_prog'] . "</option>";
+				foreach ($programa as $prog) {
+					echo "<option value='" . $prog['id_prog'] . "'>" . $prog['nom_prog'] . "</option>"; 
 				}
 				?>
 			</select>
 		</div>
+
 		<div class="row">
 			<div style="margin: 1em;" class="col-md-6">
 				<input type="submit" value="Enviar" class="btn btn-success">

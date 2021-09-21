@@ -1,7 +1,7 @@
 <div class="container">
     <div class="alert alert-danger" role="alert">
         <h4 class="alert-heading text-center">ELIMINAR LÍNEA TECNOLÓGICA</h4>
-        <p class="text-center" >! La línea tecnológica será inhabilitada ¡</p>
+        <p class="text-center">! La línea tecnológica será inhabilitada ¡</p>
     </div>
     <?php
     foreach ($lineatecnologica as $linea) {

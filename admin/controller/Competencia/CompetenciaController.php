@@ -20,10 +20,10 @@ class CompetenciaController
     {
         $obj = new CompetenciaModel();
         $desc_competencia = $_POST['desc_competencia'];
-        $id_prog = $_POST['id_prog'];
+        $id_prog = $_POST['nom_prog'];
         $id = $obj->autoincrement("t_competencia", "id_competencia");
-        $sql = "INSERT INTO t_competencia VALUES($id,'$desc_competencia','$id_prog')";
-        $ejecutar = $obj->insert($sql);
+        $sql = "INSERT INTO t_competencia VALUES($id,'$desc_competencia', $id_prog)";
+        $ejecutar = $obj->update($sql);
 
         if ($ejecutar) {
             $_SESSION['mensaje'] = "Se registró el nivel <b>$desc_competencia</b> exitosamente";
@@ -38,6 +38,9 @@ class CompetenciaController
         $obj = new CompetenciaModel();
         $sql = "SELECT * from t_competencia";
         $competencia = $obj->consult($sql);
+        
+        $sql = "SELECT * FROM t_programa";
+        $programa = $obj-> consult($sql);
         include_once '../view/Competencia/consult.php';
     }
 
@@ -86,7 +89,7 @@ class CompetenciaController
         $desc_competencia = $_POST['desc_competencia'];
 
         $sql = "UPDATE t_competencia SET desc_competencia='$desc_competencia' WHERE id_competencia=$id_competencia";
-        $ejecutar = $obj->update($sql);
+        $ejecutar = $obj->consult($sql);
 
         if ($ejecutar) {
             $_SESSION['mensaje'] = "Se editó el nivel <b>$desc_competencia</b> exitosamente";
