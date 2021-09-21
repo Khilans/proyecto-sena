@@ -24,12 +24,22 @@ margin-left: 300px;
     display:flex;
     margin-left: 200px;
     position: relative;
-    margin-top: 200px;
     border: 1px solid rgb(255, 95, 21);
 
 }
 .card-text{
-    margin-top: 10px;
+    margin-top: 0px;
+}
+.card-title{
+    margin-top: 0px;
+}
+.img-thumbnail{
+    width: 296px;
+	height: 212px;
+}
+.pic-2{
+    width: 600px;
+	height: 650px;
 }
 	.author {
 		display: -moz-flex;
@@ -55,4 +65,4 @@ margin-left: 300px;
 		letter-spacing: 0.25em;
 		text-transform: uppercase;
 		white-space: nowrap;
-    }
+    } 
