@@ -24,13 +24,13 @@
         <div class="row">    
             <div class="col-md-7 form-group">
 				<label>Asunto</label>
-				<input type="text" placeholder="..." name="asunto">
+				<input  required="required"  type="text" placeholder="..." name="asunto">
 			</div>
 		</div>
 		<div class="row">    
             <div class="col-md-7 form-group">
 				<label>Descripción</label>
-				<textarea name="desc_resp_pqrsf" rows="1" cols="50" placeholder="Reponder..."></textarea>
+				<textarea  required="required"  name="desc_resp_pqrsf" rows="1" cols="50" placeholder="Reponder..."></textarea>
 			</div>
 		</div>
 		<div class="row">

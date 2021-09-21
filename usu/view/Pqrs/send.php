@@ -32,7 +32,7 @@
 										<input type="hidden" name="usu_id" value="<?php echo $_SESSION['user_id']; ?>">
 										<!-- <input type="hidden" name="pqrsf_fecha"> -->
 										<input class="input_field contact_form_email col-md-4 mx-1" name="correo" type="email" value="<?php echo $_SESSION['correo']; ?>" required="required" data-error="Valid email is required.">
-										<select class="input_field col-md-3" name="tipopqrsf">
+										<select id="contact_form_message" required="required" data-error="Complete este campo." class="input_field col-md-3" name="tipopqrsf">
 											<option value="">Seleccione</option>
 											<?php
 											foreach ($tipoPQRSF as $tpq) {
@@ -89,7 +89,7 @@
 			<div class="row">
 				<div class="col">
 					<div id="google_map">
-						<p>Visita nuestras instalaciones.</p>
+						<p><b>Visita nuestras instalaciones.</b></p>
 						<div class="map_container">
 							<center>
 								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3982.6684695040644!2d-76.49362068524188!3d3.430634397502953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a71a83f469d3%3A0xeb602ca40963938!2sSena%20Pondaje!5e0!3m2!1ses-419!2sco!4v1631251912479!5m2!1ses-419!2sco" width="1000" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>

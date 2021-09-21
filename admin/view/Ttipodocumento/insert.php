@@ -1,13 +1,13 @@
 <div class="container">
 <div class="alert alert-success" role="alert">
                 <h4 class="alert-success text-center">Registrar tipo de documento</h4>
-                <p><b>Por favor llenar todos los campos</b></p>
+                <p><b>Los campos con * son obligatorios.</b></p>
         </div>
 	<form action="<?php echo getUrl("Ttipodocumento", "Ttipodocumento", "postInsert"); ?>" method="post" enctype="multipart/form-data">
 		<div class="row">
 			<div class="col-md-4 form-group">
-				<label>Descripción</label>
-				<input type="text" name="nom_tipo_doc" class="form-control" placeholder="Descripción">
+				<label>Descripción*</label>
+				<input required="required" type="text" name="nom_tipo_doc" class="form-control" placeholder="Descripción">
 			</div>
 		</div>
 		<div class="row">

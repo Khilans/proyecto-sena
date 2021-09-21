@@ -1,12 +1,13 @@
 <div class="container">
 	<div class="alert alert-success" role="alert">
 		<h4 class="alert-success text-center">REGISTRAR NIVEL DE PROGRAMA</h4>
+		<p>Los campos con * son obligatorios</p>
 	</div>
 	<form action="<?php echo getUrl("ProgramaNivel", "ProgramaNivel", "postInsert"); ?>" method="post" enctype="multipart/form-data">
 		<div style="margin: 1em;" class="row">
 			<div class="col-md-4 form-group">
-				<label>Descripción nivel</label>
-				<input type="text" name="nom_prog_niv" class="form-control" placeholder="nivel">
+				<label>Descripción nivel*</label>
+				<input  required="required"  type="text" name="nom_prog_niv" class="form-control" placeholder="nivel">
 			</div>
 		</div>
 		<div class="row">

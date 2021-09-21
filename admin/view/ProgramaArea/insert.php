@@ -1,21 +1,22 @@
 <div class="container">
 <div class="jumbotron">
 	<h3 class="display-4">Registrar Programa área</h3>
+	<p>Los campos con * son obligatorios.</p>
 </div>
 <form action="<?php echo getUrl("ProgramaArea", "ProgramaArea", "postInsert"); ?>" method="post" enctype="multipart/form-data">
 	<div class="row">
 	<div class="col-md-4 form-group">
-			<label>Descripción</label>
-			<input type="text" name="prog_area_desc" class="form-control" placeholder="Descripción">
+			<label>Descripción*</label>
+			<input  required="required"  type="text" name="prog_area_desc" class="form-control" placeholder="Descripción">
 		</div> 
 		<div class="col-md-4 form-group">
-			<label>Código</label>
-			<input type="hidden" name="prog_area_cod" class="form-control"">
+			<label>Código*</label>
+			<input  required="required"  type="hidden" name="prog_area_cod" class="form-control"">
 		</div>
 		
 		<div class="col-md-4 form-group">
-			<label>Línea tecnológica</label>
-			<select name="lin_tec_cod" class="form-control">
+			<label>Línea tecnológica*</label>
+			<select  required="required"  name="lin_tec_cod" class="form-control">
 				<option value="">Seleccione...</option>
 
 				<?php

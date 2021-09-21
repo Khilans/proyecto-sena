@@ -1,12 +1,13 @@
 <div class="container">
 	<div class="alert alert-success" role="alert">
 		<h4 class="alert-success text-center">Registrar Programa</h4>
+		<p>Los campos con * son obligatorios</p>
 	</div>
 	<form action="<?php echo getUrl("Programa", "Programa", "postInsert"); ?>" method="post" enctype="multipart/form-data">
 		<div style="margin: 1em;" class="row">
 			<div class="col-md-4 form-group">
 				<label>Linea tecnologica</label>
-				<select name="lin_tec_cod" class="form-control">
+				<select  required="required"  name="lin_tec_cod" class="form-control">
 					<option value="">Seleccione...</option>
 
 					<?php
@@ -18,7 +19,7 @@
 			</div>
 			<div class="col-md-4 form-group">
 				<label>Nivel</label>
-				<select name="id_prog_niv" class="form-control">
+				<select  required="required"  name="id_prog_niv" class="form-control">
 					<option value="">Seleccione...</option>
 
 					<?php
@@ -30,27 +31,27 @@
 			</div>
 			<div class="col-md-4 form-group">
 				<label>Nombre</label>
-				<input type="text" name="nom_prog" class="form-control" placeholder="Nombre">
+				<input  required="required"  type="text" name="nom_prog" class="form-control" placeholder="Nombre">
 			</div>
 			<div class="col-md-4 form-group">
 				<label>Siglas</label>
-				<input type="text" name="sigla_prog" class="form-control" placeholder="Siglas">
+				<input  required="required"  type="text" name="sigla_prog" class="form-control" placeholder="Siglas">
 			</div>
 			<div class="col-md-4 form-group">
 				<label>Descripción</label>
-				<input type="text" name="desc_prog" class="form-control" placeholder="Descripción">
+				<input  required="required"  type="text" name="desc_prog" class="form-control" placeholder="Descripción">
 			</div>
 			<div class="col-md-4 form-group">
 				<label>Duración</label>
-				<input type="text" name="duracion_prog" class="form-control" placeholder="Duración">
+				<input  required="required"  type="text" name="duracion_prog" class="form-control" placeholder="Duración">
 			</div>
 			<div class="col-md-4 form-group">
-				<label>Código</label>
-				<input type="number" name="cod_prog" class="form-control" placeholder="código">
+				<label>Ficha</label>
+				<input  required="required"  type="number" name="cod_prog" class="form-control" placeholder="código">
 			</div>
 			<div class="col-md-4">
 				<label>Imagen</label>
-				<input type="file" name="imag_prog">
+				<input  required="required"  type="file" name="imag_prog">
 			</div>
 
 		</div>

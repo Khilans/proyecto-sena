@@ -147,7 +147,7 @@
             
             $noticia_id=$_GET['id'];
             $sql = "SELECT titulo_noticia,desc_noticia FROM t_noticia WHERE cod_noticia=$noticia_id";
-            $detalles = $obj->consult($sql);
+            $detalle = $obj->consult($sql);
 
             include_once '../view/Noticia/more.php';
             
