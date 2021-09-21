@@ -17,7 +17,7 @@ include_once '../view/partials/modal.php';
 		</div>
 
 		<!-- Main Navigation -->
-		<nav class="main_nav_container">
+		<nav class="main_nav_container ">
 			<div class="main_nav">
 				<ul class="main_nav_list">
 					<li class="main_nav_item"><a href="index.php">Inicio</a></li>

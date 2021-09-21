@@ -21,7 +21,6 @@ include_once '../view/partials/modal.php';
             <tr>
 
                 <th class="text-center w-5">Id</th>
-                <th class="text-center w-15">Descripción</th>
                 <th class="text-center">Titulo</th>
                 <th class="text-center">Fecha de creación</th>
 				<th class="text-center">Imagen</th>
@@ -41,7 +40,6 @@ include_once '../view/partials/modal.php';
                 echo "<tr>";
 
                     echo "<td class='text-center'>".$noti['cod_noticia']."</td>";
-                    echo "<td class='text-center'>".$noti['desc_noticia']."</td>";
                     echo "<td class='text-center'>".$noti['titulo_noticia']."</td>";
                     echo "<td class='text-center'>" . $noti['fecha_noticia'] . "</td>";
                     echo "<td><img src='" . $noti['img_noticia'] . "' width='100px'></td>";

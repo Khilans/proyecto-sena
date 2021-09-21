@@ -10,7 +10,7 @@
             <label>Nombre de la ofertas</label>
             <input type="text"  readonly name="nom_oferta" class="form-control" value="<?php echo $d['nom_oferta']; ?>">  
             <label>Descripción de la oferta</label>
-            <input type="text"  readonly name="desc_oferta" class="form-control" value="<?php echo $d['desc_oferta']; ?>">  
+            <textarea  readonly name="desc_oferta" rows="15" cols="70"><?php echo $d['desc_oferta']; ?></textarea>   
          </div>
     </div>
     <?php

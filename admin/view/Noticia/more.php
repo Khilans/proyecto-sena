@@ -10,7 +10,7 @@
             <label>Titulo de la noticia</label>
             <input type="text"  readonly name="ttulo_noticia" class="form-control" value="<?php echo $noti['titulo_noticia']; ?>">  
             <label>Descripción de la noticia</label>
-            <input type="text"  readonly name="desc_noticia" class="form-control" value="<?php echo $noti['desc_noticia']; ?>">  
+            <textarea  readonly name="desc_noticia" rows="15" cols="70"><?php echo $noti['desc_noticia']; ?></textarea>   
          </div>
     </div>
     <?php

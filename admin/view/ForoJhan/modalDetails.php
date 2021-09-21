@@ -1,53 +1,50 @@
 <?php
-foreach ($foro as $foro) {
+foreach ($foros as $foro) {
   ?>
 <div class="modal-body">
-    <form action="<?php echo getUrl("Usuarios","Usuarios","postUpdate")?>" method="post" enctype="multipart/form-data">
+    <form action="<?php echo getUrl("Foro","Foro","postEditForo")?>" method="post" enctype="multipart/form-data" >
+        <div class="news_post_image">
+                <center><label><b>Imágen</b></label></center>
+                <div id="cambiarImagenForo">
+                    <img class="d-block" id="imagen" name="imagen" src="<?php echo $foro['imag_foro'] ?>">
+                    <center><button type="button" id="cambioImagenForo" class="btn btn-warning mt-3 mb-3">Cambiar imagen</button></center>
+                </div>
+        </div>
         <div class="row">
-            <div class="col-md-6 form-group">
-                <label>Primer nombre</label>
-                <input type="hidden" name="usu_id" value="<?php echo $usu['usu_id'];?>">
-            <input type="text"  name="usu_nombre" class="form-control" value="<?php echo $usu['usu_nombre'];?>">
-            </div>
-            <div class="col-md-6 form-group">
-                <label>Segundo nombre</label>
-                <input type="text"  name="usu_nombre2" class="form-control" value="<?php echo $usu['usu_nombre2'];?>">
+            <div class="col-md-12 form-group">
+                <center><label><b>Título</b></label></center>
+                <input type="hidden" name="id_foro" value="<?php echo $foro['cod_foro'];?>">
+                <input type="text"  name="titulo_foro" class="form-control text-center" value="<?php echo $foro['titulo_foro'];?>">
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 form-group">
-                <label>Apellidos</label>
-                <input type="text"  name="usu_apellido" class="form-control" value="<?php echo $usu['usu_apellido'];?>">
+            <div class="col-md-6">
+                <label>Fecha fin</label>
+                <input type="date" class="form-control" name="fech_fin_foro" value="<?php echo $foro['fech_fin_foro'] ?>">
             </div>
-            <div class="col-md-6 form-group">
-                <label>Tipo de documento</label>
-                <select class="form-control" name="cod_tipo_doc">
-                    <?php foreach($tipos_documentos as $td){
-                        if($usu['cod_tipo_doc']==$td['cod_tipo_doc']){
-                            echo "<option value='".$usu['cod_tipo_doc']."' selected>".$usu['nom_tipo_doc']."</option>";
-                        }else{
-                        ?>
-                            <option value="<?php echo $td['cod_tipo_doc'];?>"><?php echo $td['nom_tipo_doc']; ?></option>
+            <div class="col-md-6">
+                <label>Tema</label>
+                <select name="cod_tema" class="form-control">
+                    <option value="">Seleccione...</option>
                     <?php
-                        }
-                        }
+                    foreach($temas as $tema){
+                        if($foro['cod_tema']==$tema['cod_tema']){
+                            echo "<option value='".$tema['cod_tema']."' selected>".$tema['desc_tema']."</option>";
+                        }else
+                        echo "<option value='".$tema['cod_tema']."'>".$tema['desc_tema']."</option>";
+                    }
+
                     ?>
                 </select>
             </div>
         </div>
-        <div class="row">
-        <div class="col-md-6 form-group">
-                <label>Correo</label>
-                <input type="text"  name="usu_correo" class="form-control" value="<?php echo $usu['usu_correo'];?>">
-            </div>
-            <div class="col-md-6 form-group">
-                <label>Número de documento</label>
-                <input type="text"  name="usu_ndocumento" class="form-control" value="<?php echo $usu['usu_ndocumento'];?>">
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <textarea class="form-control" name="desc_foro" id="desc_editada" cols="50" rows="7"><?php echo $foro['desc_foro'];?></textarea>
             </div>
         </div>
-           
 
-    <div class="modal-footer">
+        <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
             <button type="submit" class="btn btn-success">Confirmar</button>
         </div>

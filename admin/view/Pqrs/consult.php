@@ -25,7 +25,6 @@ include_once '../view/partials/modal.php';
                 <th class="text-center">Nombre</th>
                 <th class="text-center">Correo</th>
 				<th class="text-center">Estado</th>
-                <th class="text-center">Descripción</th>
                 <th class="text-center">Fecha</th>
                 <th class="text-center">Acciones</th>
 
@@ -47,7 +46,6 @@ include_once '../view/partials/modal.php';
                      echo "<td class='text-center'>".$pq['nombre']."</td>";
                      echo "<td class='text-center'>".$pq['correo']."</td>";
                     echo "<td class='text-center'>".$pq['desc_estado']."</td>";
-                    echo "<td class='text-center'>".$pq['pqrsf_desc']."</td>";
                     echo "<td class='text-center'>".$pq['pqrsf_fecha']."</td>";
                     echo "<td class='text-center'>
                     <button class='btn btn-warning btn-sm' id='Detalles' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrs","Pqrs","getMore",false,"ajax")."' data-Pqm='".$pq['cod_pqrsf']."'>

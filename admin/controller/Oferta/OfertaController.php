@@ -25,7 +25,7 @@ class OfertaController{
         $fech_fin_oferta = $_POST['fech_fin_oferta'];
         $cupos_oferta=$_POST['cupos_oferta'];
         $imag_oferta = $_FILES['imag_oferta']['name'];
-        $ruta = "../../usu/web/images/$imag_oferta";
+        $ruta="../../usu/web/images/$imag_oferta";
         
         move_uploaded_file($_FILES['imag_oferta']['tmp_name'], $ruta);
         $id = $obj->autoincrement("t_oferta", "id_oferta");
