@@ -116,10 +116,10 @@ class OfertaController{
         $fech_fin_oferta = $_POST['fech_fin_oferta'];
         $id_estado = $_POST['id_estado'];
 
-        if (isset($_FILES['img_noticia']['name'])) {
-            $imag_oferta = $_FILES['img_noticia']['name'];
+        if (isset($_FILES['imag_oferta']['name'])) {
+            $imag_oferta = $_FILES['imag_oferta']['name'];
             $ruta = "images/$imag_oferta";
-            move_uploaded_file($_FILES['img_noticia']['tmp_name'], $ruta);
+            move_uploaded_file($_FILES['imag_oferta']['tmp_name'], $ruta);
 
             if (isset($_POST['img_vieja'])) {
                 $img_vieja = $_POST['img_vieja'];
