@@ -2,9 +2,9 @@
 foreach ($foros as $foro) {
   ?>
 <div class="modal-body">
-    <form action="<?php echo getUrl("Foro","Foro","postUpdate")?>" method="post" enctype="multipart/form-data">
+    <form action="<?php echo getUrl("Foro","Foro","postEditForo")?>" method="post" enctype="multipart/form-data">
         <div class="news_post_image">
-			<img src="<?php echo $foro['imag_foro']; ?>" alt="<?php echo $foro['imag_foro']; ?>">
+			<img src="<?php echo $foro['imag_foro']; ?>" alt="<?php echo $foro['imag_foro']; ?>" style="width:460px;">
            <center><button class="btn btn-warning">Cambiar imágen</button></center>
 		</div>
         <div class="row">

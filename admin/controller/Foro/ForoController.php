@@ -2,20 +2,6 @@
 include_once '../model/Foro/ForoModel.php';
     class ForoController{
 
-        public function getModalEdit(){
-            $obj=new ForoModel;
-            $foro_id=$_GET['id'];
-            $sql="SELECT f.cod_foro,f.titulo_foro,f.desc_foro,f.fech_ini_foro,f.fech_fin_foro,f.imag_foro,u.usu_nombre,u.usu_apellido FROM t_foro f,t_usuario u WHERE f.usu_id=u.usu_id AND f.cod_foro=$foro_id";
-            $foro=$obj->consult($sql);
-            if($foro){
-                include_once '../view/ForoJhan/modalEdit.php';
-            }else{
-                echo "Ocurrió un error";
-                dd($sql);
-            }
-            
-        }
-
         public function getModalDelete(){
             $obj=new ForoModel;
             $foro_id=$_GET['id'];
@@ -33,13 +19,13 @@ include_once '../model/Foro/ForoModel.php';
             $sql="UPDATE t_foro SET id_estado=2 WHERE cod_foro=$id_foro";
             $inhabilitar=$obj->consult($sql);
             if($inhabilitar){
-                redirect(getUrl("Foro","Foro","feed"));
+                redirect(getUrl("Foro","Foro","consult"));
             }
         }
 
         public function consult(){
             $obj=new ForoModel;
-            $sql="SELECT f.cod_foro,f.titulo_foro,f.desc_foro,f.fech_ini_foro,f.fech_fin_foro,f.imag_foro,u.usu_nombre,u.usu_apellido FROM t_foro f,t_usuario u WHERE f.usu_id=u.usu_id";
+            $sql="SELECT f.cod_foro,f.titulo_foro,f.desc_foro,f.fech_ini_foro,f.fech_fin_foro,f.imag_foro,f.id_estado,u.usu_nombre,u.usu_apellido,e.desc_estado FROM t_foro f,t_usuario u, t_estado e WHERE f.usu_id=u.usu_id AND f.id_estado=e.id_estado";
             $foros=$obj->consult($sql);
             include_once '../view/ForoJhan/consult.php';  
         }
