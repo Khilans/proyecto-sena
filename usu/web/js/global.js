@@ -59,10 +59,47 @@ $(document).ready(function(){
     $(document).on("click","#cambioImagenForo",function(){
         var ruta=$("#imagen").attr("src");
 
-        $("#cambiarImagenForo").html("<div class='jumbotron'><input type='file' name='imag_nueva'></div>");
+        $("#cambiarImagenForo").html("<div class='jumbotron'><input type='file' id='file' name='imag_nueva'></div>");
         $("#cambiarImagenForo").append("<input type='hidden' name='imag_vieja' value='"+ruta+"'>");
     });
 
+        //FILTRO FOROS
+    $(document).on("keyup", "#filtro",function(){
+        var buscar = $(this).val();
+        var url = $(this).attr("data-url");
+
+        $.ajax({
+
+            url: url,
+            data: "buscar="+buscar,
+            type: "POST",
+            success: function (datos) {
+                $("#div_post").html(datos);
+            }
+        });
+    });
+
+        //VALIDACIÓN FORO
+
+        $(document).on("change", "#file",function(){
+            var fileInput = document.getElementById('file');
+            var filePath = fileInput.value;
+            var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+            if(!allowedExtensions.exec(filePath)){
+                alert('Archivos permitidos .jpeg/.jpg/.png ');
+                fileInput.value = '';
+                return false;
+            }else{
+                //Image preview
+                if (fileInput.files && fileInput.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function(e) {
+                        document.getElementById('imagePreview').innerHTML = '<img src="'+e.target.result+'"/>';
+                    };
+                    reader.readAsDataURL(fileInput.files[0]);
+                }
+            }
+        });
     
    
     $('#tabla').DataTable({

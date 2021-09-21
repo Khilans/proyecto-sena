@@ -9,9 +9,9 @@ class CompetenciaController
         $obj = new CompetenciaModel();
         $sql = "SELECT * FROM t_competencia";
         $competencia = $obj->consult($sql);
-
+        
         $sql = "SELECT * FROM t_programa";
-        $programa = $obj-> consult($sql);
+        $programa = $obj-> consult($sql); 
 
         include_once  '../view/Competencia/ModalInsert.php';
     }
@@ -19,10 +19,11 @@ class CompetenciaController
     public function postInsert()
     {
         $obj = new CompetenciaModel();
+        $cod_competencia=$_POST['cod_competencia'];
         $desc_competencia = $_POST['desc_competencia'];
-        $id_prog = $_POST['nom_prog'];
+        $id_prog = $_POST['id_prog']; 
         $id = $obj->autoincrement("t_competencia", "id_competencia");
-        $sql = "INSERT INTO t_competencia VALUES($id,'$desc_competencia', $id_prog)";
+        $sql = "INSERT INTO t_competencia VALUES($id, $cod_competencia, '$desc_competencia',$id_prog)";
         $ejecutar = $obj->update($sql);
 
         if ($ejecutar) {
@@ -41,7 +42,7 @@ class CompetenciaController
         
         $sql = "SELECT * FROM t_programa";
         $programa = $obj-> consult($sql);
-        include_once '../view/Competencia/consult.php';
+        include_once '../view/Competencia/consult.php'; 
     }
 
     public function getModalDelete()
@@ -86,9 +87,10 @@ class CompetenciaController
 
         $obj = new CompetenciaModel();
         $id_competencia = $_POST['id_competencia'];
+        $cod_competencia = $_POST['cod_competencia'];
         $desc_competencia = $_POST['desc_competencia'];
 
-        $sql = "UPDATE t_competencia SET desc_competencia='$desc_competencia' WHERE id_competencia=$id_competencia";
+        $sql = "UPDATE t_competencia SET  cod_competencia=$cod_competencia,desc_competencia='$desc_competencia' WHERE id_competencia=$id_competencia";
         $ejecutar = $obj->consult($sql);
 
         if ($ejecutar) {

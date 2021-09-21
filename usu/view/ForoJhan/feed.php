@@ -8,7 +8,7 @@
 				
 				<!-- News Column -->
 
-				<div class="col-lg-8">
+				<div class="col-lg-8" id="div_post">
 					<?php
                     foreach($posts as $p){
                         ?>
@@ -19,12 +19,6 @@
 								<img src="<?php echo $p['imag_foro']; ?>">
 							</div>
 							<div class="news_post_top d-flex flex-column flex-sm-row">
-								<div class="news_post_date_container">
-									<div class="news_post_date d-flex flex-column align-items-center justify-content-center">
-										<div>18</div>
-										<div>dec</div>
-									</div>
-								</div>
 								<div class="news_post_title_container">
 									<div class="news_post_title">
 										<a href="#"><?php echo $p['titulo_foro']; ?></a>
@@ -37,11 +31,11 @@
 								</div>
 							</div>
 							<div class="news_post_text">
-								<p><?php echo substr($p['desc_foro'],0,200);?> Leer más...</p>
+								<p><?php echo substr($p['desc_foro'],0,200);?> <b>Leer más...</b></p>
 							</div>
 						<form action="<?php echo getUrl("Foro","Foro","post"); ?>" method="post">
 									<input type="hidden" name="foro_id" value="<?php echo $p['cod_foro'] ?>">
-									<button class="btn news_post_button text-center trans_200" type="submit">Ver más</button>
+									<button class="btn news_post_button text-center trans_200" type="submit"><b>Ver más</b></button>
 						</form>
 						</div>
 					</div>
@@ -83,6 +77,11 @@
 						<!-- Latest Posts -->
 
 						<div class="sidebar_section">
+
+						<div class="sidebar_section_title mb-4">
+								<h3>Filtro</h3>
+								<input type="text" id="filtro" class="form-control" palceholder="Busca un Foro por título" data-url="<?php echo getUrl("Foro","Foro","filtro",false,"ajax"); ?>">
+							</div>
 							
 							<?php
 							if(!isset($_SESSION['rol'])){
@@ -98,6 +97,7 @@
 							}
 						}
 							?>
+
 							<div class="sidebar_section_title">
 								<h3>Recientes</h3>
 							</div>
@@ -117,9 +117,9 @@
 										</div>
 										<div class="latest_post_title"><a href="news_post.html"><?php echo $reciente['titulo_foro']; ?></a></div>
 										<div class="latest_post_meta">
-											<span class="latest_post_author"><a href="#">Por <?php echo $reciente['imag_foro']; ?></a></span>
+											<span class="latest_post_author"><a href="#"><b>Por <?php echo $reciente['imag_foro']; ?></b></a></span>
 											<span>|</span>
-											<span class="latest_post_comments"><a href="#">3 Comments</a></span>
+											<span class="latest_post_comments"><a href="#"><b>3 Comments</b></a></span>
 										</div>
 									</div>
 								<?php

@@ -15,7 +15,7 @@ foreach ($noticias as $noti) {
   <div style="margin: 1em; padding-bottom: 5px" class="col-md-10">
     <div class="caja">
       <div style="width: 17rem;">
-        <img src="<?php echo $noti['img_noticia'] ?>" class="img-thumbnail" alt="Error al cargar la imagen" high="212">
+        <img src="<?php echo $noti['img_noticia'] ?>" class="img-thumbnail" alt="Error al cargar la imagen">
       </div>
       <div class="card-body">
         <div class="meta col">

@@ -37,6 +37,10 @@ margin-left: 300px;
     width: 296px;
 	height: 212px;
 }
+.pic-2{
+    width: 600px;
+	height: 650px;
+}
 	.author {
 		display: -moz-flex;
 		display: -webkit-flex;
