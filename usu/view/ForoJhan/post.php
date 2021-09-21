@@ -86,12 +86,15 @@ include_once '../view/partials/modal.php';
 											<span class="comment_separator">|</span>
 											<span class="comment_date"><?php echo $comentario['fech_foro_com']; ?></span>
 											<span class="comment_separator">|</span>
-											<?php if($comentario['usu_id']==$_SESSION['user_id'] || $_SESSION['rol']==1){
+											<?php 
+											if(!isset($_SESSION['rol'])){
+											}else{if($comentario['usu_id']==$_SESSION['user_id'] || $_SESSION['rol']==1){
 											?>
 											<span><button class="btn btn-warning btn-sm" id="editar_comentario"  data-id_comentario="<?php echo $comentario['cod_foro_com']; ?>" data-url="<?php echo getUrl("Foro","Foro","editComment",false,"ajax") ?>">Editar</button></span>
 											<span><button class="btn btn-danger btn-sm" id="eliminar_comentario" data-id_comentario="<?php echo $comentario['cod_foro_com']; ?>" data-url="<?php echo getUrl("Foro","Foro","deleteComment",false,"ajax") ?>">Eliminar</button></span>
 											<?php
 											}
+										}
 											?>
 											<!-- <span class="comment_reply_link"><a href="#">Responder</a></span> -->
 										</div>
@@ -107,7 +110,9 @@ include_once '../view/partials/modal.php';
 					</div>
 
 					<!-- Leave Comment -->
-
+				<?php if($_SESSION){
+				?>
+				
 					<div class="leave_comment">
 						<div class="leave_comment_title">Deja un comentario</div>
 
@@ -116,7 +121,9 @@ include_once '../view/partials/modal.php';
 								<button id="comment_send_btn" type="submit" class="comment_send_btn trans_200" value="Submit" data-url="<?php echo getUrl("Foro","Foro","sendComment",false,"ajax"); ?>"  data-foro_id="<?php echo $f['cod_foro']; ?>">Enviar comentario</button>
 						</div>
 					</div>
-								
+				<?php 
+				}
+				?>
 				</div>
 
 				<!-- Sidebar Column -->
@@ -128,10 +135,14 @@ include_once '../view/partials/modal.php';
 
 						<div class="sidebar_section">
 							<div class="sidebar_section_title mb-3">
-							<?php if($f['usu_id']==$_SESSION['user_id']  || $_SESSION['rol']==1){
-											echo "<h3>Acciones</h3>";
-											echo "<button class='btn btn-warning mx-2' id='modalUpdateForo' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Foro","Foro","getEditForo",false,"ajax")."' data-id_foro='".$id_foro."'>Editar foro</button>";
-											echo "<button class='btn btn-danger mx-2' id='modalUpdateForo' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Foro","Foro","getModalDelete",false,"ajax")."' data-id_foro='".$id_foro."' >Eliminar foro</button>";
+							<?php 
+							if(!isset($_SESSION['rol'])){
+							}else{
+								if($f['usu_id']==$_SESSION['user_id']  || $_SESSION['rol']==1){
+												echo "<h3>Acciones</h3>";
+												echo "<button class='btn btn-warning mx-2' id='modalUpdateForo' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Foro","Foro","getEditForo",false,"ajax")."' data-id_foro='".$id_foro."'>Editar foro</button>";
+												echo "<button class='btn btn-danger mx-2' id='modalUpdateForo' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Foro","Foro","getModalDelete",false,"ajax")."' data-id_foro='".$id_foro."' >Eliminar foro</button>";
+								}
 							}
 							?>
 							</div>

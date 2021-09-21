@@ -2,7 +2,7 @@
 <link rel="stylesheet" type="text/css" href="styles/news_responsive.css">
 <!-- News -->
 
-<div class="news">
+<div class="news" style="margin-top:5%;">
 		<div class="container">
 			<div class="row">
 				
@@ -83,7 +83,10 @@
 						<!-- Latest Posts -->
 
 						<div class="sidebar_section">
-							<?php if($_SESSION['rol']==1 || $_SESSION['rol']==3){
+							
+							<?php
+							if(!isset($_SESSION['rol'])){
+							}else{ if($_SESSION['rol']==1 || $_SESSION['rol']==3){
 								?>
 							
 								<div class="latest_post">
@@ -93,6 +96,7 @@
 								</div>
 							<?php
 							}
+						}
 							?>
 							<div class="sidebar_section_title">
 								<h3>Recientes</h3>
