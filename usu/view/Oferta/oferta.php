@@ -1,11 +1,16 @@
 <link rel="stylesheet" href="styles/oferta/Ofertas.css">
-<div class="home">
-  <img src="images/ofertas.png" class="img-fluid" alt="...">
+<link rel="stylesheet" type="text/css" href="styles/contact_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 
-  <div class="col mt-2">
-    <p class="h1 text-info">Ofertas</p>
-    <div class="p-1 mb-2 bg-warning"></div>
-  </div>
+
+<div class="home">
+	<div class="home_background_container prlx_parent">
+		<div class="home_background prlx" style="background-image:url(images/Oferta.png)"></div>
+	</div>
+	<div class="home_content">
+		<h1>OFERTAS</h1>
+	</div>
+</div>
 </div>
 <?php
     $contador=1;
@@ -25,7 +30,7 @@
             <a href="<?php echo getUrl("Oferta", "Oferta", "getPostOferta", array("id_oferta" => $ofer['id_oferta']))  ?>" >Detalles</a>
         </div>
     </div>
-
+   
 <?php
 
     $contador++;
@@ -36,4 +41,4 @@
 }
 ?>
 </div>
-
+<div>
