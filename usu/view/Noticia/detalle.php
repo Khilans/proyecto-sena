@@ -1,11 +1,14 @@
+<link rel="stylesheet" type="text/css" href="styles/contact_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
+
 
 <div class="home">
-  <img src="images/teachers_background.jpg" class="img-fluid" alt="...">
-
-  <div class="col mt-2">
-    <p class="h1 text-info">Noticias</p>
-    <div class="p-1 mb-2 bg-warning"></div>
-  </div>
+	<div class="home_background_container prlx_parent">
+		<div class="home_background prlx" style="background-image:url(images/noticias.jpg)"></div>
+	</div>
+	<div class="home_content">
+		<h1>NOTICIAS</h1>
+	</div>
 </div>
 <?php
 foreach ($noticias as $noti) {
@@ -23,8 +26,7 @@ foreach ($noticias as $noti) {
 							</div>
 							<div class="meta">
 								Fecha de publicación<time class="published" datetime="2015-11-01"><?php echo $noti['fecha_noticia'] ?></time>
-								<!-- <a href="#" class="author">_______<img src="images/avatar.jpg" alt="" /></a> -->
-							</div>
+								</div>
 						</header>
 						<span class="image featured"><img class='pic-2' src="<?php echo $noti['img_noticia'] ?>"></span>
 						<p><?php echo $noti['desc_noticia'] ?></p>
