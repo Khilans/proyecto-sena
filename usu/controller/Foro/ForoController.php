@@ -116,11 +116,11 @@ include_once '../model/Foro/ForoModel.php';
                 $sql = "UPDATE t_foro SET titulo_foro='$titulo', desc_foro='$desc_foro', fech_fin_foro='$fech_fin_foro', cod_tema=$cod_tema, imag_foro='$ruta' WHERE cod_foro=$cod_foro";
     
             } else {
-                $sql = "UPDATE t_foro SET   WHERE cod_foro=$cod_foro";
+                $sql = "UPDATE t_foro SET titulo_foro='$titulo', desc_foro='$desc_foro', fech_fin_foro='$fech_fin_foro', cod_tema=$cod_tema  WHERE cod_foro=$cod_foro";
             }
             $ejecutar = $obj->consult($sql); 
             if($ejecutar){
-                echo "SISAS";
+                redirect(getUrl("Foro","Foro","feed"));
             }else{
                 dd($sql);
             }
@@ -151,6 +151,8 @@ include_once '../model/Foro/ForoModel.php';
 
         public function feed(){
             $obj= new ForoModel;
+            $sql="SELECT * FROM t_foro WHERE id_estado=1 ORDER BY fech_ini_foro desc";
+            $recientes=$obj->consult($sql);
             $sql="SELECT f.cod_foro,f.titulo_foro,f.desc_foro,f.fech_ini_foro,f.fech_fin_foro,f.imag_foro,f.usu_id,f.id_estado,u.usu_nombre,u.usu_apellido FROM t_foro f,t_usuario u WHERE f.usu_id=u.usu_id AND f.id_estado=1 ORDER BY fech_ini_foro desc";
             $posts=$obj->consult($sql);
             include_once '../view/ForoJhan/feed.php';
