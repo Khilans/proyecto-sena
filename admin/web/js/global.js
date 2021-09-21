@@ -174,6 +174,49 @@ $(document).ready(function(){
 
 
 
+   // MODALES COMPETENCIA
+   $(document).on("click","#insertCompetencia",function(){
+    var url=$(this).attr("data-url");
+   $.ajax({
+       url:url,
+       success:function(datos){
+           $("#contenedor").html(datos);
+           $("#exampleModalCenter").modal("show");
+       }
+   }); 
+});
+
+
+$(document).on("click","#editCompetencia",function(){
+   var url=$(this).attr("data-url");
+   var id=$(this).attr("data-CompEd");
+
+   $.ajax({
+       url:url,
+       data:"id="+id,
+       success:function(datos){
+           $("#contenedor").html(datos);
+           $("#exampleModalCenter").modal("show");
+       }
+   });
+});
+
+$(document).on("click","#deleteCompetencia",function(){
+   var url=$(this).attr("data-url");
+   var id=$(this).attr("data-CompDel");
+
+   $.ajax({
+       url:url,
+       data:"id="+id,
+       success:function(datos){
+           $("#contenedor").html(datos);
+           $("#exampleModalCenter").modal("show");
+       }
+   });
+});
+
+
+
     //Modales del crud oferta
 
     $(document).on("click","#MoreOfer",function(){
