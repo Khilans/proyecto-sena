@@ -20,7 +20,6 @@ include_once '../view/partials/modal.php';
         <thead class="thead-dark">
             <tr>
                 <th class="text-center w-5">Id</th>
-                <th class="text-center w-15">Respuesta</th>
                 <th class="text-center">Fecha</th>
                 <th class="text-center">Código del pqrsf</th>
                 <th class="text-center">Acciones</th>
@@ -33,7 +32,6 @@ include_once '../view/partials/modal.php';
                 echo "<tr>";
 
                     echo "<td class='text-center'>".$res['cod_resp_pqrsf']."</td>";
-                    echo "<td class='text-center'>".$res['desc_resp_pqrsf']."</td>";
                     echo "<td class='text-center'>".$res['fech_resp_pqrsf']."</td>";
                     echo "<td class='text-center'>".$res['cod_pqrsf']."</td>";
                     echo "<td class='text-center'>

@@ -12,12 +12,16 @@
             <div class="row">
                 <div class="form-group col-md-4 mt-4">
                     <label>Descripcion del Pqrsf</label>
-                    <input type="text" readonly cols="50" name="pqrsf_desc" class="form-control" value="<?php echo $pq['pqrsf_desc']; ?>">
-                    
+                    <textarea  readonly name="pqrsf_desc" rows="15" cols="70"><?php echo $pq['pqrsf_desc']; ?></textarea>   
                 </div>
             </div>
         </form>    
     <?Php 
     }
-    ?>   
+    ?>  
+    <div class="row">
+        <div style="margin: 1em;" class="col-md-6">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+        </div> 	
+    </div> 
 </div>     

@@ -22,13 +22,14 @@ body{
     font-weight: 100;
     font-family: 'Roboto', sans-serif;
 }
-/* .card-title{
+/*  .card-title{
 	display: -webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 1;
 	line-clamp: 1;
 	overflow: hidden;
-} */
+}  */
+
 .row {
     display: -ms-flexbox;
     display: flex;
@@ -36,7 +37,7 @@ body{
     flex-wrap: wrap;
     margin-right: 120px;
     margin-left: 120px;
-  }
+}
 
   
 .container{
