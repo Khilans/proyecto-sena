@@ -51,6 +51,9 @@ include_once '../view/partials/modal.php';
                 echo "<td><img src='" . $ofer['imag_oferta'] . "' width='100px'></td>";
                 echo "<td class='text-center'>" . $ofer['desc_estado'] . "</td>";
                 echo "<td class='text-center'>
+                    <button class='btn btn-success btn-sm' id='MoreOfer' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Oferta","Oferta","More",false,"ajax")."' data-moreOfer='".$ofer['id_oferta']."'>
+                    <i class='fa fa-eye'></i>                   
+                    </button>
                     <button class='btn btn-warning btn-sm' id='editOferta' data-toggle='modal' data-target='#exampleModal' data-url='" . getUrl("Oferta", "Oferta", "getUpdate", false, "ajax") . "' data-oferE='" . $ofer['id_oferta'] . "'>
                     <i class='fa fa-edit'></i>                   
                     </button>

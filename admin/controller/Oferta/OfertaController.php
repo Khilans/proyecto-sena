@@ -141,5 +141,19 @@ class OfertaController{
             echo "Ops, ha ocurrido un error inesperado";
             
         }
+
+        
     }  
+    public function More(){
+
+        $obj=new OfertaModel();
+        
+        $id_oferta=$_GET['id'];
+        $sql = "SELECT nom_oferta,desc_oferta FROM t_oferta WHERE id_oferta=$id_oferta";
+        $detalleO = $obj->consult($sql);
+
+        include_once '../view/Oferta/more.php';
+        
+
+    }
 }

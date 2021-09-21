@@ -31,6 +31,21 @@ $(document).ready(function(){
 
     });
 
+        //Modal respuesta QPRSF
+        $(document).on("click","#MoreRes",function(){
+            var url=$(this).attr("data-url");
+            var id=$(this).attr("data-moreRes");
+    
+            $.ajax({
+                url:url,
+                data:"id="+id,
+                type:"GET",
+                success:function(datos){
+                    $("#contenedor").html(datos);
+                    $("#exampleModalCenter").modal("show");
+                }
+            });
+        });
 
 
        // modal programas
@@ -161,6 +176,21 @@ $(document).ready(function(){
 
     //Modales del crud oferta
 
+    $(document).on("click","#MoreOfer",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-moreOfer");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            type:"GET",
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
     $(document).on("click","#insertOferta",function(){
         var url=$(this).attr("data-url");
         $.ajax({
@@ -207,13 +237,14 @@ $(document).ready(function(){
 
     //Modales del crud tipo de pqrsf
 
-    $(document).on("click","#InsertTpqrs",function(){
+    $(document).on("click","#Responder",function(){
         var url=$(this).attr("data-url");
-        var id=$(this).attr("data-Tpqrs");
+        var id=$(this).attr("data-pqrsRes");
 
         $.ajax({
             url:url,
             data:"id="+id,
+            type:"GET",
             success:function(datos){
                 $("#contenedor").html(datos);
                 $("#exampleModalCenter").modal("show");
@@ -221,27 +252,14 @@ $(document).ready(function(){
         });
     });
 
-    $(document).on("click","#DeleteTpqrs",function(){
+    $(document).on("click","#Detalles",function(){
         var url=$(this).attr("data-url");
-        var id=$(this).attr("data-TpqrsD");
+        var id=$(this).attr("data-Pqm");
 
         $.ajax({
             url:url,
             data:"id="+id,
-            success:function(datos){
-                $("#contenedor").html(datos);
-                $("#exampleModalCenter").modal("show");
-            }
-        });
-    });
-
-    $(document).on("click","#EditTpqrs",function(){
-        var url=$(this).attr("data-url");
-        var id=$(this).attr("data-TpqrsE");
-
-        $.ajax({
-            url:url,
-            data:"id="+id,
+            type:"GET",
             success:function(datos){
                 $("#contenedor").html(datos);
                 $("#exampleModalCenter").modal("show");
@@ -435,21 +453,8 @@ $(document).ready(function(){
         });
     });
 
-    //Modales crud de Pqrsf
-    $(document).on("click","#Responder",function(){
-        var url=$(this).attr("data-url");
-        var id=$(this).attr("data-pqrsRes");
-
-        $.ajax({
-            url:url,
-            data:"id="+id,
-            type:"GET",
-            success:function(datos){
-                $("#contenedor").html(datos);
-                $("#exampleModalCenter").modal("show");
-            }
-        });
-    });
+    
+   
    
 
    

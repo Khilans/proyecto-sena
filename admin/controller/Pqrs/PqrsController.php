@@ -94,6 +94,27 @@
         }
 
 
+        public function getMore(){
+
+            $obj = new PqrsModel();
+
+            $cod_pqrsf=$_GET['id'];
+            $sql = "SELECT pqrsf_desc FROM t_pqrsf WHERE cod_pqrsf=$cod_pqrsf";
+            $more=$obj->consult($sql);
+
+            include_once '../view/Pqrs/more.php';
+        }
+
+        public function getMoreRes(){
+
+            $obj = new PqrsModel();
+
+            $cod_resp_pqrsf=$_GET['id'];
+            $sql = "SELECT desc_resp_pqrsf FROM t_respuestapqrsf WHERE cod_resp_pqrsf=$cod_resp_pqrsf";
+            $moreRes=$obj->consult($sql);
+
+            include_once '../view/Pqrs/moreRes.php';
+        }
         
     }
 
