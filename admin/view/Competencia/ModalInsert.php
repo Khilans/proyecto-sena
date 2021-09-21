@@ -9,13 +9,13 @@
 				<input type="text" name="desc_competencia" class="form-control" placeholder="Descripción">
 			</div>
 		</div>
-		<div class="col-md-7 form-group">
+		<div class="col-md-6 form-group">
 			<label>Programa</label>
 			<select name="id_prog" class="form-control">
 				<option value="">Seleccione...</option>
 
 				<?php
-				foreach ($programa as $prog) {
+				foreach ($programas as $prog) {
 					echo "<option value='" . $prog['id_prog'] . "'>" . $prog['nom_prog'] . "</option>";
 				}
 				?>
