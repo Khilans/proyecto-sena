@@ -1,3 +1,12 @@
+
+<div class="home">
+  <img src="images/teachers_background.jpg" class="img-fluid" alt="...">
+
+  <div class="col mt-2">
+    <p class="h1 text-info">Noticias</p>
+    <div class="p-1 mb-2 bg-warning"></div>
+  </div>
+</div>
 <?php
 foreach ($noticias as $noti) {
 ?>
@@ -10,16 +19,11 @@ foreach ($noticias as $noti) {
 					<article class="post">
 						<header>
 							<div class="title">
-								<h2><a href="#"><?php echo $noti['titulo_noticia'] ?></a></h2>
-								<?php
-								//foreach ($tipo_noticias as $tipo_not){
-								//		echo "<p>".$tipo_not['desc_tipo_noti']. "</p>";
-								//} 
-								?>
+								<h2><?php echo $noti['titulo_noticia'] ?></h2>
 							</div>
 							<div class="meta">
-								<time class="published" datetime="2015-11-01"><?php echo $noti['fecha_noticia'] ?></time>
-								<a href="#" class="author">_______<img src="images/avatar.jpg" alt="" /></a>
+								Fecha de publicación<time class="published" datetime="2015-11-01"><?php echo $noti['fecha_noticia'] ?></time>
+								<!-- <a href="#" class="author">_______<img src="images/avatar.jpg" alt="" /></a> -->
 							</div>
 						</header>
 						<span class="image featured"><img class='pic-2' src="<?php echo $noti['img_noticia'] ?>"></span>

@@ -1,13 +1,13 @@
 <div class="container">
     <div class="alert alert-success" role="alert">
         <h4 class="alert-success text-center">Registrar tipo de noticia</h4>
-        <p><b>Por favor llenar todos los campos</b></p>
+        <p><b>Los campos con * son obligatorios.</b></p>
     </div>
     <form action="<?php echo getUrl("Tnoticia", "Tnoticia", "postInsert"); ?>" method="post">
         <div class="row">
             <div class="form-group col-md-8">
-                <label>Nombre</label>
-                <input type="text" name="desc_tipo_noti" class="form-control" placeholder="Tipo noticia">
+                <label>Nombre*</label>
+                <input required="required"  type="text" name="desc_tipo_noti" class="form-control" placeholder="Tipo noticia">
             </div>
         </div>
         <div class="row">

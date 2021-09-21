@@ -1,8 +1,9 @@
-<br>
+
 	<footer class="footer">
 		<div class="container">
 			<div class="footer_content">
 				<div class="row">
+				
 					<div class="col-lg-3 footer_col">
 						<!-- Logo -->
 						<div class="logo_container">
@@ -10,8 +11,10 @@
 								<span>VISION</span>
 							</div>
 						</div>
-						<p style="container-fluid" >En el año 2022 el SENA se consolidará como una entidad referente de formación integral para el trabajo, por su aporte a la empleabilidad, el emprendimiento y la equidad, que atiende con pertinencia y calidad las necesidades productivas y sociales del país.
-</p>
+
+						<p style="container-fluid" >En el año 2022 el SENA se consolidará como una entidad referente de formación integral para el trabajo, por su aporte a la empleabilidad, el emprendimiento y la equidad, que atiende con pertinencia y calidad las necesidades productivas y sociales del país.</p>
+						
+
 
 					</div>
 					<div class="col-lg-3 footer_col">
@@ -25,6 +28,7 @@
 </p>
 
 					</div>
+					
 					<!-- Footer Column - Usefull Links -->
 					<div class="col-lg-3 footer_col">
 						<div class="footer_column_title">Links</div>

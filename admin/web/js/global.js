@@ -2,7 +2,7 @@ $(document).ready(function(){
     $(document).on("click","#cambioDeImagen",function(){
         var ruta=$("#imagen").attr("src");
 
-        $("#cambiarImagen").html("<input type='file' name='img_noticia'>");
+        $("#cambiarImagen").html("<input id='contact_form_message' required='required' data-error='Complete este campo.' type='file' name='img_noticia'>");
         $("#cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
     });
 
@@ -303,6 +303,20 @@ $(document).on("click","#deleteCompetencia",function(){
         $.ajax({
             url:url,
             
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#Morenoti",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-TnotiM");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
             success:function(datos){
                 $("#contenedor").html(datos);
                 $("#exampleModalCenter").modal("show");

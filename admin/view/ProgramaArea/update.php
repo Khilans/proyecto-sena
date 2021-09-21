@@ -1,5 +1,6 @@
 <div class="jumbotron mt-4">
-    <h2 class="display-4">Editar noticia</h2>
+    <h2 class="display-4">Editar programa area</h2>
+    <p>Por favor llenar los campos con *</p>
 </div>
 <div class="container">
     <?php
@@ -8,17 +9,17 @@
     <form action="<?php echo getUrl("Noticia","Noticia","postUpdate");?>" method="post">
         <div class="row">
             <div class="form-group col-md-7">
-                <label>Descripcion</label>
+                <label>Descripcion*</label>
                 <input type="hidden" name="cod_noticia" value="<?php echo $noti['cod_noticia']; ?>">
-                <input type="text" name="desc_noticia" class="form-control" value="<?php echo $noti['desc_noticia']; ?>">
+                <input  required="required"  type="text" name="desc_noticia" class="form-control" value="<?php echo $noti['desc_noticia']; ?>">
               
             </div> 
             <div class="form-group col-md-7">
-                <label>Titulo</label>
-                <input type="text" name="titulo_noticia" class="form-control" value="<?php echo $noti['titulo_noticia']; ?>">
+                <label>Titulo*</label>
+                <input  required="required"  type="text" name="titulo_noticia" class="form-control" value="<?php echo $noti['titulo_noticia']; ?>">
             </div>
             <div class="col-md-4">
-                <label>Imagen</label>
+                <label>Imagen*</label>
                 <div id="cambiarImagen">
 
                     <img class="d-block" id="imagen" src="<?php echo $noti['img_noticia'] ?>" width="150px">
@@ -26,8 +27,8 @@
                 </div>
             </div>
             <div class=" form-group col-md-4">
-                <label>Tipo de noticia</label>
-                <select name="cod_tipo_noti" class="form-control">
+                <label>Tipo de noticia*</label>
+                <select  required="required"  name="cod_tipo_noti" class="form-control">
                     <option value="">Seleccione...</option>
                     <?php
                     foreach ($tipo_noticias as $tipo_not) {
@@ -42,8 +43,8 @@
                 </Select>
             </div>
             <div class=" form-group col-md-4">
-                <label>Estado</label>
-                <select name="id_estado" class="form-control">
+                <label>Estado*</label>
+                <select  required="required"  name="id_estado" class="form-control">
                     <option value="">Seleccione...</option>
                     <?php
                     foreach ($estados as $estd) {

@@ -19,7 +19,7 @@
     <div  style="margin-top:25px;" class="container col-2">
         <div class="card ml-md-4">
             <img src="<?php echo $ofer['imag_oferta']; ?>" alt="">
-            <p><?php echo $ofer['desc_oferta']; ?></p>
+            <p><?php echo $ofer['nom_oferta']; ?></p>
             <p ><b>Cupos disponible:</b><?php echo $ofer['cupos_oferta']?></p>
             <p  style="margin-top:-35px;"><b>Fecha de cierre:</b><?php echo $ofer['fech_fin_oferta']?></p>
             <a href="<?php echo getUrl("Oferta", "Oferta", "getPostOferta", array("id_oferta" => $ofer['id_oferta']))  ?>" >Detalles</a>

@@ -131,7 +131,7 @@ include_once '../view/partials/modal.php';
 							<?php if($f['usu_id']==$_SESSION['user_id']  || $_SESSION['rol']==1){
 											echo "<h3>Acciones</h3>";
 											echo "<button class='btn btn-warning mx-2' id='modalUpdateForo' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Foro","Foro","getEditForo",false,"ajax")."' data-id_foro='".$id_foro."'>Editar foro</button>";
-											echo "<button class='btn btn-danger mx-2' href='".getUrl("Foro","Foro","getEditForo")."'>Eliminar foro</button>";
+											echo "<button class='btn btn-danger mx-2' id='modalUpdateForo' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Foro","Foro","getModalDelete",false,"ajax")."' data-id_foro='".$id_foro."' >Eliminar foro</button>";
 							}
 							?>
 							</div>

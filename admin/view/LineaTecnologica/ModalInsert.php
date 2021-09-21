@@ -1,12 +1,13 @@
 <div class="container">
 	<div class="alert alert-success" role="alert">
 		<h4 class="alert-success text-center">Registrar Línea Tecnológica</h4>
+		<p>Los campos con * son obligatorios.</p>
 	</div>
 	<form action="<?php echo getUrl("LineaTecnologica", "LineaTecnologica", "postInsert"); ?>" method="post" enctype="multipart/form-data">
 		<div style="margin: 1em;" class="row">
 			<div class="col-md-4 form-group">
-				<label>Descripción</label>
-				<input type="text" name="lin_tec_desc" class="form-control" placeholder="Descripción">
+				<label>Descripción*</label>
+				<input  required="required"  type="text" name="lin_tec_desc" class="form-control" placeholder="Descripción">
 			</div>
 		</div>
 		<div class="row">

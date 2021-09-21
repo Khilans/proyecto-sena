@@ -4,7 +4,7 @@
 
 <div class="home">
 	<div class="home_background_container prlx_parent">
-		<div class="home_background prlx" style="background-image:url(images/contact_background.jpg)"></div>
+		<div class="home_background prlx" style="background-image:url(images/lam.jpg)"></div>
 	</div>
 	<div class="home_content">
 		<h1>PQRSF</h1>
@@ -25,9 +25,9 @@
 						<div class="contact_form_container">
 							<form action="<?php echo getUrl("Pqrs","Pqrs","postSendU"); ?>" method="POST">
 
-								<input class="input_field contact_form_name col-md-4" name="nombre" type="text" placeholder="Name" required="required" data-error="Name is required.">
-								<input class="input_field contact_form_email col-md-4 mx-1" name="correo" type="email" placeholder="E-mail" required="required" data-error="Valid email is required.">
-                                <select class="input_field col-md-3" name="tipopqrsf">
+								<input id="contact_form_message" required="required" data-error="Complete este campo." class="input_field contact_form_name col-md-4" name="nombre" type="text" placeholder="Name" required="required">
+								<input id="contact_form_message" required="required" data-error="Complete este campo." class="input_field contact_form_email col-md-4 mx-1" name="correo" type="email" placeholder="E-mail" required="required">
+                                <select id="contact_form_message" required="required" data-error="Complete este campo." class="input_field col-md-3" name="tipopqrsf">
 											<option value="">Seleccione</option>
 											<?php
 											foreach ($tipoPQRSF as $tpq) {

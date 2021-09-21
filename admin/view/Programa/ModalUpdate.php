@@ -1,6 +1,7 @@
 <div class="container">
     <div class="alert alert-success" role="alert">
         <h4 class="alert-success text-center">Editar programa</h4>
+        <p>Por favor llenar los campos con *</p>
     </div>
 
     <?php
@@ -14,8 +15,8 @@
                     <input type="number" readonly name="id_prog" class="form-control" value="<?php echo $prog['id_prog']; ?>">
                 </div>
                 <div class=" form-group col-md-4 mt-4">
-                    <label>Linea tecnologica</label>
-                    <select name="lin_tec_cod" class="form-control">
+                    <label>Linea tecnologica*</label>
+                    <select  required="required"  name="lin_tec_cod" class="form-control">
                         <option value="">Seleccione...</option>
                         <?php
                         foreach ($lineatecnologica as $linea) {
@@ -31,8 +32,8 @@
                 </div>
 
                 <div class=" form-group col-md-4 mt-4">
-                    <label>Nivel</label>
-                    <select name="id_prog_niv" class="form-control">
+                    <label>Nivel*</label>
+                    <select  required="required"  name="id_prog_niv" class="form-control">
                         <option value="">Seleccione...</option>
                         <?php
                         foreach ($nivel as $niv) {
@@ -47,27 +48,27 @@
                     </Select>
                 </div>
                 <div class="col-md-4 form-group">
-                    <label>Nombre</label>
-                    <input type="text" name="nom_prog" class="form-control" value="<?php echo $prog['nom_prog']; ?>">
+                    <label>Nombre*</label>
+                    <input  required="required"  type="text" name="nom_prog" class="form-control" value="<?php echo $prog['nom_prog']; ?>">
                 </div>
                 <div class="col-md-4 form-group">
-                    <label>Siglas</label>
-                    <input type="text" name="sigla_prog" class="form-control" value="<?php echo $prog['sigla_prog']; ?>">
+                    <label>Siglas*</label>
+                    <input  required="required"  type="text" name="sigla_prog" class="form-control" value="<?php echo $prog['sigla_prog']; ?>">
                 </div>
                 <div class="col-md-4 form-group">
-                    <label>Descripción</label>
-                    <input type="text" name="desc_prog" class="form-control" value="<?php echo $prog['desc_prog']; ?>">
+                    <label>Descripción*</label>
+                    <input  required="required"  type="text" name="desc_prog" class="form-control" value="<?php echo $prog['desc_prog']; ?>">
                 </div>
                 <div class="col-md-4 form-group">
-                    <label>Duración</label>
-                    <input type="text" name="duracion_prog" class="form-control" value="<?php echo $prog['duracion_prog']; ?>">
+                    <label>Duración*</label>
+                    <input  required="required"  type="text" name="duracion_prog" class="form-control" value="<?php echo $prog['duracion_prog']; ?>">
                 </div>
                 <div class="col-md-4 form-group">
-                    <label>Código</label>
-                    <input type="number" name="cod_prog" class="form-control" value="<?php echo $prog['cod_prog']; ?>">
+                    <label>Código*</label>
+                    <input  required="required"  type="number" name="cod_prog" class="form-control" value="<?php echo $prog['cod_prog']; ?>">
                 </div>
                 <div class="form-group col-md-4">
-                    <label>.</label>
+                    <label>Imagen*</label>
                     <div id="cambiarImagen">
                         <img class="d-block" id="imagen" src="<?php echo $prog['imag_prog'] ?>" width="50px">
                         <button type="button" id="cambioDeImagen" class="btn btn-outline-secondary mt-2">Cambiar imagen</button>

@@ -1,13 +1,13 @@
 <div class="container">
     <div class="alert alert-success" role="alert">
         <h4 class="alert-success text-center">Registrar estado</h4>
-        <p><b>Por favor llenar todos los campos</b></p>
+        <p><b>Los campos con * son obligatorios</b></p>
     </div>
     <form action="<?php echo getUrl("Estado", "Estado", "postInsert"); ?>" method="post">
         <div class="row">
             <div class="form-group col-md-8">
-                <label>Nombre</label>
-                <input type="text" name="desc_estado" class="form-control" placeholder="Estado">
+                <label>Nombre*</label>
+                <input required="required"  type="text" name="desc_estado" class="form-control" placeholder="Estado">
             </div>
         </div>
         <div class="row">

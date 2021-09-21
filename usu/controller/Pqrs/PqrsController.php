@@ -22,12 +22,15 @@
             $usu_id=$_POST['usu_id'];
             $pqrsf_desc=$_POST['pqrsf_desc'];
             
-            
-           
-           $id = $obj->autoincrement("t_pqrsf", "cod_pqrsf");
+            $id = $obj->autoincrement("t_pqrsf", "cod_pqrsf");
 
-            $sql = "INSERT INTO t_pqrsf VALUES($id,$cod_pqrsf_tipo,$usu_id,1,'$pqrsf_desc','$correo','$nombre', NOW())";
-       
+
+            if ($_POST['tipopqrsf'] == 5){
+                $sql = "INSERT INTO t_pqrsf VALUES($id,$cod_pqrsf_tipo,$usu_id,6,'$pqrsf_desc','$correo','$nombre', NOW())";
+            }else{
+                $sql = "INSERT INTO t_pqrsf VALUES($id,$cod_pqrsf_tipo,$usu_id,5,'$pqrsf_desc','$correo','$nombre', NOW())";
+            }
+
             $ejecutar = $obj->update($sql);
 
             if ($ejecutar) {

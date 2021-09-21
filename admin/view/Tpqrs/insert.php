@@ -1,13 +1,13 @@
 <div class="container">
     <div class="alert alert-success" role="alert">
         <h4 class="alert-success text-center">Registrar tipo de pqrsf</h4>
-        <p><b>Por favor llenar todos los campos</b></p>
+        <p><b>Los campos con * son obligatorios</b></p>
     </div>
     <form action="<?php echo getUrl("Tpqrs", "Tpqrs", "postInsert"); ?>" method="post">
         <div class="row">
             <div class="form-group col-md-8">
-                <label>Nombre</label>
-                <input type="text" name="desc_pqrsf_tipo" class="form-control" placeholder="Tipo pqrsf">
+                <label>Nombre*</label>
+                <input  required="required"  type="text" name="desc_pqrsf_tipo" class="form-control" placeholder="Tipo pqrsf">
             </div>
         </div>
         <div class="row">

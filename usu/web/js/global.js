@@ -43,6 +43,19 @@ $(document).ready(function(){
         });
     });
 
+    $(document).on("click","#modalDeleteForo",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-id_foro");
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
     $(document).on("click","#cambioImagenForo",function(){
         var ruta=$("#imagen").attr("src");
 

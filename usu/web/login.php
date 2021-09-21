@@ -32,11 +32,11 @@ include_once '../lib/helpers.php';
             <form action="<?php echo getUrl("Acceso", "Acceso", "login") ?>" method="POST">
                 <div class="form-group">
                     <label for="username">Numero de documento:</label>
-                    <input type="number" class="form-control" name="usu_ndocumento" placeholder="Numero de identidad">
+                    <input  required="required"  type="number" class="form-control" name="usu_ndocumento" placeholder="Numero de identidad">
                 </div>
                 <div class="form-group">
                     <label for="pwd">Contraseña:</label>
-                    <input type="password" class="form-control" name="usu_pass" placeholder="Contraseña">
+                    <input  required="required"  type="password" class="form-control" name="usu_pass" placeholder="Contraseña">
 
                 </div>
                 <div class="form-group">

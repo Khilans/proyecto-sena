@@ -109,7 +109,7 @@
             $id_estado = $_POST['id_estado'];
             $cod_tipo_noti = $_POST['cod_tipo_noti'];
             $desc_noticia=$_POST['desc_noticia'];
-            $fecha_noticia = hora();
+            $fecha_noticia =hora();
             $titulo_noticia=$_POST['titulo_noticia'];
 
             if (isset($_FILES['img_noticia']['name'])) {
@@ -121,10 +121,10 @@
                     $img_vieja = $_POST['img_vieja'];
                     unlink("$img_vieja");
                 }
-                $sql = "UPDATE t_noticia SET  titulo_noticia='$titulo_noticia', desc_noticia='$desc_noticia',cod_tipo_noti=$cod_tipo_noti,
+                $sql = "UPDATE t_noticia SET  titulo_noticia='$titulo_noticia', fecha_noticia='$fecha_noticia',desc_noticia='$desc_noticia',cod_tipo_noti=$cod_tipo_noti,
                 id_estado=$id_estado,img_noticia='$ruta' WHERE cod_noticia=$cod_noticia";
             } else {
-                $sql = "UPDATE t_noticia SET titulo_noticia='$titulo_noticia', desc_noticia='$desc_noticia', cod_tipo_noti=$cod_tipo_noti, 
+                $sql = "UPDATE t_noticia SET titulo_noticia='$titulo_noticia', fecha_noticia='$fecha_noticia', desc_noticia='$desc_noticia', cod_tipo_noti=$cod_tipo_noti, 
                 id_estado=$id_estado WHERE cod_noticia=$cod_noticia";
             }
             $ejecutar = $obj->consult($sql);
@@ -141,6 +141,20 @@
         }
 
 
+        public function More(){
+
+            $obj=new NoticiaModel();
+            
+            $noticia_id=$_GET['id'];
+            $sql = "SELECT titulo_noticia,desc_noticia FROM t_noticia WHERE cod_noticia=$noticia_id";
+            $detalle = $obj->consult($sql);
+
+            include_once '../view/Noticia/more.php';
+            
+
+        }
+
+        
     }     
 
 

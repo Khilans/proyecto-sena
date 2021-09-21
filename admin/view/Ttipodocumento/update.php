@@ -1,7 +1,7 @@
 <div class="container">
     <div class="alert alert-success" role="alert">
-                <h4 class="alert-success text-center">Editar tipo de documento</h4>
-                
+        <h4 class="alert-success text-center">Editar tipo de documento</h4>
+        <p>Por favor llenar los campos con *</p>       
     </div>
     <div class="container">
         <?php
@@ -10,9 +10,9 @@
             <form action="<?php echo getUrl("Ttipodocumento", "Ttipodocumento", "postUpdate"); ?>" method="post">
                 <div class="row ">
                     <div class="form-group col-md-7">
-                        <label>Nombre</label>
+                        <label>Nombre*</label>
                         <input type="hidden" name="cod_tipo_doc" value="<?php echo $tipodocu['cod_tipo_doc']; ?>">
-                        <input type="text" name="nom_tipo_doc" class="form-control" value="<?php echo $tipodocu['nom_tipo_doc']; ?>">
+                        <input required="required"  type="text" name="nom_tipo_doc" class="form-control" value="<?php echo $tipodocu['nom_tipo_doc']; ?>">
                     </div>
                 </div>
                 <div class="modal-footer">

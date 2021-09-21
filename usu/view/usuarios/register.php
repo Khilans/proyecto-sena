@@ -8,6 +8,7 @@ include_once '../lib/helpers.php';
 <head>
 	<meta charset="utf-8">
 	<title>Registrar</title>
+    
 	<link rel="stylesheet" href="../web/styles/registro.css">
     <link rel="stylesheet" href="../web/styles/bootstrap.css">
 </head>
@@ -16,8 +17,8 @@ include_once '../lib/helpers.php';
         <h2>Registrar</h2>
         <form action="<?php echo getUrl("Registro","Registro","postRegister")?>" method="POST">
             <div class="form-group">
-                <label for="first-name">Primer nombre</label>
-                <input type="text" class="form-control" placeholder="Primer nombre" id="first-name" name="usu_nombre">
+                <label for="first-name">Primer nombre*</label>
+                <input  required="required"  type="text" class="form-control" placeholder="Primer nombre" id="first-name" name="usu_nombre">
             </div>
 
             <div class="form-group">
@@ -26,13 +27,13 @@ include_once '../lib/helpers.php';
             </div>
 
             <div class="form-group">
-                <label for="first-name">Apellidos</label>
-                <input type="text" class="form-control" placeholder="Apellidos" id="first-name" name="usu_apellido">
+                <label for="first-name">Apellidos*</label>
+                <input  required="required"  type="text" class="form-control" placeholder="Apellidos" id="first-name" name="usu_apellido">
             </div>
 
             <div class="form-group">
-                <label for="last-name">Tipo documento</label>
-                <select name="cod_tipo_doc" class="form-control">
+                <label for="last-name">Tipo documento*</label>
+                <select  required="required"  name="cod_tipo_doc" class="form-control">
                     <option value="">Seleccione...</option>
                     <?php
                         foreach($tipos_documentos as $td){
@@ -43,22 +44,22 @@ include_once '../lib/helpers.php';
             </div>
 
             <div class="form-group">
-                <label for="number">Numero documento</label>
-                <input type="number" class="form-control" placeholder="Numero documento" id="number" name="usu_ndocumento">
+                <label for="number">Numero documento*</label>
+                <input  required="required"  type="number" class="form-control" placeholder="Numero documento" id="number" name="usu_ndocumento">
             </div>
 
             <div class="form-group">
-                <label>Correo electronico</label>
-                <input type="email" class="form-control" placeholder="Correo electronico" name="usu_correo">
+                <label>Correo electronico*</label>
+                <input  required="required"  type="email" class="form-control" placeholder="Correo electronico" name="usu_correo">
             </div>
             <div class="row">
                 <div class="form-group col-md-5">
-                    <label>Contraseña</label>
-                    <input type="password" class="form-control" placeholder="Contraseña" name="usu_pass">
+                    <label>Contraseña*</label>
+                    <input  required="required"  type="password" class="form-control" placeholder="Contraseña" name="usu_pass">
                 </div>
                 <div class="form-group col-md-5">
-                    <label>Confirma contraseña</label>
-                    <input type="password" class="form-control" placeholder="Confirma contraseña" name="confirm">
+                    <label>Confirma contraseña*</label>
+                    <input   required="required"  type="password" class="form-control" placeholder="Confirma contraseña" name="confirm">
                 </div>
             </div>
         <?php

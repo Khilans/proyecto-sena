@@ -11,7 +11,7 @@
             <div class="form-group col-md-7">
                 <label>Nombre</label>
                 <input type="hidden" name="id_estado" value="<?php echo $estd['id_estado']; ?>">
-                <input type="text" name="desc_estado" class="form-control" value="<?php echo $estd['desc_estado']; ?>">
+                <input  required="required" type="text" name="desc_estado" class="form-control" value="<?php echo $estd['desc_estado']; ?>">
             </div>
         </div>
         <div class="modal-footer">
