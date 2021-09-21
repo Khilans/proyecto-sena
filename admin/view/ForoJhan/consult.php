@@ -42,8 +42,7 @@ include_once '../view/partials/modal.php';
                     <button class='btn btn-warning btn-sm' id='modalUpdateForo' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Foro","Foro","getModalEdit",false,"ajax")."' data-foro_id='".$foro['cod_foro']."'>
                     <i class='fa fa-edit'></i>                   
                     </button>
-                    <button class='btn btn-danger btn-sm' id='modalDeleteForo' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Foro","Foro","getDelete",false,"ajax")."' data-foro_id='".$foro['cod_foro']."'>
-                    <i class='fa fa-trash'></i>                   
+                    <button class='btn btn-danger btn-sm mx-2' id='modalDeleteForo' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Foro","Foro","getModalDelete",false,"ajax")."' data-id_foro='".$foro['cod_foro']."' ><i class='fa fa-trash'></i>                   
                     </button>
                     <button type='button' class='btn btn-info btn-sm' type='button' id='modalInfoForo' data-toggle='modal' data-target='#exampleModal' data-url='". getUrl('Foro', 'Foro', 'profile', false, 'ajax')."' data-foro_id='".$foro['cod_foro']."'>
                     <i class='fa fa-eye'></i>

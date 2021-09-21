@@ -53,13 +53,25 @@
 
 					<!-- Page Nav -->
 
-					<div class="news_page_nav">
-						<ul>
-							<li class="active text-center trans_200"><a href="#">01</a></li>
-							<li class="text-center trans_200"><a href="#">02</a></li>
-							<li class="text-center trans_200"><a href="#">03</a></li>
-						</ul>
-					</div>
+					<nav aria-label="Page navigation example">
+					<ul class="pagination pagination-lg">
+						<li class="page-item">
+						<a class="page-link" href="#" aria-label="Previous">
+							<span aria-hidden="true">&laquo;</span>
+							<span class="sr-only">Previous</span>
+						</a>
+						</li>
+						<li class="page-item"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item">
+						<a class="page-link" href="#" aria-label="Next">
+							<span aria-hidden="true">&raquo;</span>
+							<span class="sr-only">Next</span>
+						</a>
+						</li>
+					</ul>
+					</nav>
 
 				</div>
 
@@ -89,19 +101,28 @@
 							<div class="latest_posts">
 								
 								<!-- Latest Post -->
+								<?php 
+								$contador=0;
+								foreach($recientes as $reciente){
+									$contador++;
+									if($contador<5){
+									?>
+									<div class="latest_post">
+										<div class="latest_post_image" style="width:350px">
+											<img src="<?php echo $reciente['imag_foro']; ?>" alt="https://unsplash.com/@dsmacinnes">
+										</div>
+										<div class="latest_post_title"><a href="news_post.html"><?php echo $reciente['titulo_foro']; ?></a></div>
+										<div class="latest_post_meta">
+											<span class="latest_post_author"><a href="#">Por <?php echo $reciente['imag_foro']; ?></a></span>
+											<span>|</span>
+											<span class="latest_post_comments"><a href="#">3 Comments</a></span>
+										</div>
+									</div>
+								<?php
+								}
+							}
+								?>
 
-								<div class="latest_post">
-									<div class="latest_post_image">
-										<img src="images/latest_1.jpg" alt="https://unsplash.com/@dsmacinnes">
-									</div>
-									<div class="latest_post_title"><a href="news_post.html">Why do you need a qualification?</a></div>
-									<div class="latest_post_meta">
-										<span class="latest_post_author"><a href="#">By Christian Smith</a></span>
-										<span>|</span>
-										<span class="latest_post_comments"><a href="#">3 Comments</a></span>
-									</div>
-								</div>
-								
 							</div>
 								
 						</div>

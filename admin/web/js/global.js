@@ -47,6 +47,39 @@ $(document).ready(function(){
             });
         });
 
+            //MODAL FORO
+    $(document).on("click","#modalUpdateForo",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-id_foro");
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#modalDeleteForo",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-id_foro");
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#cambioImagenForo",function(){
+        var ruta=$("#imagen").attr("src");
+
+        $("#cambiarImagenForo").html("<input type='file' name='imag_nueva'>");
+        $("#cambiarImagenForo").append("<input type='hidden' name='imag_vieja' value='"+ruta+"'>");
+    });
 
        // modal programas
     $(document).on("click","#insertPrograma",function(){
