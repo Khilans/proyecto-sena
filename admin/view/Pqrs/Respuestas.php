@@ -23,6 +23,7 @@ include_once '../view/partials/modal.php';
                 <th class="text-center w-15">Respuesta</th>
                 <th class="text-center">Fecha</th>
                 <th class="text-center">Código del pqrsf</th>
+                <th class="text-center">Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -35,7 +36,11 @@ include_once '../view/partials/modal.php';
                     echo "<td class='text-center'>".$res['desc_resp_pqrsf']."</td>";
                     echo "<td class='text-center'>".$res['fech_resp_pqrsf']."</td>";
                     echo "<td class='text-center'>".$res['cod_pqrsf']."</td>";
-                    
+                    echo "<td class='text-center'>
+                    <button class='btn btn-success btn-sm' id='MoreRes' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrs","Pqrs","getMoreRes",false,"ajax")."' data-moreRes='".$res['cod_resp_pqrsf']."'>
+                    <i class='fa fa-eye'></i>                   
+                    </button>
+                    </td>";
                     "</td>";
                 echo "</tr>";
             }

@@ -50,7 +50,7 @@ include_once '../view/partials/modal.php';
                     echo "<td class='text-center'>".$pq['pqrsf_desc']."</td>";
                     echo "<td class='text-center'>".$pq['pqrsf_fecha']."</td>";
                     echo "<td class='text-center'>
-                    <button class='btn btn-warning btn-sm' id='#' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrsf","Pqrsf","getModalUpdate",false,"ajax")."' data-pq='".$pq['cod_pqrsf']."'>
+                    <button class='btn btn-warning btn-sm' id='Detalles' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrs","Pqrs","getMore",false,"ajax")."' data-Pqm='".$pq['cod_pqrsf']."'>
                     <i class='fa fa-eye'></i>                   
                     </button>
                     <button class='btn btn-danger btn-sm' id='Responder' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrs","Pqrs","getAnswer",false,"ajax")."' data-pqrsRes='".$pq['cod_pqrsf']."'>
