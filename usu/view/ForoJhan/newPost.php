@@ -18,19 +18,14 @@
           <form action="<?php echo getUrl("Foro","Foro","insertNewPost") ?>" method="post" enctype="multipart/form-data">
                   <div class="jumbotron text-center" style="height:300px;">
                     <h2 class="display-5" style="margin-top:35px;">Inserte una imágen</h2>
-                    <input type="file"  name="imagen_foro" id="">
+                    <input type="file"  name="imagen_foro">
                   </div>
                 </div>
                 <div class="news_post_top d-flex flex-column flex-sm-row">
-                  <div class="news_post_date_container">
-                    <div class="news_post_date d-flex flex-column align-items-center justify-content-center">
-                      <div>18</div>
-                      <div>dec</div>
-                    </div>
-                  </div>
                   <div class="news_post_title_container">
                     <div class="news_post_title ">
-                      <input class="form-control" type="text" name="titulo_foro" placeholder="Digite aquí el título del foro" style="width:600px;">
+						<center><label>Título Foro</label></center>
+                      <input class="form-control" type="text" name="titulo_foro" placeholder="Digite aquí el título del foro" style="width:600px;" required="required">
                     </div>
                     <div class="news_post_meta">
                       <span class="news_post_author"><a href="#">Por <?php echo $_SESSION['nombre']; ?> <?php echo $_SESSION['nombre2']; ?> <?php echo $_SESSION['apellidos']; ?></a></span>
@@ -40,12 +35,14 @@
                   </div>
                 </div>
                 <div class="news_post_text">
-                  <textarea name="desc_foro" id="" cols="88" rows="10"></textarea>
+                  <textarea name="desc_foro" id="" cols="88" rows="10" required="required"></textarea>
                 </div>
                 
                 <div class="row">
-                  <input type="date" name="fecha_final" class="form-control col-md-6">
-                  <select class="form-control col-md-5 mx-1" name="tema_foro">
+				  <label>Fecha fin</label>
+                  <input type="date" name="fecha_final" class="form-control col-md-5" required="required">
+				  <label>Tema </label>
+                  <select class="form-control col-md-5 mx-1" name="tema_foro" required="required">
                     <option value="">Seleccione...</option>
                     <?php foreach($temas as $tema){
                       echo "<option value='".$tema['cod_tema']."'>".$tema['desc_tema']."</option>";
