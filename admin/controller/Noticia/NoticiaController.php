@@ -58,6 +58,8 @@
             $obj = new NoticiaModel();
 
             $noticia_id=$_GET['id'];
+            $sql="SELECT * FROM t_tiponoticia";
+            $tipo_noticias=$obj->consult($sql);
             $sql = "SELECT * FROM t_noticia WHERE cod_noticia=$noticia_id";
             $noticias=$obj->consult($sql);
 
@@ -72,7 +74,8 @@
             $cod_noticia=$_POST['cod_noticia'];
             $titulo_noticia=$_POST['titulo_noticia'];
 
-            $sql="DELETE FROM t_noticia WHERE cod_noticia=$cod_noticia";
+            $sql="UPDATE t_noticia SET id_estado=2 WHERE cod_noticia=$cod_noticia";
+            
             $ejecutar=$obj->update($sql);
 
             if ($ejecutar){
@@ -82,6 +85,7 @@
                 echo "Ops,error al eliminar una noticia";
             }
         }
+
 
         public function getModalUpdate(){
 
