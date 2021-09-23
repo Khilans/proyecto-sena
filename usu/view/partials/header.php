@@ -6,35 +6,30 @@ include_once '../view/partials/modal.php';
 	<div class="header_content d-flex flex-row align-items-center">
 		<!-- Logo -->
 		<div class="logo_container">
-			<div class="logo">
+			<div class="logo ">
 				<span>senatel</span>
 			</div>
-
-
-
-
-
 		</div>
 
 		<!-- Main Navigation -->
 		<nav class="main_nav_container ">
 			<div class="main_nav">
 				<ul class="main_nav_list">
-					<li class="main_nav_item"><a href="index.php">Inicio</a></li>
+					<li class="main_nav_item" bg-color="green"><a href="index.php">Inicio</a></li>
 					<?php
-						if(isset($_SESSION['user_id'])){
+					if (isset($_SESSION['user_id'])) {
 					?>
-					<li class="main_nav_item"><a href="<?php echo getUrl("Pqrs", "Pqrs", "getSend") ?>">PQRSF</a></li>
+						<li class="main_nav_item"><a href="<?php echo getUrl("Pqrs", "Pqrs", "getSend") ?>">PQRSF</a></li>
 					<?php
-						}else{
-							echo "<li class='main_nav_item'><a href=". getUrl('Pqrs', 'Pqrs', 'getSendU'). ">Pqrsf</a></li>";	
-						}
+					} else {
+						echo "<li class='main_nav_item'><a href=" . getUrl('Pqrs', 'Pqrs', 'getSendU') . ">Pqrsf</a></li>";
+					}
 					?>
 
 					<li class="main_nav_item"><a href="<?php echo getUrl("Foro", "Foro", "feed") ?>">Foros</a></li>
 					<li class="main_nav_item"><a href="<?php echo getUrl("Oferta", "Oferta", "getOferta") ?>">Ofertas</a></li>
 					<li class="main_nav_item"><a href="<?php echo getUrl("Noticia", "Noticia", "getView") ?>">Noticias</a></li>
-					
+
 				</ul>
 			</div>
 		</nav>

@@ -205,6 +205,51 @@ $(document).ready(function(){
        });
    });
 
+   
+       // MODALES PROGRAMA AREA
+
+    $(document).on("click","#inProgArea",function(){
+        var url=$(this).attr("data-url");
+       $.ajax({
+           url:url,
+           success:function(datos){
+               $("#contenedor").html(datos);
+               $("#exampleModalCenter").modal("show");
+           }
+       }); 
+    });
+    
+    
+    $(document).on("click","#editProgArea",function(){
+       var url=$(this).attr("data-url");
+       var id=$(this).attr("data-ProgAreaEd");
+    
+       $.ajax({
+           url:url,
+           data:"id="+id,
+           success:function(datos){
+               $("#contenedor").html(datos);
+               $("#exampleModalCenter").modal("show");
+           }
+       });
+    });
+    
+    $(document).on("click","#deleteProgArea",function(){
+       var url=$(this).attr("data-url");
+       var id=$(this).attr("data-ProgAreaDel");
+    
+       $.ajax({
+           url:url,
+           data:"id="+id,
+           success:function(datos){
+               $("#contenedor").html(datos);
+               $("#exampleModalCenter").modal("show");
+           }
+       });
+    });
+    
+
+
 
 
    // MODALES COMPETENCIA

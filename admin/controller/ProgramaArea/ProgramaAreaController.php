@@ -5,7 +5,7 @@
 
        
 
-        public function getInsert()
+        public function getModalInsert()
     {
 
         $obj = new ProgramaAreaModel();
