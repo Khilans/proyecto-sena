@@ -7,7 +7,7 @@
 		<div style="margin: 1em;" class="row">
 			<div class="col-md-7 form-group">
 				<label>Descripción*</label>
-				<textarea required="required"  name="desc_noticia" rows="1" cols="50" placeholder="Descripción de la noticia"></textarea>
+				<textarea required="required"   name="desc_noticia" rows="1" cols="50" placeholder="Descripción de la noticia"></textarea>
 			</div>
 			<div class="col-md-7 form-group">
 				<label>Título*</label>

@@ -20,22 +20,21 @@ class OfertaController{
 
         $usu_id=$_SESSION['user_id'];
         $desc_oferta = $_POST['desc_oferta'];
-        $nom_oferta = $_POST['nom_oferta'];
         $fech_ini_oferta=hora();
         $fech_fin_oferta = $_POST['fech_fin_oferta'];
         $cupos_oferta=$_POST['cupos_oferta'];
-        $imag_oferta = $_FILES['imag_oferta']['name'];
-        $ruta="../../usu/web/images/$imag_oferta";
+        $imag_oferta=$_FILES['imag_oferta']['name'];
+        $ruta = "../../usu/web/images/$imag_oferta";
         
         move_uploaded_file($_FILES['imag_oferta']['tmp_name'], $ruta);
         $id = $obj->autoincrement("t_oferta", "id_oferta");
 
-        $sql = "INSERT INTO t_oferta VALUES($id, $usu_id, 3, '$nom_oferta','$desc_oferta',$cupos_oferta,'$fech_ini_oferta', '$fech_fin_oferta', '$ruta')";
+        $sql = "INSERT INTO t_oferta VALUES($id, $usu_id, 3, '$desc_oferta',$cupos_oferta,'$fech_ini_oferta', '$fech_fin_oferta', '$ruta')";
 
         $ejecutar = $obj->insert($sql);
 
         if ($ejecutar) {
-            $_SESSION['mensaje'] = "Se registró la oferta <b>$nom_oferta</b> exitosamente";
+            $_SESSION['mensaje'] = "Se registró la oferta <b>$desc_oferta</b> exitosamente";
             redirect(getUrl("Oferta", "Oferta", "consult"));
         } else {
             echo "Ops, ha ocurrido un error";
@@ -43,6 +42,7 @@ class OfertaController{
             
         }
     }
+
 
     public function consult()
     {
@@ -116,14 +116,14 @@ class OfertaController{
         $fech_fin_oferta = $_POST['fech_fin_oferta'];
         $id_estado = $_POST['id_estado'];
 
-        if (isset($_FILES['img_noticia']['name'])) {
-            $imag_oferta = $_FILES['img_noticia']['name'];
+        if (isset($_FILES['imag_oferta']['name'])) {
+            $imag_oferta = $_FILES['imag_oferta']['name'];
             $ruta = "images/$imag_oferta";
-            move_uploaded_file($_FILES['img_noticia']['tmp_name'], $ruta);
+            move_uploaded_file($_FILES['imag_oferta']['tmp_name'], $ruta);
 
-            if (isset($_POST['img_vieja'])) {
-                $img_vieja = $_POST['img_vieja'];
-                unlink("$img_vieja");
+            if (isset($_POST['imag_vieja'])) {
+                $imag_vieja = $_POST['imag_vieja'];
+                unlink("$imag_vieja");
             }
         
             $sql = "UPDATE t_oferta SET id_estado=$id_estado, nom_oferta='$nom_oferta', desc_oferta='$desc_oferta', cupos_oferta=$cupos_oferta, fech_ini_oferta='$fech_ini_oferta', fech_fin_oferta='$fech_fin_oferta', imag_oferta='$ruta' where id_oferta=$id_oferta";
