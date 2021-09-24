@@ -18,7 +18,19 @@
 					<!-- Contact Form -->
 					<div class="contact_form">
 						<div class="contact_title">Radica tu PQRSF</div>
-
+						<?php
+						if (isset($_SESSION['mensaje'])) {
+						?>
+							<div class="alert alert-success mt-4 alert-dismissible fade show" id="alerta" role="alert">
+								<?= $_SESSION['mensaje'] ?>
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						<?php
+							unset($_SESSION['mensaje']);
+						}
+						?>
 						<div class="contact_form_container">
 							<form action="<?php echo getUrl("Pqrs", "Pqrs", "postSend"); ?>" method="POST">
 								<?php
@@ -40,7 +52,7 @@
 										<textarea id="contact_form_message" class="text_field contact_form_message" name="pqrsf_desc" placeholder="Message" required="required" data-error="Por favor escribe el asunto."></textarea>
 									</div>
 								<?Php
-									}
+								}
 								?>
 								<button id="contact_send_btn" type="submit" class="contact_send_btn trans_200" value="Enviar">Radicar</button>
 							</form>
@@ -60,7 +72,7 @@
 									<div class="contact_info_icon">
 										<img src="images/smartphone.svg" alt="https://www.flaticon.com/authors/lucy-g">
 									</div>
-									000000000
+									+57 2 4315800.
 								</li>
 								<li class="contact_info_item">
 									<div class="contact_info_icon">

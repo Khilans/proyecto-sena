@@ -12,7 +12,7 @@
             <div class="form-group col-md-7">
                 <label>Descripción*</label>
                 <input type="hidden" name="cod_noticia" value="<?php echo $noti['cod_noticia']; ?>">
-                <textarea  required="required"  name="desc_noticia" rows="1" cols="50" placeholder="Descripción" value="<?php echo $noti['desc_noticia']; ?>"></textarea>
+                <textarea  required="required"  name="desc_noticia" rows="1" cols="50" placeholder="Descripción" value="#"><?php echo $noti['desc_noticia']; ?></textarea>
             </div> 
             <div class="form-group col-md-7">
                 <label>Título*</label>
