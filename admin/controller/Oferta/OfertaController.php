@@ -59,33 +59,66 @@ class OfertaController{
        public function getDelete()
        {
 
-        $obj = new OfertaModel();
+            $obj = new OfertaModel();
 
-        $id_oferta = $_GET['id'];
+            $id_oferta = $_GET['id'];
 
-        $sql = "SELECT * FROM t_oferta WHERE id_oferta=$id_oferta";
-        $oferta = $obj->consult($sql);
+            $sql = "SELECT * FROM t_oferta WHERE id_oferta=$id_oferta";
+            $oferta = $obj->consult($sql);
 
-        include_once '../view/Oferta/delete.php';
-    }
-
-    public function postDelete()
-    {
-        $obj = new OfertaModel();
-
-        $id_oferta = $_POST['id_oferta'];
-        $nom_oferta=$_POST['nom_oferta'];
-
-        $sql = "DELETE FROM t_oferta WHERE id_oferta=$id_oferta";
-        $ejecutar = $obj->update($sql);
-
-        if ($ejecutar) {
-            $_SESSION['mensaje'] = "Se eliminó la oferta <b>$nom_oferta</b> exitosamente";
-            redirect(getUrl("Oferta", "Oferta", "consult"));
-        } else {
-            echo "Ops, ha ocurrido un error";
+            include_once '../view/Oferta/delete.php';
         }
-    }
+
+        public function postDelete()
+        {
+            $obj = new OfertaModel();
+
+            $id_oferta = $_POST['id_oferta'];
+            $nom_oferta=$_POST['nom_oferta'];
+
+            $sql = "UPDATE t_oferta SET id_estado=2 WHERE id_oferta=$id_oferta";
+            
+            $ejecutar = $obj->update($sql);
+
+            if ($ejecutar) {
+                $_SESSION['mensaje'] = "Se inhabilitó la oferta <b>$nom_oferta</b> exitosamente";
+                redirect(getUrl("Oferta", "Oferta", "consult"));
+            } else {
+                echo "Ops, ha ocurrido un error";
+            }
+        }
+
+        public function getView()
+       {
+
+            $obj = new OfertaModel();
+
+            $id_oferta = $_GET['id'];
+
+            $sql = "SELECT * FROM t_oferta WHERE id_oferta=$id_oferta";
+            $oferta = $obj->consult($sql);
+
+            include_once '../view/Oferta/view.php';
+        }
+
+        public function postView()
+        {
+            $obj = new OfertaModel();
+
+            $id_oferta = $_POST['id_oferta'];
+            $nom_oferta=$_POST['nom_oferta'];
+
+            $sql = "UPDATE t_oferta SET id_estado=3 WHERE id_oferta=$id_oferta";
+            
+            $ejecutar = $obj->update($sql);
+
+            if ($ejecutar) {
+                $_SESSION['mensaje'] = "Se habilitó la oferta <b>$nom_oferta</b> exitosamente";
+                redirect(getUrl("Oferta", "Oferta", "consult"));
+            } else {
+                echo "Ops, ha ocurrido un error";
+            }
+        }
     
     public function getUpdate()
     {

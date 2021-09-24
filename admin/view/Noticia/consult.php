@@ -46,14 +46,17 @@ include_once '../view/partials/modal.php';
                     echo "<td class='text-center'>".$noti['desc_tipo_noti']."</td>";
                     echo "<td class='text-center'>".$noti['desc_estado']."</td>";
                     echo "<td class='text-center'>
-                    <button class='btn btn-success btn-sm' id='Morenoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","More",false,"ajax")."' data-TnotiM='".$noti['cod_noticia']."'>
-                    <i class='fa fa-eye'></i>                   
+                    <button class='btn btn-info btn-sm' id='Morenoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","More",false,"ajax")."' data-TnotiM='".$noti['cod_noticia']."'>
+                    <i class='fa fa-comment-dots'></i>                
                     </button>
                     <button class='btn btn-warning btn-sm' id='modalnoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","getModalUpdate",false,"ajax")."' data-noti='".$noti['cod_noticia']."'>
                     <i class='fa fa-edit'></i>                   
                     </button>
                     <button class='btn btn-danger btn-sm'  id='modalDeletenoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","getModalDelete",false,"ajax")."' data-notid='".$noti['cod_noticia']."'>
-                    <i class='fa fa-trash'></i>                   
+                    <i class='fa fa-eye-slash'></i>                   
+                    </button>
+                    <button class='btn btn-success btn-sm'  id='modalViewnoti' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Noticia","Noticia","getView",false,"ajax")."' data-notiV='".$noti['cod_noticia']."'>
+                    <i class='fa fa-eye'></i>                   
                     </button>
                     </td>";
                 echo "</tr>";

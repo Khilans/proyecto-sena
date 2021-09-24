@@ -86,6 +86,37 @@
             }
         }
 
+        public function getView(){
+
+            $obj = new NoticiaModel();
+
+            $noticia_id=$_GET['id'];
+            $sql="SELECT * FROM t_tiponoticia";
+            $tipo_noticias=$obj->consult($sql);
+            $sql = "SELECT * FROM t_noticia WHERE cod_noticia=$noticia_id";
+            $noticias=$obj->consult($sql);
+
+            include_once '../view/Noticia/View.php';
+        }
+
+        public function postView(){
+            $obj=new NoticiaModel();
+
+            $cod_noticia=$_POST['cod_noticia'];
+            $titulo_noticia=$_POST['titulo_noticia'];
+
+            $sql="UPDATE t_noticia SET id_estado=1 WHERE cod_noticia=$cod_noticia";
+            
+            $ejecutar=$obj->update($sql);
+
+            if ($ejecutar){
+                $_SESSION['mensaje']="Se habilito la noticia <b>$titulo_noticia</b> exitosamente";
+                redirect(getUrl("Noticia","Noticia","consult"));
+            } else {
+                echo "Ops,error al eliminar una noticia";
+            }
+        }
+
 
         public function getModalUpdate(){
 

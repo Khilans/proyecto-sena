@@ -319,6 +319,20 @@ $(document).on("click","#deleteCompetencia",function(){
         });
     });
 
+    $(document).on("click","#modalViewOfer",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-oferV");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
     $(document).on("click","#insertOferta",function(){
         var url=$(this).attr("data-url");
         $.ajax({
@@ -430,6 +444,20 @@ $(document).on("click","#deleteCompetencia",function(){
     $(document).on("click","#DeleteTnoti",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-TnotiD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#modalViewnoti",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-notiV");
 
         $.ajax({
             url:url,
