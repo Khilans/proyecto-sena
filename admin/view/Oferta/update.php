@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-md-6 form-group">
                     <label>Descripción oferta*</label>
-                <textarea  id="contact_form_message" required="required" data-error="Complete este campo." name="desc_oferta" rows="1" cols="30" placeholder="Descripción" value="<?php echo $ofer['desc_oferta']; ?>"></textarea>
+                <textarea  id="contact_form_message" required="required" data-error="Complete este campo." name="desc_oferta" rows="1" cols="30" placeholder="Descripción" value="#"><?php echo $ofer['desc_oferta']; ?></textarea>
                 </div>
                 <div class="col-md-6 form-group">
                     <label>Cupos disponibles*</label>

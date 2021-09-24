@@ -9,10 +9,14 @@
 	-webkit-line-clamp: 1;
 	line-clamp: 1;
 	overflow: hidden;
+	
 }
+
+
 
 .card{
 position:absolute;
+
 }
 .card-body{
 position:absolute;
@@ -29,9 +33,11 @@ margin-left: 300px;
 }
 .card-text{
     margin-top: 0px;
+	
 }
 .card-title{
     margin-top: 0px;
+	
 }
 .img-thumbnail{
     width: 296px;

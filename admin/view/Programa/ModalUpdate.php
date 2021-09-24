@@ -57,7 +57,7 @@
                 </div>
                 <div class="col-md-4 form-group">
                     <label>Descripción*</label>
-                    <input  required="required"  type="text" name="desc_prog" class="form-control" value="<?php echo $prog['desc_prog']; ?>">
+                    <textarea  required="required"  name="desc_prog" rows="1" cols="18" placeholder="Descripción" value="#"><?php echo $prog['desc_prog']; ?></textarea>
                 </div>
                 <div class="col-md-4 form-group">
                     <label>Duración*</label>

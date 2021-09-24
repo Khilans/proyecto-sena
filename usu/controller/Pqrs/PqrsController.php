@@ -34,7 +34,7 @@
             $ejecutar = $obj->update($sql);
 
             if ($ejecutar) {
-                $_SESSION['mensaje'] = "Se registró tu <b>$cod_pqrsf_tipo</b> exitosamente";
+                $_SESSION['mensaje'] = "Se envío tu <b>PQRSF</b> exitosamente";
                 redirect(getUrl("Pqrs", "Pqrs", "getSend"));
             } else {
                 echo "Ops, error ";
