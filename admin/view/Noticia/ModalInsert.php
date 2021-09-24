@@ -35,10 +35,10 @@
 			</div>
 
 		</div>
-		<div class="row">
-			<div style="margin: 1em;" class="col-md-6">
+		<div class="modal-footer">
+			<div  class="col-md-5">
 				<input type="submit" value="Enviar" class="btn btn-success">
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
 			</div>
 		</div>
 

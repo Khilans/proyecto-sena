@@ -1,6 +1,6 @@
 <div class="container">
 <div class="alert alert-success" role="alert">
-                <h4 class="alert-success text-center">Editar noticia</h4>
+                <h4 class="alert-success text-center">Editar oferta</h4>
                 <p>Los dartos con * son obligatorios</p>
     </div>
     <?php
@@ -51,12 +51,10 @@
                 </div>
             </div>
 
-            <div class="row">
-                <div style="margin: 1em;" class="col-md-6">
-                    <input type="submit" value="Enviar" class="btn btn-success">
-                    <a href="<?php echo getUrl("Oferta", "Oferta", "consult"); ?>"><button type="button" class="btn btn-primary">Volver</button></a>
-                </div>
-            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-success">Confirmar</button>
+        </div>
         </form>
 
     <?php

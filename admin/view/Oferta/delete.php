@@ -15,10 +15,9 @@
                 </div>
             </div>
          
-            <div class="row">
-                <div style="margin: 1em;" class="col-md-6">
-                    <input type="submit" value="Eliminar" class="btn btn-success">
-                    <a href="<?php echo getUrl("Oferta", "Oferta", "consult"); ?>"><button type="button" class="btn btn-primary">Cancelar</button></a>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-success">Confirmar</button>
                 </div>
             </div>
         </form>

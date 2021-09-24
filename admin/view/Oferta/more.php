@@ -16,8 +16,8 @@
     <?php
         } 
     ?>
-    <div class="row">
-        <div style="margin: 1em;" class="col-md-6">
+    <div class="modal-footer">
+        <div  class="col-md-2">
             <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
         </div> 	
     </div>
