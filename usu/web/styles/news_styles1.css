@@ -3,6 +3,11 @@
 
 /******************************
 
+COLOR PALETTE
+
+
+
+
 [Table of Contents]
 
 1. Fonts
@@ -19,8 +24,7 @@
 7. Page Section
 8. Buttons
 9. News
-	9.1 Comments
-	9.2 Leave Comment
+	9.1 News Page Nav
 10. Sidebar
 11. Footer
 	11.1 Newsletter
@@ -75,7 +79,6 @@ p
 	font-size: 14px;
 	line-height: 2.29;
 	font-weight: 400;
-	color:#1a1a1a;
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
@@ -753,7 +756,7 @@ section
 }
 .news_post
 {
-	
+	margin-bottom: 85px;
 }
 .news_post:last-child
 {
@@ -844,183 +847,53 @@ section
 {
 	margin-top: 27px;
 }
-.news_post_quote
+.news_post_button
 {
-	background: #f8f4f4;
-	padding-left: 50px;
-	padding-right: 30px;
-	padding-top: 47px;
-	padding-bottom: 40px;
-	margin-top: 60px;
+	width: 188px;
+	height: 53px;
+	background: #ffb606;
+	margin-top: 18px;
 }
-.news_post_quote::after
+.news_post_button a
 {
 	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 4px;
-	height: 100%;
-	background: #ffb606;
-	content: '';
-}
-.news_post_quote_text
-{
-	font-size: 18px;
-	font-style: italic;
-	font-weight: 400;
-	line-height: 32.08px;
-	margin-bottom: 0px;
-}
-.news_post_quote_text span
-{
-	font-size: 36px;
-	color: #ffb606;
-	margin-right: 2px;
-}
-
-/*********************************
-9.1 Comments
-*********************************/
-
-.news_post_comments
-{
-	margin-top: 67px;
-}
-.comments_title
-{
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: 700;
-	color: #1a1a1a;
-}
-.comments_list
-{
-	margin-top: 69px;
-}
-.comment
-{
-	margin-bottom: 25px;
-}
-.comment:last-child
-{
-	margin-bottom: 0px;
-}
-.comment_image
-{
-	width: 70px;
-	height: 70px;
-	overflow: hidden;
-	border-radius: 50%;
-	margin-top: 13px;
-}
-.comment_image img
-{
-	width: 100%;
-	height: auto;
-}
-.comment_content
-{
-	padding-left: 28px;
-}
-.comment_meta span
-{
-	font-size: 14px;
-	font-weight: 500;
-	color: #1a1a1a;
-}
-.comment_name a
-{
-	font-size: 14px;
-	font-weight: 500;
-	color: #1a1a1a;
-}
-.comment_name a:hover
-{
-	color: #a5a5a5;
-}
-.comment_separator
-{
-	margin-left: 7px;
-	margin-right: 7px;
-}
-.comment_text
-{
-	margin-top: 10px;
-	padding-left: 2px;
-}
-.comment_reply_link a
-{
-	font-size: 14px;
-	font-weight: 500;
-	color: #ffb606;
-}
-.comment_reply_link a:hover
-{
-	color: #1a1a1a;
-}
-
-/*********************************
-9.2 Leave Comment
-*********************************/
-
-.leave_comment
-{
-	margin-top: 51px;
-}
-.leave_comment_title
-{
-	font-size: 18px;
-	font-weight: 700;
-	color: #1a1a1a;
-}
-.leave_comment_form_container
-{
-	margin-top: 77px;
-}
-.input_field
-{
-	width: 100%;
-	background: #f8f4f4;
-	border: solid 2px transparent;
-	margin-bottom: 24px;
-	height: 42px;
-	padding-left: 33px;
-}
-.input_field:focus
-{
-	outline: none !important;
-	border-color: #ffb606;
-}
-.text_field
-{
-	width: 100%;
-	height: 189px;
-	background: #f8f4f4;
-	border: solid 2px transparent;
-	padding-left: 33px;
-	margin-bottom: 24px;
-}
-.text_field:focus
-{
-	outline: none !important;
-	border-color: #ffb606;
-}
-.comment_send_btn
-{
-	width: 100%;
-	height: 48px;
-	background: #ffb606;
-	font-size: 14px;
-	font-weight: 700;
-	text-transform: uppercase;
 	color: #FFFFFF;
-	cursor: pointer;
-	border: none;
+	line-height: 53px;
 }
-.comment_send_btn:focus
+.news_post_button:hover
 {
-	outline: solid 1px #ffb606;
-	border: green !important;
+	box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+}
+
+/*********************************
+9.1 News Page Nav
+*********************************/
+
+.news_page_nav ul li
+{
+	display: inline-block;
+	width: 43px;
+	height: 43px;
+	background: #d2d2d2;
+	margin-right: 3px;
+}
+.news_page_nav ul li.active
+{
+	background: #ffb606;
+}
+.news_page_nav ul li:hover
+{
+	background: #ffb606;
+}
+.news_page_nav ul li a
+{
+	display: block;
+	font-size: 16px;
+	font-weight: 500;
+	color: #FFFFFF;
+	line-height: 43px;
 }
 
 /*********************************

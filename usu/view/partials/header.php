@@ -2,8 +2,8 @@
 include_once '../view/partials/modal.php';
 ?>
 <!-- Header -->
-<header class=>"header d-flex flex-row"
-	<div class="header_content d-flex flex-row align-items-center">
+<header class="header d-flex ">
+	<div class="header_content d-flex  align-items-center">
 		<!-- Logo -->
 		<div class="logo_container">
 			<div class="logo ">

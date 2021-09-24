@@ -1,4 +1,4 @@
-<link rel="stylesheet" type="text/css" href="styles/news_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/news_styles1.css">
 <link rel="stylesheet" type="text/css" href="styles/news_responsive.css">
 <!-- News -->
 
