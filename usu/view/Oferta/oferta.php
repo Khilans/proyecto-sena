@@ -5,13 +5,11 @@
 
 <div class="home">
     <div class="home_background_container prlx_parent">
-        <div class="home_background prlx" style="background-image:url(images/Oferta.png)"></div>
+        <div class="home_background prlx" style="background-image:url(images/Ofer.jpg)"></div>
     </div>
-    <div class="home_content">
-        <h1>OFERTAS</h1>
-    </div>
-</div>
 
+</div>
+<div>
 <?php
 $contador = 1;
 foreach ($ofertas as $ofer) {
@@ -40,5 +38,5 @@ foreach ($ofertas as $ofer) {
     }
 }
 ?>
-<br>
 </div>
+<br>
