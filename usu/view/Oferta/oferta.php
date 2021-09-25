@@ -41,3 +41,4 @@ foreach ($ofertas as $ofer) {
 }
 ?>
 <br>
+</div>

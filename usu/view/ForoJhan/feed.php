@@ -2,6 +2,11 @@
 <link rel="stylesheet" type="text/css" href="styles/news_responsive.css">
 <!-- News -->
 
+<div class="home">
+	<div class="home_background_container prlx_parent">
+		<div class="home_background prlx" style="background-image:url(images/foros.png)"></div>
+	</div>
+</div>
 <div class="news" style="margin-top:5%;">
 		<div class="container">
 			<div class="row">
@@ -98,36 +103,7 @@
 						}
 							?>
 
-							<div class="sidebar_section_title">
-								<h3>Recientes</h3>
-							</div>
 							
-							<div class="latest_posts">
-								
-								<!-- Latest Post -->
-								<?php 
-								$contador=0;
-								foreach($recientes as $reciente){
-									$contador++;
-									if($contador<5){
-									?>
-									<div class="latest_post">
-										<div class="latest_post_image" style="width:350px">
-											<img src="<?php echo $reciente['imag_foro']; ?>" alt="https://unsplash.com/@dsmacinnes">
-										</div>
-										<div class="latest_post_title"><a href="news_post.html"><?php echo $reciente['titulo_foro']; ?></a></div>
-										<div class="latest_post_meta">
-											<span class="latest_post_author"><a href="#"><b>Por <?php echo $reciente['imag_foro']; ?></b></a></span>
-											<span>|</span>
-											<span class="latest_post_comments"><a href="#"><b>3 Comments</b></a></span>
-										</div>
-									</div>
-								<?php
-								}
-							}
-								?>
-
-							</div>
 								
 						</div>
 
