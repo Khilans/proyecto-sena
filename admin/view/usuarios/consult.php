@@ -41,7 +41,7 @@ include_once '../view/partials/modal.php';
                     <button class='btn btn-warning btn-sm' id='modalUpdate' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Usuarios","Usuarios","getUpdateModal",false,"ajax")."' data-usu_id='".$user['usu_id']."'>
                     <i class='fa fa-edit'></i>                   
                     </button>
-                    <button class='btn btn-danger btn-sm' id='modalDelete' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Usuarios","Usuarios","getDeleteModal",false,"ajax")."' data-usu_id='".$user['usu_id']."'>
+                    <button class='btn btn-danger btn-sm' id='modalDelete' data-toggle='modal' ".if($user['cod_rol']=1){'disabled'}." data-target='#exampleModal' data-url='".getUrl("Usuarios","Usuarios","getDeleteModal",false,"ajax")."' data-usu_id='".$user['usu_id']."'>
                     <i class='fa fa-trash'></i>                   
                     </button>
                     <button class='btn btn-info btn-sm' id='modalDelete' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Usuarios","Usuarios","getDeleteModal",false,"ajax")."' data-usu_id='".$user['usu_id']."'>
