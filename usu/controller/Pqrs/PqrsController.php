@@ -65,7 +65,11 @@
            
            $id = $obj->autoincrement("t_pqrsf", "cod_pqrsf");
 
-            $sql = "INSERT INTO t_pqrsf VALUES($id,$cod_pqrsf_tipo,NULL,1,'$pqrsf_desc','$correo','$nombre', NOW())";
+           if ($_POST['tipopqrsf'] == 5){
+            $sql = "INSERT INTO t_pqrsf VALUES($id,$cod_pqrsf_tipo,NULL,6,'$pqrsf_desc','$correo','$nombre', NOW())";
+        }else{
+            $sql = "INSERT INTO t_pqrsf VALUES($id,$cod_pqrsf_tipo,NULL,5,'$pqrsf_desc','$correo','$nombre', NOW())";
+        }
        
             $ejecutar = $obj->update($sql);
 
