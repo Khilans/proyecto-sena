@@ -29,6 +29,29 @@ $(document).ready(function(){
         });
     });
 
+
+    //Validacion imagenes noticias
+
+    $(document).on("change", "#fileN",function(){
+        var fileInput = document.getElementById('file');
+        var filePath = fileInput.value;
+        var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+        if(!allowedExtensions.exec(filePath)){
+            alert('Archivos permitidos .jpeg/.jpg/.png ');
+            fileInput.value = '';
+            return false;
+        }else{
+            //Image preview
+            if (fileInput.files && fileInput.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('imagePreview').innerHTML = '<img src="'+e.target.result+'"/>';
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+        }
+    });
+
     //MODAL FORO
     $(document).on("click","#modalUpdateForo",function(){
         var url=$(this).attr("data-url");

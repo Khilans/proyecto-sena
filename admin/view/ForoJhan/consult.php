@@ -21,7 +21,7 @@ include_once '../view/partials/modal.php';
                 <th class="text-center w-5">ID</th>
                 <th class="text-center w-15">Título</th>
                 <th class="text-center">Inicio</th>
-                <th class="text-center">Fin</th>
+                <th class="text-center">Fecha fin</th>
                 <th class="text-center">Estado</th>
                 <th class="text-center">Usuario</th>
                 <th class="text-center">Acciones</th>

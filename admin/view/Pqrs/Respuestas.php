@@ -21,7 +21,7 @@ include_once '../view/partials/modal.php';
             <tr>
                 <th class="text-center w-5">Id</th>
                 <th class="text-center">Fecha</th>
-                <th class="text-center">Código del pqrsf</th>
+                <th class="text-center">Id del pqrsf</th>
                 <th class="text-center">Acciones</th>
             </tr>
         </thead>

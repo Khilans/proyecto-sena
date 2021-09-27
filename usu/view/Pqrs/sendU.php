@@ -45,7 +45,7 @@
 									}
 									?>
 								</select>
-								<textarea id="contact_form_message" class="text_field contact_form_message" name="pqrsf_desc" placeholder="Message" required="required" data-error="Por favor escribe el asunto."></textarea>
+								<textarea id="contact_form_message" class="text_field contact_form_message" name="pqrsf_desc" placeholder="Radique aquí su PQRSF" required="required" data-error="Por favor escribe el asunto."></textarea>
 								<button id="contact_send_btn" type="submit" class="contact_send_btn trans_200" value="Enviar">Radicar</button>
 							</form>
 						</div>
@@ -56,7 +56,7 @@
 				<div class="col-lg-4">
 					<div class="about">
 						<div class="about_title">¿Qué son los PQRSF?</div>
-						<p class="about_text">Las PQRSF son las solicitudes, quejas, reclamos, sugerencias y felicitaciones que los usuarios pueden enviar de manera verbal o escrita a través de los canales de contacto de PQRSF</p>
+						<p class="about_text">Las PQRSF son las solicitudes, quejas, reclamos, sugerencias y felicitaciones que los usuarios pueden enviar de manera escrita a través de los canales de contacto de PQRSF</p>
 
 						<div class="contact_info">
 							<ul>
