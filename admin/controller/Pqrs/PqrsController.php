@@ -24,6 +24,8 @@
             $respuesta=$obj->consult($sql);
 
             include_once  '../view/Pqrs/Answer.php';
+
+            
             
         }
 
@@ -45,7 +47,7 @@
 
             $mensaje=$desc_resp_pqrsf;
                 try{
-                    $mail->SMTPDebug=2;
+                    $mail->SMTPDebug=0;
                     $mail->isSMTP();
                     $mail->Host="smtp.gmail.com";
                     $mail->SMTPAuth=true;
@@ -65,6 +67,7 @@
                     $mail->isHTML(true);
                     $mail->Subject=$asunto;
                     $mail->Body=$mensaje;
+                
 
                     //Enviar correo
                     $mail->send();
@@ -81,6 +84,13 @@
                 $sql="INSERT INTO t_respuestapqrsf VALUES ($id,'$desc_resp_pqrsf',NOW(),$cod_pqrsf)";
                 $ejecutar=$obj->insert($sql);
 
+                if ($ejecutar) {
+                    $_SESSION['mensaje'] = "Se envió tu respuesta exitosamente";
+                    redirect(getUrl("Pqrs", "Pqrs", "consult"));
+                } else {
+                    echo "Ops, ha ocurrido un error";
+                }
+
         }
 
 
@@ -91,6 +101,8 @@
             $respuesta = $obj->consult($sql);
 
             include_once '../view/Pqrs/Respuestas.php';
+
+            
         }
 
 
