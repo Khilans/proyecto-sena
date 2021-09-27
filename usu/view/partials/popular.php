@@ -91,7 +91,7 @@
 									<div class="hero_box d-flex flex-row align-items-center justify-content-start">
 										<img src="images/professor.svg" class="svg" alt="">
 										<div class="hero_box_content">
-											<h2 class="hero_box_title"><a href="<?php echo getUrl("Noticia", "Noticia", "getView") ?>">Glpi</a></h2>
+											<h2 class="hero_box_title"><a href="#">Glpi</a></h2>
 
 										</div>
 									</div>
