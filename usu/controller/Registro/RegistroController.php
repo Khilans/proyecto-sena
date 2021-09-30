@@ -22,8 +22,8 @@
             $tipo_documento=$_POST['cod_tipo_doc'];
             $numero_documento=$_POST['usu_ndocumento'];
             $correo=$_POST['usu_correo'];
-            $contraseña=$_POST['usu_pass'];
-            $confirma_contraseña=$_POST['confirm'];
+            $contraseña=$_POST['usu_password'];              // se cambió usu_pass
+            $confirma_contraseña=$_POST['usu_password2'];    // se cambió confirm
             if(filter_var($correo,FILTER_VALIDATE_EMAIL)){
                 if($confirma_contraseña==$contraseña){
                     $sql="SELECT usu_correo, usu_ndocumento FROM t_usuario WHERE usu_correo='$correo' OR usu_ndocumento=$numero_documento";
@@ -38,12 +38,12 @@
                         if($registro){
                             echo "Se registró exitosamente";
                             $_SESSION['mensaje']="Se registró exitosamente";
-                            redirect("login.php");
+                            redirect("login.php"); 
                         }else{
                             echo "Ocurró un error durante el registro, intenta nuevamente.";
                             $_SESSION['mensaje']="Ocurró un error durante el registro, intenta nuevamente.";
-                            echo $tipo_documento;
-                            dd($sql);
+                             echo $tipo_documento; 
+                             dd($sql); 
                         }
                     }
                 }else{

@@ -3,7 +3,7 @@ include_once '../view/partials/modal.php';
 ?>
 <div class="container">
     <button class="btn btn-success btn-sm" id="insertProgNiv" data-toggle="modal" data-target='#exampleModal' data-url=" <?php echo getUrl("ProgramaNivel", "ProgramaNivel", "getModalInsert", false, "ajax"); ?>">Insertar</button>
-<br><br>
+ <br><br>
     <table class="table table-striped mt-5 table-hover table table-bordered " id="tabla">
         <thead class="thead-dark">
             <tr>

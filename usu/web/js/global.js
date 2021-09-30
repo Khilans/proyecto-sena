@@ -323,7 +323,6 @@ $(document).ready(function(){
     $(document).on("click","#quitar",function(){
         $(this).parent().parent().remove();
     });
-
     
 
 });

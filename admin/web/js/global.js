@@ -214,8 +214,7 @@ $(document).ready(function(){
 
    
        // MODALES PROGRAMA AREA
-
-    $(document).on("click","#inProgArea",function(){
+       $(document).on("click","#insertProgArea",function(){
         var url=$(this).attr("data-url");
        $.ajax({
            url:url,
@@ -224,8 +223,8 @@ $(document).ready(function(){
                $("#exampleModalCenter").modal("show");
            }
        }); 
-    });
-    
+   });
+
     
     $(document).on("click","#editProgArea",function(){
        var url=$(this).attr("data-url");

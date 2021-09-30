@@ -12,7 +12,7 @@
                     <div class="row">
                         <div class="col-md-6 form-group">
                             <label>Código</label>
-                             <input type="hidden" name="id_competencia" value="<?php echo $comp['id_competencia']; ?>"> -->
+                             <input type="hidden" name="id_competencia" value="<?php echo $comp['id_competencia']; ?>"> 
                             <input type="number" name="cod_competencia" class="form-control" value="<?php echo $comp['cod_competencia']; ?>">
                         </div>
 
@@ -21,6 +21,8 @@
                             <!-- <input type="hidden" name="id_competencia" value="<?php //echo $comp['id_competencia']; ?>"> -->
                             <input type="text" name="desc_competencia" class="form-control" value="<?php echo $comp['desc_competencia']; ?>">
                         </div>
+
+                        
                     </div>
 
                     <div class="modal-footer">

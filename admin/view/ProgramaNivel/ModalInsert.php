@@ -9,6 +9,7 @@
 				<label>Descripción nivel*</label>
 				<input  required="required"  type="text" name="nom_prog_niv" class="form-control" placeholder="nivel">
 			</div>
+			
 		</div>
 		<div class="row">
 			<div style="margin: 1em;" class="col-md-6">

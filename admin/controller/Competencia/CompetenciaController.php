@@ -89,8 +89,9 @@ class CompetenciaController
         $id_competencia = $_POST['id_competencia'];
         $cod_competencia = $_POST['cod_competencia'];
         $desc_competencia = $_POST['desc_competencia'];
+        $id_prog=$_POST['nom_prog'];
 
-        $sql = "UPDATE t_competencia SET  cod_competencia=$cod_competencia,desc_competencia='$desc_competencia' WHERE id_competencia=$id_competencia";
+        $sql = "UPDATE t_competencia SET  cod_competencia=$cod_competencia,desc_competencia='$desc_competencia', id_prog=$id_prog WHERE id_competencia=$id_competencia";
         $ejecutar = $obj->consult($sql);
 
         if ($ejecutar) {

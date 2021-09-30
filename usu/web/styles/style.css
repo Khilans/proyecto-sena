@@ -1,11 +1,10 @@
 *{
-<<<<<<< HEAD
     padding: 0px;
     margin: 0px;
 }
 
 .card-text{
-	display: -webkit-box;
+	display:-webkit-box;
 	-webkit-box-orient: vertical;
 	-webkit-line-clamp: 1;
 	line-clamp: 1;
@@ -57,10 +56,9 @@ margin-left: 300px;
 		text-transform: uppercase;
 		white-space: nowrap;
     }
-=======
-    padding: 0%;
+   /*  padding: 0%;
     margin: 0%;
-}
+} */
 
 body{
     width: 100%;
@@ -132,9 +130,3 @@ body{
     color: #3498db;
 }
 
-
-
-
-
-
->>>>>>> b461e1b2b57d4401103778422414f0470c3eba5b

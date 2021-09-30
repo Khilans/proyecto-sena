@@ -3,8 +3,6 @@
     class ProgramaAreaController{
 
 
-       
-
         public function getModalInsert()
     {
 
@@ -15,7 +13,7 @@
         $sql = "SELECT * FROM t_lineatecnologica";
         $lineatecnologica = $obj->consult($sql);
 
-        include_once  '../view/ProgramaArea/insert.php';
+        include_once  '../view/ProgramaArea/ModalInsert.php';
     }
 
     public function postInsert()
@@ -44,7 +42,7 @@
     {
         $obj = new ProgramaAreaModel();
 
-        $sql = "SELECT p.prog_area_cod, l.lin_tec_desc , p.prog_area_desc FROM t_programa_area p, t_lineatecnologica l WHERE l.lin_tec_cod = p.lin_tec_cod ";
+        $sql = "SELECT p.prog_area_cod, p.prog_area_desc , l.lin_tec_desc  FROM t_programa_area p, t_lineatecnologica l WHERE l.lin_tec_cod = p.lin_tec_cod ";
         $progarea = $obj->consult($sql);
 
         include_once '../view/ProgramaArea/consult.php';
@@ -83,7 +81,7 @@
 
     }
 
-    public function getUpdate()
+    public function getModalUpdate()
     {
 
         $obj = new ProgramaAreaModel();
@@ -95,7 +93,7 @@
         $sql = "SELECT * FROM t_lineatecnologica";
         $linea = $obj->consult($sql);
 
-        include_once '../view/ProgramaArea/update.php';
+        include_once '../view/ProgramaArea/ModalUpdate.php';
     }
 
     public function postUpdate()
@@ -118,13 +116,4 @@
             
         }
     }
-    }   
-?>
-
-
-
-
-
-
-
-
+    }
