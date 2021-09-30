@@ -25,7 +25,7 @@ include_once '../view/partials/modal.php';
                 <th class="text-center">Nombre oferta</th>
                 <th class="text-center">Cupos</th>
                 <th class="text-center">Fecha inicial</th>
-                <th class="text-center">fecha final</th>
+                <th class="text-center">Fecha final</th>
                 <th class="text-center">Imagen</th>
                 <th class="text-center">Estado</th>
                 <th class="text-center">Acciones</th>

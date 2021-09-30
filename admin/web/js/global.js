@@ -38,6 +38,53 @@ $(document).ready(function(){
 
     });
 
+
+        //Modal tipo de tipo pqrsf 
+        $(document).on("click","#InsertTpqrs",function(){
+            var url=$(this).attr("data-url");
+            $.ajax({
+                url:url,
+                
+                success:function(datos){
+                    $("#contenedor").html(datos);
+                    $("#exampleModalCenter").modal("show");
+                }
+            });
+        });
+    
+    
+    
+    
+        $(document).on("click","#EditTpqrs",function(){
+            var url=$(this).attr("data-url");
+            var id=$(this).attr("data-TpqrsE");
+    
+            $.ajax({
+                url:url,
+                data:"id="+id,
+                success:function(datos){
+                    $("#contenedor").html(datos);
+                    $("#exampleModalCenter").modal("show");
+                }
+            });
+        });
+    
+        $(document).on("click","#DeleteTpqrs",function(){
+            var url=$(this).attr("data-url");
+            var id=$(this).attr("data-TpqrsD");
+    
+            $.ajax({
+                url:url,
+                data:"id="+id,
+                success:function(datos){
+                    $("#contenedor").html(datos);
+                    $("#exampleModalCenter").modal("show");
+                }
+            });
+        });
+
+
+
         //Modal respuesta QPRSF
         $(document).on("click","#MoreRes",function(){
             var url=$(this).attr("data-url");
