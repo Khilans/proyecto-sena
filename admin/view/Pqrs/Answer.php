@@ -7,13 +7,13 @@
             foreach ($respuesta as $pq){
         ?>
         <div  class="row">
-            <div class="col-md-7 form-group">
+            <div class="col-md-6 form-group">
                 <label>Nombre</label>
                 <input type="hidden" name="cod_pqrsf" value="<?php echo $pq['cod_pqrsf']; ?>">
                 <input type="text" readonly name="nombre" class="form-control" value="<?php echo $pq['nombre']; ?>"> 
             
             </div>
-            <div class="col-md-7 form-group">
+            <div class="col-md-6 form-group">
                 <label>Correo</label>
                 <input type="text" readonly name="correo" class="form-control" value="<?php echo $pq['correo']; ?>"> 
             </div>
@@ -22,15 +22,15 @@
             }
         ?>
         <div class="row">    
-            <div class="col-md-7 form-group">
+            <div class="col-md-12 form-group">
 				<label>Asunto</label>
-				<input  required="required"  type="text" placeholder="..." name="asunto">
+				<input class="form-control" required="required"  type="text" placeholder="..." name="asunto">
 			</div>
 		</div>
 		<div class="row">    
-            <div class="col-md-7 form-group">
-				<label>Descripción</label>
-				<textarea  required="required"  name="desc_resp_pqrsf" rows="1" cols="50" placeholder="Reponder..."></textarea>
+            <div class="col-md-12 form-group">
+				<label>Respuesta</label>
+				<textarea class="form-control" required="required"  name="desc_resp_pqrsf" rows="5" cols="50" placeholder="Reponder..."></textarea>
 			</div>
 		</div>
 		<div class="row">

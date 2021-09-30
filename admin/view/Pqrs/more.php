@@ -10,9 +10,9 @@
         <form action="<?php echo getUrl("Pqrs", "Pqrs", "getMore"); ?>" method="post">
 
             <div class="row">
-                <div class="form-group col-md-4 mt-4">
+                <div class="form-group col-md-12 mt-4">
                     <label>Descripcion del Pqrsf</label>
-                    <textarea  readonly name="pqrsf_desc" rows="15" cols="70"><?php echo $pq['pqrsf_desc']; ?></textarea>   
+                    <textarea class="form-control" readonly name="pqrsf_desc" rows="5" cols="70"><?php echo $pq['pqrsf_desc']; ?></textarea>   
                 </div>
             </div>
         </form>    
