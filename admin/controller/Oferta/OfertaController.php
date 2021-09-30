@@ -19,6 +19,7 @@ class OfertaController{
         $obj = new OfertaModel();
 
         $usu_id=$_SESSION['user_id'];
+        $titulo=$_POST['nom_oferta'];
         $desc_oferta = $_POST['desc_oferta'];
         $fech_ini_oferta=hora();
         $fech_fin_oferta = $_POST['fech_fin_oferta'];
@@ -29,7 +30,7 @@ class OfertaController{
         move_uploaded_file($_FILES['imag_oferta']['tmp_name'], $ruta);
         $id = $obj->autoincrement("t_oferta", "id_oferta");
 
-        $sql = "INSERT INTO t_oferta VALUES($id, $usu_id, 3, '$desc_oferta',$cupos_oferta,'$fech_ini_oferta', '$fech_fin_oferta', '$ruta')";
+        $sql = "INSERT INTO t_oferta VALUES($id, $usu_id, 3, '$desc_oferta','$titulo',$cupos_oferta,'$fech_ini_oferta', '$fech_fin_oferta', '$ruta')";
 
         $ejecutar = $obj->insert($sql);
 
