@@ -104,8 +104,8 @@ include_once '../model/Foro/ForoModel.php';
             $fech_fin_foro=$_POST['fech_fin_foro'];
             $desc_foro=$_POST['desc_foro'];
             if (isset($_FILES['imag_nueva']['name'])) {
-                $imag_oferta = $_FILES['imag_nueva']['name'];
-                $ruta = "images/$imag_oferta";
+                $imag_foro = $_FILES['imag_nueva']['name'];
+                $ruta = "images/$imag_foro";
                 move_uploaded_file($_FILES['imag_nueva']['tmp_name'], $ruta);
     
                 if (isset($_POST['imag_vieja'])) {

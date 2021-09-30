@@ -8,7 +8,7 @@ $(document).ready(function(){
 
     $(document).ready(function(){
         $(document).on("click","#cambioDeImagenOf",function(){
-            var ruta=$("#imagen").attr("src");
+            var ruta=$("#imagenOf").attr("src");
     
             $("#cambiarImagenOf").html("<input id='contact_form_message' required='required' data-error='Complete este campo.' type='file' name='imag_oferta'>");
             $("#cambiarImagenOf").append("<input type='hidden' name='imag_vieja' value='"+ruta+"'>");
@@ -384,7 +384,7 @@ $(document).on("click","#deleteCompetencia",function(){
         var url=$(this).attr("data-url");
         $.ajax({
             url:url,
-            
+            type:"GET",
             success:function(datos){
                 $("#contenedor").html(datos);
                 $("#exampleModalCenter").modal("show");

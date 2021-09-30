@@ -7,6 +7,16 @@ $(document).ready(function(){
         $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
     });
 
+
+    $(document).ready(function(){
+        $(document).on("click","#cambioDeImagenOf",function(){
+            var ruta=$("#imagen").attr("src");
+    
+            $("#cambiarImagenOf").html("<input id='contact_form_message' required='required' data-error='Complete este campo.' type='file' name='imag_oferta'>");
+            $("#cambiarImagenOf").append("<input type='hidden' name='imag_vieja' value='"+ruta+"'>");
+        });
+    });
+
     $(document).on("click","#editar_comentario",function(){
             var id_comentario=$(this).attr("data-id_comentario");
             var url=$(this).attr("data-url");

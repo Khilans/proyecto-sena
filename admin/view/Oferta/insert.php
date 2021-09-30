@@ -3,7 +3,7 @@
                 <h4 class="alert-success text-center">Registrar noticia</h4>
                 <p><b>Los campos con * son obligatorios</b></p>
         </div>
-	<form action="<?php echo getUrl("Oferta", "Oferta", "postInsert"); ?>" method="post">
+	<form action="<?php echo getUrl("Oferta", "Oferta", "postInsert"); ?>" method="post" enctype="multipart/form-data">
 		<div class="row">
 		<div class="col-md-7 form-group">
 				<label>Nombre de la oferta*</label>
