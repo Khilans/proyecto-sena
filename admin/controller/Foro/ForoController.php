@@ -104,7 +104,7 @@ include_once '../model/Foro/ForoModel.php';
             }
             $ejecutar = $obj->consult($sql); 
             if($ejecutar){
-                redirect(getUrl("Foro","Foro","feed"));
+                redirect(getUrl("Foro","Foro","consult"));
             }else{
                 dd($sql);
             }

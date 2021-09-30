@@ -12,6 +12,7 @@
 <script src="js/custom.js"></script>
 <script src="js/news_custom.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="js/global.js"></script>
    
   

@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+    //LOGIN
+    $(document).on("click","#signIn",function(){
+        
+    });
+
     $(document).on("click","#cambioDeImagen",function(){
         var ruta=$("#imagen").attr("src");
 

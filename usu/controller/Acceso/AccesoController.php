@@ -24,9 +24,6 @@
                         $_SESSION['rol']=$user['cod_rol'];
                     }
                     $_SESSION['mensaje']="Sesión iniciada exitosamente";
-                    if($_SESSION['rol']==1){
-                        redirect("index.php");
-                    }else
                     redirect("index.php");
                 }else{
                     $_SESSION['mensaje']="Correo y/o contraseñas incorrectos";
