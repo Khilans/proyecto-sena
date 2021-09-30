@@ -1,25 +1,31 @@
 $(document).ready(function(){
 
-    //LOGIN
-    $(document).on("click","#signIn",function(){
-        
+    //Modal perfil
+    $(document).on("click","#updateprofile",function(){
+        var url=$(this).attr("data-url");
+        var usu_id=$("#usu_id").val();
+        var fName=$("#fname").val();
+        var sName=$("#sname").val();
+        var ltName=$("#ltname").val();
+        var typeDoc=$("#typedoc").val();
+        var numDoc=$("#numDoc").val();
+        alert(fname);
+        var dataString= 'usu_id='+usu_id+'&usu_nombre'+fName+'&usu_nombre2'+sName+'&usu_nombre2'+sName;
+    /*     $.ajax({
+            url:url,
+            data:dataString,
+            type:"GET",
+            success:function(datos){
+                location.reload(true);
+            }
+        }); */
     });
-
+    //Fin modal perfil
     $(document).on("click","#cambioDeImagen",function(){
         var ruta=$("#imagen").attr("src");
 
         $("#cambiarImagen").html("<input type='file' name='img_noticia'>");
         $("$cambiarImagen").append("<input type='hidden' name='img_vieja' value='"+ruta+"'>");
-    });
-
-
-    $(document).ready(function(){
-        $(document).on("click","#cambioDeImagenOf",function(){
-            var ruta=$("#imagen").attr("src");
-    
-            $("#cambiarImagenOf").html("<input id='contact_form_message' required='required' data-error='Complete este campo.' type='file' name='imag_oferta'>");
-            $("#cambiarImagenOf").append("<input type='hidden' name='imag_vieja' value='"+ruta+"'>");
-        });
     });
 
     $(document).on("click","#editar_comentario",function(){
