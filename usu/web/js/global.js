@@ -9,16 +9,15 @@ $(document).ready(function(){
         var ltName=$("#ltname").val();
         var typeDoc=$("#typedoc").val();
         var numDoc=$("#numDoc").val();
-        alert(fname);
-        var dataString= 'usu_id='+usu_id+'&usu_nombre'+fName+'&usu_nombre2'+sName+'&usu_nombre2'+sName;
-    /*     $.ajax({
+        var dataString= 'usu_nombre='+fName+'&usu_nombre2='+sName+'&usu_apellido='+ltName+'&cod_tipo_doc='+typeDoc+'&usu_ndocumento='+numDoc;
+         $.ajax({
             url:url,
             data:dataString,
             type:"GET",
             success:function(datos){
                 location.reload(true);
             }
-        }); */
+        });
     });
     //Fin modal perfil
     $(document).on("click","#cambioDeImagen",function(){

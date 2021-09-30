@@ -49,7 +49,7 @@ foreach ($usuario as $usu) {
 
         <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                <button type="button" id="updateprofile" class="btn btn-success">Confirmar</button>
+                <button type="button" id="updateprofile" data-url="<?php echo getUrl("Usuarios","Usuarios","postUpdateProfile",false,"ajax") ?>" class="btn btn-success">Confirmar</button>
             </div>
     </form>
 </div>
