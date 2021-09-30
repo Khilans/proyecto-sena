@@ -128,10 +128,24 @@ $(document).ready(function(){
         });
     });
 
+    $(document).on("click","#modalDetails",function(){
+        alert("Hola");
+       /*  var url=$(this).attr("data-url");
+        var id=$(this).attr("data-id_foro");
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        }); */
+    });
+
     $(document).on("click","#cambioImagenForo",function(){
         var ruta=$("#imagen").attr("src");
 
-        $("#cambiarImagenForo").html("<input type='file' name='imag_nueva'>");
+        $("#cambiarImagenForo").html("<div class='jumbotron'><input type='file' id='file' name='imag_nueva'></div>");
         $("#cambiarImagenForo").append("<input type='hidden' name='imag_vieja' value='"+ruta+"'>");
     });
 

@@ -17,6 +17,7 @@ class OfertaController{
         $obj = new OfertaModel();
 
         $usu_id=$_SESSION['user_id'];
+        $titulo=$_POST['nom_oferta'];
         $desc_oferta = $_POST['desc_oferta'];
         $nom_oferta=$_POST['nom_oferta'];
         $fech_ini_oferta=hora();
