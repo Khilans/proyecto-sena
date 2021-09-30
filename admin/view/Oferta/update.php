@@ -45,7 +45,7 @@
                 <div class="form-group col-md-6">
                     <label>Imagen</label>
                     <div id="cambiarImagenOf">
-                        <img class="d-block" id="imagen" src="<?php echo $ofer['imag_oferta'] ?>" width="50px">
+                        <img class="d-block" id="imagenOf" src="<?php echo $ofer['imag_oferta'] ?>" width="50px">
                         <button type="button" id="cambioDeImagenOf" class="btn btn-outline-secondary mt-2">Cambiar imagen</button>
                     </div>
                 </div>
