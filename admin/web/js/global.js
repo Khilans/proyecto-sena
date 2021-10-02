@@ -1,4 +1,26 @@
 $(document).ready(function(){
+
+        //Modal perfil
+        $(document).on("click","#updateprofile",function(){
+            var url=$(this).attr("data-url");
+            var usu_id=$("#usu_id").val();
+            var fName=$("#fname").val();
+            var sName=$("#sname").val();
+            var ltName=$("#ltname").val();
+            var typeDoc=$("#typedoc").val();
+            var numDoc=$("#numDoc").val();
+            var dataString= 'usu_nombre='+fName+'&usu_nombre2='+sName+'&usu_apellido='+ltName+'&cod_tipo_doc='+typeDoc+'&usu_ndocumento='+numDoc;
+             $.ajax({
+                url:url,
+                data:dataString,
+                type:"GET",
+                success:function(datos){
+                    location.reload(false);
+                }
+            });
+        });
+        //Fin modal perfil
+
     $(document).on("click","#cambioDeImagen",function(){
         var ruta=$("#imagen").attr("src");
 
@@ -8,7 +30,7 @@ $(document).ready(function(){
 
     $(document).ready(function(){
         $(document).on("click","#cambioDeImagenOf",function(){
-            var ruta=$("#imagen").attr("src");
+            var ruta=$("#imagenOf").attr("src");
     
             $("#cambiarImagenOf").html("<input id='contact_form_message' required='required' data-error='Complete este campo.' type='file' name='imag_oferta'>");
             $("#cambiarImagenOf").append("<input type='hidden' name='imag_vieja' value='"+ruta+"'>");
@@ -37,6 +59,53 @@ $(document).ready(function(){
             },
 
     });
+
+
+        //Modal tipo de tipo pqrsf 
+        $(document).on("click","#InsertTpqrs",function(){
+            var url=$(this).attr("data-url");
+            $.ajax({
+                url:url,
+                
+                success:function(datos){
+                    $("#contenedor").html(datos);
+                    $("#exampleModalCenter").modal("show");
+                }
+            });
+        });
+    
+    
+    
+    
+        $(document).on("click","#EditTpqrs",function(){
+            var url=$(this).attr("data-url");
+            var id=$(this).attr("data-TpqrsE");
+    
+            $.ajax({
+                url:url,
+                data:"id="+id,
+                success:function(datos){
+                    $("#contenedor").html(datos);
+                    $("#exampleModalCenter").modal("show");
+                }
+            });
+        });
+    
+        $(document).on("click","#DeleteTpqrs",function(){
+            var url=$(this).attr("data-url");
+            var id=$(this).attr("data-TpqrsD");
+    
+            $.ajax({
+                url:url,
+                data:"id="+id,
+                success:function(datos){
+                    $("#contenedor").html(datos);
+                    $("#exampleModalCenter").modal("show");
+                }
+            });
+        });
+
+
 
         //Modal respuesta QPRSF
         $(document).on("click","#MoreRes",function(){
@@ -81,10 +150,24 @@ $(document).ready(function(){
         });
     });
 
+    $(document).on("click","#modalDetails",function(){
+        alert("Hola");
+       /*  var url=$(this).attr("data-url");
+        var id=$(this).attr("data-id_foro");
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        }); */
+    });
+
     $(document).on("click","#cambioImagenForo",function(){
         var ruta=$("#imagen").attr("src");
 
-        $("#cambiarImagenForo").html("<input type='file' name='imag_nueva'>");
+        $("#cambiarImagenForo").html("<div class='jumbotron'><input type='file' id='file' name='imag_nueva'></div>");
         $("#cambiarImagenForo").append("<input type='hidden' name='imag_vieja' value='"+ruta+"'>");
     });
 
@@ -318,11 +401,25 @@ $(document).on("click","#deleteCompetencia",function(){
         });
     });
 
+    $(document).on("click","#modalViewOfer",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-oferV");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
     $(document).on("click","#insertOferta",function(){
         var url=$(this).attr("data-url");
         $.ajax({
             url:url,
-            
+            type:"GET",
             success:function(datos){
                 $("#contenedor").html(datos);
                 $("#exampleModalCenter").modal("show");
@@ -429,6 +526,20 @@ $(document).on("click","#deleteCompetencia",function(){
     $(document).on("click","#DeleteTnoti",function(){
         var url=$(this).attr("data-url");
         var id=$(this).attr("data-TnotiD");
+
+        $.ajax({
+            url:url,
+            data:"id="+id,
+            success:function(datos){
+                $("#contenedor").html(datos);
+                $("#exampleModalCenter").modal("show");
+            }
+        });
+    });
+
+    $(document).on("click","#modalViewnoti",function(){
+        var url=$(this).attr("data-url");
+        var id=$(this).attr("data-notiV");
 
         $.ajax({
             url:url,

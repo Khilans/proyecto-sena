@@ -88,8 +88,8 @@ include_once '../model/Foro/ForoModel.php';
             $fech_fin_foro=$_POST['fech_fin_foro'];
             $desc_foro=$_POST['desc_foro'];
             if (isset($_FILES['imag_nueva']['name'])) {
-                $imag_oferta = $_FILES['imag_nueva']['name'];
-                $ruta = "images/$imag_oferta";
+                $imag_foro = $_FILES['imag_nueva']['name'];
+                $ruta = "images/$imag_foro";
                 move_uploaded_file($_FILES['imag_nueva']['tmp_name'], $ruta);
     
                 if (isset($_POST['imag_vieja'])) {
@@ -104,7 +104,7 @@ include_once '../model/Foro/ForoModel.php';
             }
             $ejecutar = $obj->consult($sql); 
             if($ejecutar){
-                redirect(getUrl("Foro","Foro","feed"));
+                redirect(getUrl("Foro","Foro","consult"));
             }else{
                 dd($sql);
             }
@@ -116,4 +116,11 @@ include_once '../model/Foro/ForoModel.php';
             $posts=$obj->consult($sql);
             include_once '../view/ForoJhan/feed.php';
         }
+
+        public function details(){
+            $obj= new ForoModel;
+            $foro_id=$_POST['foro_id'];
+            $sql="SELECT f.cod_foro,f.titulo_foro,f.desc_foro,f.fech_ini_foro,f.fech_fin_foro,f.imag_foro,u.usu_nombre,u.usu_apellido FROM t_foro f, t_usuario u WHERE cod_foro=$foro_id AND f.usu_id=u.usu_id ";
+            $foro=$obj->consult($sql);
+            include_once '../view/ForoJhan/modalDetails.php';        }
     }

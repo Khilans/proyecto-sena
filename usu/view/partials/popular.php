@@ -49,6 +49,7 @@
 						</div>
 					</div>
 				<!-- </div> -->
+				<iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"width="1500" height="400" type="text/html" src="https://www.youtube.com/embed/icGktF1h0YY?autoplay=0&fs=0&iv_load_policy=3&showinfo=0&rel=0&cc_load_policy=0&start=0&end=0&origin=https://youtubeembedcode.com"><div><small><a href="https://youtubeembedcode.com/pl/">youtubeembedcode pl</a></small></div><div><small><a href="https://onlinecasinoutanspelpaus.se/">onlinecasinoutanspelpaus.se</a></small></div></iframe>
 			</div>
 		</div>
 	</div>
@@ -81,7 +82,7 @@
 									<div class="hero_box d-flex flex-row align-items-center justify-content-start">
 										<img src="images/professor.svg" class="svg" alt="">
 										<div class="hero_box_content">
-											<h2 class="hero_box_title"><a href="<?php echo getUrl("Noticia", "Noticia", "getView") ?>">Moodle</a></h2>
+											<h2 class="hero_box_title"><a href="https://moodle.org/?lang=es">Moodle</a></h2>
 
 										</div>
 									</div>
@@ -90,7 +91,7 @@
 									<div class="hero_box d-flex flex-row align-items-center justify-content-start">
 										<img src="images/professor.svg" class="svg" alt="">
 										<div class="hero_box_content">
-											<h2 class="hero_box_title"><a href="<?php echo getUrl("Noticia", "Noticia", "getView") ?>">Glpi</a></h2>
+											<h2 class="hero_box_title"><a href="#">Glpi</a></h2>
 
 										</div>
 									</div>

@@ -11,5 +11,7 @@
 <script src="plugins/easing/easing.js"></script>
 <script src="js/custom.js"></script>
 <script src="js/news_custom.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/sweetAlert.js"></script>
 <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 <script src="js/global.js"></script> 

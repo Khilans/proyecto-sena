@@ -28,6 +28,7 @@
 						<div class="search_content text-center">
 							<h1 class="search_title">Telecomunicaciones</h1>
 							<p class="search_title">El sector de telecomunicaciones es el principal encargado de permitir la comunicación y el intercambio de información entre personas, sin necesidad
+<<<<<<< HEAD
 								que se encuentren en el mismo lugar, por medio
 								de medios de comunicación tales como la radio, la televisión y el teléfono fijo. Por lo que
 								a la hora de referirse al sector de telecomunicaciones se deben tener en cuenta todas
@@ -42,6 +43,22 @@
 								fija y los servicios de televisión.</p>
 
 						</div>
+=======
+                             que se encuentren en el mismo lugar, por medios
+                            comunicación tales como la radio, la televisión y el teléfono fijo. Por lo que
+                             a la hora de referirse al sector de telecomunicaciones se deben tener en cuenta todas
+                             aquellas ocupaciones relacionadas con la
+                             instalación y mantenimiento de las redes
+                             necesarias para garantizar la presencia
+                             de dichos medios de comunicación en
+                             los hogares y en las empresas. Y por
+                             otro lado también se deben tener en
+                             cuenta a las empresas encargadas de
+                             prestar los servicios asociados a estos medios de comunicación, es decir la telefonía
+                             fija y los servicios de televisión.</p>
+					
+						</div> 
+>>>>>>> 3a1d30ce7105dafe7d7fa45d589306983fadd695
 					</div>
 
 				</div>

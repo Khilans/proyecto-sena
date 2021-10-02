@@ -25,7 +25,7 @@ include_once '../view/partials/modal.php';
                 <th class="text-center">Nombre oferta</th>
                 <th class="text-center">Cupos</th>
                 <th class="text-center">Fecha inicial</th>
-                <th class="text-center">fecha final</th>
+                <th class="text-center">Fecha final</th>
                 <th class="text-center">Imagen</th>
                 <th class="text-center">Estado</th>
                 <th class="text-center">Acciones</th>
@@ -49,14 +49,17 @@ include_once '../view/partials/modal.php';
                 echo "<td><img src='" . $ofer['imag_oferta'] . "' width='100px'></td>";
                 echo "<td class='text-center'>" . $ofer['desc_estado'] . "</td>";
                 echo "<td class='text-center'>
-                    <button class='btn btn-success btn-sm' id='MoreOfer' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Oferta","Oferta","More",false,"ajax")."' data-moreOfer='".$ofer['id_oferta']."'>
-                    <i class='fa fa-eye'></i>                   
+                    <button class='btn btn-info btn-sm' id='MoreOfer' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Oferta","Oferta","More",false,"ajax")."' data-moreOfer='".$ofer['id_oferta']."'>
+                    <i class='fa fa-comment-dots'></i>                   
                     </button>
                     <button class='btn btn-warning btn-sm' id='editOferta' data-toggle='modal' data-target='#exampleModal' data-url='" . getUrl("Oferta", "Oferta", "getUpdate", false, "ajax") . "' data-oferE='" . $ofer['id_oferta'] . "'>
                     <i class='fa fa-edit'></i>                   
                     </button>
                     <button class='btn btn-danger btn-sm' id='DeleteOferta' data-toggle='modal' data-target='#exampleModal' data-url='" . getUrl("Oferta", "Oferta", "getDelete", false, "ajax") . "' data-oferD='" . $ofer['id_oferta'] . "'>
-                    <i class='fa fa-trash'></i>                   
+                    <i class='fa fa-eye-slash'></i>                   
+                    </button>
+                    <button class='btn btn-success btn-sm'  id='modalViewOfer' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Oferta","Oferta","getView",false,"ajax")."' data-oferV='".$ofer['id_oferta']."'>
+                    <i class='fa fa-eye'></i>                   
                     </button>
                     </td>";
                 echo "</tr>";

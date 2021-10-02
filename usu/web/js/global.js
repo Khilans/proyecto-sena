@@ -1,5 +1,25 @@
 $(document).ready(function(){
 
+    //Modal perfil
+    $(document).on("click","#updateprofile",function(){
+        var url=$(this).attr("data-url");
+        var usu_id=$("#usu_id").val();
+        var fName=$("#fname").val();
+        var sName=$("#sname").val();
+        var ltName=$("#ltname").val();
+        var typeDoc=$("#typedoc").val();
+        var numDoc=$("#numDoc").val();
+        var dataString= 'usu_nombre='+fName+'&usu_nombre2='+sName+'&usu_apellido='+ltName+'&cod_tipo_doc='+typeDoc+'&usu_ndocumento='+numDoc;
+         $.ajax({
+            url:url,
+            data:dataString,
+            type:"GET",
+            success:function(datos){
+                location.reload(true);
+            }
+        });
+    });
+    //Fin modal perfil
     $(document).on("click","#cambioDeImagen",function(){
         var ruta=$("#imagen").attr("src");
 

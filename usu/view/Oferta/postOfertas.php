@@ -1,5 +1,14 @@
 <link rel="stylesheet" href="styles/oferta/Oferta.css" />
+<link rel="stylesheet" type="text/css" href="styles/contact_styles.css">
+<link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 
+
+<div class="home">
+    <div class="home_background_container prlx_parent">
+        <div class="home_background prlx" style="background-image:url(images/Ofer.jpg)"></div>
+    </div>
+
+</div>
 <?php
 	foreach ($ofertas as $ofer) {
 ?>
@@ -20,7 +29,7 @@
 							<?php echo $ofer['fech_fin_oferta']?></time>
 					</div>
 				</header>
-				<span class="image featured"><img class='pic-2' src="<?php echo $ofer['imag_oferta']?>"></span>
+				<span class="image featured"><img  src="<?php echo $ofer['imag_oferta']?>"></span>
 				<div class="fondo">
 					<div>
 						<h2>Acerca de la oferta</h2>

@@ -1,6 +1,6 @@
 <div class="container">
 <div class="alert alert-success" role="alert">
-                <h4 class="alert-success text-center">Editar noticia</h4>
+                <h4 class="alert-success text-center">Editar oferta</h4>
                 <p>Los dartos con * son obligatorios</p>
     </div>
     <?php
@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-md-6 form-group">
                     <label>Descripción oferta*</label>
-                <textarea  id="contact_form_message" required="required" data-error="Complete este campo." name="desc_oferta" rows="1" cols="30" placeholder="Descripción" value="<?php echo $ofer['desc_oferta']; ?>"></textarea>
+                <textarea  id="contact_form_message" required="required" data-error="Complete este campo." name="desc_oferta" rows="1" cols="30" placeholder="Descripción" value="#"><?php echo $ofer['desc_oferta']; ?></textarea>
                 </div>
                 <div class="col-md-6 form-group">
                     <label>Cupos disponibles*</label>
@@ -45,18 +45,16 @@
                 <div class="form-group col-md-6">
                     <label>Imagen</label>
                     <div id="cambiarImagenOf">
-                        <img class="d-block" id="imagen" src="<?php echo $ofer['imag_oferta'] ?>" width="50px">
+                        <img class="d-block" id="imagenOf" src="<?php echo $ofer['imag_oferta'] ?>" width="50px">
                         <button type="button" id="cambioDeImagenOf" class="btn btn-outline-secondary mt-2">Cambiar imagen</button>
                     </div>
                 </div>
             </div>
 
-            <div class="row">
-                <div style="margin: 1em;" class="col-md-6">
-                    <input type="submit" value="Enviar" class="btn btn-success">
-                    <a href="<?php echo getUrl("Oferta", "Oferta", "consult"); ?>"><button type="button" class="btn btn-primary">Volver</button></a>
-                </div>
-            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-success">Confirmar</button>
+        </div>
         </form>
 
     <?php

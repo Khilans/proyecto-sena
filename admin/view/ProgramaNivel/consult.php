@@ -7,9 +7,9 @@ include_once '../view/partials/modal.php';
     <table class="table table-striped mt-5 table-hover table table-bordered " id="tabla">
         <thead class="thead-dark">
             <tr>
-                <th>CÓDIGO</th>
-                <th>NIVEL</th>
-                <th>ACCIONES</th>
+                <th>Id</th>
+                <th>Nivel</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>

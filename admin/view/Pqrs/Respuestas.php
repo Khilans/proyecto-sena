@@ -21,7 +21,7 @@ include_once '../view/partials/modal.php';
             <tr>
                 <th class="text-center w-5">Id</th>
                 <th class="text-center">Fecha</th>
-                <th class="text-center">Código del pqrsf</th>
+                <th class="text-center">Id del pqrsf</th>
                 <th class="text-center">Acciones</th>
             </tr>
         </thead>
@@ -35,8 +35,8 @@ include_once '../view/partials/modal.php';
                     echo "<td class='text-center'>".$res['fech_resp_pqrsf']."</td>";
                     echo "<td class='text-center'>".$res['cod_pqrsf']."</td>";
                     echo "<td class='text-center'>
-                    <button class='btn btn-success btn-sm' id='MoreRes' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrs","Pqrs","getMoreRes",false,"ajax")."' data-moreRes='".$res['cod_resp_pqrsf']."'>
-                    <i class='fa fa-eye'></i>                   
+                    <button class='btn btn-info btn-sm' id='MoreRes' data-toggle='modal' data-target='#exampleModal' data-url='".getUrl("Pqrs","Pqrs","getMoreRes",false,"ajax")."' data-moreRes='".$res['cod_resp_pqrsf']."'>
+                    <i class='fa fa-comment-dots'></i>                   
                     </button>
                     </td>";
                     "</td>";

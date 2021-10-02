@@ -10,9 +10,9 @@ include_once '../view/partials/modal.php';
                 <th>Nivel</th>
                 <th>Nombre</th>
                 <th>Siglas</th>
-                <th>descripcion</th>
+                <th>Descripcion</th>
                 <th>Duración</th>
-                <th>Código</th>
+                <th>Ficha</th>
                 <th>Imagen</th>
                 <th>Acciones</th>
             </tr>

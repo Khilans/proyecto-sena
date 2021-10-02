@@ -34,7 +34,7 @@
             $ejecutar = $obj->update($sql);
 
             if ($ejecutar) {
-                $_SESSION['mensaje'] = "Se registró tu <b>$cod_pqrsf_tipo</b> exitosamente";
+                $_SESSION['mensaje'] = "Se envío tu <b>PQRSF</b> exitosamente";
                 redirect(getUrl("Pqrs", "Pqrs", "getSend"));
             } else {
                 echo "Ops, error ";
@@ -58,19 +58,23 @@
             $nombre=$_POST['nombre']; 
             $correo=$_POST['correo']; 
             $pqrsf_desc=$_POST['pqrsf_desc'];
-            $pqrsf_fecha=hora();
+            
             
            /*  dd($_POST);  */
             
            
            $id = $obj->autoincrement("t_pqrsf", "cod_pqrsf");
 
-            $sql = "INSERT INTO t_pqrsf VALUES($id,$cod_pqrsf_tipo,NULL,1,'$pqrsf_desc','$correo','$nombre','$pqrsf_fecha')";
+           if ($_POST['tipopqrsf'] == 5){
+            $sql = "INSERT INTO t_pqrsf VALUES($id,$cod_pqrsf_tipo,NULL,6,'$pqrsf_desc','$correo','$nombre', NOW())";
+        }else{
+            $sql = "INSERT INTO t_pqrsf VALUES($id,$cod_pqrsf_tipo,NULL,5,'$pqrsf_desc','$correo','$nombre', NOW())";
+        }
        
             $ejecutar = $obj->update($sql);
 
             if ($ejecutar) {
-                $_SESSION['mensaje'] = "Se registró tu <b>$cod_pqrsf_tipo</b> exitosamente";
+                $_SESSION['mensaje'] = "Se envío tu <b>PQRSF</b> exitosamente";
                 redirect(getUrl("Pqrs", "Pqrs", "getSendU"));
             } else {
                 echo "Ops, error ";

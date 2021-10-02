@@ -21,12 +21,12 @@
         }
         public function postUpdateProfile(){
             $obj=new UsuariosModel;
-            $id=$_POST['usu_id'];
-            $nombre1=$_POST['usu_nombre'];
-            $nombre2=$_POST['usu_nombre2'];
-            $apellido=$_POST['usu_apellido'];
-            $tipodoc=$_POST['cod_tipo_doc'];
-            $ndoc=$_POST['usu_ndocumento'];
+            $id=$_SESSION['user_id'];
+            $nombre1=$_GET['usu_nombre'];
+            $nombre2=$_GET['usu_nombre2'];
+            $apellido=$_GET['usu_apellido'];
+            $tipodoc=$_GET['cod_tipo_doc'];
+            $ndoc=$_GET['usu_ndocumento'];
             $sql="SELECT usu_id, usu_ndocumento FROM t_usuario WHERE usu_id=$id";
             $validar=$obj->consult($sql);
             if($validar){
@@ -35,10 +35,10 @@
                     $sql="UPDATE t_usuario SET usu_nombre='$nombre1',usu_nombre2='$nombre2',usu_apellido='$apellido',cod_tipo_doc=$tipodoc WHERE usu_id=$id";
                     $actualizar=$obj->update($sql);
                     if($actualizar){
-                        redirect(getUrl("Usuarios","Usuarios","consult"));
+                        
                     }else{
                         echo "Error al actualizar";
-                        dd($_POST);
+                        dd($_GET);
                     }
                 }else{
                     $sql="SELECT usu_id FROM t_usuario WHERE usu_ndocumento=$ndoc";

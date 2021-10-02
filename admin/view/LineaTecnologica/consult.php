@@ -8,7 +8,7 @@ include_once '../view/partials/modal.php';
  <br><br>
         <thead  class="thead-dark"> 
             <tr>
-                <th>Código</th>
+                <th>Id</th>
                 <th>Descripción</th>
                 <th>Acciones</th>
             </tr>

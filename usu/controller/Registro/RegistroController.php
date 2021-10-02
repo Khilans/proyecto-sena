@@ -14,9 +14,9 @@
             $obj=new RegistroModel;
             $id=$obj->autoincrement("t_usuario","usu_id");
             $pnombre=$_POST['usu_nombre'];
-            if(!isset($_POST['usu_nombre2'])){
+             if(!isset($_POST['usu_nombre2'])){
                 $snombre=null;
-            }else
+            }else 
             $snombre=$_POST['usu_nombre2'];
             $apellidos=$_POST['usu_apellido'];
             $tipo_documento=$_POST['cod_tipo_doc'];
@@ -53,6 +53,8 @@
             }else{
                 echo "Digite un correo válido";
                 $_SESSION['mensaje']="Digite un correo válido";
+
+                dd($_POST);
             }
         }
     }

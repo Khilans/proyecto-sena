@@ -6,9 +6,6 @@
 	<div class="home_background_container prlx_parent">
 		<div class="home_background prlx" style="background-image:url(images/PQRS.jpg)"></div>
 	</div>
-	<div class="home_content">
-		<h1>PQRSF</h1>
-	</div>
 </div>
 
 <div class="container">
@@ -21,21 +18,34 @@
 					<!-- Contact Form -->
 					<div class="contact_form">
 						<div class="contact_title">Radica tu PQRSF</div>
+						<?php
+						if (isset($_SESSION['mensaje'])) {
+						?>
+							<div class="alert alert-success mt-4 alert-dismissible fade show" id="alerta" role="alert">
+								<?= $_SESSION['mensaje'] ?>
+								<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						<?php
+							unset($_SESSION['mensaje']);
+						}
+						?>
 
 						<div class="contact_form_container">
-							<form action="<?php echo getUrl("Pqrs","Pqrs","postSendU"); ?>" method="POST">
+							<form action="<?php echo getUrl("Pqrs", "Pqrs", "postSendU"); ?>" method="POST">
 
 								<input id="contact_form_message" required="required" data-error="Complete este campo." class="input_field contact_form_name col-md-4" name="nombre" type="text" placeholder="Name" required="required">
 								<input id="contact_form_message" required="required" data-error="Complete este campo." class="input_field contact_form_email col-md-4 mx-1" name="correo" type="email" placeholder="E-mail" required="required">
-                                <select id="contact_form_message" required="required" data-error="Complete este campo." class="input_field col-md-3" name="tipopqrsf">
-											<option value="">Seleccione</option>
-											<?php
-											foreach ($tipoPQRSF as $tpq) {
-												echo "<option value='" . $tpq['cod_pqrsf_tipo'] . "'>" . $tpq['desc_pqrsf_tipo'] . "</option>";
-											}
-											?>
-										</select>
-								<textarea id="contact_form_message" class="text_field contact_form_message" name="pqrsf_desc" placeholder="Message" required="required" data-error="Por favor escribe el asunto."></textarea>
+								<select id="contact_form_message" required="required" data-error="Complete este campo." class="input_field col-md-3" name="tipopqrsf">
+									<option value="">Seleccione</option>
+									<?php
+									foreach ($tipoPQRSF as $tpq) {
+										echo "<option value='" . $tpq['cod_pqrsf_tipo'] . "'>" . $tpq['desc_pqrsf_tipo'] . "</option>";
+									}
+									?>
+								</select>
+								<textarea id="contact_form_message" class="text_field contact_form_message" name="pqrsf_desc" placeholder="Radique aquí su PQRSF" required="required" data-error="Por favor escribe el asunto."></textarea>
 								<button id="contact_send_btn" type="submit" class="contact_send_btn trans_200" value="Enviar">Radicar</button>
 							</form>
 						</div>
@@ -46,7 +56,7 @@
 				<div class="col-lg-4">
 					<div class="about">
 						<div class="about_title">¿Qué son los PQRSF?</div>
-						<p class="about_text">Las PQRSF son las solicitudes, quejas, reclamos, sugerencias y felicitaciones que los usuarios pueden enviar de manera verbal o escrita a través de los canales de contacto de PQRSF</p>
+						<p class="about_text">Las PQRSF son las solicitudes, quejas, reclamos, sugerencias y felicitaciones que los usuarios pueden enviar de manera escrita a través de los canales de contacto de PQRSF</p>
 
 						<div class="contact_info">
 							<ul>
@@ -54,7 +64,7 @@
 									<div class="contact_info_icon">
 										<img src="images/smartphone.svg" alt="https://www.flaticon.com/authors/lucy-g">
 									</div>
-									0034 37483 2445 322
+									+57 2 4315800.
 								</li>
 								<li class="contact_info_item">
 									<div class="contact_info_icon">

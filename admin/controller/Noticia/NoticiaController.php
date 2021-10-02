@@ -86,6 +86,37 @@
             }
         }
 
+        public function getView(){
+
+            $obj = new NoticiaModel();
+
+            $noticia_id=$_GET['id'];
+            $sql="SELECT * FROM t_tiponoticia";
+            $tipo_noticias=$obj->consult($sql);
+            $sql = "SELECT * FROM t_noticia WHERE cod_noticia=$noticia_id";
+            $noticias=$obj->consult($sql);
+
+            include_once '../view/Noticia/View.php';
+        }
+
+        public function postView(){
+            $obj=new NoticiaModel();
+
+            $cod_noticia=$_POST['cod_noticia'];
+            $titulo_noticia=$_POST['titulo_noticia'];
+
+            $sql="UPDATE t_noticia SET id_estado=1 WHERE cod_noticia=$cod_noticia";
+            
+            $ejecutar=$obj->update($sql);
+
+            if ($ejecutar){
+                $_SESSION['mensaje']="Se habilito la noticia <b>$titulo_noticia</b> exitosamente";
+                redirect(getUrl("Noticia","Noticia","consult"));
+            } else {
+                echo "Ops,error al eliminar una noticia";
+            }
+        }
+
 
         public function getModalUpdate(){
 
@@ -110,7 +141,6 @@
             $obj = new NoticiaModel();
 
             $cod_noticia = $_POST['cod_noticia'];
-            $id_estado = $_POST['id_estado'];
             $cod_tipo_noti = $_POST['cod_tipo_noti'];
             $desc_noticia=$_POST['desc_noticia'];
             $fecha_noticia =hora();
@@ -126,10 +156,10 @@
                     unlink("$img_vieja");
                 }
                 $sql = "UPDATE t_noticia SET  titulo_noticia='$titulo_noticia', fecha_noticia='$fecha_noticia',desc_noticia='$desc_noticia',cod_tipo_noti=$cod_tipo_noti,
-                id_estado=$id_estado,img_noticia='$ruta' WHERE cod_noticia=$cod_noticia";
+            img_noticia='$ruta' WHERE cod_noticia=$cod_noticia";
             } else {
                 $sql = "UPDATE t_noticia SET titulo_noticia='$titulo_noticia', fecha_noticia='$fecha_noticia', desc_noticia='$desc_noticia', cod_tipo_noti=$cod_tipo_noti, 
-                id_estado=$id_estado WHERE cod_noticia=$cod_noticia";
+                WHERE cod_noticia=$cod_noticia";
             }
             $ejecutar = $obj->consult($sql);
 

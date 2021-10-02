@@ -6,7 +6,7 @@ const expresiones = {   // <--  objeto
 	nombre2: /^[a-zA-ZÁ-ÿ]{1,20}$/, // Letras y espacios, pueden llevar acentos.
 	apellidos:/^[a-zA-ZÁ-ÿ\s]{1,20}$/,
 	numerodoc:/^\d{1,14}/, 
-	password: /^.{4,12}$/, // 4 a 12 digitos.
+	password: /^.{6,30}$/, // 4 a 12 digitos.
 	correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
 }
 
@@ -96,9 +96,9 @@ inputs.forEach((input) => {
 
 formulario.addEventListener('submit', (e) => {
    /*     e.preventDefault();   */  
-	const terminos = document.getElementById('terminos');
-	if(campos.nombre && campos.nombre2 && campos.apellidos && campos.numerodoc && campos.password && campos.correo && terminos.checked ){
-		formulario.reset();
+	const terminos = document.getElementById('terminos'); 
+	if(campos.nombre && campos.apellidos && campos.numerodoc && campos.password && campos.correo && terminos.checked ){
+		/* formulario.reset(); */
 
 	 	document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo'); 
 		  setTimeout(() => {
@@ -109,13 +109,14 @@ formulario.addEventListener('submit', (e) => {
 			icono.classList.remove('formulario__grupo-correcto');
 		}); 
 		
-	}  else {
+	}   else {
+		e.preventDefault();
 		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo'); 
-		/* setTimeout(() => {
+		 setTimeout(() => {
 		document.getElementById('formulario__mensaje').classList.remove('formulario__mensaje-activo'); 
 
-	   }, 5000); */
-	}  
+	   }, 5000); 
+	}   
 }); 
 
 

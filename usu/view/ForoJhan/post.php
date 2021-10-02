@@ -7,13 +7,10 @@ include_once '../view/partials/modal.php';
 	<!-- Home -->
 
 	<div class="home">
-		<div class="home_background_container prlx_parent">
-			<div class="home_background prlx" style="background-image:url(images/news_background.jpg)"></div>
-		</div>
-		<div class="home_content">
-			<h1>Foro</h1>
-		</div>
+	<div class="home_background_container prlx_parent">
+		<div class="home_background prlx" style="background-image:url(images/foros.png)"></div>
 	</div>
+</div>
 
 	<!-- News -->
 
@@ -147,45 +144,10 @@ include_once '../view/partials/modal.php';
 							?>
 							</div>
 
-							<div class="sidebar_section_title">
-								<h3>Recientes</h3>
-							</div>
-
-							<div class="latest_posts">
-							
-								<!-- Latest Post -->
-								<div class="latest_post">
-									<div class="latest_post_image">
-										<img src="images/latest_1.jpg" alt="https://unsplash.com/@dsmacinnes">
-									</div>
-									<div class="latest_post_title"><a href="#">Cómo escanear con NMap</a></div>
-									<div class="latest_post_meta">
-										<span class="latest_post_author"><a href="#">Autor</a></span>
-										<span>|</span>
-										<span class="latest_post_comments"><a href="#">3 Comentarios</a></span>
-									</div>
-								</div>
-
-							
-							</div>
 
 						</div>
 
-						<!-- Tags -->
-
-						<div class="sidebar_section">
-							<div class="sidebar_section_title">
-								<h3>Etiquetas</h3>
-							</div>
-							<div class="tags d-flex flex-row flex-wrap">
-								<div class="tag"><a href="#">Redes</a></div>
-								<div class="tag"><a href="#">Comunicaciones</a></div>
-								<div class="tag"><a href="#">Router</a></div>
-								<div class="tag"><a href="#">IP</a></div>
-								<div class="tag"><a href="#">Curso</a></div>
-								<div class="tag"><a href="#">NMap</a></div>
-							</div>
-						</div>
+						
 
 					</div>
 				</div>
