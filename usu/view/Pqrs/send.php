@@ -37,7 +37,7 @@
 								if (isset($_SESSION['user_id'])) {
 								?>
 									<div class="row">
-										<input class="input_field contact_form_name col-md-4" name="nombre" type="text" value="<?php echo $_SESSION['nombre']; ?>" required="required" data-error="Se requiere el nombre.">
+										<input class="input_field contact_form_name col-md-4" name="nombre" type="text" value="<?php echo $_SESSION['nombre']; ?> <?php echo $_SESSION['apellidos']; ?>" required="required" data-error="Se requiere el nombre.">
 										<input type="hidden" name="usu_id" value="<?php echo $_SESSION['user_id']; ?>">
 										<!-- <input type="hidden" name="pqrsf_fecha"> -->
 										<input class="input_field contact_form_email col-md-4 mx-1" name="correo" type="email" value="<?php echo $_SESSION['correo']; ?>" required="required" data-error="Valid email is required.">
